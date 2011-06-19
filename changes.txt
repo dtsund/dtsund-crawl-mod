@@ -1,0 +1,17 @@
+Changes made:
+	Monsters may no longer invoke Zot traps against the player
+	Charms and Hexes re-merged into Enchantments (possibly pending some more reshuffling)
+	Haste and Slow unnerfed.
+	Crude hack in mon-place.cc to make Mennas not spawn.  Possibly remove if Mennas tweaked.
+	Spell success rate shown as an actual percentage, not an adjective.  Success >= 98% rounded up to 100%.
+	Replace Silence with Haste in the book of War Chants
+	Replace Repel Missiles with Throw Frost in book of Minor Magic
+	Selective Amnesia restored as a spell.  Now found in Wizardry, Enchantments, and Dreams.
+	Give Assassins many kinds of needle (might revert if OP).  Now get 3 each of sleep, slow, confusion.
+	Remove Shoals from early Lair lottery (kludgy, just rigged the lottery)
+	Have acquirement show the exact items the player is choosing from
+		Flaw(?) with current implementation: I think unrands that get generated
+		and rejected don't get a second chance to generate.
+
+		Also can't see ring bonii if int/str/dex without examination, but this is minor
+		(who'd spend an acquirement on one anyway?)
