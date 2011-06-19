@@ -1,17 +1,45 @@
-Changes made:
+Probably-easy TODO list:
+	Remove Felids, because boring(?)
+	Remove Troves and Labyrinths, because boring(?)
+	Bump Slow back up to level 3 (OR level 2 Ench/Sorc)
+	Rename Poison Magic to Sorcery, reschool some of the more Hex-like spells to it
+		More generally, Sorcery could be a school focused on underhanded play and weaknesses
+	Rename Megabat?
+
+
+Harder TODO list:
+	Redo scoring system to induce experts to play hyperagressively
+	Phase out paralysis in favor of a suite of new status effects
+	Restore square spell ranges (This actually looks really hard)
+	Reduce game length by 1/3 outside of extended endgame
+		There are subtle balance issues involved!
+	Tweak silent spectre, give Mennas a few holy-flavored ones as pets
+		Specifically: Reduce spectre melee attack to negligible levels,
+		give them crazy speed, have them cast Silence rather than keep
+		a permanent aura.  Skeletal warrior packs past a certain point
+		get a chance at having them.
+	Nerf Mennas' defense.  Make him rely on his pets for Silence.
+	Make Shoals a portal vault
+	Skill autotraining?  Maybe just wait for the DevTeam to implement it and merge in.
+	Make Invisibility more viable late-game/extended
+		Reduce some See Invisible enemies to merely Sense Invisible, or no
+		invisibility detection at all
+
+
+Changes already made:
 	Monsters may no longer invoke Zot traps against the player
-	Charms and Hexes re-merged into Enchantments (possibly pending some more reshuffling)
-	Haste and Slow unnerfed.
-	Crude hack in mon-place.cc to make Mennas not spawn.  Possibly remove if Mennas tweaked.
+	Charms and Hexes re-merged into Enchantments (pending some reshuffling)
+	Unnerf Haste and Slow
+	Crude hack in mon-place.cc to make Mennas not spawn.  Remove when Mennas tweaked.
 	Spell success rate shown as an actual percentage, not an adjective.  Success >= 98% rounded up to 100%.
 	Replace Silence with Haste in the book of War Chants
 	Replace Repel Missiles with Throw Frost in book of Minor Magic
 	Selective Amnesia restored as a spell.  Now found in Wizardry, Enchantments, and Dreams.
-	Give Assassins many kinds of needle (might revert if OP).  Now get 3 each of sleep, slow, confusion.
+	Give Assassins many kinds of needle (might revert if OP).  Now get 5 each of sleep, slow, confusion.
 	Remove Shoals from early Lair lottery (kludgy, just rigged the lottery)
 	Have acquirement show the exact items the player is choosing from
 		Flaw(?) with current implementation: I think unrands that get generated
 		and rejected don't get a second chance to generate.
-
+		
 		Also can't see ring bonii if int/str/dex without examination, but this is minor
 		(who'd spend an acquirement on one anyway?)
