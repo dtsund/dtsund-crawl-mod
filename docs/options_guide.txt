@@ -1,0 +1,2337 @@
+Guide to Crawl's options
+========================
+
+This document explains all of the options in the latest version of
+Dungeon Crawl Stone Soup. If you get stuck or some things won't seem to
+work properly, ask for help on the newsgroup rec.games.roguelike.misc.
+Please flag queries with '-crawl-', as other roguelikes are discussed
+there as well.
+The contents of this text are:
+
+0-  Generalities.
+0-a     Standard and additional option files.
+0-b     Options on the command line
+0-c     Options and how to set them.
+0-d     Aliases and variables.
+1-  Starting Screen.
+                name, remember_name, weapon, book, wand,
+                religion,
+                species, background, random_pick, good_random,
+                restart_after_game
+2-  File System and Sound.
+                crawl_dir, morgue_dir, save_dir, macro_dir, sound
+3-  Lua files.
+                stash.lua, wield.lua, kills.lua, runrest.lua,
+                gearset.lua, pickup.lua, trapwalk.lua, autofight.lua
+4-  Interface.
+4-a     Dropping and Picking up.
+                autopickup, autopickup_exceptions, default_autopickup,
+                autopickup_no_burden, pickup_thrown, pickup_dropped,
+                chunks_autopickup, assign_item_slot, drop_mode,
+                pickup_mode, drop_filter, default_friendly_pickup
+4-b     Targeting.
+                default_target, target_unshifted_dirs, darken_beyond_range
+4-c     Passive Sightings (detected and remembered entities).
+                detected_monster_colour, detected_item_colour,
+                remembered_monster_colour, colour_map, clean_map
+4-d     Branding (Item and Monster Highlighting).
+                friend_brand, neutral_brand, stab_brand, may_stab_brand,
+                heap_brand, feature_item_brand, trap_item_brand,
+                verbose_monster_panel
+4-e     Level Map Functions.
+                level_map_cursor_step, level_map_title, item_colour
+4-f     Viewport Display Options.
+                view_max_width, view_max_height, view_lock_x,
+                view_lock_y, view_lock, center_on_scroll,
+                symmetric_scroll, scroll_margin_x, scroll_margin_y,
+                scroll_margin
+4-g     Travel and Exploration.
+                travel_delay, explore_delay, travel_avoid_terrain,
+                explore_greedy, explore_stop, explore_stop_pickup_ignore,
+                explore_improved, travel_key_stop,
+                tc_reachable, tc_dangerous, tc_disconnected,
+                tc_excluded, tc_exclude_circle,
+                runrest_ignore_message, runrest_stop_message,
+                runrest_ignore_poison, runrest_ignore_monster,
+                trapwalk_safe_hp, trap_prompt, rest_wait_both, auto_exclude
+4-h     Stashes.
+                stash_filter, annotate_item_class,
+                annotate_item_dropped
+4-i     Command Enhancements.
+                auto_list, easy_open, easy_unequip, equip_unequip,
+                easy_confirm, allow_self_target,
+                easy_butcher, always_confirm_butcher, prefer_safe_chunks,
+                easy_eat_chunks, easy_eat_gourmand, easy_eat_contaminated,
+                prompt_for_swap, easy_quit_item_prompts,
+                easy_exit_menu, sort_menus
+4-j     Message and Display Improvements.
+                hp_warning, mp_warning, hp_colour, mp_colour, stat_colour,
+                status_caption_colour, clear_messages, show_more, small_more,
+                show_inventory_weights, show_gold_turns, show_game_turns,
+                show_beam, item_stack_summary_minimum, list_rotten,
+                mlist_min_height, msg_min_height, msg_max_height,
+                messages_at_top,
+                mlist_allow_alternate_layout, mlist_targetting, classic_hud,
+                menu_colour, menu_colour_prefix_class, menu_colour_shops,
+                message_colour, force_more_message,
+                msg_condense_repeats, msg_condense_short
+4-k     Missiles.
+                fire_items_start, fire_order
+4-l     Message Channels.
+                plain, prompt, god, pray, duration, danger, food, warning,
+                recovery, talk, talk_visual, intrinsic_gain, mutation,
+                monster_spell, monster_enchant, friend_spell, friend_enchant,
+                monster_damage, rotten_meat, equipment, floor, multiturn,
+                examine, examine_filter, diagnostics, error, tutorial
+4-m     Inscriptions.
+                autoinscribe, autoinscribe_artefacts, autoinscribe_cursed
+4-n     Macro related Options.
+                flush.failure, flush.command, flush.message,
+                additional_macro_file, bindkey
+4-o     Tiles Options.
+                tile_show_items, tile_skip_title, tile_menu_icons,
+                tile_player_col, tile_monster_col, tile_neutral_col,
+                tile_peaceful_col, tile_friendly_col, tile_plant_col,
+                tile_item_col, tile_unseen_col, tile_floor_col, tile_wall_col,
+                tile_mapped_wall_col, tile_door_col, tile_downstairs_col,
+                tile_upstairs_col, tile_feature_col, tile_trap_col,
+                tile_water_col, tile_lava_col, tile_excluded_col,
+                tile_excl_centre_col, tile_update_rate, tile_runrest_rate,
+                tile_key_repeat_delay, tile_tooltip_ms, tile_tag_pref,
+                tile_full_screen, tile_window_width, tile_window_height,
+                tile_map_pixels, tile_force_overlay, tile_font_crt_file,
+                tile_font_stat_file, tile_font_msg_file, tile_font_tip_file,
+                tile_font_lbl_file, tile_font_crt_size, tile_font_stat_size,
+                tile_font_msg_size, tile_font_tip_size, tile_font_lbl_size,
+                tile_show_minihealthbar, tile_show_minimagicbar,
+                tile_show_demon_tier, tile_layout_priority,
+                tile_force_regenerate_levels
+5-  Character Dump.
+5-a     Items and Kills.
+                kill_map, dump_kill_places, dump_item_origins,
+                dump_item_origin_price, dump_message_count, dump_order,
+                dump_book_spells
+5-b     Notes.
+                user_note_prefix, note_items, note_monsters,
+                ood_interesting, note_hp_percent, note_skill_levels,
+                note_all_skill_levels, note_skill_max, note_all_spells,
+                note_xom_effects, note_messages
+6-  Miscellaneous.
+6-a     All OS.
+                mouse_input, wiz_mode, char_set, classic_item_colours,
+                colour, cset, feature, mon_glyph, pizza,
+                use_fake_player_cursor, show_player_species
+
+6-b     DOS and Windows.
+                dos_use_background_intensity
+6-c     Unix.
+                background_colour, use_fake_cursor
+
+7-  Inline Lua.
+7-a     Executing lua.
+7-b     Conditional options.
+7-c     Conditional option caveats.
+
+------------------------------------------------------------------------
+
+0-  Generalities on options.
+============================
+
+0-a     Standard and additional option files.
+---------------------------------------------
+
+Crawl uses the first file of the following list as its option file:
+* settings/init.txt
+* init.txt (in the Crawl directory)
+* .crawlrc (in the Unix home directory)
+
+Alternatively, you can use the command line option
+    -rc <file>
+which tells Crawl to use precisely that file.
+
+On the starting screen, Crawl tells you which init file it uses, if any.
+
+It is possible to include additional files within the options file via
+    include = <file>
+Note that these are treated as if their content was entered verbatim
+in the options file. By default, Crawl searches for all these included
+files in the settings/ directory but you can specify a special folder
+using the command line option
+    -rcdir <dir>
+
+External option files have several uses: They allow quick customisation
+of Crawl's general appearance (colouring/suppression of messages, and
+the inventory style). More elaborate option magic (usually containing
+lua) can also be conveniently hidden this way. Finally, there are some
+additional option files coming with this release; these allow to set
+many options to old defaults, i.e. those of Crawl 0.3.4 and before.
+See the header of the default init.txt for more details.
+
+0-b     Options on the command line
+-----------------------------------
+
+A quick way to make small changes to the options, without having to
+switch to a different option file, is to use the command line options
+-extra-opt-first or -extra-opt-last, which make it as if the given
+option was (repsecitvely) at the top or bottom of the option file.  For
+example,
+
+    -extra-opt-last wiz_mode=yes
+
+will cause any new game to start in wizard mode.  -extra-opt-first and
+-extra-opt-last can be used multiple times on the same command line.
+
+0-c     Options and how to set them.
+------------------------------------
+
+There are three broad types of Crawl options: true/false values
+(booleans), arbitrary values, and lists of values. In this document,
+options are usually described with their default values (if there is a
+default); this should also explain which of the above-mentioned types
+it is. Each option should have some remarks on how it's typically used
+- but keep in mind that the options you want to use depend on your
+playing style and sometimes also on your operating system.
+
+The standard init.txt distributed with Crawl includes all boolean
+options, commented out. The commented-out values are always the
+_non-defaults_, so you can toggle boolean options by uncommenting
+them.
+
+There are two styles you can use to set options. The classic
+name=value syntax, one option per-line:
+    remember_name  = true
+    explore_greedy = false
+    drop_mode      = multi
+
+And the NetHack-style combined option line:
+    OPTION = remember_name, !explore_greedy, drop_mode:multi
+
+The second style is useful to specify simple options in a few lines,
+but it cannot be used for options that take complex lists of values
+(such as the autopickup_exceptions option).
+
+Some options need a path as an argument; here you have to use a
+filesystem path suitable for your system. Other options accept regular
+expressions (regexes): here you can simply use ordinary strings, adapt
+the suggested regexes to your needs or search the internet for regex
+syntax.
+
+Note that, in the tutorial, some of your options settings may get
+overwritten to facilitate the explanations. This concerns the
+following options, and their enforced setting for tutorial games
+are as follows:
+   clear_messages      = true
+   auto_list           = true
+   weapon              = hand axe, for Berserkers
+   book                = random, for Conjurers
+and, for Tiles,
+   tile_tag_pref       = tutorial
+
+0-d     Aliases and variables.
+------------------------------
+
+For long option names, you can define option aliases by doing:
+    alias := long_option_name
+For instance, you can use:
+    ae := autopickup_exceptions
+and thereafter use "ae" instead of "autopickup_exceptions":
+    ae = >uselessness, >inaccuracy
+
+You can define shortcuts for option values (variables). For example,
+    $useless := darkgrey
+could be used in conjunction with
+    menu_colour = $useless:random uselessness
+
+To prevent a variable from being changed you can make it a constant:
+    constant = useless
+
+This is useful if you wish to prevent an included file from altering
+a variable.
+
+See settings/standard_colours.txt and settings/food_colouring.txt
+for usage of aliases and variables.
+
+
+1-  Starting Screen.
+====================
+
+The following options are a convenience to help you quickly start your
+game of Crawl.
+
+name = Delilah
+        If set, that's the name all your Crawl characters will get.
+
+remember_name = true
+        Crawl remembers the options (species, background etc.) you used
+        to create your last character. You may recycle them in the
+        starting screen for a new character. If this option is set to
+        true, Crawl will also remember the last name you used.
+
+        If you use this option and want to enter a name _after_
+        choosing your species and background, you must enter . at the
+        initial name prompt - hitting Enter at the name prompt will
+        simply reuse your old name if remember_name is set.
+
+weapon = (short sword | falchion | hand axe | spear | mace | trident
+          | quarterstaff | unarmed | random)
+        Specifying the weapon option allows you to bypass the weapon
+        selection screen. Tridents and falchions are restricted to only
+        fighters and gladiators, quarterstaves are restricted to monks,
+        and unarmed is restricted to monks and races with claws. The
+        standard weapon prompt will be shown if an illegal choice for the
+        selected background is specified.
+
+book = (flame | fire | ice | cold | random)
+        Conjurers can choose their starting spellbook. Note flame=fire and
+        ice=cold.
+
+wand = (enslavement | confusion | magic darts | frost | flame | striking | random)
+        Artificers can start with either a wand of random effects and another
+        wand out of enslavement, confusion, magic darts, frost, or flame, or
+        with a rod of striking.
+
+religion = (Zin | Beogh | random)
+        Hill Orc priests may choose between worshipping Zin and Beogh, specifying
+        the religion option allows them to bypass this prompt.
+
+species = (Human |...| Vampire | random)
+        The usual abbreviations (Hu, HE, etc.) work.
+
+background = (Fighter |...| Wanderer | random)
+        Here again the abbreviations (Fi, Wi, Pr, etc.) can be used.
+
+random_pick = false
+        The random_pick option will randomly generate a character.
+        The above options (weapons and species/background options) will
+        override where appropriate.
+
+good_random = true
+        Whenever random_pick is used, species or background are set
+        random, or a remembered random choice is executed in the
+        character selection, the game will only pick good combinations.
+
+restart_after_game = true/false
+        When a game ends, Crawl will return to the main menu if
+        restart_after_game is set. This option is enabled by default
+        for tiles builds and disabled by default for other builds.
+
+2-  File System.
+================
+
+crawl_dir = <path>
+        The path used for the relative paths when looking for other
+        files. Defaults to the directory that contains the Crawl
+        executable.
+
+morgue_dir = morgue
+        Directory where morgue dumps files (morgue*.txt and
+        morgue*.lst) as well as character dumps files are written.
+
+save_dir = saves
+        Directory where saves and bones are stored. This option may be
+        ignored depending on the settings used to compile Crawl, but
+        should be honoured for the official Crawl binaries.
+
+macro_dir = settings/
+        Directory for reading macro.txt.
+        For tile games, wininit.txt will also be stored here.
+        It should end with the path delimiter.
+
+sound = <regex>:<path to sound file>
+        Plays the sound file if a message contains regex. The regex
+        should not include commas or colons. For example
+             sound = LOW HITPOINT WARNING:sound\sounds2\danger3.wav
+        Getting appropriate sound files may be difficult. Check other
+        roguelikes or old computer RPGs. Alternatively, ask for help
+        in the newsgroup rec.games.roguelike.misc.
+
+
+3-  Lua files.
+==============
+
+Lua files are scripts which can provide existing commands with a new
+meaning or create new commands (to be used in macros). To use Lua
+files, Crawl needs to be compiled with support for user Lua scripts.
+You can if your Crawl has Lua support by hitting ?V in-game. The list
+of features Crawl displays should include "Lua user scripts".
+
+Lua files are included using the lua_file option (one file per line):
+
+lua_file = <path/name.lua>
+
+The available stock Lua scripts are
+  stash.lua     -- annotates the stash file for better searching
+                   (Ctrl-F). Searching for 'Long blades' will also turn
+                   up all weapons with the long blade skill. Similarly,
+                   you can use 'altar','portal' etc. Also, you can look
+                   for spellbooks ('book'), artefacts ('artefact'), and
+                   ego items ('ego').
+  wield.lua     -- shows more intelligent options when using 'w?'
+  kills.lua     -- improves the Vanquished Creatures list in dump files;
+                   currently gives three lists (Vanquished, Friendly,
+                   Others).
+  runrest.lua   -- allows overriding certain stop conditions when
+                   running.
+                   New options: runrest_ignore_poison, runrest_stop_message
+                   runrest_ignore_message, runrest_ignore_monster
+  gearset.lua   -- provides commands for switching of complete sets via
+                   macro.
+                   New macroable functions: rememberkit, swapkit
+  pickup.lua    -- allows autopickup of a butchering tool if you don't
+                   already have one.
+  trapwalk.lua  -- allows travel to cross certain traps if you have
+                   enough HP.
+  autofight.lua -- provides a command for moving to and attacking the
+                   nearest monster. Attempts to move in a straight line
+                   into the direction of the closest hostile monster.
+                   If there are several monsters of equal distance,
+                   e.g. adjacent, prefers those to the upper left, then
+                   continues in anti-clockwise manner.
+                   Requires non-rebound vi keys.
+                   New macroable function: hit_closest
+
+
+The above mentioned Lua functions can be macroed in-game by setting the
+macro action to "===", followed by the function name.
+
+Also see section 7 on inline Lua fragments.
+
+The wizard-mode Lua interpreter (&^T) will, the first time it's invoked,
+load all of the files that are specified with the terp_file option:
+
+terp_file = <path/name.lua>
+
+The Lua in these files will have access to all of the Crawl Lua internals
+(that is, will be run in the context of dlua, not clua).
+
+4-  Interface.
+==============
+
+4-a     Picking up and Dropping.
+--------------------------------
+
+autopickup = $?!+"/%
+        The above is the default list. The valid symbols are
+        )       Weapons
+        (       Missiles
+        [       Armour
+        /       Wands
+        %       Food
+        ?       Scrolls
+        " or =  Jewellery
+        !       Potions
+        + or :  Books
+        \ or |  Staves
+        0       Orbs
+        }       Misc. items
+        X       Corpses
+        $       Gold
+        Note that _whether_ items are picked up automatically or not, is
+        controlled by the in-game toggle Ctrl-A. Also note that picking
+        up takes a turn, but only one turn (regardless of the number of
+        items). If you teleport or blink onto a square with interesting
+        items, these will not be picked up.
+
+autopickup_exceptions = <pickup-regex, >don't-pickup-regex, ...
+        A set of regexes that force matching items to be picked up (if
+        prefixed with <), or never picked up (if prefixed with >).
+        Excludes (>) take precedence over includes (<), so if the same
+        item is matched by both an exclude and an include, it will not
+        be subject to autopickup.
+
+        An example:
+             autopickup_exceptions = <curare-tipped needle
+        Forces autopickup to grab all curare-tipped needles, even if
+        missiles are not set in the "autopickup" option.
+
+        Whitespace between <> and the match expression is significant,
+        so the following won't work:
+             autopickup_exceptions = <   ebony casket
+
+        autopickup_exceptions replace the older ban_pickup. Using
+             autopickup_exceptions = >uselessness, >inaccuracy
+        is the same as using
+             ban_pickup = uselessness, inaccuracy
+
+        If the regexes are not prefixed with < or >, > is implied, so
+        the option setting above can also be written as
+             autopickup_exceptions = uselessness, inaccuracy
+
+        You can use multiple autopickup_exceptions lines. Some examples:
+             autopickup_exceptions = inaccuracy, scrolls? of paper,
+             autopickup_exceptions = immolation, curse (armour|weapon),
+             autopickup_exceptions = uselessness, noise, torment
+
+        Note that if pickup.lua has been sourced, you won't need to set
+        autopickup exceptions for potions except maybe for very special
+        cases.
+
+default_autopickup = true
+        When set to false, the game starts with autopickup turned off.
+        You can still toggle autopickup in-game with Ctrl-A.
+
+autopickup_no_burden = true
+        When set, autopickup will not pick up items which would increase
+        your burden status (from unencumbered to burdened, or from
+        encumbered to overloaded.)
+
+pickup_thrown = true
+        pickup_thrown = true causes autopickup to pick up thrown/fired
+        missiles, which can make life much easier for hunter types. Be
+        aware that autopickup uses a turn, though it won't trigger if
+        there are hostile monsters in sight.
+
+pickup_dropped = false
+        pickup_dropped lets autopickup affect objects you've dropped.
+        Set to false to block autopickup for dropped objects. This can
+        be convenient.
+
+chunks_autopickup = true
+        If true then butchered flesh will be automatically picked up
+        right after they're generated (and after switching back from
+        the butchering weapon to the usual weapon, if necessary).
+        Respects all of the autopickup options.  Requires '%' to be
+        in the autopickup line.
+        Does not apply to Vampires who will pick up bottled potions
+        of blood regardless of this option, and not pick up chunks.
+
+assign_item_slot = (forward | backward)
+        When picking up items, the inventory slot into which the item
+        goes is normally the first free slot from a-zA-Z (this is the
+        default "forward" behaviour). Setting assign_item_slot to
+        "backward" changes the slot assignment to the first letter after
+        the last slot.
+        For instance, if you have items on 'a' and 'c', then with
+          assign_item_slot = forward, the next item will go into 'b',
+          assign_item_slot = backward, the next item will go to 'd'
+        instead.
+        With "backward", items dropped/fired and picked up later are
+        more likely to get their old slot back.
+
+drop_mode = (multi | single)
+        Single is the classic behaviour; when you select an inventory
+        letter, that item will be dropped immediately. Multidrop allows
+        you to select multiple items to be dropped. (You can also switch
+        to multidrop from the classic drop menu using the '@' key).
+
+        Multidrop is the default and can be very convenient, but be
+        aware that every item dropped takes one turn. (This is different
+        from picking up.)
+        When selecting multidrops, the top right corner shows the
+        estimated number of turns.
+
+        The order in which items get dropped is from top to bottom in
+        the inventory listing, but equipped items will be dropped last,
+        and may be dropped out of order.
+
+pickup_mode = (multi | single | auto:X)
+        Single is the classical behaviour (and default): when picking up
+        items, you are prompted for them one by one. Multi makes a menu
+        appear, where you can choose which items to pick up. Note that
+        no matter how many items you choose, picking up will always take
+        one turn.
+        If pickup_mode is auto:X, where X is some number (for example,
+        auto:5), then pickup will give a menu if there are at least X
+        items on your square, and will prompt one by one otherwise.
+
+drop_filter = <regex>
+        When selecting items using the global (de)select keys (',' or
+        '-') in a multidrop menu, you can choose to select only items
+        that match a search regex using this option.
+
+        For instance, to quickly select carrion and rotting chunks of
+        meat, you could use:
+             drop_filter = skeleton, rotting, corpse
+        Other choices can come in handy as well, e.g. if you want to
+        regularly sacrifice all weapons except axes, use:
+             drop_filter = axe, broadaxe
+
+        drop_filter will match against the same keywords menu_colour uses,
+        except that it lacks identification status and corpse/chunk
+        information.  It defaults to useless_item.
+
+        When a drop_filter is set, using the select/deselect keys will
+        set/clear selection of items that match the filter
+        expression(s).
+
+default_friendly_pickup = (friend | player | none | all)
+        Using an in-game toggle, you can control what types of items
+        your allies will pick up:
+             none   = They won't pick up anything at all.
+                      (This is the old friendly pick up behaviour.)
+             friend = They may pick up anything they or another ally
+                      dropped, e.g. if another ally dies.
+                      (This is the default setting.)
+             player = Like 'friend', but they may also pick up anything
+                      you've dropped or thrown.
+             all    = They may pick up anything they want to have.
+                      (This is how it works for hostile monsters.)
+
+        This option controls which is the default setting for this toggle
+        when you start a new game, or when you enter a level for the first
+        time.
+
+        Note that this only works for intelligent allies (such as you
+        can get when worshipping Beogh or when summoning intelligent
+        monsters), and that monsters have their own reasonings for which
+        items they may need, and when they feel safe enough to pick them
+        up. Except for "none", these options won't let you override these
+        requirements.
+        Also, friendly jellies won't ever eat any items, regardless of
+        this option.
+
+4-b     Targeting.
+-------------------
+
+default_target = true
+        If set to true (the default), targeting will start on either
+        your previous target (if it is still visible) or the closest
+        monster (if not) rather than on the character. If no monsters
+        are in view, targeting will start on the character regardless.
+
+        If default_target = false, the targeting cursor will always
+        start aimed at the character.
+
+        default_target is mutually exclusive with
+        target_unshifted_dirs. Using default_target will automatically
+        disable target_unshifted_dirs.
+
+target_unshifted_dirs = false
+        If set to true, targeting will use the old Stone Soup 0.1 /
+        Crawl 4.0 targeting keymap where unshifted direction keys fire
+        in that direction immediately. The default is to use the new
+        targeting keymap where unshifted direction keys move the
+        targeting cursor (and shifted directions fire in the given
+        direction immediately).
+
+        If you use target_unshifted_dirs, default_target will be
+        automatically disabled.
+
+darken_beyond_range = true
+        If set to true, everything beyond range when targeting will be
+        coloured grey. Setting this to false will also suppress the brief
+        flash if there are no visible monsters within range, both for
+        ASCII and the Tiles version.
+
+4-c     Passive Sightings (detected or remembered entities).
+-----------------------------------------------------------
+
+detected_monster_colour = lightred
+        Monsters found by detect creatures will be coloured this colour.
+
+detected_item_colour = green
+        Items found by detect items will be given this colour.
+
+remembered_monster_colour = darkgrey
+        The colour for monsters you have seen before. Note that the
+        value of this option is meaningless if you set clean_map.
+
+colour_map = true
+        Colours out of sight map features on the playing screen.
+
+clean_map = false
+        Cleans up out of sight monsters and clouds on the map. This is
+        like pressing Ctrl-C (clearing both main screen and level map)
+        all the time.
+        Setting this to true can be disconcerting for summoners.
+
+4-d     Branding (Item and monster highlighting).
+-------------------------------------------------
+
+Branding refers to displaying particular monsters (e.g. summons) or
+items in a special way; special as in reversing fore- and background.
+There are several branding choices (these will not work everywhere; it
+depends on OS and terminal):
+   standout         -- often the same as reverse, might be underline or
+                       dim
+   bold             -- used by colour curses for brightening foreground
+                       colours
+   blink            -- used by colour curses for brightening background
+                       colours
+   reverse          -- this will probably work
+   dim              -- probably no effect
+   underline        -- this will probably work
+   highlight:colour -- set background colour of branded monsters to
+                       "colour"
+The last can be abbreviated to hi:colour.
+See part Technical (6-) for dos_use_background_intensity under Windows
+and DOS.
+
+By default, only two of the item brands are active (and set to reverse):
+   heap_brand, feature_item_brand
+They can be deactivated by setting them to "none".
+
+friend_brand = hi:green
+        Brand friends in some way. This is very helpful for summoners. The
+        default setting shows friends with a green background. If the friend is
+        itself green, it'll show up as black on green.
+
+neutral_brand = hi:lightgrey
+        Brand neutral monsters in some way. Useful both to get out of
+        a neutral monster's path, and to avoid accidentally killing it.
+        The default setting shows neutrals with a dark grey background. Since
+        there are no darkgrey monster glyphs anymore, this works fine.
+
+stab_brand = hi:blue
+        Some deities object to you stabbing monsters. Certain backgrounds
+        specialise in stabbing monsters. Still other characters are
+        happy if they spot a monster before the monster spots them. In
+        all these cases, it helps to identify monsters that are unaware
+        of the character (and hence susceptible to being stabbed) without
+        using the 'x' command. All the normal 'brand' options apply.
+
+may_stab_brand = hi:yellow
+        Stabbing may be possible even if the monster is not asleep (if
+        it's confused or distracted, for instance). This option brands
+        monsters that you *might* be able to stab.
+
+heap_brand = reverse
+        Brand heaps of items (more than one item or stack).
+
+feature_item_brand = reverse
+        Brands features (stairs, shops, altars) that would otherwise be
+        hidden by items. If you use this brand, the items on the square
+        are hidden by the feature symbol and the feature symbol is
+        branded.
+
+trap_item_brand = reverse
+        Brands traps that would otherwise be hidden by items. If you
+        use this brand, the items on the square are hidden by the trap
+        symbol (^) and the trap symbol is branded.
+
+verbose_monster_pane = true
+        If set to false using the console version of Crawl (rather than the
+        tiles version), the pane listing the monsters in sight will give
+        the older, less detailed information like "distracted" or "resting"
+        rather than "fleeing", "sleeping", "unaware", etc.
+
+4-e     Level Map Functions.
+----------------------------
+
+level_map_cursor_step = 7
+        How many squares the cursor moves on the level map when using
+        Shift-direction.
+
+level_map_title = true
+        Whether to show the level name at the top of the level map
+        screen.
+
+item_colour = true
+        Colours items on level-map.
+
+4-f     Viewport Display Options
+--------------------------------
+
+The viewport is the portion of the map that is displayed during normal
+play. The viewport is 33x17 by default, but if you use larger terminal
+sizes, you can set these options to make the game show a larger
+viewport. (These options are not fully available on DOS.)
+
+None of these options affects gameplay. In particular, your character's
+line-of-sight is unaffected by these options.
+
+view_max_width = 33 (max 81)
+        Sets the maximum width of the viewport (defaults to 33).
+        Making this larger will allow Crawl to show a wider viewport
+        on larger terminals. This is ignored in tiles, the viewport will
+        always use all the available space.
+
+view_max_height = 21 (max 71)
+        Similar to view_max_width, but sets the viewport's maximum height.
+        In tiles, this value is used to set when space starts to be affected
+        to the message area instead of the viewport. When the message area
+        reaches msg_max_height, the remaining space goes to the viewport.
+        If for performance reason you need a smaller viewport, either reduce
+        the window size, or increase the message area.
+
+* Note that using large viewports can slow the game down.
+
+view_lock_x = true
+        Keeps the player character centered horizontally in the
+        viewport, continuously scrolling the viewport to match the
+        PC's movements. If this is not set, the player character can
+        move horizontally within the viewport, and the viewport will
+        scroll only when the character's line-of-sight reaches the
+        left or right edge.
+
+view_lock_y = true
+        Keeps the character centered vertically in the viewport.
+
+view_lock = true
+        Aliased option that sets both view_lock_x and view_lock_y.
+
+center_on_scroll = false
+        If this is set, the viewport centers on the player character
+        whenever it scrolls (this option is irrelevant if view_lock_x
+        and view_lock_y are set).
+
+symmetric_scroll = true
+        If this is set, the viewport will scroll in a manner consistent
+        with the character movement that caused the scroll.
+
+        To illustrate, let's say the PC is at the lower edge of the
+        viewport, but is near the horizontal center. Now the PC moves
+        diagonally down and right, forcing the viewport to scroll up
+        one line. If symmetric_scroll is set, the viewport will also
+        scroll left one column to match the PC's diagonal movement. If
+        symmetric_scroll is not set, the viewport will only scroll up,
+        not horizontally. symmetric_scroll can be less disorienting
+        than free scrolling.
+
+        This option is not relevant if view_lock or center_on_scroll
+        are set.
+
+scroll_margin_x = 2
+        How far from the left or right edges scrolling starts. By
+        default, if the PC's circle of line-of-sight is closer than
+        two squares from the edge, the viewport scrolls. If set at
+        zero, the viewport scrolls only when the LOS circle reaches
+        the viewport edge.
+
+scroll_margin_y = 2
+        How far from the top or bottom edges scrolling starts.
+
+scroll_margin = 2
+        An aliased option that sets both scroll_margin_x and
+        scroll_margin_y.
+
+4-g     Travel and Exploration.
+-------------------------------
+
+travel_delay = 20
+        How long travel waits after each move (milliseconds), and also
+        how long auto-explore waits after each move unless explore_delay
+        is set. Depends on platform. Setting to -1 will jump to end of
+        travel - you will not see the individual moves.
+
+explore_delay = -1
+        How long auto-explore waits after each move (milliseconds). Depends on
+        platform.  In particular, setting travel_delay = -1 and
+        explore_delay = 20 means you will see the invividual moves of
+        autoexplore, but not the invidivual moves of other forms of travel.
+        Setting to -1 means the auto-explore delay will be the same as
+        travel_delay.
+
+travel_avoid_terrain = (shallow water | deep water)
+        Prevent travel from routing through shallow water. By default,
+        this option is commented out. For merfolk and/or characters with
+        permanent levitation,
+             travel_avoid_terrain = shallow water, deep water
+        will prevent travel or explore from going through any water.
+
+explore_greedy = true
+        Greedy explore travels to items that are eligible for
+        autopickup in addition to exploring the level, but is
+        otherwise identical to regular explore. Greedy explore is best
+        with pickup_dropped = false. Explore greed is disabled if
+        you're temporarily unable to pick up items (from uncontrolled
+        levitation, for instance).
+
+explore_stop  = items,greedy_pickup_smart,stairs,shops,altars,gates,
+explore_stop += greedy_visited_item_stack
+        Explore will stop for one of these conditions. Whatever you
+        set this option to, anything that stops travel will also stop
+        explore. Multiple explore_stop lines are cumulative if you use
+        "explore_stop += option"s, otherwise the last "explore_stop ="
+        options line will override all previous explore_stop lines.
+        "explore_stop -=" can be used to remove items from the list.
+
+        NOTE: runrest_ignore_message has no effect on explore_stop.
+
+        When using non-greedy explore, items causes explore to stop
+        when any new item comes into view.  When using greedy explore,
+        the conditions act as follows:
+
+        items: stop when items that aren't eligible for autopickup come
+            into view.
+
+        greedy_items: stop when items that are eligible for autopickup
+            come into view.
+
+        greedy_pickup: stop after you automatically pick up any item
+            eligible for autopickup, excluding gold, but including
+            items thrown/fired by the player.  You can make certain items
+            *not* trigger this with the option explore_stop_pickup_ignore
+
+        greedy_pickup_gold: stop when automatically picking up gold during
+            greedy explore.
+
+        greedy_pickup_smart: Similar to greedy_pickup, but tries to be
+            smart about it, meaning only stopping for items which aren't
+            similar to any you already have in your inventory.  It
+            doesn't stop for automatically picking up items which were
+            thrown/fired by the player; you can add "greedy_pickup_thrown"
+            if you want to stop for those.
+
+        greedy_pickup_thrown: Stops after you pick up any item you've
+            thrown/fired.   greedy_pickup automatically does this, but
+            greedy_pickup_smart does not.  explore_stop_pickup_ignore
+            does not affect this condition.
+
+        greedy_visited_item_stack: Stop when visiting a stack of items
+            previously unknown to the player, even if the stack contains
+            nothing eligible for autopickup.
+
+        glowing_items: like items, but only for items which are
+            glowing/runed/embroidered/etc.
+
+        artefacts: like items, but only for artefacts.
+
+        runes: like items, but only for runes.
+
+explore_stop_pickup_ignore = <regex list>
+        If explore_stop has greedy_pickup or greedy_pickup_smart set,
+        then picking up any items matching any of the regexes in the list
+        will *not* stop auto-explore.  For example, by default curare-
+        tipped needles are automatically picked up to keep them out of
+        the hands of monsters, even if you don't have a blowgun, so to
+        not stop auto-explore because of this use
+        "explore_stop_pickup_ignore = curare".
+
+        This options has no affect on items which were thrown by the
+        player.
+
+explore_improved = false
+        If set to true explore will attempt to reduce zig-zagging during
+        auto-explore.  On average it increases the number of turns taken
+        by about 0.9%, sometimes actually speeding it up slightly and
+        sometimes increasing the turns taken by up to 5%, with
+        pathological cases causing a 13% increase.
+
+travel_key_stop = true
+        If set to true then travel will stop at any keypress.
+
+tc_reachable      = blue
+tc_dangerous      = cyan
+tc_disconnected   = darkgrey
+tc_excluded       = lightmagenta
+tc_exclude_circle = red
+        The above five settle the colouring of the level map ('X').
+        They are
+          reachable: all squares safely reachable (without leaving the
+                     level)
+          dangerous: squares which are only connected to you via traps,
+                     etc.
+          disconnected: squares which cannot be reached without leaving
+                        the level
+          excluded: the colour for the centre of travel exclusions ('e')
+          excluded_circle: the colour for travel exclusions apart from
+                           centre
+
+runrest_ignore_message = <list of regexes>
+runrest_stop_message = <list of regexes>
+        Use these to force messages to interrupt travel and resting, or
+        not. These are matched against full message text. To limit a
+        substring match to a message channel, prefix the substring with
+        the channel name and a colon (see section 4-k below on Message
+        Channels). For instance, if you want travel to stop when you're
+        hit by divine retribution, you could use:
+             runrest_stop_message = god:wrath finds you
+        Or you can explicitly ignore some messages:
+             runrest_ignore_message = offer a prayer,prayer is over
+             runrest_ignore_message = pleased with you,exalted
+
+        Note that monster talk and dungeon noises already do not
+        interrupt running or resting, by default.
+
+        Multiple lines can be used. The earliest match among both
+        ignore and stop messages overrides later lines. The file
+        runrest_messages.txt contains a number of default settings.
+
+        Note also that runrest_ignore_message has no effect on what
+        explore_stop stops for.
+
+runrest_ignore_poison = <poison damage>:<minimum hp>
+        This only works if runrest.lua has already been sourced in
+        init.txt. Poison damage of x will be ignored if you have at
+        least y hp if you've defined a runrest_ignore_poison = x:y
+        option. Running here means shift-running and resting only. Only
+        one runrest_ignore_poison line is considered.  Note that for
+        this work, you should also tell Crawl to ignore the
+        "You feel sick" messages. For example,
+             runrest_ignore_message = You feel.*sick
+             runrest_ignore_poison = 4:100
+
+runrest_ignore_monster = <string>:<distance>
+        This only works if runrest.lua has already been sourced in
+        init.txt.
+
+        Any monster containing the string will only interrupt your
+        activity if the distance between you and the monster is
+        less than the specified number. E.g. with
+             runrest_ignore_monster = fish:3
+        all of big fish, jellyfish, giant goldfish and lavafish will be
+        considered safe for travel, explore and resting as long as the
+        distance is at least 3.
+
+trapwalk_safe_hp = <trap_name>:<minimum_hp>, ...
+        This only works if trapwalk.lua has already been sourced in
+        init.txt. Any square containing one of the listed trap types
+        will be considered safe for travel if your hp is greater than or
+        equal to the number connected to the trap in question.
+
+        All the existing trap types can be used, but in practice only
+        the mechanical traps (dart, bolt, arrow, needle, spear, axe,
+        blade) make sense. Note that travel tries to avoid traps if this
+        is easily possible. Defaults to none. For example,
+              trapwalk_safe_hp = dart:15, needle:25, spear:50
+
+trap_prompt = true
+        If trap_prompt is set to true Crawl will use the trapwalk_safe_hp
+        values to decide whether the player should be prompted before
+        stepping on a mechnical trap. Note that you'll always be prompted
+        before stepping on non-mechanical traps.
+
+rest_wait_both = false
+        If rest_wait_both is set to true then resting will only stop
+        when both HP and MP are fully restored, not when either one of
+        them is restored.
+
+auto_exclude = <list of monster names>
+        Whenever you encounter a sleeping or stationary monster during
+        exploration that is included in this list, automatically a
+        travel exclusion is set centered on this monster, meaning
+        autoexplore won't ever bring you in its line of sight. If the
+        monster dies or wakes up while you are in sight, this exclusion
+        is automatically removed again.
+
+4-h     Stashes.
+----------------
+
+A stash is a heap of items tracked by Crawl. You can search in your
+stashes with Ctrl-F. The weird name "stash" is for historical reasons
+when the stash-tracker tracked only specific stashes that you asked it
+to. Modern Crawls track all items in the dungeon without the need for
+explicit steps.
+
+stash_filter = <list of item names or numbers>
+        This option prevents certain items or classes of items from being
+        rembered by the stash tracker.
+
+        For example:
+
+             stash_filter = scroll of noise, scroll of curse weapon
+
+        will make the stash-tracker ignore scrolls of noise and scrolls
+        of curse weapon.  The item names must be exact, and must be
+        singular, not plural.
+
+        It can also be used the filter entire classes of items by their
+        number.  For example:
+
+             stash_filter = 14, 4:21
+
+        filters corpses (14) as well as food of the subtype chunks (4:21).
+
+annotate_item_class = false
+        This only works if stash.lua has already been sourced in
+        init.txt. Automatically annotates items with their object class,
+        e.g. weapon or wand, for stash searching.
+
+annotate_item_dropped = false
+        This only works if stash.lua has already been sourced in
+        init.txt. Annotates dropped items with {dropped} for stash
+        searching.
+
+4-i     Command Enhancements.
+-----------------------------
+
+auto_list = true
+        When set (the default), the appropriate inventory items are
+        automatically listed for commands like eat and read. This is
+        like immediately hitting '?', and can be confusing to beginners
+        because they won't get to see the prompts. This option does not
+        apply to spell casting... Conjurers would probably find that
+        really annoying.
+
+easy_open = true
+        Open doors by moving on to them. Highly convenient. Note that
+        travel and exploration will automatically open doors depending
+        on this option.
+
+easy_unequip = true
+        Allows auto removal of armour and jewellery when dropping it.
+
+equip_unequip = false
+        If this is true, 'W'ear will also allow you to 'T'ake off worn
+        armour, and vice versa, and the same is true for 'P'utting on/
+        'R'emoving jewellery.
+
+easy_confirm = (none | safe)
+        Make confirmation questions easier to answer:
+           none = force capitals on Y/N questions
+           safe = force only on questions that will end game (default)
+        WARNING TO KEYPAD USERS: The number 7 is mapped to the letter
+        'y', which can result in accidentally answering yes to
+        questions.
+
+allow_self_target = (yes | no | prompt)
+        Allow targeting yourself with risky magic (e.g., the spell
+        Bolt of Fire or a wand of slowing.)
+        When set to 'yes', you are a valid target. When set to 'no',
+        you cannot target yourself with such spells. When set to
+        'prompt' (the default), you will be required to confirm
+        self-targeting. This option has no effect on area-effect
+        spells, such as Mephitic Cloud or Evaporate, where you
+        are always a valid target.
+
+easy_butcher = true
+        If true, auto-switch to an appropriate uncursed weapon for
+        butchery. For such tools any special messages are ignored. If
+        false, you have to wield the tool manually.
+
+always_confirm_butcher = false
+        If true, always request confirmation before butchering. If
+        false, butchering will proceed automatically if there is exactly
+        one corpse on the square. If there are multiple corpses on a
+        square, you will always be prompted, regardless of this option.
+
+prefer_safe_chunks = true
+        The (e)at command will prompt for all chunks on the floor and in your
+        inventory, sorted by age. If this option is set to true, clean chunks
+        will be offered before contaminated ones even if the latter are older.
+        Poisonous, mutagenic, rot-inducing, and chunks forbidden by
+        your religion will always be offered last.
+
+easy_eat_chunks = false
+        If this is set to true then when using the (e)at command, the
+        game will automatically determine the oldest chunk that is safe
+        to eat, and eat it without prompting.
+        If prefer_safe_chunks is set to false you will be prompted if
+        the oldest chunk happens to be contaminated, and you will always
+        be prompted for harmful chunks.
+        Note that this option is ignored for each of the undead species.
+
+easy_eat_gourmand = false
+        If both this and easy_eat_chunks are true, and you're wearing an
+        amulet of the Gourmand, then religion-safe contaminated chunks will
+        be eaten without prompting.  If prefer_safe_chunks is true then this
+        will only be done if you have no safe chunks to eat, but if it's
+        false then you'll auto-eat older contaminated chunks before fresher
+        safe chunks.
+
+easy_eat_contaminated = false
+        Like easy_eat_gourmand, but always in effect, not just when you're
+        wearing an amulet of the Gourmand.
+
+prompt_for_swap = true
+        If both this and easy_butcher are true, then if an auto-switch
+        butchery is interrupted by a hostile monster, the game will
+        ask if you wish to switch back to your weapon.  It will also
+        prompt you if after butchery is interupted you teleport or
+        change levels and find yourself near hostile monsters.
+
+easy_quit_item_prompts = true
+        Setting this option to true allows the quitting of item listing
+        with Space (as well as Escape, which always works). These lists
+        are essentially all of those that are requesting an inventory
+        item and accept '?' and '*'. The identify list will never easy
+        quit.
+
+easy_exit_menu = false
+        In multidrop (and pickup) menus, paging past the end will drop
+        out of the menu if easy_exit_menu is true.
+
+sort_menus = [menu:](true | false | auto:X)[:sort_order]
+        Controls if and how items are sorted in inventory and pickup
+        menus.
+
+        When sort_menus = false (the default), items are not sorted, and
+        will be ordered by inventory letter (or in the order they're
+        stacked for items on the floor).
+
+        When sort_menus = true, items are sorted according to the specified
+        sort_order, with the default being:
+             equipped, basename, qualname, curse, qty
+
+        If sort_menus = auto:X, items are sorted if there are at least
+        X items in the same category. For instance:
+             sort_menus = auto:5
+        will sort item classes that have at least 5 items. For instance,
+        having 4 kinds of potions would not sort them, but having 5
+        would.
+
+        You can explicitly specify sort criteria in the sort_menus
+        option as:
+             sort_menus = true : art, basename, qualname, curse, qty
+
+        Two items will be compared based on the first sort criteria
+        where they differ.  So with the sort_menus line given above,
+        if only one of two different items is a known artefact, it will be
+        listed first, else (if both or neither are artefacts) if their
+        basenames are different they will be alphabetically compared using
+        their basenames; if the basenames are the same but the qualified
+        names are different it will compare their qualified names, and so
+        on.
+
+        The available sort criteria are:
+
+        * basename:
+          This is the name of the item type. The basename for all of
+          "a +0 robe", "an embroidered robe" and "the cursed +2 robe of
+          Ponies" is just "robe".  The basename for both of "a brass
+          ring" and "a ring of fire resistance" are "ring".
+
+        * qualname:
+          The name of the item without articles (a/an/the), quantities,
+          enchantments, or curse-status. The qualified names for the
+          robes described above are "robe", "embroidered robe" and "robe
+          of Ponies", respectively.  The qualified names for the rings
+          described above are "brass ring" and "ring of fire
+          resistance", respectively.
+
+        * fullname:
+          This is the name of the item as displayed in menus (including
+          (quantities, curse-status, etc.)
+
+        * curse:
+          Curse-status of the item (if known). Uncursed items show up
+          first.
+
+        * equipped:
+          Equipped items show up first.
+
+        * art:
+          Identified artefacts show up first.
+
+        * ego:
+          Identified ego items show up first.
+
+        * glowing:
+          Unidentified glowing/shiny/runed/etc items show up first.
+
+        * identified:
+          Identified items show up before unidentified ones of the
+          same type. An item is regarded as identified once you know
+          its subtype or ego.
+
+        * qty:
+          The quantity for stackable items (such as scrolls, potions,
+          etc.)
+
+        * slot:
+          The inventory letter for items in inventory; irrelevant for
+          items on the floor.
+
+        * freshness:
+          The freshness of chunks of meat; irrelevant for everything
+          else.  It makes the oldest chunks of meat show up first, with
+          rotting chunks listed last for non-Saprovores.
+          If this sort criteria is placed before (or in the absence of)
+          basename and qualname, then non-chunk food items will be
+          sorted between the non-rotting and rotting chunks.
+
+        * charged:
+          Makes wands known or assumed to have some charges left appear
+          before wands known to be empty; irrelevant for all other item
+          types.
+
+        You can ask for a descending order sort by prefixing one or more
+        sort criteria with > as:
+             sort_menus = true : basename, >qty
+
+        You can also request sorting only for specific menus:
+             sort_menus = pickup: true
+        or
+             sort_menus = inv: true
+        (Menu types must be specified as name:, with no space between
+        name and colon.)
+
+        By default only pickup menus are sorted, and the sort criteria are:
+             "equipped, basename, qualname, curse, qty".
+        All other menus (drop, inv) will be sorted by inventory letter.
+
+        The menu selectors available are:
+
+        pickup: All pickup menus, stash-search menus, etc. for items not
+                in your inventory.
+        drop:   The item drop menu.
+        inv:    Inventory listings for any command (but not for dropping
+                items).
+        any:    All menus; this is the default when unspecified.
+
+        For example,
+             sort_menus = true : equipped, basename, qualname, curse, qty
+        will produce the same inventory and drop menus as by default,
+        with the exception that all worn/wielded items come first. This
+        can be convenient if you use the '.' command to select
+        subsequent items.
+        If you define sort_menus differently for two or more selectors,
+        the last one matching will always take precedence, i.e. "any"
+        as last setting would override any of the others.
+
+4-j     Messages and Display Enhancements.
+------------------------------------------
+
+hp_warning = 10
+        hp_warning gives "* * * LOW HITPOINT WARNING * * *" on the
+        danger channel when the player takes damage and their hitpoints
+        are less than this percentage of their maximum (use 0 to turn
+        off these messages).
+
+mp_warning = 0
+        mp_warning gives "* * * LOW MAGIC WARNING * * *" on the danger
+        channel when the player's magic points drop below this
+        percentage of their maximum (use 0 to turn off these messages).
+
+hp_colour = 50:yellow, 25:red
+        hp_colour colours your Health appropriately in the status
+        display. In the default setting, your health will appear in
+        red if at less than 25%, yellow if at less than 50%, and in
+        the default colour otherwise.
+
+mp_colour = 50:yellow, 25:red
+        mp_colour does to Magic what hp_colour does to Health.
+
+stat_colour = 1:lightred, 3:red
+        stat_colour colours your stats if they drop below a given value,
+        in the order of their definition. This check takes place before
+        the ones for e.g. Might or degeneration.
+        For normal grey colouring, set it to
+           stat_colour = 7
+
+status_caption_colour = brown
+        Sets the colour that is used to display the captions in the status
+        area (for instance the "Health:" in "Health: 10/10").
+
+clear_messages = false
+        Setting this option to true will cause messages to cleared
+        between player actions (default is false which will delay the
+        clearing of messages until the message space is full).
+
+show_more = true
+        Setting this option to false will cause the game not to prompt
+        if more than a window-full of messages are output at once. This
+        options has no effect if clear_messages is set.
+
+small_more = false
+        With small_more = false (default), the --more-- prompt is on a
+        separate line at the bottom of the message window. With
+        small_more = true, it is just the bottom left character if
+        clear_messages is not set.
+
+show_inventory_weights = false
+        When this is set to true, inventory listings will mention the
+        weight of each item.
+        Note: This option doesn't currently work for Tiles unless you use
+              tile_menu_icons = false.
+
+show_gold_turns = false
+        If set to true, this option adds an extra line to the stat area
+        to display the current gold and turn counters. In Tiles, this option is
+        ignored. Use the tile_layout_priority option instead.
+
+show_game_turns = false
+        If set to true, the turn counter in the stat area will display game
+        turns instead of player turns. A second number is displayed in
+        parenthesis, showing the duration of the last action.
+
+show_beam = true
+        When performing actions such as throwing or zapping, you can
+        toggle whether to show the beam path or not. This option
+        controls the initial status of this toggle. When set to true,
+        the path will be shown.  This is always true for the tile
+        version.
+
+item_stack_summary_minimum = 5
+        If you step over a stack with this number or more of items in
+        it, the first description line will contain a summary of all the
+        items in the stack (up to 50 items), in a format which looks
+        like this:
+          Items here: !! """ % ( )))))) [[[
+        Known artefacts will be coloured in yellow; glowing or runed
+        items will be in white, unless you already know that they are
+        not ego items.
+
+list_rotten = true
+        Setting this to true will print a list of inventory slots for
+        all corpses and chunks that have become rotten along with the
+        rotting message, in the form of
+          "You smell something rotten. (slots f and m)"
+        Additionally, this option will make a default message appear
+        for Trolls, as well.
+
+mlist_min_height = 4
+        If there is extra space available for the message area and
+        monster list, the monster list will expand to this height
+        before letting the message area get more.
+        (Note that the monster list is only available for ASCII.)
+
+msg_min_height = 7
+        You can reduce this to give more space to the map display. The
+        minimum value is 5.
+
+msg_max_height = 10
+        In console, if there is extra space available after the monster list
+        has expanded, the message area will expand up to this height.
+        The monster list will get the rest.
+        In tiles, control the maximum size of the message area. The viewport
+        will get the rest.
+
+messages_at_top = false
+        Put the message window at the top of the screen. This moves
+        the last message close to the center of the view when not
+        using clear_messages=true.
+
+mlist_allow_alternate_layout = false
+        Display the monster list wherever Crawl may find space on
+        your console display, usually to the left of the map, rather
+        than using the fixed position below the stat area.
+        This option is not supported in the tiles build.
+
+mlist_targetting = false
+        Using the monster list you can directly target monsters in
+        targetting mode. There's a toggle that allows you to turn this
+        feature on and off. This option controls the initial setting
+        at game start or reload.
+
+classic_hud = false
+        Remove the Health and Magic bars and the monster list, for a
+        more 0.3-like HUD display.
+
+menu_colour = <match>:<colour>:<regex>
+        This prints a line (of the inventory, a menu, or the discoveries
+        screen) containing regex in the stated colour. There can be
+        several statements in a list, and also several menu_colour
+        lines. When using several menu_colour lines, the colour of the
+        _first_ matching regex is applied. For a list of colours, check
+        the colour option in 6-a.
+
+        The match specifies which listings are affected by the
+        colouring. If you specify 'any', or completely skip the <match>:
+        part, then all listings are used. Possible values for match are:
+           ability       (the A screen)
+           description   (the \ screen)
+           equip         (the [, (, ), " screens)
+           help          (the manual)
+           inventory     (inventory and pickup menus)
+           pickup        (specific to pickup menus)
+           shop          (shop menus)
+           notes         (the ?: screen)
+           resists       (the % screen)
+           spell         (the Z and I screens)
+           stash         (the results from Ctrl-F)
+
+        Crawl has a couple of prefixes defined to make inventory colouring
+        easier. These are, in order of definition:
+           identified      (The item is fully identified.)
+           known           (You recognize the item's subtype.)
+           unidentified    (You don't recognize the item's subtype.)
+
+        The following only apply to items whose subtype is known.
+           evil_item       (Your god would hate it if you used this item.)
+
+           emergency_item  (This item is invaluable in emergencies.)
+           good_item       (This item is generally a good item.)
+           dangerous_item  (Using this item can be dangerous.)
+           bad_item        (This item is generally a bad item.)
+           useless_item    (This item is of no use to you.)
+
+           evil_eating     (Eating this item is punished by the good gods.)
+           inedible        (You cannot eat this, or get no nutrition from it.)
+           preferred       (The food type your character prefers, for example
+                            for herbivores/carnivores.)
+           poisonous       (Chunks/corpses that are poisonous)
+           mutagenic       (Chunks/corpses that are mutagenic)
+           contaminated    (Chunks/corpses that may cause sickness, but
+                            ignored for Kobolds, Ogres, Trolls, and Ghouls.)
+           rot-inducing    (Chunks/corpses that cause rotting.)
+
+           equipped        (Equipped items.)
+           artefact        (For artefacts, whether identified or not.)
+
+        When looking for menu_colour matches, these prefixes are prepended to
+        the actual item name, e.g. in the form of
+           identified evil_item wand of draining (4)
+           unidentified equipped artefact sparkling ring (left hand)
+
+        The same prefixes can also be used for highlighting prompts pertaining
+        to items matching the description, or to define autopickup_exceptions.
+
+        If you want to colour all items that contain a certain prefix, use
+          menu_colour = lightgreen:poisonous
+
+        To colour worn stuff and highlight cursed items, take
+          menu_colour = inventory:lightred:equipped.* cursed
+          menu_colour = inventory:green:equipped
+          menu_colour = inventory:red: cursed
+
+        To colour identified artefacts, try
+          menu_colour = inventory:white:( [-+] the)
+        or
+          menu_colour = inventory:white:identified.*artefact
+
+        If you frequently die because you forget to use emergency items,
+        try
+          menu_colour = inventory:cyan:emergency_item
+          menu_colour = inventory:lightcyan:wand of (fire|cold|draining)
+
+        To quickly check what potions were trashed by a mummy curse, use
+          menu_colour = inventory:lightred:potions? of (degeneration|decay)
+
+        If you'd like to see rotting chunks and corpses at a glance, use
+          menu_colour = inventory:red: rotting
+
+        menu_colour can also be applied to colour the in-game notes (to
+        be read with '?:'). The following line will show level ups in
+        white:
+          menu_colour = notes:white:Reached XP level
+
+menu_colour_prefix_class = true
+        Setting this option to true will prefix the string against which
+        menu_colour regexes are matched (not the string displayed) with
+        the item's object type: armour, weapon, wand, etc.
+
+        Note that the prefix is put before the the *entire* string which
+        is displayed, so if you're wielding a uncursed dagger which has
+        the 'a' slot, the string the regexes will match against is
+        "weapon  a - an uncursed dagger (weapon)".
+
+menu_colour_shops = true
+        If this option is set to true the shop menu will be coloured
+        according to the menu colours (using tags "shop" or "any");
+        otherwise the lines are coloured alternately white or lightgrey.
+
+message_colour = <colour>:[<channel>:]<regex>
+        message_colour allows you to override colours for individual
+        messages. For instance, if you find the low hp warning to be
+        insufficiently attention grabbing, you could do something like
+             message_colour = yellow:LOW HITPOINT WARNING
+        You can also narrow the message match to a specific channel:
+             message_colour = lightred:god:xom
+        If you don't want to see a message at all, you can mute it:
+             message_colour = mute:You start resting
+
+force_more_message = <list of regexes>
+        Any message that contains a regex specified here, will enforce a
+        -More- prompt, so it can be used to highlight really important
+        events.
+        The syntax is identical to that of runrest_ignore_message (4-g).
+
+msg_condense_repeats = true
+        If the same message is repeated multiple times during the same
+        turn, then it will be output in a condensed format indicating
+        how many times it was repeated.  If the same output (including the
+        counter) is repeated over several turns, the Show Previous Message
+        command (Ctrl-P) will likewise condense them into one. For example:
+            The killer bee misses you. (x5)
+
+msg_condense_short = true
+        If set, short messages on the same channel don't all start a new
+        line.
+
+4-k     Missiles.
+-----------------
+
+fire_items_start = a
+        Sets the first inventory item to consider when selecting
+        missiles to fire. The default is a.
+
+fire_order  = launcher, return
+fire_order += javelin / dart / stone / rock / spear / net / handaxe / dagger
+fire_order += inscribed
+        Controls the order of items autoselected for firing. Items
+        should be separated by commas and items that appear first get
+        higher priority. You can use multiple fire_order lines - all
+        lines but the first must use "fire_order +=".
+
+        Items in any position may be slash-separated to indicate that
+        these are of equal priority. If this is the case, the first item
+        in your inventory that fits one of these will be picked for
+        firing.
+
+        'launcher' refers to firing the appropriate missile for the
+        wielded weapon (i.e. crossbow, bow, sling, blowgun). You'll almost
+        certainly want it first, as it'll be ignored when you're not
+        wielding a ranged weapon. 'return' refers to (identified)
+        weapons of returning.
+
+        'inscribed' refers to any item with the "+f" inscription.  See
+        the "Inscriptions" section of Crawl's manual for more information
+        about inscriptions.
+
+(See also pickup_thrown in 4-a.)
+
+4-l     Message Channels.
+-------------------------
+
+Crawl communicates to the players with its message window. Every message
+belongs to one of the so-called channels. The behaviour of each channel
+can be changed with the option
+
+     channel.CHANNEL_NAME = (COLOUR | mute | default | on | off | plain)
+
+CHANNEL_NAME can currently be one of these:
+   plain           = regular text (and things "uncoloured")
+   prompt          = input prompts to the player
+   god             = messages from the gods
+   pray            = standard praying messages (start/end of prayer)
+   duration        = messages about character spells/effects wearing off
+   danger          = serious threats to the character's existence
+   food            = warnings about food
+   warning         = various other warnings
+   recovery        = recovery from disease/stat loss/poison conditions
+   talk            = monsters talking
+   talk_visual     = monster performing some action that the player sees
+   intrinsic_gain  = level/stat/species power gains
+   mutation        = gain/lose mutations
+   monster_spell   = messages about monsters gesturing or casting spells
+   monster_enchant = messages pertaining to monster enchantments
+   friend_spell    = as monster_spell, but only for friendly monsters
+   friend_enchant  = as monster_enchant, but only for friendly monsters
+   monster_damage  = messages telling how damaged a monster is
+   rotten_meat     = messages about chunks/corpses becoming rotten
+   equipment       = messages indicating worn/wielded equipment
+   floor           = messages when looking at or walking over a floor
+                     item
+   multiturn       = indicates long actions (wearing armour, dissecting
+                     etc.)
+   examine         = messages from examining your surroundings
+   examine_filter  = boring messages from examining your surroundings
+   diagnostics     = debugging messages
+   error           = error messages
+   tutorial        = messages from the tutorial
+
+The channel options are
+   mute      = show no messages from channel (dangerous, be careful!)
+   default   = turn channel on to its default scheme
+   alternate = turn channel on to its alternate "colourful" scheme
+   on        = same as default
+   plain     = make channel the same colour as the "plain" channel
+               (won't do anything silly like "mute" if plain == mute,
+               though)
+   off       = same as plain
+COLOUR can be any of the colours described in section 6-a (colours
+option).
+
+The only multi-colour channels currently are monster_damage and god. All
+other channels are defaulted to on, except for multiturn, which defaults
+to mute.
+Note that the template init.txt sets
+     channel.multiturn = on
+in order to help new players. You may want to comment out this option,
+if you feel the messages are too verbose.
+
+4-m     Inscriptions.
+---------------------
+
+See the "Inscriptions" section of the crawl manual for more information
+about inscriptions.
+
+autoinscribe = <regex>:<inscription>
+        Any item whose description contains the regex will be
+        automatically inscribed (if autopickup is toggled on). For
+        example, marking all royal jellies and honeycombs eases the Hive
+        (if food is not in the autopickup option):
+             autoinscribe = royal jell:=g
+             autoinscribe = honeycomb:=g
+
+        Another use of autoinscription is making sure that you don't
+        lose charges of important wands accidentally, as in
+             autoinscribe = wand of healing:!V
+
+        The menu colour prefixes (evil_item etc.) can also be used here.
+        For example:
+             autoinscribe = bad_item.*potion:!q
+        will protect Transmuters against accidentally drinking their
+        distilled potions.
+
+autoinscribe_artefacts = true
+        Automatically inscribes identified artefacts with their properties.
+
+autoinscribe_cursed = true
+        Automatically inscribes items with "was cursed" when using a scroll of
+        remove curse.
+
+4-n     Macro related Options.
+------------------------------
+
+flush.failure = true
+flush.command = false
+flush.message = false
+        These are useful when using macros. Setting one of these
+        sub-options to true will cause the entire input buffer to be
+        dumped and thus effectively stop the macro. The sub-options
+        currently are
+           failure -- when spells/abilities get miscast
+           command -- whenever the game is about to get the next command
+           message -- whenever the game outputs a non-mute message
+
+additional_macro_file = path/to/filename
+        Add an additional macro file to be loaded after macro.txt.
+        You can have multiple additional_macro_file lines.
+
+bindkey = [^D] CMD_BUTCHER
+        Change which key invokes which command at a lower level of
+        operation than macros.  Useful in that macros cannot (yet)
+        invoke each other, but a macro can invoke a command whose
+        key has changed.
+        The syntax is always the same: [key] command
+        First, in square brackets, list the key you want to use, with
+        ^X meaning Ctrl-X. After that name the command to be bound to
+        that key. You can bind several commands to the same key, as long
+        as they take effect in different areas of the game, i.e. one
+        targetting command and one for the main game. Likewise, you can
+        bind the same command to different keys.
+        For a full list of possible commands, see keybind.txt.
+
+4-o     Tiles Options.
+----------------------
+In non-tile games the tile options are ignored.
+
+tile_show_items = <glyphs>
+        This option controls the order of items in the tiles
+        inventory.  By default, its value is "!?/%=([)x}+\".
+        Items with glyphs not in the list will be shown last.
+
+tile_skip_title = false
+        When this is set to true, you won't be prompted for a key at the title
+        screen when the game has finished loading and will be taken directly to
+        the starting menu.
+
+tile_menu_icons = true
+        Causes inventory menus and a few other ones to include tiled icons
+        and the menus to be displayed in up to two columns to make up for
+        the reduction of space.
+        If you would rather have the plain menus set this option to false.
+
+tile_player_col      = white
+tile_monster_col     = red
+tile_neutral_col     = red
+tile_peaceful_col    = lightred
+tile_friendly_col    = lightred
+tile_plant_col       = darkgreen
+tile_item_col        = green
+tile_unseen_col      = black
+tile_floor_col       = lightgrey
+tile_wall_col        = darkgrey
+tile_mapped_wall_col = blue
+tile_door_col        = brown
+tile_downstairs_col  = magenta
+tile_upstairs_col    = blue
+tile_feature_col     = cyan
+tile_trap_col        = yellow
+tile_water_col       = grey
+tile_lava_col        = grey
+tile_excluded_col    = darkcyan
+tile_excl_centre_col = darkblue
+tile_window_col      = yellow
+
+These options allow configuring the colours used for the minimap of
+the dungeon level.
+   tile_player_col       - colour of player position, as well as of
+                           map centre during level map mode ('X')
+   tile_monster_col      - colour of hostile monsters
+   tile_neutral_col      - colour of neutral monsters
+   tile_peaceful_col     - colour of peaceful monsters
+   tile_friendly_col     - colour of friendly monsters
+   tile_plant_col        - colour of zero xp monsters (plant and fungus)
+   tile_item_col         - colour of known or detected items
+   tile_unseen_col       - colour of unseen areas (usually stone)
+   tile_wall_col         - colour of any wall type
+   tile_mapped_wall_col  - colour of walls detected via magic mapping
+   tile_door_col         - colour of known doors, open or closed
+   tile_downstairs_col   - colour of downstairs, including branch stairs
+   tile_upstairs_col     - colour of upstairs, including branch stairs
+   tile_feature_col      - colour of any non-stair feature
+                           (altar, shop, portal, fountain, ...)
+   tile_trap_col         - colour of known traps of any type
+   tile_water_col        - colour of both shallow and deep water
+   tile_lava_col         - colour of lava
+   tile_excluded_col     - colour of squares excluded for autotravel
+                           (will only override tile_floor_col colour)
+   tile_excl_centre_col  - colour of exclusion centre (overrides
+                           tile_floor_col and tile_item_col, only)
+   tile_window_col       - colour of the rectangular view window
+
+tile_update_rate = 1000
+        The number of milliseconds that tick by before the screen is redrawn
+        without any input. If game response is slow, try increasing this
+        number. If, on the other hand, response time is fine but it takes too
+        long for redrawings to happen, set it to a lower value.
+
+tile_runrest_rate = 100
+        The number of milliseconds that tick by before the screen is redrawn
+        when running or resting.  If Crawl is slow while running or resting,
+        increase this number.
+
+tile_key_repeat_delay = 200
+        If you hold down a key, there's a delay until the pressed key will
+        take action. This option controls this delay, in milliseconds. If it
+        is set to 0 key presses will never repeat.
+
+tile_tooltip_ms = 500
+        The number of milliseconds before a tooltip appears when hovering the
+        mouse over part of the screen. Setting this option to 0 will
+        deactivate the tooltips entirely.
+
+tile_tag_pref = (none| named | enemy | tutorial )
+        This option defaults to "enemy" normally and "tutorial" in tutorial
+        modes.  This setting determines which monsters receive text tag
+            none     - turns off all tags.
+            named    - shows names of all named monsters, ally or enemy
+            enemy    - shows names of named enemy monsters
+            tutorial - shows names of all monsters not yet killed this game
+                       and of named enemy monsters
+        Examples for named monsters are uniques and ghosts.
+
+tile_window_width  = 0
+tile_window_height = 0
+        The width and height of the window, in pixels.  If set to zero, it
+        will auto-size the window.
+
+tile_map_pixels = 3
+        The maximum number of pixels each minimap square should take up. If you
+        have a low resolution, and feel like the inventory is too small, you
+        can try setting this to 1 to get more space for the inventory. The
+        downside is that traveling by clicking on the minimap becomes much
+        harder.
+
+tile_force_overlay = false
+        Setting this option to true will force the message window to appear as
+        an overlay on top of the screen. If you use this option, making your
+        tile_font_msg_size smaller will make the overlay smaller while retaining
+        the same number of lines. Increase the view_max_height option if you
+        find yourself with unused screen estate.
+
+tile_full_screen = false
+        Setting this option to true will start Crawl in full screen mode.
+
+tile_font_crt_file  = VeraMono.ttf
+tile_font_stat_file = VeraMono.ttf
+tile_font_msg_file  = VeraMono.ttf
+tile_font_tip_file  = VeraMono.ttf
+tile_font_lbl_file  = Vera.ttf
+        Fonts used in various sections of the screen. If you want to use
+        another font, you'll have to place the corresponding *.ttf file into
+        the dat/tiles/ folder.
+        Screen regions are as follows:
+            crt  - non-map screens (menus, message history, etc.)
+            stat - stat area (hit points, AC, etc.)
+            msg  - message area
+            tip  - tooltips (mouseover information)
+            lbl  - item/monster names in inventory/main map
+
+tile_font_crt_size  = 15
+tile_font_stat_size = 16
+tile_font_msg_size  = 14
+tile_font_tip_size  = 15
+tile_font_lbl_size  = 14
+        Font size for the screen regions listed above.
+
+tile_show_minihealthbar = true
+tile_show_minimagicbar  = true
+        Will show health and magic bars on top of the player tile when the
+        player gets hurt or spends magic.
+
+tile_show_demon_tier = true
+        Will overlay demon tiles with an icon intended to represent their
+        tier (or difficulty rank) among demons, as is the case for non-Tiles
+        builds.
+
+tile_layout_priority = minimap, inventory, gold_turn, command, spell, monster
+        This option allows you to control the order in which elements are
+        placed on the right of the screen, below the stat area. On small
+        resolution, there won't be enough room for everything, so only the
+        first items will be placed. You can also remove items you don't want
+        to be permanently displayed. The inventory tab will always be placed at
+        the bottom but is initialised at a minimum size (4 lines). If you put a
+        tab before it on the option line, the tab will still be placed above it,
+        but it will have priority over it so the inventory might not be able to
+        expand to its maximum size (6 lines). The minimap is always placed
+        between the stat area and the tabs.
+
+tile_force_regenerate_levels = false
+
+        If set to true, this will cause the tiles information of existing
+        levels to be regenerated when loading the level, thus repairing
+        save files where this information has become corrupted.
+
+
+5-  Character Dump.
+===================
+
+5-a     Items and Kills.
+------------------------
+
+The character dump or morgue files end with a list of all monsters that
+perished while the character was active. By default, dead monsters are
+grouped in three parts:
+   Vanquished Creatures    -- monsters killed by the character
+   Collateral Kills        -- kills of friendly monsters
+   Others                  -- all other casualties (e.g. traps, hostile
+                              monsters)
+
+kill_map = friend:you, other:you
+        will merge friendly and other kills into the main vanquished
+        creatures list.  Note that the merging is only for display (the
+        game still maintains three separate lists internally) and that
+        kill places (see below) may be in the wrong order for merged
+        entries. The default is an empty list.
+
+dump_kill_places = (none | all | single)
+        In the Vanquished Creatures list, this option controls how the
+        locations of each kill are displayed. Use 'none' to suppress
+        place display altogether, 'all' to display all known (up to 5)
+        kill places, anything else to the default of showing kill places
+        only for single kills
+
+dump_item_origins = artefacts, rods
+        The game remembers where you find items. If you want this item
+        origin memory listed in your dumps, use this option to select
+        which items get annotated. Available selectors are:
+                artefacts, ego_arm, ego_weap, jewellery, runes,
+                rods, staves, books, all, none.
+        If you use multiple dump_item_origins lines, the last line takes
+        effect; all preceding lines are ignored.
+
+        If you don't want any items to be annotated, set
+        dump_item_origins to none, and set dump_item_origin_price to -1.
+
+dump_item_origin_price = -1
+        Item origins are dumped if the price of the item is greater than
+        or equal to this amount. Set this to -1 to prevent selection by
+        price.
+
+dump_message_count = 7
+        The number of last messages to be displayed in character dump
+        files.
+
+dump_order  = header,hiscore,stats,misc,notes,inventory,
+dump_order += skills,spells,overview,mutations,messages,screenshot,
+dump_order += monlist,kills
+        Controls the order of sections in the dump. You can use multiple
+        dump_order lines - all lines but the first must use
+             dump_order +=
+
+        Two optional dump sections are "turns_by_place" and
+        "kills_by_place", which add detailed statistics to where turns
+        were spent and monsters were killed. You can add them to your
+        dump as:
+             dump_order += turns_by_place, kills_by_place
+
+        Another optional dump section is "vaults", which will list the
+        locations and names of all the vaults that have been generated
+        in the game.  This will only be included in the final dump
+        which happens when you die, quit or win (or in ordinary dumps
+        while in wizard mode).
+
+dump_book_spells = true
+        By default all randart spellbooks in inventory will have all their
+        spells listed in the dump. If this option is set to true, spells will
+        also be dumped for non-randart spellbooks.
+
+5-b     Notes.
+--------------
+
+Crawl can automatically log certain events during play. You can read
+these in the dump or morgue files. Below are options for tweaking this behaviour.
+The following events are logged:
+        - Gaining or losing a level
+        - Entering a dungeon level for the first time
+        - Memorizing a spell of higher level than any learned before
+        - Becoming a worshipper of a god
+        - Abandoning a god
+        - Being put under penance and being forgiven
+        - Receiving a gift from a god (except Xom)
+        - Being able to invoke a godly power for the first time
+        - Picking up a rune, the Orb of Zot, or an artefact for the first time.
+        - Identifying items.
+        - Killing OOD or unique monsters (see below)
+        - Reaching critical HP levels (see below)
+        - Gaining or losing mutations
+        - Reaching significant levels in a skill (see below)
+        - Dying
+You can use the command ':' for manually adding notes.
+
+user_note_prefix = <string>
+        Prefixes manually added notes with the given string, to make
+        them easier to find.
+
+note_items = <regexes>
+        When an item is identified for the first time, it will be
+        noted if its short description matches a regex. E.g.
+             note_items = rod,book,acquirement
+        Artefacts (fixed, unrand, or random) will always be noted when
+        identified, regardless of note_items.
+
+        The description matched against has the same prefixes as notes
+        for the menu_colour option (e.g., "emergency_item").
+
+note_monsters = <regex list>
+        Monsters whose name matches an item in this comma-separated list
+        are considered interesting. You can have multiple note_monsters
+        lines. E.g.
+             note_monsters = Klown,orb of fire
+
+ood_interesting = 8
+        Monsters which are out of depth (OOD for short) for their
+        current level, e.g. a dragon on level 2, will be noted if they
+        are out of depth by at least ood_interesting levels. To disable
+        OOD monster noting, set ood_interesting to 500.
+        Unique monsters are always noted, regardless of this setting.
+        OOD monsters are only noted in the main dungeon.
+
+rare_interesting = 9
+        Monsters which are rare for the location they're in will be
+        noted.  Increasing the number causes more common monsters to
+        be noted, while decreasing it causes only the most rare of
+        monsters to be noted; setting it to 0 will turn noting of rare
+        monsters off. Really wimpy monsters (such as rats or butterflies)
+        won't ever be noted.
+
+note_hp_percent = 5
+        If your HP falls below a certain note_hp_percentage of your max
+        hit points, a note will be taken. There is some code to avoid
+        repetitions of notes based on the same incident.
+
+note_skill_levels = 1,5,13,27
+        This sets which skill levels are noteworthy. You can have
+        multiple note_skill_levels lines. The default is nothing (no
+        notes.)
+
+note_all_skill_levels = false
+        This is a shortcut for note_skill_levels = 1,2,..,27. If you set
+        this to true, all skill levels are considered noteworthy.
+
+note_skill_max = true
+        Setting this option will cause a note whenever a new maximum in
+        skill levels is reached. If note_skill_max is true and
+        note_skill_levels is nonempty, notes will be taken whenever
+        either of the criteria are met.
+
+note_all_spells = true
+        Will add a note for each spell memorised.
+
+note_xom_effects = true
+        This will add a note whenever Xom does something.
+
+note_messages = <regex list>
+        Messages which match an item in this comma-separated list are
+        considered interesting. You can have multiple note_messages
+        lines. E.g.
+             note_messages = Something interferes
+             note_messages = protects you from harm
+        If you want all banishments to the Abyss noted, use
+             note_messages = [bB]anish.*Abyss
+        If you want a note when your draconian scales turn <colour>, use
+             note_messages = Your scales start
+
+
+6-  Miscellaneous.
+==================
+
+6-a     All OS.
+---------------
+
+mouse_input = false
+        When enabled, the mouse_input option allows the game to use
+        mouse input events on certain platforms (Windows and Unix).
+        Note that the extent of mouse support varies greatly across
+        platforms and is strongly influenced by your terminal settings.
+
+        On Unixes, you're only likely to get mouse support working with
+        ncurses in xterms (specifically your $TERM probably needs to
+        contain "xterm" for ncurses to activate its mouse events;
+        if you're running Crawl in GNU screen in an xterm, the mouse
+        will probably not work).
+
+        On Windows, you'll need to disable QuickEdit Mode on your
+        console for Crawl to use the mouse (QuickEdit is disabled by
+        default, so you shouldn't need to change anything if you're
+        using a stock console). You can disable QuickEdit by
+        right-clicking the titlebar of your command-prompt, selecting
+        Properties and disabling QuickEdit in the Options tab.
+
+wiz_mode = (no | never | yes)
+        Wizard mode options (available only in WIZARD compiles):
+          yes   -- start games in wizard mode (game will not be scored)
+          no    -- still allows player to enter wizard mode after start
+                   of game
+          never -- never allow a wizard command to be used
+
+char_set = (default | ascii | ibm | dec | unicode)
+        Chooses different pre-set character sets for the game play screen.
+        Unlike previous versions of Crawl, this does not select the I/O
+        encoding anymore.
+
+        Setting char_set = ibm or dec has a side effect of making numeric
+        codes inside cset, feature and mon_glyph lines interpreted as,
+        respectively, CP437 codes or VT100 line-drawing characters + 128.
+
+        Has negligible effect in the Tiles build.
+
+classic_item_colours = false
+        Crawl uses 4.0 b26/0.1.x-like item colours if
+        classic_item_colours is set to true. The default (false) is to
+        use the new 0.2 item colours.
+        This option will not affect the colour of existing items, only
+        items generated after the option is set.
+
+colour.OLDCOLOUR = NEWCOLOUR
+        Useful for terminals where some colours are hard to read (and
+        cannot be adjusted), as well as for creating a custom scheme,
+        especially when used with the background option on a terminal
+        with a non-black background.
+        Format is colour.OLDCOLOUR = NEWCOLOUR, later rules take
+        precedence and the NEWCOLOUR is always literal (ie. it won't
+        re-evaluate to a different colour).
+        The colours are:
+                black, blue, green, cyan, red, magenta, brown, lightgrey,
+                darkgrey, lightblue, lightgreen, lightcyan, lightred,
+                lightmagenta, yellow, white
+        with lightgray = lightgrey, darkgray = darkgrey. Some examples:
+          colour.lightgrey = black
+          colour.lightcyan = cyan
+          colour.yellow    = brown
+
+cset = <dungeon_character_name : symbol>
+        a list of these is allowed, as well.
+
+        The possible entries for dungeon_character_name are:
+           wall, wall_magic, floor, floor_magic, door_open, door_closed,
+           trap, stairs_down, stairs_up, altar, arch, fountain, wavy,
+           statue, invis_exposed, item_detected, item_orb, item_weapon,
+           item_armour, item_wand, item_food, item_scroll, item_ring,
+           item_potion, item_missile, item_book, item_stave,
+           item_miscellany, item_corpse, item_gold, item_amulet, cloud,
+           tree, fired_flask, fired_bolt, fired_chunk, fired_book,
+           fired_weapon, fired_zap, fired_burst, fired_stick, fired_trinket,
+           fired_scroll, fired_debug, fired_armour, fired_missile,
+           explosion
+        Most of these are self-explanatory. "arch" is used for shops and
+        portals.  "floor_magic" and "wall_magic" are used to display
+        magic-mapped squares on the level map. "invis_exposed" is the
+        character for water creatures submerged in shallow water, or
+        invisible creatures wading in shallow water.
+
+        Symbols can be specified using a letter, or by its ASCII/Unicode
+        code: a decimal number or a hexadecimal one (prefixed with x).
+        For compatibility with old config files, you can use cset_ibm or
+        cset_dec to use IBM code page 437 or vt100 graphic characters.
+
+        For an example on IBM displays,
+             cset_ibm = wall:219, arch:0, wavy:x7E
+        shows walls as solid blocks, shops and portals as '0', and water
+        as '~'.
+
+feature = <regex> { <symbol>, <magicmap symbol>, <view colour>,
+                    <levelmap_magic_colour>, <levelmap_seen_colour>,
+                    <emphasised_colour>, <levelmap_emphasised_colour> }
+        where <regex> is a regular expression describing a dungeon
+        feature. This regex should match the description when using the
+        'x' command. In case the regex matches several descriptions, all
+        such features are affected.
+
+        The list in {...} specifies the appearance of the dungeon
+        feature(s), and should be self-explanatory. <symbol> can be used
+        to override the above cset options, or also to distinguish among
+        subtypes of a character.
+
+        'magic' always refers to magic mapping. So the <magicmap symbol>
+        entry determines what symbol will be used for features only
+        detected via magic mapping.
+
+        'emphasised_colour' refers to the colour used to highlight
+        unvisited stone stairs; for non-stair features, setting emphasis
+        colours does nothing useful.
+
+        Leading parameters in the {...} list can be omitted by leaving
+        them blank and using placeholder commas. Trailing parameters can
+        be omitted without placeholder commas.
+
+        Multiple feature option lines can be used, as can multiple
+        feature descriptions strung together on the same line separated
+        by semicolons.
+
+        Examples:
+         * Colour rock walls red:
+             feature = rock wall { , , red }
+         * Use # for metal walls in all character sets:
+             feature = metal wall {#}
+         * Colour upstairs green and downstairs red:
+             feature = stone staircase leading up {,,,,green}
+             feature = stone staircase leading down {,,,,red}
+
+        Symbols can be specified as with cset:
+             feature = metal wall {#}
+             feature = metal wall {35}
+             feature = metal wall {x23}
+        all do the same thing.
+
+mon_glyph = <monster name or symbol> : <colour> <glyph>
+        The mon_glyph option allows you to customise the symbol and
+        colour used to display a monster.
+
+        You can customise symbols based on monster names or their
+        existing symbols. For instance, if you want to put elves on E
+        and efreeti on e, you can do this:
+
+             mon_glyph = e : E
+             mon_glyph = E : e
+
+        If you want to change the symbol for a monster that uses a space
+        as a symbol, specify an underscore on the left:
+
+             mon_glyph = _ : #
+
+        (That changes shades to use #.)
+
+        You can specify a different symbol, or a colour, or both, in any
+        order. Here are more examples:
+
+             mon_glyph = deep elf annihilator : E lightmagenta
+             mon_glyph = Xtahua : lightmagenta D
+             mon_glyph = large zombie : darkgrey
+             mon_glyph = small simulacrum : x
+
+        (The left hand side of the : is case-sensitive.)
+
+        You can specify symbols using their code points using the syntax
+        as shown in the "feature" option. If you're using
+        char_set=unicode, you can use unicode code points:
+
+             mon_glyph = draconian scorcher : x6e9
+
+        A single _ is treated as a space; if you want a real underscore,
+        put a \ in front of it like this:
+
+             mon_glyph = player ghost : \_
+
+        You can also redefine several "pseudo" monsters, them being:
+
+             player
+             sensed monster
+             merged slime creature
+             vampire bat
+             kenku
+             demonspawn
+             demigod
+             halfling
+
+pizza = <topping name>
+        The player's choice of pizza topping.
+
+use_fake_player_cursor = true
+        Makes the main view highlight the player without using the
+        terminal cursor. This means it won't flicker when the cursor
+        is turned off to move elsewhere for drawing, and allows
+        turning the cursor off by default. Has no effect in the Tiles build.
+
+show_player_species = false
+        Displays your character as a member of its species. For example, if
+        you're a Hill Orc, you will be shown as an 'o' rather than '@'. Has
+        no effect in Tiles.
+
+6-b     DOS and Windows.
+------------------------
+
+dos_use_background_intensity = false
+        On DOS and Windows, if you're using a console that can do
+        high-intensity background colours, set this option to true for
+        superior friend-branding. If your console doesn't like this
+        option, some friendly monsters will appear as blinking
+        characters (and setting this option to false may be advisable to
+        preserve your sanity in such cases).
+
+6-c     Unix.
+-------------
+
+background_colour = black
+        Sets the default background colour by name (defaults to BLACK).
+        This may be useful if you're using a terminal with a background
+        colour other than black (such as an xterm), but this option is
+        still experimental and the results may not be very good.
+
+use_fake_cursor = true
+        If true, Crawl draws the cursor explicitly on the level-map and
+        targeting screens instead of relying on the term to draw the
+        cursor. Use this if your term cannot show a cursor over
+        darkgrey/black squares.
+        On non-Unix builds this option defaults to false.
+
+
+7-  Inline Lua.
+===============
+
+7-a     Executing lua.
+----------------------
+
+Lua code can be used directly in your init.txt/.crawlrc. You can
+execute Lua code using the following syntax.
+
+: Single line of lua code
+
+< Possibly multi-line
+  Lua code >
+
+{ Possibly multi-line
+  Lua code }
+
+In the second and third cases, the restriction is that the delimiter
+characters appear at the beginning and end of a line, respectively.
+The difference between the <> and {} is when the code gets executed.
+Code {}, it is executed right away.  Other Lua code is executed only
+after the entire init file is read in.
+
+Examples:
+
+# Print a welcome message
+: crawl.mpr("Hello " .. you.name())
+
+<
+-- Another welcome message (lua code uses lua comments)
+crawl.mpr("Hi there")
+>
+
+{
+function ch_autopickup(it) [ ... body omitted ... ] end
+}
+
+7-b     Conditional options.
+----------------------------
+
+You can use Lua to selectively include parts of your init.txt (based
+on character type, for instance) using the same syntax.
+
+Example:
+
+: if you.race() == "Mummy" then
+autopickup = $?+"/
+: else
+autopickup = $?+"/!%
+: end
+
+Options can be rerefenced by lua via "options.option_name".  For
+example:
+
+:if string.find(options.autopickup, "!") then
+# Do something here if potions are included in autopickup
+:end
+
+"options.option_name" can even be used for options that crawl itself
+doesn't recognize.  This can be combined with setting options on the
+command line (see section 0-b) to use the command line to control
+conditionalization of options in the options files.  For example, on the
+command line you could set the option "foobar" with "-extra-opt-first
+foobar=true", and then do:
+
+:if options.foobar then
+# Do things here
+:end
+
+7-c     Conditional option caveats.
+-----------------------------------
+
+Note that none of the options listed under "Starting Screen" (section 1)
+can be set conditionally.  This is because the options files are
+actually read in twice: once before character creation with Lua turned
+off, and a second time after character creation with Lua turned on.  If
+you attempt to set a starting-screen option conditionally then the value
+furthest down in the options file will be used regardless of what
+conditions you set.
+
+The above caveat applies to the "wiz_mode" option as well.  Instead of
+conditionalized wiz_mode, you can add to the command line
+"-extra-opt-last wiz_mode=yes" to make any new game start in wizard
+mode.

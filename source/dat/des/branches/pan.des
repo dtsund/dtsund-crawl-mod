@@ -1,0 +1,1003 @@
+##############################################################################
+# pan.des: Minivaults particular to Pan, and the lairs of the Pan Demon Lords
+##############################################################################
+
+# The generic pan lord warning message.
+
+{{
+function pan_lord_epilogue(name)
+    local msgs = {
+        Mnoleg = "The air here is shimmering with an eerie glow.",
+        ['Lom Lobon'] = "You sense a powerful magical presence. It is not pleased.",
+        Cerebov = "Searing heat pours from the floors and walls of this place.",
+        ['Gloorx Vloq'] = "Shadowy figures dance across your vision."
+    }
+
+    crawl.mpr(msgs[name])
+    crawl.mpr("You feel a terrible weight on your shoulders! A mighty lord of Pandemonium must reside here.", "warning")
+    crawl.take_note('Entered the realm of ' .. name .. '.')
+    crawl.mark_milestone('br.enter', 'entered the realm of ' .. name .. '.')
+end
+
+colours = {
+    "magenta", "blue", "cyan", "green",
+    "brown", "red", "lightgrey"
+}
+brightcolours = {
+    "lightmagenta", "lightblue", "lightcyan", "lightgreen",
+    "yellow", "lightred", "white"
+}
+
+disco_choices = {
+    function (x, y, ballx, bally, turn, rand)
+        local index = ((x + turn) % #colours) + 1
+        if rand > 60 then
+            return colours[index]
+        else
+            return brightcolours[index]
+        end
+    end,
+    function (x, y, ballx, bally, turn, rand)
+        local index = ((y + turn) % #colours) + 1
+        if rand > 60 then
+            return colours[index]
+        else
+            return brightcolours[index]
+        end
+    end,
+    function (x, y, ballx, bally, turn, rand)
+        local angle = math.atan2(y - bally, x - ballx)
+        local segment = (math.floor(angle / (2 * math.pi) * (2 * #colours)) + 2 * #colours) % (2 * #colours)
+        local index = (math.floor((segment + turn) / 2) % #colours) + 1
+        if rand > 60 then
+            return colours[index]
+        else
+            return brightcolours[index]
+        end
+    end,
+    function (x, y, ballx, bally, turn, rand)
+        local distance = math.floor(math.sqrt((x - ballx)^2 + (y - bally)^2))
+        local index = ((distance + turn) % #colours) + 1
+        if rand > 60 then
+            return colours[index]
+        else
+            return brightcolours[index]
+        end
+    end
+}
+
+colour.add_colour("disco", function(rand, x, y)
+    local vault = dgn.vault_at(x, y)
+    local ul = vault:pos()
+    local ulx, uly = ul:xy()
+    x, y = x - ulx, y - uly
+
+    local map = vault:map()
+    local ballx, bally = dgn.gly_point(map, "D")
+
+    local cycle = disco_choices[math.floor((you.turns() % (16 * #disco_choices)) / 16) + 1]
+    return cycle(x, y, ballx, bally, you.turns() % 16, rand)
+end)
+}}
+
+# 25% chance to appear on D:21-27, and guaranteed on D:24.
+NAME: pan_entry
+TAGS: extra allow_dup can_overwrite
+DEPTH: D:21-27
+CHANCE: 100% (D:24), 25%
+KFEAT: O = enter_pandemonium
+MAP
+O
+ENDMAP
+
+##############################################################################
+# Pan Demon Lairs
+#
+# NOTE: The Pandemonium demonlord levels are requested by tag; if you change
+# the tag, also update dungeon.cc.
+#
+# You can define alternate levels for a Pandemonium lord by using the same
+# TAGS: and a different NAME:
+##############################################################################
+
+###########################################################################
+# Mnoleg
+#
+NAME:      mnoleg
+TAGS:      mnoleg
+ORIENT:    northeast
+LFLOORCOL: yellow
+LROCKCOL:  red
+MONS:      patrolling Mnoleg, neqoxec
+KITEM:     O = glowing rune of Zot
+epilogue{{
+  pan_lord_epilogue('Mnoleg')
+}}
+MAP
+xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+x.................2............xxxx
+x.....2........................xxxx
+x..cccccccc...ccccccc..ccccccc.xxxx
+x..ccccccccc.2.ccccccc..cccccc.xxxx
+x..cccccccccc...ccccccc..ccccc.xxxx
+x..ccccccccccc.1.ccccccc..cccc.xxxx
+x2.cccccccccc.2..Occccccc2.ccc.xxxx
+x..ccccccccc.....ccccccccc..cc.xxxx
+x..cccccccc...c...ccccccccc..c.xxxx
+x..ccccccc...ccc...ccccccccc...xxxx
+x..cccccc...ccccc...ccccccccc..xxxx
+x..ccccc...ccccccc...ccccccccc.xxxx
+x..cccc...ccccccccc...ccccccc..xxxx
+x..ccc.2.ccccccccccc.2.ccccc...xxxx
+x..cc.....ccccccccccc...ccc....xxxx
+x..c...c...ccccccccccc...c.2...xxxx
+x.....ccc.2.ccccccccccc......c.xxxx
+x....ccccc...ccccccccccc....cc.xxxx
+x.2.ccccccc...ccccccccccc..ccc.xxxx
+x.................2.......cccc.xxxx
+x...c..ccccccc.ccccccc...ccccc.xxxx
+x..ccc......2c.c2cccc...cccccc.xxxx
+x.ccccc..ccc.c.c2ccc.2.ccccccc.xxxx
+x.cccccc..cc.c.c.cc...cccccccc.xxxx
+x.ccccccc..c.c.c.c...ccccccccc.xxxx
+x.cccccccc...c.c....cccccccccc.xxxx
+x.ccccccccc..c.c...ccccccccccc.xxxx
+x..............................xxxx
+xxxxxxxxxxxxxx@xxxxxxxxxxxxxxxxxxxx
+ENDMAP
+
+NAME:      mnoleg_st
+TAGS:      mnoleg
+ORIENT:    southwest
+LFLOORCOL: yellow
+LROCKCOL:  red
+MONS:      patrolling Mnoleg, neqoxec
+MONS:      patrolling cacodemon, patrolling tormentor
+MONS:      large abomination, tentacled monstrosity
+KMONS:     w = brain worm
+KMONS:     u = very ugly thing
+KMONS:     U = ugly thing
+KITEM:     O = glowing rune of Zot
+NSUBST:    q = 2:u / *:.
+NSUBST:    e = 2:u / *:.
+NSUBST:    p = 3:u / *:.
+epilogue{{
+  pan_lord_epilogue('Mnoleg')
+}}
+MAP
+xxxxxxxxxxxxxxxxxxxxxx@xxxxxxxx
+xc...........................cx
+xc..ccccccc..c..c.c.c.c.c.c.ccx
+xc...ccccc..ccc..c.........c.cx
+xc.c2.ccc.2ccccc..c.2.2.2.c..cx
+xc.cc..c..ccccccc..c.w.w.c...cx
+xc.ccc...ccccccccc..c.w.c..c.cx
+xc.cccc...ccccccccc..c.c..cc.cx
+xc.cc.cc...ccccccccc..c..ccc.cx
+xc.ccqqcc...ccccccccc...cccc.cx
+xc.ccqqqcc...ccccccccc.ccccc.cx
+xc.ccqqq..c...ccccc..ccccccc.cx
+xc.ccqq...cc...ccc....c...c..cx
+xc2cc......cc...c...cc.....cccx
+xc.ccU......cc..2..cc...5...ccx
+xc..cc....eeecc...ccc..565..ccx
+xc...ccU.eeecc...ccccc..5..cccx
+xcc...cceeecc...cc..ccc...ccccx
+xccc...ccecc...cc....cccccccccx
+xc.cc...ccc...cc......ccccccccx
+xcp.cc...c............2cccccccx
+xc.pp.c.....c...........ccccccx
+xcppppcc...cc............cccccx
+xc.ppppcc2cc..............ccccx
+xcp.pp.pccc........1....4..cccx
+xc....wccc.................cccx
+xcw...cccc...............3.cccx
+xc..wcccccc..........cc....cccx
+xc..cccccccc.........cOc..ccccx
+xc.cccccccccc2....3...cc.cccccx
+xccccccccccccc..........ccccccx
+xcccccccccccccccccccccccccccccx
+xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+ENDMAP
+
+
+#######################################################################
+# Lom Lobon
+#
+NAME:      lom_lobon
+TAGS:      lom_lobon
+ORIENT:    north
+LFLOORCOL: lightgrey
+TAGS:      no_rotate
+LROCKCOL:  white
+MONS:      patrolling Lom Lobon, giant orange brain, rakshasa, wizard
+KITEM:     O = magical rune of Zot
+epilogue{{
+  pan_lord_epilogue('Lom Lobon')
+}}
+MAP
+xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+xxxxxxxxxxxxxxxxxxxxxxxxxxxwwwwwwwwwwww.......wwwwwwwxxxxxxxxxxxxxxxxxxxxxxxxxxx
+xxxxxxxxxxxxxxxxxxxxxxwwwwwwwwwwwwbbbwwwwwww.......wwwwwwwxxxxxxxxxxxxxxxxxxxxxx
+xxxxxxxxxxxxxxxxxxwwwwwwwwwwwwbbbbbbbbbbbwwwwww.........wwwwwwxxxxxxxxxxxxxxxxxx
+xxxxxxxxxxxxxxxwwwwwwwwwwwwbbbbwwwwwwwwwbbbbwwwwww.........wwwwwwxxxxxxxxxxxxxxx
+xxxxxxxxxxxxxwwwwwwwbbbbbbbbwwwwwwwwwwwwwwwbbbwwwww...........wwwwwxxxxxxxxxxxxx
+xxxxxxxxxxxxwwwwwbbbb......bbbwwwwwwwwwwww...bbwwwww.............wwwxxxxxxxxxxxx
+xxxxxxxxxxxxwwwbbb...........bbbwwwwww........bbwwwww.............wwxxxxxxxxxxxx
+xxxxxxxxxxxwwwbb...............bbwwww..........bwwwwww.............wwxxxxxxxxxxx
+xxxxxxxxxxxwwbb........1O.......bbww...........bbwwww..............wwxxxxxxxxxxx
+xxxxxxxxxxwwwb...................bw......2......bwww.....U....2.....wwxxxxxxxxxx
+xxxxxxxxxxwwbb...................bb.............bww.................wwxxxxxxxxxx
+xxxxxxxxxxwwbb..3................bbb............bbw..............4..wwxxxxxxxxxx
+xxxxxxxxxwwbbb...................b.b............4....................wwxxxxxxxxx
+xxxxxxxxxwwbwbb.................bb.......U......4..........U..........wxxxxxxxxx
+xxxxxxxxxwwbwwbb...............bb..b............bbw..............4.....xxxxxxxxx
+xxxxxxxxxwwbbwwbbb...........bbb..bb............bwww...................xxxxxxxxx
+xxxxxxxxxwwwbwwwwb..b..2..bbbb....b.............bwww...................xxxxxxxxx
+xxxxxxxxxxwwbwwww...bbbbbbb.......bw.....3.....bbwwww...U.....3.......xxxxxxxxxx
+xxxxxxxxxxwwbbww.................bbww........wwbwwwww.................xxxxxxxxxx
+xxxxxxxxxxwwwbbw................bbwwwww....wwwbbwwww..................xxxxxxxxxx
+xxxxxxxxxxwwwwbb...4...U........bwwwwwwwwwwwwbbwww....................xxxxxxxxxx
+xxxxxxxxxxxwwwwbbb...........bbbbbwwwwwwwwwbbbwww....................xxxxxxxxxxx
+xxxxxxxxxxxwwwwwwbbbb.....bbbbwwwbbbbwwwbbbbwwww....................xxxxxxxxxxxx
+xxxxxxxxxxxwwwwwwwwwbbbbbbbwwwwwwwwwbbbbbwwwww......4.....4........xxxxxxxxxxxxx
+xxxxxxxxxxxxwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwww......................xxxxxxxxxxxxxx
+xxxxxxxxxxxxwwwwwwwwwwwwwwwwwwwwwwwwwwwww.......................xxxxxxxxxxxxxxxx
+xxxxxxxxxxxxxxwwwwwwwwwwwwwwwwwwwww........................xxxxxxxxxxxxxxxxxxxxx
+xxxxxxxxxxxxxxxxxxxxxxxxxwwwwwww......................xxxxxxxxxxxxxxxxxxxxxxxxxx
+xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx...@.xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+ENDMAP
+
+NAME:      lom_lobon_st
+TAGS:      lom_lobon no_pool_fixup
+ORIENT:    northwest
+LFLOORCOL: lightgrey
+LROCKCOL:  white
+KITEM:     O = magical rune of zot
+MONS:      patrolling Lom Lobon
+MONS:      blue death, green death, wizard, draconian annihilator
+MONS:      sixfirhy
+SUBST:     0 = 23444445566
+NSUBST:    Q = 1:O / *:4
+NSUBST:    B = 1:. / *:b
+epilogue{{
+  pan_lord_epilogue('Lom Lobon')
+}}
+MAP
+xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+xxxxxxxxxxxwxxwwwwwwwxxxxxxxwwwwwwwwwxxxxxxxxxxxx
+xxxxxxxxwxwwwwbbbbbbbwwxxwwwbbbbbbbwwwxxxxxxxxxxx
+xxxxxxxwwwwwbbbb...bbbbwwwbbbb...bbbbwwwxxwxxxxxx
+xxxxwxxwwwwbb....0....bbwbb....0....bbwwwwwwxxxxx
+xxxwwwwwwwbb...........bbb...........bbwwwwwwxxxx
+xxxwwwwwwbb...wwwwwww.......wwwwwww...bbwwwwxxxxx
+xxxxwwwwbb...wwwwwwwww.....wwwwwwwww...bbwwwwxxxx
+xxwwwwwbb...wwbbbbbbbww...wwbbbbbbbww...bbwwwwxxx
+xxxwwwbb...wwbbwwwwwbbw...wbbwwwwwbbww...bbwwwxxx
+xxxwwbb...wwbbwwwwwwwbb...bbwwwwwwwbbww...bbwwwxx
+xxwwbb...wwbbwwvvvwwwwbbBbbwwwwvvvwwbbww...bbwxxx
+xwwwbb..wwbbwwvv.vvwwwwb.bwwwwvv.vvwwbbww..bbwwxx
+xxwbb...wwbwwwv.Q.vwwwwb.bwwwwv.Q.vwwwbww...bbwwx
+xxwbb.0.wwbwwwvv.+vwwwwb.bwwwwv+.vvwwwbww.0.bbwwx
+xwwbb...wwbwwwwvvv.wwwbb.bbwww.vvvwwwwbww...bbwxx
+xxwwbb..wwbbwwwwwww.wbb...bbw.wwwwwwwbbww..bbwxxx
+xxwwbb...wwbbwwwwwww.........wwwwwwwbbww...bbwxxx
+xwwwwbb...wwbbwwwwwb.........bwwwwwbbww...bbwwxxx
+xxxwwwbb...wwbbwwwbb.........bbwwwbbww...bbwwxxxx
+xxxxwwwbb.....bbbbb...........bbbbb.....bbwwwwxxx
+xxxwwwwwb.....B.........1.........B.....bwwwwwxxx
+xxxwwwwbb.....bbbbb...........bbbbb.....bbwwwwwxx
+xxwwwwbb...wwbbwwwbb.........bbwwwbbww...bbwwwxxx
+xwwwwbb...wwbbwwwwwb.........bwwwwwbbww...bbwwwxx
+xxwwbb...wwbbwwwwwww.........wwwwwwwbbww...bbwwxx
+xxwwbb..wwbbwwwwwww.wbb...bbw.wwwwwwwbbww..bbwwxx
+xwwbb...wwbwwwwvvv.wwwbb.bbwww.vvvwwwwbww...bbwwx
+xwwbb.0.wwbwwwvv.+vwwwwb.bwwwwv+.vvwwwbww.0.bbwxx
+xxwbb...wwbwwwv.Q.vwwwwb.bwwwwv.Q.vwwwbww...bbwwx
+xxxwbb..wwbbwwvv.vvwwwwb.bwwwwvv.vvwwbbww..bbwwxx
+xxwwbb...wwbbwwvvvwwwwbbBbbwwwwvvvwwbbww...bbwwxx
+xxxxwbb...wwbbwwwwwwwbb...bbwwwwwwwbbww...bbwwwxx
+xxxxwwbb...wwbbwwwwwbbw...wbbwwwwwbbww...bbwwwxxx
+xxxxxwwbb...wwbbbbbbbww...wwbbbbbbbww...bbwwwwxxx
+xxxxwwwwbb...wwwwwwwww.....wwwwwwwww.......wwwxxx
+xxxwwwwwwbb...wwwwwww.......wwwwwww...b.....wwwxx
+xxxxwwwwwwbb...........bbb...........bb.......wxx
+xxxxxxwwwwwbb....0....bbwbb....0....bbw....6....x
+xxxxxxwxwwwwbbbb...bbbbwwwbbbb...bbbbwww......6..
+xxxxxxxxxwwwwwbbbbbbbwwwwwwwbbbbbbbwwwwww.6......
+xxxxxxxxxwxwwwwwwwwwwwwwxxxwwwwwwwwwwxxxw........
+xxxxxxxxxxxxxxxxwwxxxxxxxxxxxxxxwwxwxxxxxx.......
+xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx..@..
+ENDMAP
+
+NAME:      lom_lobon_spiral_st
+TAGS:      lom_lobon no_pool_fixup patrolling
+ORIENT:    northeast
+LFLOORCOL: lightgrey
+LROCKCOL:  white
+KITEM:     O = magical rune of zot
+MONS:      patrolling Lom Lobon, titan, vapour, wizard
+KMONS:     S = storm dragon
+KMONS:     d = draconian annihilator
+KMONS:     e = deep elf annihilator
+COLOUR:    c = white
+KFEAT:     S = deep_water
+NSUBST:    D = 1:S / *:w
+epilogue{{
+  pan_lord_epilogue('Lom Lobon')
+}}
+MAP
+cccccccccccccccccccccccccccccccccccccccc
+cbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbc
+cbbbbbb.....bb+..2..bbbbbwwwbbbbbbbbbbbc
+cbbbb.........bb...bbbwwwwwwwwwbbbbbbbbc
+cbbb...........bbObbwww.....wwwwwbbbbbbc
+cbb.............bbbww.........wwwwbbbbbc
+cbb.............bbww.....w......wwwbbbbc
+cb.......1.......bw....www.......wwbbbbc
+cb...............bw...wwwww...V..wwwbbbc
+cb...............bb..wwwwwww......wwbbbc
+cbb.............bbb.....wwwww.....wwbbbc
+cbb.............bbbb...2..wwwww....wwbbc
+cbbb...........bbbbbbb.......www...wwwbc
+cbbbbb.......bbbbbbbbbbbbbb...bbb...wwwc
+cbbbbbbb...bbbbbbbbbbbbbwwww....bb..wwwc
+cbbbbbb...bbbbbbbbbbbwwwwwwwww...bb..wwc
+cbbbbb..wbbbbbbbbbbwwwwwwwwwwww...b..wwc
+cbbb...wwwbbbbbbbbwwwwwwwwwwwwww..bb.wwc
+cbb...wwwwwbbbbbbbwwwwww..wwwwww...b..wc
+cbb.d..wwwwwbbbbb.wwwww.ee.wwwww...b..wc
+cbb.....wwwwwwbbb.wwwwww..wwwwww...b..wc
+cbb...d.wwww....2..wwwwwwwwwwwww..bb..Dc
+cwb.........www.....wwwwwwwwwww...bw..wc
+cwbb...wwwwwwwwbbb...wwwwwwwww...bbw..wc
+cwbbbdwwwwwwwwbbbbb....wwww.....bbww.wwc
+cwwbbbbwwwwbbbbwwwbbb.........bbbww..wwc
+cwwSbbbbbbbbwwwwwwwwbbb....bbbbwww...wwc
+cwwwwwbbbbwwwwwwwwwwwwbbbbbbwwwDww...wwc
+cwwwwwwwwwwwww.4.wwwwwwwwwwwwwwwww....wc
+cwwwwwwwwww........wwwwwwwwwwwwww.....wc
+cwwwwwwww...........wwwwwwwwwwww.....wwc
+cwwwwwww.....U...U......wwwwwwww.....wwc
+cwwwwbbbb..................wwww.....wwwc
+cwwbbb..............ww..............wwDc
+cwbb..3...........wwwwww.....2.....wwwwc
+cwb$.........ww..wwwwwwwww.......wwwwwwc
+cwb$..3.....wwww..wwwwwwwww....wwwwwwwwc
+cwbb3...3.bbwwww...wwwwwwwwwwwwwwwwwwwcc
+cwwbbb$$bbbwwwwww....wwwwwwwwwwwwwwwwccc
+ccwwwbbbbwwwww...w....wwwwwwwwwwwwwwcccc
+cccwwwwwwwwww..4.....4.wwwwwwwwwwwcccccc
+cccccwwwwww............wwwwwwwwwcccccccc
+cccccccccccccccc..@..ccccccccccccccccccc
+ENDMAP
+
+
+#############################################################################
+# Cerebov
+#
+# You might not want to teleport too much on this level - unless you can
+# reliably teleport away again.
+#
+NAME:      cerebov
+TAGS:      cerebov
+DESC:      Cerebov's castle
+ORIENT:    northeast
+LFLOORCOL: red
+LROCKCOL:  red
+MONS:      patrolling Cerebov, Balrug, Pit Fiend
+KITEM:     O = fiery rune of Zot
+epilogue{{
+  pan_lord_epilogue('Cerebov')
+}}
+COLOUR:     n = blue
+TILE:       n = dngn_metal_wall_cracked
+:           dgn.set_feature_desc_short("translucent stone wall",
+:                                      "cracked metal wall")
+:           dgn.set_feature_desc_long("translucent stone wall",
+:                                     "This metal wall has suffered some " ..
+:                                     "damage. Alas, the hole is not big " ..
+:                                     "enough to crawl through.\n")
+MAP
+xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+...............................xxxx
+.............vvvvv.............xxxx
+.............v$$$v.............xxxx
+.............v|||v.............xxxx
+.............v$$$v.............xxxx
+.vvvvv...vvvvvvvvvvvvv...vvvvv.xxxx
+.v|$|vvvvv...........vvvvv$|$v.xxxx
+.v$|$v.....vvvvvvvvv.....v|$|v.xxxx
+.v|$|v.vvvvvvvvOvvvvvvvv.v$|$v.xxxx
+.vvvvv.vvvvvv..3..vvvvvv.vvvvv.xxxx
+...v...vv.....vvv.....vv...v...xxxx
+...v.vvvv....vv1vv....vvvv.v...xxxx
+...v.vv......v...v......vv.v...xxxx
+...v.vvvv.............vvvv.v...xxxx
+...v...vv..2.......2..vv...v...xxxx
+.vvvvv.vv..2.......2..vv.vvvvv.xxxx
+.v|$|v.vv.............vv.v$|$v.xxxx
+.v|$|v.vv...vv...vv...vv.v$|$v.xxxx
+.v|$|v.vv...vv+++vv...vv.v$|$v.xxxx
+.vvvvv.vvvvvvv...vvvvvvv.vvvvv.xxxx
+....v..vvvvvvv...vvvvvvv..v....xxxx
+....vv...................vv....xxxx
+.....vv.vvvnv..2..vvvvv.vv.....xxxx
+......vvv|||v.....v$$$vvv......xxxx
+........v|$|vv...vv$|$v........xxxx
+........v|||v.....v$$$v........xxxx
+........vvvvv.....vvvvv........xxxx
+...............................xxxx
+...............@...............xxxx
+ENDMAP
+
+NAME:      cerebov_st
+TAGS:      cerebov patrolling
+ORIENT:    north
+LFLOORCOL: red
+LROCKCOL:  red
+KITEM:     O = fiery rune of zot
+MONS:      patrolling Cerebov, balrug, pit fiend
+MONS:      red devil, sun demon, imp
+epilogue{{
+  pan_lord_epilogue('Cerebov')
+}}
+MAP
+xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+xx.....................................................................xx
+xx...............................6.....6...............................xx
+xx..................................6..................................xx
+xx.............................vvv.....vvv.............................xx
+xx...vvvvv.....................vvv.v.v.vvv.....................vvvvv...xx
+xx...v|$|v..vv..vv..vv..vv..vv.vvv.....vvv.vv..vv..vv..vv..vv..v|||v...xx
+xx...v$|$vvvvvvvvvvvvvvvvvvvvvvvvvvv.vvvvvvvvvvvvvvvvvvvvvvvvvvv|$|v...xx
+xx...v|$|v.......................vvv.vvv.......................v|||v...xx
+xx...vvvv+.vvvvvvvvvvvvvvvvvvvvv.v.....v.vvvvvvvvvvvvvvvvvvvvv.+vvvv...xx
+xx....vv...vvvvvvvvvvvvvvvvvvvvv+vvv.vvv+vvvvvvvvvvvvvvvvvvvvv...vv....xx
+xx.....v.vvvvvvv...........v.......v.v.......v.v.....5..5.+..vvv.v.....xx
+xx....vv.vvvvvvv+v+vvvvvvv+v.v.v.v.....v.v.v.v.v..v..v..v.v.$||v.vv....xx
+xx....vv.vv||v.......v$$vv+v.................v.+.........3v.$||v.vv....xx
+xx.....v.vv||v.v.1.v.v$$v6.v.v.............v.v.v..v..v..v.v.$$$v.v.....xx
+xx....vv.vv||v.v...v.v$$vO3v......2...2......v.v.....5..5.+.$$$v.vv....xx
+xx....vv.vv+vv.......vv+vvvv.v.............v.v.vvvvvvvvvvvvvvvvv.vv....xx
+xx.....v.vv..2.......2..v..+.................+.............+...v.v.....xx
+xx....vv.vv..2.......2..v..v.v.............v.vvvvvvvvvvvvvvv...v.vv....xx
+xx....vv.vv.............v..v......2...2......v...v..4..v$|$v.6.v.vv....xx
+xx.....v.vv....v...v....v..v.v.............v.v...+..2..+|$|v.2.v.v.....xx
+xx....vv.vv...vv+++vv...v..v.................v.4.v..4..v$|$v...v.vv....xx
+xx....vv.vvvvvv.....vvvvv..v.v.v.v.....v.v.v.v.4.vvvvvvvvvvv...v.vv....xx
+xx.....v.vvv...............v.......v.v.......v...vvvvvvvvvvv+vvv.v.....xx
+xx....vv...vvvvvvvvvvvvvvvvvvvvv+vvv.vvv+vvvvv...+...........v...vv....xx
+xx...vvvv+.vvvvvvvvvvvvvvvvvvvvv.v.....v.vvvvvvvvvvvvvvvvvvvvv.+vvvv...xx
+xx...v$$$v.......................vvv.vvv.......................v$$$v...xx
+xx...v|||vvvvvvvvvvvvvvvvvvvvvvvvvvv.vvvvvvvvvvvvvvvvvvvvvvvvvvv$|$v...xx
+xx...v$$$v..vv..vv..vv..vv..vv.vvv.....vvv.vv..vv..vv..vv..vv..v$$$v...xx
+xx...vvvvv.....................vvv.v.v.vvv.....................vvvvv...xx
+xx.............................vvv.....vvv.............................xx
+xx..................................6..................................xx
+xx...............................6.....6...............................xx
+xx.....................................................................xx
+xx.................................@@@.................................xx
+ENDMAP
+
+##############################################################################
+# Gloorx Vloq
+#
+NAME:      gloorx_vloq
+TAGS:      gloorx_vloq
+ORIENT:    southwest
+LFLOORCOL: lightgrey
+LROCKCOL:  lightgrey
+MONS:      patrolling Gloorx Vloq, Executioner, demonic crawler, shadow demon
+KITEM:     O = dark rune of Zot
+epilogue{{
+  pan_lord_epilogue('Gloorx Vloq')
+}}
+MAP
+xxxxxxxxxxxxxxxxxx@.xxxxxxxxxxxxxxx
+xxxx..............................x
+xxxx..............................x
+xxxx..............................x
+xxxx.x.x.x.x.x.x.x..x.x.x.x.x.x.x.x
+xxxx..............................x
+xxxx.x.xxxx=xxxxxxxxxxxx=xxxxxx.x.x
+xxxx...xx....................xx...x
+xxxx.x.x..ccccc..4..4..ccccc..x.x.x
+xxxx...x.cc.3............3.cc.x...x
+xxxx.x.x.c..ccccc.cc.ccccc..c.x.x.x
+xxxx...x.c.cc.....cc.....cc.c.x...x
+xxxx.x.x.c.c.2...cccc...2.c.c.x.x.x
+xxxx...x...c...ccc..ccc...c...=...x
+xxxx.x.x.3.....2..1O..2.....3.x.x.x
+xxxx...=...c...ccc..ccc...c...x...x
+xxxx.x.x.c.c.2...cccc...2.c.c.x.x.x
+xxxx...x.c.cc.....cc.....cc.c.x...x
+xxxx.x.x.c..ccccc.cc.ccccc..c.x.x.x
+xxxx...x.cc.3............3.cc.x...x
+xxxx.x.x..ccccc..4..4..ccccc..=.x.x
+xxxx...xx....................xx...x
+xxxx.x.xxxx=xxxx=xxxxxxxx=xxxxx.x.x
+xxxx..............................x
+xxxx.x.x.x.x.x.x.x..x.x.x.x.x.x.x.x
+xxxx..............................x
+xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+ENDMAP
+
+NAME:      gloorx_vloq_st
+TAGS:      gloorx_vloq
+ORIENT:    southeast
+LFLOORCOL: lightgrey
+LROCKCOL:  lightgrey
+MONS:      patrolling Gloorx Vloq, Executioner, shadow wraith
+MONS:      shadow demon, unseen horror
+KITEM:     O = dark rune of Zot
+epilogue{{
+  pan_lord_epilogue('Gloorx Vloq')
+}}
+MAP
+xxxxxxxxxxxxxxxxxx.@.xxxxxxxxxxxxxxxxxx
+xxxxx.............................xxxxx
+xxxx...xxx.x.xxx.x.x.x.xxx.x.xxx...xxxx
+xxx....xxx.x.xxx.x3x3x.xxx.x.xxx....xxx
+xx...................................xx
+x..5..ccccccccccccccccccccccccccc..5..x
+xx...xcxxxxxxxxxxxxxxxxxxxxxxxxxcx...xx
+x.x.x.cx.x4x.x.x.x.x.x.x.x.x4x.xc.x.x.x
+x..x..cxx.x.x.x.x.xOx.x.x.x.x.xxc..x..x
+x.x.x.cx.x.x.x.x.xxxxx.x.x.x.x.xc.x.x.x
+xx...xcxx.x.x.x.x4...4x.x.x.x.xxcx...xx
+x.x.x.cx.x.x.x.x.x...x.x.x.x.x.xc.x.x.x
+x..x..cxx.x.x.x.x.....x.x.x.x.xxc..x..x
+x.x.x.cx.x.x2x.x.x...x.x.x2x.x.xc.x.x.x
+xx...xcxx.x.x.x.x.....x.x.x.x.xxcx...xx
+x.x.x.cx.x.x.x.x.x.1.x.x.x.x.x.xc.x.x.x
+x3.x.3cxx.x.x.x.x.....x.x.x.x.xxc3.x.3x
+x.x.x.cx2x.x.x.x.x...x.x.x.x.x2xc.x.x.x
+xx...xcxx.x.x.x.x.....x.x.x.x.xxcx...xx
+x.x.x.cx.x.x.x.x.x...x.x.x.x.x.xc.x.x.x
+x..x..cxx.x.x.x.x4...4x.x.x.x.xxc..x..x
+x.x.x.cx.x.x.x.x.x...x.x.x.x.x.xc.x.x.x
+xx...xccx.x.x.x.x.....x.x.x.x.xccx...xx
+xxx.x.xccx.x.x.x.x...x.x.x.x.xccx.x.xxx
+xxxx....ccc2x.x.x.....x.x.x2ccc....xxxx
+xxxxx.....cccc.x.x...x.x.cccc.....xxxxx
+xxxxxxx......ccccx...xcccc......xxxxxxx
+xxxxxxxxx.......cc===cc.......xxxxxxxxx
+xxxxxxxxxxxx.......2.......xxxxxxxxxxxx
+xxxxxxxxxxxxxxx.........xxxxxxxxxxxxxxx
+xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+ENDMAP
+
+
+
+#############################################################################
+# Pandemonium lesser demon vaults
+#############################################################################
+# Pandemonium demon vaults are selected by tag. They must have the tag "pan",
+# or they won't even be considered. Tags are case-sensitive.
+#
+# Tagging these levels also ensures they won't be generated in the main
+# dungeon.
+
+NAME:  rand_demon_1
+TAGS:  pan allow_dup
+MONS:  pandemonium demon, random, random, random, random, random
+SUBST: P = .:8 O:1
+KITEM: O = demonic rune of Zot
+MAP
+............
+.xx.xx.x.xx.
+..x.x..x.x..
+..x.x..x.x..
+..x.x..x.x..
+..x.x..x.x..
+..x.x1Px.x..
+..x.x..x.x..
+..x.x..x.x..
+..x.x..x.x..
+.xx.x.xx.xx.
+............
+ENDMAP
+
+###################################
+
+NAME:  rand_demon_2
+TAGS:  pan allow_dup
+MONS:  greater demon, common demon, common demon
+SUBST: P = P:8 O:1
+KMONS: PO = pandemonium demon
+KITEM: O = demonic rune of Zot
+MAP
+............
+.xxxxxxxx2x.
+.2.....xx.x.
+.xxxxxx3x.x.
+.xx3x..xx.x.
+.x.x.11.x.x.
+.x.x.P1.x.x.
+.x.xx..x3xx.
+.x.x3xxxxxx.
+.x.xx.....2.
+.x2xxxxxxxx.
+............
+ENDMAP
+
+###################################
+
+NAME:  rand_demon_3
+TAGS:  pan allow_dup
+MONS:  common demon, common demon
+SUBST: P = P:8 O:1
+KMONS: PO = pandemonium demon
+KITEM: O = demonic rune of Zot
+MAP
+............
+.x.x.x2x.x..
+..x.x2x2x.x.
+.x.x.x1x.x..
+..x2x1x1x2x.
+.x2x1xPx1x2.
+..x2x1x1x2x.
+.x.x.x1x2x..
+..x.x2x2x.x.
+.x.x.x2x.x..
+..x.x.x.x.x.
+............
+ENDMAP
+
+###################################
+
+NAME:  rand_demon_4
+TAGS:  pan allow_dup
+MONS:  pandemonium demon, any demon, any demon
+SUBST: P = .:8 O:1
+KITEM: O = demonic rune of Zot
+MAP
+............
+.xxxxxxxxx..
+.x$=*=3=|x..
+.xxxxxxx=x..
+.x2=3=2x|x..
+.x=xxxxx=x..
+.x3=*x1=Px..
+.x=x=xxxxx..
+.x*x2=3=2=..
+.xxxxxxxxx..
+............
+............
+ENDMAP
+
+###################################
+
+NAME:  rand_demon_5
+TAGS:  pan allow_dup
+MONS:  pandemonium demon, any demon, any demon
+SUBST: P = .:8 O:1
+KITEM: O = demonic rune of Zot
+MAP
+............
+...xxxxxx...
+..xx....xx..
+.xx......xx.
+.x..3232..x.
+.x..2|P3..x.
+.x..3.|2..x.
+.x..2123..x.
+.xx......xx.
+..xx....xx..
+...xxxxxx...
+............
+ENDMAP
+
+###################################
+
+NAME:  rand_demon_6
+TAGS:  pan allow_dup
+MONS:  pandemonium demon, any demon, any demon
+SUBST: P = .:8 O:1
+KITEM: O = demonic rune of Zot
+MAP
+............
+............
+......2.....
+............
+.3..........
+..........2.
+.....1P.....
+............
+............
+.2.......3..
+............
+............
+ENDMAP
+
+###################################
+
+NAME:  rand_demon_7
+TAGS:  pan allow_dup
+MONS:  any demon, greater demon
+SUBST: P = P:8 O:1
+KMONS: PO = pandemonium demon
+KITEM: O = demonic rune of Zot
+MAP
+............
+.xxx....xxx.
+.x|xx=xxx|x.
+.xx=....=xx.
+..x.x==x.x..
+..x.=P1=.=..
+..=.=12=.x..
+..x.x==x.x..
+.xx=....=xx.
+.x|xxx=xx|x.
+.xxx....xxx.
+............
+ENDMAP
+
+###################################
+
+NAME:  rand_demon_8
+TAGS:  pan allow_dup
+MONS:  pandemonium demon, greater demon, any demon
+SUBST: P = .:8 O:1
+KITEM: O = demonic rune of Zot
+MAP
+............
+....xxxxxxx.
+..xxx....1x.
+.xx..2..P.x.
+.x........x.
+.xx.......x.
+..xx33..2.x.
+....33...xx.
+.....x...x..
+..F..xx.xx..
+......xxx...
+............
+ENDMAP
+
+###################################
+
+NAME:  rand_demon_9
+TAGS:  pan allow_dup
+MONS:  pandemonium demon, any demon, greater demon
+SUBST: P = .:8 O:1
+KITEM: O = demonic rune of Zot
+MAP
+............
+.xxxxxxxxxx.
+.x2=3=3=3xx.
+.x=xxxxxx2x.
+.x3x^^^^x=x.
+.x=x^P^^x2x.
+.x3x^^1^x=x.
+.x=x^^^^x3x.
+.x2xxxx=x=x.
+.xx2=2=3x3x.
+.xxxxxxxx=x.
+............
+ENDMAP
+
+###################################
+
+NAME:    lemuel_draining_boxes
+TAGS:    pan
+MONS:    pandemonium demon, eye of draining, any demon
+SHUFFLE: aA/bB/cC/dD/eE/fF, eE/gG, fF/hH
+SUBST:   a=m, b=m, c=m, d=m, e=m, f=m, g=., h=.
+SUBST:   A=2, B=2, C=2, D=2, E=2, F=2, G=., H=.
+# the two center boxes are granted;
+# of the six outer boxes, one or two may be missing
+SUBST:   n=n =:1
+SUBST:   m:mn
+KMONS:   O = eye of draining
+KITEM:   O = demonic rune of Zot
+MAP
+                  ....bbb..
+.......           ....bBb..
+.aaa...           ....bbb..
+.aAa...           .........
+.aaa.......................
+...........................
+.............mmm.............
+    .........m2m..........ccc
+    .........mmm3.........cCc
+...............333........ccc
+..............33133nnn.......
+.fff...........333.nOn.......
+.fFf............3..nnn...
+.fff.....................
+.........................
+.............................
+  .........        ...ddd....
+  ...eee...        ...dDd....
+  ...eEe...        ...ddd....
+  ...eee...        ..........
+ENDMAP
+
+###################################
+
+NAME:  lemuel_hellion_island
+TAGS:  pan
+MONS:  hellion
+SUBST: L=l.
+KMONS: O = pandemonium demon
+KITEM: O = demonic rune of Zot
+MAP
+    ..LlllL..
+  ..LlllllllL..
+ .LlllllllllllL.
+.LlllllL1LlllllL.
+.LllllL1.1LllllL.
+LllllL1|1|1LllllL
+llllL1.1O1.1Lllll
+llllL.1|1|1.Lllll
+LllllL.1.1.LllllL
+.LllllL.1.LllllL.
+.LlllllLLLlllllL.
+ .LlllllllllllL.
+  ..LlllllllL.
+    ..LlllL..
+ENDMAP
+
+###################################
+
+NAME:    lemuel_hall_of_pain
+TAGS:    pan
+MONS:    pandemonium demon, any demon
+MONS:    smoke demon / weight:1 fiend
+SHUFFLE: mx/nc
+SHUFFLE: O1/AB
+SUBST:   A=|, B=|
+KITEM:   O = demonic rune of Zot
+MAP
+.......@.......
+xxxxxx+++xxxxxx
+xOx.xl...lx.xAx
+x1x3xl.2.lx3xBx
+x.x.ml...lm.x.x
+x2x.xl...lx.x2x
+x.x3xl...lx3x.x
+x2x.ml...lm.x2x
+x.x3xl...lx3x.x
+x2x.xl.2.lx.x2x
+x.x.ml...lm.x.x
+x.x3xl...lx3x.x
+x2x.xl...lx.x2x
+x.x.ml...lm.x.x
+x.x3xl.2.lx3x.x
+x2xxxl2.2lxxx2x
+x....2.2.2....x
+xxxxxxxxxxxxxxx
+ENDMAP
+
+###################################
+# A couple of small vaults featuring blood fountains.
+
+NAME:   pan_blood_fountain
+TAGS:   pan
+SUBST:  ' : '"
+COLOUR: ' = red / none
+COLOUR: " = red / none w:5 / lightred w:2
+COLOUR: . = red / none w:40
+# not sure which FTILE to use here
+SUBST:  '=. , "=.
+MAP
+ ...
+.'''.
+.'Y'.
+.'''.
+ ...@
+ENDMAP
+
+NAME:   pan_blood_fountain_2
+TAGS:   pan
+SUBST:  ' : '"
+SUBST:  Y = YYV
+COLOUR: ' = red / none
+COLOUR: " = red / none w:5 / lightred w:2
+COLOUR: . = red / none w:80
+# not sure which FTILE to use here
+SUBST:  '=. , "=.
+MAP
+ @.....
+ '''.'''
+.'Y'.'Y'.
+.'''''''.
+ ..'Y'..
+  .'''.
+   ...
+ENDMAP
+
+###################################
+
+NAME:   pan_surprise
+TAGS:   pan
+KMONS: 1 = executioner
+KITEM: 1 = executioner's axe
+# It may be a surprise for the executioner as well if the player has high
+# stealth -- an alarm trap would be found by most chars who dare Pan and thus
+# spoil the fun.
+MAP
+xxxx
+xx.x
+x1x@
+xxx
+ENDMAP
+
+###################################
+
+# Sadly, this vault works well only in text. If we could get changing tiles,
+# it would be great, but for now, these are static.
+#
+NAME:   pan_disco_hall
+TAGS:   pan no_rotate
+ORIENT: float
+SUBST:  - = 0:1 / .:10
+COLOUR: D = random
+COLOUR: .x = disco
+COLOUR: 0123456789 = disco
+KFEAT:  D = granite_statue
+MARKER: D = lua:portal_desc { desc="weirdly glowing ball", \
+            desc_long=("This floating ball radiates with shimmering light.") }
+MARKER: D = lua:props_marker { veto_fragmentation="veto", \
+                               veto_disintegrate="veto", \
+                               veto_shatter="veto" }
+MONS:   col:random name:demonic name_adjective plant
+MONS:   red devil ; demon trident good_item ego:distortion
+MONS:   red devil ; lajatang good_item ego:distortion
+MONS:   red devil ; katana good_item ego:distortion
+RTILE:  x = wall_zot_blue / wall_zot_green / wall_zot_cyan / wall_zot_red /\
+            wall_zot_magenta / wall_zot_yellow
+# alas, floor tiles are not distinguished from walls enough, commenting out:
+# FTILE: . = floor_moss / floor_dirt / floor_hive / floor_rough_red /\
+#            floor_snake / floor_swamp
+KFEAT:  _ = floor
+FTILE:  _ = floor_hall
+MAP
+                   xx@xx
+                   x1.1x
+                   x...x
+   xxxxxxxxxxxxxxxxxx.xxxxxxxxxxxxxxxxxxxxxxx
+   x........................x---------------x
+   x.x.x.x.x.x.x.x.x.x.x.x..x---------------x
+   x........................x---------------xxxxxx
+   x.x.x.x.x.x.x.x.x.x.x.x..x---------------_....x
+xxxx.........................---------------_..2.x
+x1.x.........................---------------_....x
+@...........................D---------------_..3.x
+x1.x.........................---------------_....x
+xxxx.........................---------------_..4.x
+   x.xxxxxxxxxxxxxxxxxxxxx..x---------------_....x
+   x.x0.0x..0x0.0x0.0x..0x..x---------------xxxxxx
+   x.x0..x0..x...x0..x...x..x---------------x
+   x........................x---------------x
+   xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+ENDMAP
+
+
+##############################################################################
+# Random vault and minivault balancers for Pan.
+
+NAME: pan_mini_dummy_balancer
+DEPTH: Pan
+TAGS: dummy
+WEIGHT: 100
+MAP
+x
+ENDMAP
+
+NAME: pan_dummy_balancer
+DEPTH: Pan
+TAGS: dummy
+ORIENT: float
+WEIGHT: 100
+MAP
+x
+ENDMAP

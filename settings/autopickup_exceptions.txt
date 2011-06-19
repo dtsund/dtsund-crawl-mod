@@ -1,0 +1,36 @@
+ae := autopickup_exceptions
+
+#### inclusions ###
+
+# curare is always dangerous on the floor
+ae = <curare-tipped
+
+### exclusions ###
+
+# Don't autopickup in the Abyss
+< do
+local old_ch_deny_autopickup = ch_deny_autopickup or function() return false end
+--function ch_deny_autopickup(it)
+--    return you.where() == "Abyss" or old_ch_deny_autopickup(it)
+--end
+end >
+
+# Exclude items useless in general (?paper, bad potions unless you know
+# Evaporate) or for your current character (such as inedible food or
+# armour you can't wear).
+ae = useless_item
+
+# Exclude potentially useful items of high risk, like ?torment or
+# !mutation.
+ae = dangerous_item
+
+# Exclude items which your god disapproves of.
+ae = evil_item
+
+# Excluding amulets as you only need one of each. (If you know the
+# subtype that means you already have one of it.) Also for some rings.
+# Some items may already be excluded as bad_item, e.g. inaccuracy.
+ae = amulet of (inaccuracy|the gourmand|controlled flight|warding)
+ae = amulet of (resist .*|clarity|rage|conservation|guardian spirit|faith|stasis)
+ae = ring of (see invisible|levitation|poison resistance|hunger)
+ae = ring of (invisibility|teleport control)

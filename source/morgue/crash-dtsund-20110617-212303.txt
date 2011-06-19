@@ -1,0 +1,163 @@
+Version: Dungeon Crawl Stone Soup 0.8.0-0-g3a1e774
+Platform: unix
+Bits: 64
+Game mode: normal
+Tiles: yes
+
+Command line: ./crawl
+
+RC options:
+restart_after_game = true
+
+
+Crash caused by signal #11: Segmentation fault
+
+Obtained 12 stack frames.
+./crawl(_Z17write_stack_traceP8_IO_FILEi+0x28) [0x9c1928]: write_stack_trace(_IO_FILE*, int)
+./crawl(_Z13do_crash_dumpv+0x295) [0x53d115]: do_crash_dump()
+./crawl() [0x9c1b9a]
+/lib/libc.so.6(+0x33af0) [0x7f6abfdf3af0]: 
+./crawl(_Z11acquirement17object_class_typeibPib+0x2f0) [0x4d5a60]: acquirement(object_class_type, int, bool, int*, bool)
+./crawl(_Z11read_scrolli+0x118e) [0x67479e]: read_scroll(int)
+./crawl(_Z15process_command12command_type+0x3ba) [0x6f068a]: process_command(command_type)
+./crawl() [0x6f2212]
+./crawl() [0x6f3925]
+./crawl(main+0x2c9) [0x6f4309]: 
+/lib/libc.so.6(__libc_start_main+0xfd) [0x7f6abfddec4d]: 
+./crawl() [0x4b9d59]
+
+Compilation info:
+<<<<<<<<<<<
+Compiled with GCC 4.4.3 on Jun 17 2011 at 21:22:23
+Build platform: x86_64-linux-gnu
+Platform: x86_64-linux-gnu
+CLFAGS: -O2 -pipe -Wall -DUSE_TILE -DUSE_SDL -DUSE_GL -DUSE_FT -D_GNU_SOURCE=1 -D_REENTRANT -Wundef -Wno-array-bounds -Wno-parentheses -Wwrite-strings -Wshadow -D_FORTIFY_SOURCE=0 -Wuninitialized -Icontrib/install/include -Iutil -I. -I/usr/include/lua5.1 -I/usr/include -Irltiles -I/usr/include/freetype2 -I/usr/include/SDL -I/usr/include/ncursesw -DWIZARD -DASSERTS -D_GNU_SOURCE=1 -D_REENTRANT -DCLUA_BINDINGS
+LDFLAGS: -rdynamic -O2
+>>>>>>>>>>>
+
+Place info:
+absdepth0 = 0, branch = 0, level_type = 0, type_name = 
+
+Level id: D:1
+level build method = random_map_for_place build_rooms
+level layout type  = rooms
+Level extras:
+    early_knife [1]: (48,21) (1,1) orient: 10 lev: 0
+Level vaults:
+    dpeg_entry_round_c [1]: (39,30) (12,24) orient: 10 lev: 0
+    patterned_corridor [2]: (55,25) (8,23) orient: 10 lev: 0
+
+Markers:
+<<<<<<<<<<<<<<<<<<<<<<
+>>>>>>>>>>>>>>>>>>>>>>
+
+Messages:
+<<<<<<<<<<<<<<<<<<<<<<
+Welcome, dtsund the Deep Elf Wizard.
+They say that the Orb of Zot exists deep, deep down but nobody ever got it.
+Welcome back, dtsund the Deep Elf Wizard.
+Welcome back, dtsund the Deep Elf Wizard.
+Welcome back, dtsund the Deep Elf Wizard.
+Welcome back, dtsund the Deep Elf Wizard.
+Welcome back, dtsund the Deep Elf Wizard.
+Press ? for a list of commands and other information.
+WARNING: ABOUT TO ENTER WIZARD MODE!
+If you continue, your game will not be scored!
+Do you really want to enter wizard mode? 
+Enter Wizard Command (? - help): 
+) - weapons     ( - missiles  [ - armour  / - wands    ?  - scrolls
+= - jewellery   ! - potions   : - books   | - staves   0  - The Orb
+} - miscellany  X - corpses   % - food    $ - gold    ESC - exit
+What class of item? ?
+What type of item? acq
+scroll of acquirement
+Something appears at your feet!
+e - 12 scrolls of acquirement
+Read which item? (? for menu, Esc to quit)
+As you read the scroll of acquirement, it crumbles to dust.
+This is a scroll of acquirement!
+Something appears at your feet!
+
+>>>>>>>>>>>>>>>>>>>>>>
+
+Game state:
+
+mouse_enabled: 0, waiting_for_command: 0, terminal_resized: 0
+io_inited: 1, need_save: 1, saving_game: 0, updating_scores: 0:
+seen_hups: 0, map_stat_gen: 0, type: 1, arena_suspended: 0
+
+prev_cmd = CMD_READ
+repeat_cmd = CMD_NO_CMD
+
+Player:
+{{{{{{{{{{{
+Name:       [dtsund]
+Species:    Deep Elf
+Job:        Wizard
+
+class_name: Wizard
+
+HP: 6/6; base: 5000/5006
+MP: 7/7; base: 5000/5006
+Stats: 4 (4) 22 (22) 13 (13)
+Position: (45, 32), god:No God (0), turn_is_over: 1, banished: 0
+Standing on/in/over feature: staircase leading out of the dungeon
+
+Spell bugs:
+
+Durations:
+
+Attributes:
+
+Mutations:
+
+Demon mutations:
+
+Inventory bugs:
+
+Equipment:
+    eq slot #2, inv slot #1: +0 elven wizard hat
+    eq slot #6, inv slot #0: +0 elven robe
+
+}}}}}}}}}}}
+
+clua stack:
+
+
+dlua stack:
+
+
+Lua persistent data:
+<<<<<<<<<<<<<<<<<<<<<<
+wucad_mu_died: [type boolean]
+ziggurat: 
+    level: 
+
+    portal: 
+        dstname: Ziggurat:1
+        floor: stone_arch
+        onclimb: 
+            CLASS: FunctionWrapper
+            name: callback.ziggurat_initialiser
+            fn: [type function]
+
+        dst: ziggurat
+        desc: gateway to a ziggurat
+        toll_desc: to enter a ziggurat
+        amount: 3990
+        overview_note: 3990 gp
+        dstname_abbrev: Zig:1
+        overview: Ziggurat
+        dstorigin: on level 1 of a ziggurat
+
+    colour: magenta
+    builder: rectangle
+    depth: 1
+    zig_exc: 8
+    origin_level: D:1
+
+>>>>>>>>>>>>>>>>>>>>>>
+
+Lua marker contents:
+<<<<<<<<<<<<<<<<<<<<<<
+>>>>>>>>>>>>>>>>>>>>>>

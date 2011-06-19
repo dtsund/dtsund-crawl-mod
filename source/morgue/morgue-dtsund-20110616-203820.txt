@@ -1,0 +1,185 @@
+ Dungeon Crawl Stone Soup version 0.8.0-0-g3a1e774 character file.
+
+512459 dtsund the Intangible (level 27, 97/238 HPs) *WIZ*
+             Began as a Deep Elf Wizard on June 16, 2011.
+             Quit the game on Level 1 of the Dungeon.
+             The game lasted 00:01:40 (11 turns).
+
+dtsund the Intangible (Deep Elf Wizard)                                                                       Turns: 11, Time: 00:01:40
+
+HP  97/238       AC  4     Str  5      Exp: 27/1187198 (25)
+MP  33/50        EV 28     Int 26 (28) God: No God 0 (0)
+Gold 20          SH  0     Dex 13      Spells:  2 memorised, 75 levels left
+
+Res.Fire  : . . .   See Invis. : .      - Unarmed
+Res.Cold  : . . .   Warding    : . .  a - +0 elf robe
+Life Prot.: . . .   Conserve   : .    (no shield)
+Res.Acid. : . . .   Res.Corr.  : .    b - +0 elf wizard hat
+Res.Poison: .       Clarity    : .    (no cloak)
+Res.Elec. : .       Spirit.Shd : .    (no gloves)
+Sust.Abil.: . .     Stasis     : .    (no boots)
+Res.Mut.  : .       Ctrl.Telep.: .    (no amulet)
+Res.Rott. : .       Levitation : .    (no ring)
+Saprovore : . . .   Ctrl.Flight: .    (no ring)
+
+@: very resistant to hostile enchantments, incredibly stealthy
+A: no striking features
+a: no special abilities
+
+
+You were on level 1 of the Dungeon.
+You were not hungry.
+
+You visited 1 branch of the dungeon, and saw 1 of its levels.
+
+Inventory:
+
+Armour
+ a - a +0 elven robe (worn)
+ b - a +0 elven wizard hat (worn)
+Comestibles
+ d - a bread ration
+Books
+ c - a book of Minor Magic   
+   
+   Spells                             Type                      Level
+   *Magic Dart                        Conjuration                  1
+   Blink                              Translocation                2
+   Call Imp                           Summoning                    2
+   Throw Frost                        Conjuration/Ice              2
+   Slow                               Enchantment                  2
+   Conjure Flame                      Conjuration/Fire             3
+   Mephitic Cloud                     Conjuration/Poison/Air       3
+ e - a book of Enchantments   
+   
+   Spells                             Type                      Level
+   Levitation                         Enchantment/Air              2
+   Tukima's Dance                     Enchantment                  3
+   See Invisible                      Enchantment                  4
+   *Selective Amnesia                 Enchantment                  4
+   Cause Fear                         Enchantment                  5
+   Deflect Missiles                   Enchantment/Air              6
+   Haste                              Enchantment                  6
+
+
+ You had 25 experience left.
+
+   Skills:
+ * Level 27 Fighting
+ * Level 27 Short Blades
+ * Level 27 Long Blades
+ * Level 27 Axes
+ * Level 27 Maces & Flails
+ * Level 27 Polearms
+ * Level 27 Staves
+ * Level 27 Slings
+ * Level 27 Bows
+ * Level 27 Crossbows
+ * Level 27 Throwing
+ * Level 27 Armour
+ * Level 27 Dodging
+ * Level 27 Stealth
+ * Level 27 Stabbing
+ * Level 27 Shields
+ * Level 27 Traps & Doors
+ * Level 27 Unarmed Combat
+ * Level 27 Spellcasting
+ * Level 27 Conjurations
+ * Level 27 Enchantments
+ * Level 27 Summonings
+ * Level 27 Necromancy
+ * Level 27 Translocations
+ * Level 27 Transmutations
+ * Level 27 Fire Magic
+ * Level 27 Ice Magic
+ * Level 27 Air Magic
+ * Level 27 Earth Magic
+ * Level 27 Poison Magic
+ * Level 27 Invocations
+ * Level 27 Evocations
+
+
+You had 75 spell levels left.
+You knew the following spells:
+
+ Your Spells              Type           Power        Success   Level  Hunger
+a - Magic Dart            Conj           25 (25)      100%        1    None
+c - Selective Amnesia     Ench           N/A          100%        4    None
+
+
+Dungeon Overview and Level Annotations
+
+Branches:
+Dungeon (1/27)            
+
+Altars:
+
+Message History
+
+You finish memorising.
+Cast which spell? (? or * to list) 
+Forget which spell ([?*] list [ESC] exit)? 
+Your memory of Blink unravels.
+The spell releases its latent energy back to you as it unravels.
+Read which item? (? for menu, Esc to quit)
+Are you sure you want to quit? (Confirm with "yes".) 
+
+        ∙≈∙
+    ∙∙ ∙∙≈∙∙▒∙
+   ≈∙∙▒ ∙≈∙∙ ∙∙
+  ∙∙≈∙∙ ∙≈∙▒∙∙≈∙
+  ∙∙∙≈∙▒∙≈∙▒∙≈∙∙∙
+ ∙  ∙∙≈∙▒∙▒∙≈∙∙▒
+ ∙∙∙ ▒(≈∙∙∙≈∙▒  ∙
+∙∙∙∙∙∙▒∙∙∙∙∙▒∙∙∙∙∙
+≈≈≈≈≈≈∙∙@<∙∙∙≈≈≈≈≈
+∙∙∙∙∙∙▒∙∙!∙∙▒)∙∙∙∙
+ ∙∙∙ ▒∙≈∙∙∙≈∙▒  ∙
+ ∙  ∙∙≈∙▒∙▒∙≈∙∙▒
+  ∙∙∙≈∙▒∙≈∙▒∙≈∙∙∙
+  ∙∙≈∙∙ ∙≈∙▒∙∙≈∙
+   ≈∙∙▒ ∙≈∙∙ ∙∙
+    ∙∙ ∙∙≈∙∙▒∙
+        ∙≈∙
+
+
+There were no monsters in sight!
+
+
+Notes
+Turn   | Place   | Note
+--------------------------------------------------------------
+     0 | D:1      | dtsund, the Deep Elf Wizard, began the quest for the Orb.
+     0 | D:1      | Reached XP level 1. HP: 6/6 MP: 7/7
+     1 | D:1      | Entered wizard mode.
+     2 | D:1      | XOM: stat loss: -2 Int (20/22)
+     2 | D:1      | Reached XP level 2. HP: 10/10 MP: 8/10
+     2 | D:1      | Reached XP level 3. HP: 14/14 MP: 9/13
+     2 | D:1      | Reached XP level 4. HP: 18/18 MP: 10/16
+     2 | D:1      | Reached XP level 5. HP: 23/23 MP: 11/18
+     2 | D:1      | Reached XP level 6. HP: 26/26 MP: 12/20
+     2 | D:1      | Reached XP level 7. HP: 31/31 MP: 13/21
+     2 | D:1      | Reached XP level 8. HP: 35/35 MP: 14/23
+     2 | D:1      | Reached XP level 9. HP: 39/39 MP: 15/24
+     2 | D:1      | Reached XP level 10. HP: 43/43 MP: 16/26
+     2 | D:1      | Reached XP level 11. HP: 48/48 MP: 17/27
+     2 | D:1      | Reached XP level 12. HP: 51/51 MP: 18/28
+     2 | D:1      | Reached XP level 13. HP: 54/54 MP: 19/28
+     2 | D:1      | Reached XP level 14. HP: 57/57 MP: 20/29
+     2 | D:1      | Reached XP level 15. HP: 59/59 MP: 21/30
+     2 | D:1      | Reached XP level 16. HP: 62/62 MP: 22/31
+     2 | D:1      | Reached XP level 17. HP: 66/66 MP: 23/31
+     2 | D:1      | Reached XP level 18. HP: 69/69 MP: 24/32
+     2 | D:1      | Reached XP level 19. HP: 73/73 MP: 25/33
+     2 | D:1      | Reached XP level 20. HP: 77/77 MP: 26/34
+     2 | D:1      | Reached XP level 21. HP: 80/80 MP: 27/34
+     2 | D:1      | Reached XP level 22. HP: 82/82 MP: 28/35
+     2 | D:1      | Reached XP level 23. HP: 85/85 MP: 29/36
+     2 | D:1      | Reached XP level 24. HP: 86/86 MP: 30/36
+     2 | D:1      | Reached XP level 25. HP: 89/89 MP: 31/36
+     2 | D:1      | Reached XP level 26. HP: 91/91 MP: 32/37
+     2 | D:1      | Reached XP level 27. HP: 93/93 MP: 33/37
+     5 | D:1      | Learned a level 2 spell: Blink
+    10 | D:1      | Learned a level 4 spell: Selective Amnesia
+    11 | D:1      | Quit the game
+

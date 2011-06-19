@@ -1,0 +1,154 @@
+ Dungeon Crawl Stone Soup version 0.8.0-0-g3a1e774 character file.
+
+53 dtsund the Sneak (level 1, -1/10 HPs)
+             Began as a Spriggan Assassin on June 16, 2011.
+             Slain by a hobgoblin
+             ... wielding a +0,+0 club
+              (2 damage)
+             ... on Level 1 of the Dungeon.
+             The game lasted 00:02:24 (465 turns).
+
+dtsund the Sneak (Spriggan Assassin)                                                                         Turns: 465, Time: 00:02:24
+
+HP  -1/10        AC  3     Str  7      Exp: 1/5 (0), need: 7
+MP   1/1         EV 17     Int 12      God: 
+Gold 50          SH  0     Dex 17      Spells:  0 memorised,  0 levels left
+
+Res.Fire  : . . .   See Invis. : +    a - +2 dagger
+Res.Cold  : . . .   Warding    : . .  c - +0 robe
+Life Prot.: . . .   Conserve   : .    (shield restricted)
+Res.Acid. : . . .   Res.Corr.  : .    (helmet restricted)
+Res.Poison: .       Clarity    : .    d - +0 cloak
+Res.Elec. : .       Spirit.Shd : .    (gloves unavailable)
+Sust.Abil.: . .     Stasis     : .    (boots unavailable)
+Res.Mut.  : .       Ctrl.Telep.: .    (no amulet)
+Res.Rott. : .       Levitation : .    (no ring)
+Saprovore : . . .   Ctrl.Flight: .    (no ring)
+
+@: very quick, not resistant to hostile enchantments, quite stealthy
+A: unfitting armour, see invisible, herbivore 3, speed 3, slow metabolism 3
+a: no special abilities
+
+
+You were on level 1 of the Dungeon.
+You were not hungry.
+
+You visited 1 branch of the dungeon, and saw 1 of its levels.
+
+Inventory:
+
+Hand weapons
+ a - a +2,+2 dagger (weapon)
+ b - a +0 blowgun
+Missiles
+ e - 10 poisoned +0 needles
+ f - 3 curare-tipped +0 needles
+ g - 3 +0 needles of sleeping
+ h - 3 +0 needles of slowing
+ i - 3 +0 needles of confusion
+Armour
+ c - a +0 robe (worn)
+ d - a +0 cloak (worn)
+Comestibles
+ k - a meat ration
+ m - a bread ration
+Scrolls
+ l - 2 scrolls of enchant weapon I {unknown}
+Potions
+ j - a potion of porridge
+
+
+ You had 0 experience left.
+
+   Skills:
+ + Level 1 Fighting
+ + Level 2 Short Blades
+ + Level 2 Throwing
+ + Level 2 Dodging
+ + Level 4 Stealth
+ + Level 3 Stabbing
+
+
+You couldn't memorise any spells.
+You didn't know any spells.
+
+Dungeon Overview and Level Annotations
+
+Branches:
+Dungeon (1/27)            
+
+Altars:
+
+
+                    Innate Abilities, Weirdness & Mutations
+
+You are tiny and cannot use many weapons and most armour.
+You have supernaturally acute eyesight.
+You are a herbivore.
+You cover ground extremely quickly.
+You need consume almost no food.
+
+
+Message History
+
+The hobgoblin is moderately wounded.
+The hobgoblin hits you with a club.
+* * * LOW HITPOINT WARNING * * *
+You hit the hobgoblin.
+The hobgoblin is heavily wounded.
+The hobgoblin hits you with a club.
+You die...
+
+▒∙▒    ▒▒▒▒▒▒▒   ▒∙▒∙▒    ▒∙▒ ▒∙∙∙
+▒∙▒              ▒∙▒∙▒    ▒∙▒ ▒∙∙∙
+▒h▒              ▒∙▒∙▒    ▒∙▒ ▒∙∙∙
+▒∙▒              ▒∙▒∙▒    ▒∙▒ ▒∙∙∙
+▒∙▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒∙▒∙▒▒▒▒▒▒∙▒▒▒∙∙∙
+∙∙∙∙>∙∙∙∙∙∙∙∙∙∙∙∙∙∙∙∙∙∙∙∙∙∙∙∙∙∙∙∙∙
+▒∙▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒∙▒∙▒▒▒▒▒▒∙▒▒▒▒▒∙
+▒∙▒         ▒∙∙∙∙∙∙▒∙▒    ▒∙▒   ▒∙
+▒h▒         ▒∙∙∙∙∙∙▒∙▒    ▒)▒   ▒∙
+▒∙▒         ▒∙∙∙g∙∙▒∙▒    ▒%▒   ▒∙
+▒∙▒         ▒∙∙∙∙@∙▒∙▒    ▒∙▒   ▒∙
+▒∙▒         ▒∙∙∙∙∙∙▒∙▒    ▒∙▒   ▒∙
+▒∙▒         ▒∙∙∙∙∙∙▒∙▒    ▒∙▒   ▒∙
+▒∙▒         ▒∙∙∙∙∙∙▒∙▒    ▒∙▒   ▒∙
+▒∙▒▒▒▒▒▒▒▒▒▒▒∙%∙∙∙∙▒∙▒▒▒▒▒▒∙▒▒▒▒▒∙
+▒∙▒∙∙∙∙)∙∙∙∙h∙∙∙∙∙∙∙∙∙∙∙∙∙∙∙∙∙∙∙∙∙
+▒∙∙∙▒∙▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒
+∙∙∙▒▒'▒▒z▒Z▒   ▒▒▒▒▒z▒z▒z▒∙▒≈▒
+∙▒▒▒∙∙∙▒▒▒▒▒▒▒▒▒∙▒M▒▒▒▒▒▒▒▒▒▒▒▒▒
+∙▒∙▒∙>∙∙∙∙∙▒∙▒Z▒▒▒▒▒∙∙∙∙∙∙∙∙∙∙<▒
+∙▒▒▒∙∙∙▒▒▒∙▒▒▒▒▒∙∙∙∙∙∙∙∙∙∙∙∙∙∙<▒
+
+
+You could see a jackal and a hobgoblin.
+
+Vanquished Creatures
+  2 goblins (D:1)
+  A kobold (D:1)
+  2 rats (D:1)
+5 creatures vanquished.
+
+Notes
+Turn   | Place   | Note
+--------------------------------------------------------------
+     0 | D:1      | dtsund, the Spriggan Assassin, began the quest for the Orb.
+     0 | D:1      | Reached XP level 1. HP: 10/10 MP: 1/1
+     1 | D:1      | Noticed a human zombie
+     3 | D:1      | Noticed a spriggan zombie
+     3 | D:1      | Noticed a draconian zombie
+     5 | D:1      | Noticed a kobold zombie
+     7 | D:1      | Noticed a human zombie
+     8 | D:1      | Noticed an ogre zombie
+    10 | D:1      | Noticed a mummy
+    10 | D:1      | Noticed a minotaur zombie
+    12 | D:1      | Noticed a naga zombie
+    13 | D:1      | Noticed a centaur zombie
+    14 | D:1      | Noticed a troll zombie
+    14 | D:1      | Noticed a kobold zombie
+    16 | D:1      | Noticed a minotaur zombie
+    18 | D:1      | Noticed an elf zombie
+    18 | D:1      | Noticed a draconian zombie
+   465 | D:1      | Slain by a hobgoblin
+

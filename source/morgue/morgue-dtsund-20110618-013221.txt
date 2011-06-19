@@ -1,0 +1,208 @@
+ Dungeon Crawl Stone Soup version 0.8.0-0-g3a1e774 character file.
+
+20 dtsund the Magician (level 1, 6/6 HPs) *WIZ*
+             Began as a Deep Elf Wizard on June 18, 2011.
+             Quit the game on Level 1 of the Dungeon.
+             The game lasted 00:05:26 (61 turns).
+
+dtsund the Magician (Deep Elf Wizard)                                                                         Turns: 61, Time: 00:05:26
+
+HP   6/6         AC  8     Str  7      Exp: 1/0 (13), need: 13
+MP   7/7         EV 12     Int 22      God: No God 0 (0)
+Gold 20          SH  0     Dex 13      Spells:  1 memorised,  7 levels left
+
+Res.Fire  : . . .   See Invis. : .    (no weapon)
+Res.Cold  : + + .   Warding    : . .  a - +0 elf robe
+Life Prot.: . . .   Conserve   : .    (no shield)
+Res.Acid. : . . .   Res.Corr.  : .    o - +3 helmet of Esket {rC++}
+Res.Poison: .       Clarity    : .    (no cloak)
+Res.Elec. : .       Spirit.Shd : .    n - +1 pair of gauntlets {Str+3}
+Sust.Abil.: . .     Stasis     : .    (no boots)
+Res.Mut.  : .       Ctrl.Telep.: .    (no amulet)
+Res.Rott. : .       Levitation : .    (no ring)
+Saprovore : . . .   Ctrl.Flight: .    (no ring)
+
+@: studying Crossbows, not resistant to hostile enchantments, fairly stealthy
+A: blink 1
+a: Blink
+
+
+You were on level 1 of the Dungeon.
+You were not hungry.
+
+You visited 1 branch of the dungeon, and saw 1 of its levels.
+
+Inventory:
+
+Hand weapons
+ f - the +5,+2 sling of the Original Sin {frost, rElec rF++}
+   (You acquired it on level 1 of the Dungeon)   
+   
+   It turns projectiles fired from it into bolts of frost.
+   
+   
+   It greatly protects you from fire.
+   It insulates you from electricity.
+ k - the +6,+6 Lehudib's crystal spear (quivered) {return, Int+3}
+   (You acquired it on level 1 of the Dungeon)   
+   
+   A skilled user can throw it in such a way that it will return to its owner.
+   
+   
+   It affects your intelligence (+3).
+   
+   Presumably this relic led to the invention of the famous spell, or maybe the
+   other way around.
+Armour
+ a - a +0 elven robe (worn)
+ b - a +0 elven wizard hat
+ n - a +1 pair of gauntlets of strength (worn)
+ o - the +3 helmet of Esket (worn) {rC++}
+   (You acquired it on level 1 of the Dungeon)   
+   
+   
+   It greatly protects you from cold.
+Magical devices
+ j - a wand of hasting (4)
+Comestibles
+ d - a bread ration
+Jewellery
+ l - the ring "Sequcw" {+Blink +Rage rC+ rN+ MR Dex+2}
+   (You acquired it on level 1 of the Dungeon)   
+   
+   [ring of protection from magic]
+   
+   It affects your dexterity (+2).
+   It protects you from cold.
+   It protects you from negative energy.
+   It lets you blink.
+   It lets you go berserk.
+Books
+ c - a book of Minor Magic   
+   
+   Spells                             Type                      Level
+   *Magic Dart                        Conjuration                  1
+   Blink                              Translocation                2
+   Call Imp                           Summoning                    2
+   Throw Frost                        Conjuration/Ice              2
+   Slow                               Enchantment                  2
+   Conjure Flame                      Conjuration/Fire             3
+   Mephitic Cloud                     Conjuration/Poison/Air       3
+ h - Margery's Disquisition on Battle Magic and the Blaze
+   (You acquired it on level 1 of the Dungeon)   
+   
+   Spells                             Type                      Level
+   Shock                              Conjuration/Air              1
+   Sting                              Conjuration/Poison           1
+   Evaporate                          Fire/Transmutation           2
+   Sticky Flame                       Conjuration/Fire             4
+   Bolt of Fire                       Conjuration/Fire             6
+ m - Mnemo's Catalogue of Air and Enchantment
+   (You acquired it on level 1 of the Dungeon)   
+   
+   Spells                             Type                      Level
+   Swiftness                          Enchantment/Air              2
+   Flight                             Enchantment/Air              4
+   Deflect Missiles                   Enchantment/Air              6
+   Conjure Ball Lightning             Conjuration/Air              7
+Magical staves
+ g - a staff of energy
+Miscellaneous
+ i - a crystal ball of energy
+
+
+ You had 13 experience left.
+
+   Skills:
+ + Level 2 Dodging
+ + Level 2 Stealth
+ + Level 4 Spellcasting
+ + Level 1 Conjurations
+ + Level 1 Summonings
+ + Level 1 Translocations
+
+
+You had 7 spell levels left.
+You knew the following spells:
+
+ Your Spells              Type           Power        Success   Level  Hunger
+a - Magic Dart            Conj           8 (25)       91%         1    None
+
+
+Dungeon Overview and Level Annotations
+
+Branches:
+Dungeon (1/27)            
+
+Altars:
+
+
+                    Innate Abilities, Weirdness & Mutations
+
+You can translocate small distances at will.
+
+
+Message History
+
+You start putting on your armour.
+You continue putting on the +3 helmet of Esket {rC++}.
+You finish putting on the +3 helmet of Esket {rC++}.
+Read which item? (? for menu, Esc to quit)
+As you read the scroll of acquirement, it crumbles to dust.
+This is a scroll of acquirement!
+Are you sure you want to quit? (Confirm with "yes".) 
+
+▒∙▒∙∙∙∙∙∙∙∙∙∙∙∙∙▒∙∙
+▒∙∙∙∙▒▒▒∙∙∙▒▒▒∙∙∙∙▒
+▒∙∙∙∙▒<∙∙∙∙∙<▒∙∙∙∙▒
+▒∙∙∙∙▒∙∙∙∙∙∙∙▒∙∙∙∙▒
+  ▒∙∙∙∙∙∙∙∙∙∙∙∙∙▒∙▒
+  ▒∙∙∙∙∙∙▒∙∙∙∙∙∙▒∙∙
+  ▒∙$∙∙∙∙∙∙∙∙∙∙∙▒
+▒∙∙∙∙▒∙∙∙∙∙∙∙▒∙∙∙
+▒∙∙∙∙▒<∙∙∙∙∙>▒∙∙∙∙
+▒∙∙∙∙▒▒▒∙∙∙▒▒▒∙∙∙∙▒
+ ∙▒∙∙∙∙∙∙∙@∙∙∙∙∙▒∙
+  ▒∙∙∙∙∙∙∙∙∙∙?∙∙▒∙▒
+   ▒▒∙∙∙▒▒▒∙∙∙▒▒▒
+   ∙∙∙∙∙   ∙∙∙∙∙
+   ▒▒▒ ∙   ▒▒▒▒▒▒
+
+
+There were no monsters in sight!
+
+
+Notes
+Turn   | Place   | Note
+--------------------------------------------------------------
+     0 | D:1      | dtsund, the Deep Elf Wizard, began the quest for the Orb.
+     0 | D:1      | Reached XP level 1. HP: 6/6 MP: 7/7
+     2 | D:1      | Entered wizard mode.
+     3 | D:1      | Identified the +5,+2 sling of the Original Sin (You acquired it on level 1 of the Dungeon)
+     3 | D:1      | Identified the -1 robe of Folly (You acquired it on level 1 of the Dungeon)
+     3 | D:1      | Identified the amulet "Griokos" (You acquired it on level 1 of the Dungeon)
+     3 | D:1      | Identified 12 scrolls of acquirement
+     5 | D:1      | Identified Margery's Disquisition on Battle Magic and the Blaze (You acquired it on level 1 of the Dungeon)
+     6 | D:1      | Identified the +2,+10 spear of the Botono (You acquired it on level 1 of the Dungeon)
+     6 | D:1      | Identified the +1 helmet "Jotoc" (You acquired it on level 1 of the Dungeon)
+     9 | D:1      | Gained mutation: You digest meat inefficiently.
+    18 | D:1      | Lost mutation: You digest meat inefficiently.
+    18 | D:1      | Gained mutation: You can translocate small distances at will.
+    35 | D:1      | Identified the -4,-5 crossbow of Compulsion (You acquired it on level 1 of the Dungeon)
+    35 | D:1      | Identified Hycy's Reference Book on the Supportive Glacier (You acquired it on level 1 of the Dungeon)
+    37 | D:1      | Identified the +0 helmet of Ghietats (You acquired it on level 1 of the Dungeon)
+    37 | D:1      | Identified the ring "Sapsouhe" (You acquired it on level 1 of the Dungeon)
+    37 | D:1      | Identified Toom's Early Guide to Rites and Rhymes (You acquired it on level 1 of the Dungeon)
+    39 | D:1      | Identified the +6,+6 Lehudib's crystal spear (You acquired it on level 1 of the Dungeon)
+    39 | D:1      | Identified the Volume of Lightness (You acquired it on level 1 of the Dungeon)
+    41 | D:1      | Identified the -3,+0 spiked flail of Igur (You acquired it on level 1 of the Dungeon)
+    41 | D:1      | Identified the ring "Sequcw" (You acquired it on level 1 of the Dungeon)
+    43 | D:1      | Identified the amulet of Qiulit (You acquired it on level 1 of the Dungeon)
+    43 | D:1      | Identified Mnemo's Catalogue of Air and Enchantment (You acquired it on level 1 of the Dungeon)
+    55 | D:1      | Identified the +3 helmet of Esket (You acquired it on level 1 of the Dungeon)
+    55 | D:1      | Identified Jowuurch's Handbook of the Harmful Entourage (You acquired it on level 1 of the Dungeon)
+    60 | D:1      | Identified the +4,+1 sling "Newtbane" (You acquired it on level 1 of the Dungeon)
+    60 | D:1      | Identified the ring "Imutat" (You acquired it on level 1 of the Dungeon)
+    60 | D:1      | Identified Sif Muna's Collected Works on Cankerous Moulding (You acquired it on level 1 of the Dungeon)
+    61 | D:1      | Quit the game
+

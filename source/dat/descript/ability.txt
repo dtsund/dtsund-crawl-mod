@@ -1,0 +1,421 @@
+%%%%
+No ability
+
+If you get this description, it is a bug.
+%%%%
+Spit Poison
+
+Spit poison at a targeted monster.
+%%%%
+Teleportation
+
+Teleport yourself to a random location on the level.
+%%%%
+Blink ability
+
+Randomly translocate a short distance.
+%%%%
+Breathe Energy
+
+Breathe a blast of power at a targeted monster, possibly removing some of its enchantments.
+%%%%
+Breathe Fire
+
+Breathe a blast of fire at a targeted monster, possibly leaving fire clouds in its wake.
+%%%%
+Breathe Frost
+
+Breathe a blast of frost at a targeted monster.
+%%%%
+Breathe Poison Gas
+
+Breathe a blast of poison gas at a targeted monster.
+%%%%
+Breathe Lightning
+
+Release a great discharge of electricity causing an uncontrollable lightning storm.
+%%%%
+Breathe Sticky Flame
+
+Breathe a blast of sticky flame at a targeted monster. As the name suggests, sticky flame will stick around, so the monster may be covered in flames for several rounds until they eventually go out. It may splash on impact.
+%%%%
+Breathe Steam
+
+Breathe a jet of steam at a targeted monster.
+%%%%
+Breathe Noxious Fumes
+
+Breathe a blast of noxious fumes at a targeted monster.
+%%%%
+Bat Form
+
+Turn into a speedy vampire bat. In bat form, you can neither interact with items in any form (except picking them up or dropping them), nor cast spells. Note that Bat Form will decrease your current Strength while increasing your Dexterity. Thus, you won't be able to change form if your Strength is too low.
+%%%%
+Bottle Blood
+
+At experience level 6 and higher, Vampires can bottle the blood from non-rotten and blood-containing corpses they are standing on. Doing so requires a butchery tool and the capability of wielding it, as is the case for butchering.
+%%%%
+Spit Acid
+
+Spit acid at a targeted monster.
+%%%%
+# Both for Fly I and II.
+Fly
+
+Start flying.
+%%%%
+Hellfire
+
+Blast your enemies with hellfire.
+%%%%
+Throw Flame ability
+
+Throw a blast of flame at a targeted monster.
+%%%%
+Throw Frost ability
+
+Throw a blast of frost at a targeted monster.
+%%%%
+Release Delayed Fireball
+
+Instantly release a previously memorised (delayed) fireball without additional cost in terms of magic or hunger.
+%%%%
+Self-Restoration
+
+At the permanent loss of one magic point restore your Strength, Dexterity and Intelligence, and heal a large amount of rotted hit points.
+%%%%
+Device Recharging
+
+At the permanent loss of one magic point recharge a wand or rod.
+%%%%
+Evoke Teleportation
+
+Teleport yourself to a random location on the level.
+%%%%
+Evoke Blink
+
+Randomly translocate a short distance.
+%%%%
+Evoke Berserk Rage
+
+Go berserk. Going berserk greatly, if temporarily, increases your hit points and damage output in melee fights. It will time out quickly if you don't kill anything, but may be extended by multiple kills. While berserk, you cannot perform a number of actions such as, for example, (un)wield a weapon, quaff something, evoke wands or items, or cast spells. Such a rage is usually followed by deep exhaustion, a time during which you are slowed down, cannot berserk again, and occasionally even pass out.
+%%%%
+Evoke Invisibility
+
+Turn yourself invisible for a limited amount of time. Turning invisible increases your magical contamination and may eventually cause glowing.
+%%%%
+Turn Visible
+
+Turn visible again.
+%%%%
+Evoke Levitation
+
+Start levitating. During levitation you can safely cross water and similar obstacles. Be warned, though, that levitation may time out at inopportune moments and cause you to fall to your death. While levitating, you cannot interact with items on the floor or pick them up.
+%%%%
+Stop Levitating
+
+Stop levitating.
+%%%%
+End Transformation
+
+Revert to your normal form, with a short delay.
+%%%%
+# Zin
+Recite
+
+Preach to monsters about Zin's laws, which can lead to various results. There are four books you can preach from:
+
+* Book of Abominations: This book deals with the very thing most abhorrent to Zin - chaos in all its forms. These recitations will invoke Zin's most powerful smiting.
+
+* Book of Ablutions: The impure are nearly as loathed by the Law-Giver. Recitations from this book will deal damage to such creatures.
+
+* Book of Apostates: Intelligent creatures who do not worship Zin but do no other evil will be dealt with least harshly. The recitations from this book merely sow confusion. Yet those who dare to worship a god alien to Zin may be permanently deprived of means to spread their foul faith.
+
+* Book of Anathema: Demons and the undead are hated by Zin. This book gives you means to rebuke them.
+%%%%
+Vitalisation
+
+Vitalise yourself. This will remove a negative affliction from you, or restore one of your attributes. In case neither of these is necessary, it will give you temporary boosts to your attributes instead.
+%%%%
+Imprison
+
+Temporarily imprison a monster surrounded by empty space in rock. It only works on monsters receptive to Recite, as such monsters will feel the effects of Recite once the prison naturally disappears.
+%%%%
+Sanctuary
+
+For a short duration gain safety in a divine refuge. While you are inside the sanctuary, monsters will not attack you, but the protection will disappear at once should you breach the divine peace.
+%%%%
+Cure All Mutations
+
+Cure all your mutations - but only once.
+%%%%
+# The Shining One
+Divine Shield
+
+Conjure up a divine shield that stacks with an ordinary shield and can be used even when wielding a two-handed weapon, as the Divine Shield is managed by the Shining One.
+%%%%
+Cleansing Flame
+
+Invoke a huge blast of divine fury centered on you, severely damaging undead and demons. All other hostiles also take damage, if less so, whereas you and your allies are never affected.
+%%%%
+Summon Divine Warrior
+
+Summon an Angel or Daeva, powerful warriors against evil. They may be blessed by the Shining One to stay longer or even permanently in this world.
+%%%%
+# Kikubaaqudgha
+Receive Corpses
+
+Create one or more reanimatable monster corpses near yourself. The number and freshness of these are dependent on Necromancy skill.
+%%%%
+Torment
+
+Sacrifice a cadaver to make everyone in sight, including you, experience all the pain that being suffered in its life. This will decimate the resilience of all those who can feel it.
+
+Kikubaaqudgha may choose to protect you from it... or may not.
+%%%%
+# Yredelemnul
+Animate Remains
+
+Reanimate a single corpse or skeleton as a follower. Note that zombies and skeletons cannot leave the level they were created on.
+%%%%
+Recall Undead Slaves
+
+Recall your undead followers from anywhere on the level to your immediate surroundings.
+%%%%
+Injury Mirror
+
+Hurt attacking monsters by reflecting damage they do to you back at them.
+%%%%
+Animate Dead ability
+
+Reanimate all corpses and skeletons in your vicinity as followers. Note that zombies and skeletons cannot leave the level they were created on.
+%%%%
+Drain Life
+
+Heal hit points by draining the life force of the monsters surrounding you.
+%%%%
+Enslave Soul
+
+Mark a living intelligent monster's soul as ripe for the taking. Once the marked monster dies, its soul will be yours.
+
+The enslaved soul will retain the monster's faculties, equipment and abilities, as well as some of its innate healing. However, only a relatively uninjured monster can have its soul marked, and only one soul can be enslaved at a time. Furthermore, the duration of the mark is dependent on Invocations skill.
+
+Note that enslaved souls can follow you beyond the level they were created on.
+%%%%
+Animate Remains or Dead
+
+If you get this description, it is a bug.
+%%%%
+# Okawaru
+Heroism
+
+Temporarily increase all of your combat skills, including the ability to sneak around or avoid traps.
+%%%%
+Finesse
+
+Greatly increase your combat speed, with no loss of accuracy. This unnatural effect causes small amounts of magic contamination, prolonged exposure to which may be bad for your health.
+%%%%
+# Makhleb
+Minor Destruction
+
+Shoot a random harmful blast at the targeted monster.
+%%%%
+Lesser Servant of Makhleb
+
+Summon a minor demon, with a chance of being hostile at low Invocations skill.
+%%%%
+Major Destruction
+
+Shoot a random harmful beam or explosion at the targeted monster.
+%%%%
+Greater Servant of Makhleb
+
+Summon a major demon, with a chance of being hostile at low Invocations skill.
+%%%%
+# Sif Muna
+Channel Energy
+
+Replenish your magical reservoir by an amount depending on your Invocations skill.
+%%%%
+Forget Spell
+
+Forget any spell out of the ones you've currently memorised, so as to free memory to learn others.
+%%%%
+# Trog
+Burn Spellbooks
+
+Set all spellbooks within your field of vision on fire. The fire is fuelled by Trog's hatred, and Trog likes it most when you don't even care which books of madness burst into flames.
+%%%%
+Berserk
+
+Go berserk. Going berserk greatly, if temporarily, increases your hit points and damage output in melee fights. It will time out quickly if you don't kill anything, but may be extended by multiple kills. While berserk, you cannot perform a number of actions such as, for example, (un)wield a weapon, quaff something, evoke wands or items, or cast spells. Such a rage is usually followed by deep exhaustion, a time during which you are slowed down, and cannot berserk again. Unlike other sources of rage, depending on your piety Trog may occasionally prevent you from passing out.
+%%%%
+Trog's Hand
+
+Invoke a powerful regeneration ability which stacks with all other sources and even allows otherwise non-healing species to regenerate. This will also increase protection from magical effects.
+%%%%
+Brothers in Arms
+
+Summon huge angry allies to wreak havoc.
+%%%%
+# Elyvilon
+Divine Protection
+
+Beseech Elyvilon to save your life. If you are mortally wounded, the Healer may undo the killing blow. Especially pious individuals may be certain of this help, but in that case, any actual intervention costs piety (as opposed to merely asking for intervention, which is always free).
+
+Beware: killing others while asking to be spared yourself is a major sin!
+%%%%
+Lesser Healing
+
+Depending on your Invocations skill, heal a creature other than you by a small amount. Using this ability on hostile monsters will try to make them neutral. This works best on animals, worse on humanoids of your species, still worse on other humanoids, and worst of all on demons and undead. Mindless creatures cannot be pacified, and no monster can be pacified while it is asleep. The chance for successful pacification depends on the healing power.
+
+Whether the pacification succeeds or not, the invested food and magic point are lost. If it does succeed, the monster is healed and you gain half the monster's experience value and possibly some piety. Otherwise, the monster is unaffected and you gain nothing.
+
+You can also heal allies and neutral monsters.
+%%%%
+Lesser Self-Healing
+
+Depending on your Invocations skill, heal a small amount of hit points.
+%%%%
+Purification
+
+Purge your body of bad effects such as sickness, poisoning, slowness, confusion and rotting.
+%%%%
+Greater Healing
+
+Depending on your Invocations skill, heal a creature other than you by a moderate amount. Using this ability on hostile monsters will try to make them neutral. This works best on animals, worse on humanoids of your species, still worse on other humanoids, and worst of all on demons and undead. Mindless creatures cannot be pacified, and no monster can be pacified while it is asleep. The chance for successful pacification depends on the healing power, so it is significantly better than using Lesser Healing.
+
+Whether the pacification succeeds or not, the invested food, piety and magic points are lost. If it does succeed, the monster is healed and you gain half the monster's experience value and possibly some piety. Otherwise, the monster is unaffected and you gain nothing.
+
+You can also heal allies and neutral monsters.
+%%%%
+Greater Self-Healing
+
+Depending on your Invocations skill, heal a moderate amount of hit points. Roughly, Greater Healing will allow you to heal three times the amount of Lesser Healing at a slightly higher total piety cost.
+%%%%
+Restoration
+
+Fully restore your Strength, Dexterity and Intelligence, and heal a large amount of rotted hit points.
+%%%%
+Divine Vigour
+
+Depending on your Invocations skill, restore a large amount of, and temporarily increase, both your hit points and your magic points.
+%%%%
+# Lugonu
+Depart the Abyss
+
+Leave the Abyss to return into the branch and level you last were in when you left the dungeon.
+%%%%
+Bend Space
+
+Bend the fabric of space around you, instantly translocating you a small distance, and possibly also translocating and damaging monsters in your vicinity.
+%%%%
+Banish
+
+Attempt to banish a monster into the Abyss.
+%%%%
+Corrupt
+
+Corrupt the current level by unleashing Abyssal energies on it. This will cause the level to largely change appearance, and will gate in demons from the Abyss bent on causing destruction. This will not work on levels already corrupted or in the Abyss.
+%%%%
+Enter the Abyss
+
+Transfer yourself to Lugonu's realm instantly... at a cost.
+%%%%
+# Nemelex Xobeh
+Draw One
+
+Choose any deck in your inventory and draw a card from it.
+%%%%
+Peek at Two
+
+Draw two cards from any deck in your inventory, look at them, and shuffle them back into the deck. The deck will be inscribed as containing those two cards, and, if they are different, this will identify the deck.
+%%%%
+Triple Draw
+
+Draw three cards from any deck in your inventory, look at them, and decide which one to keep, discarding the other two.
+%%%%
+Mark Four
+
+Draw four cards from any deck in your inventory, mark and remember them, so that you can tell when they are on top, and shuffle them back into the deck. The deck will be inscribed as containing those cards, and doing so will identify the deck.
+%%%%
+Stack Five
+
+Draw five cards from any deck in your inventory, losing the rest of the deck. Look at the cards and sort them into any order you'd like. Subsequently, you can draw these cards in the order you chose.
+%%%%
+# Beogh
+Smiting
+
+Smite an enemy within your field of vision. This doesn't require a direct path, just seeing the enemy is enough.
+%%%%
+Recall Orcish Followers
+
+Recall your orcish followers from anywhere on the level to your immediate surroundings.
+%%%%
+# Fedhas
+Sunlight
+
+Call sunlight down over a small area of the dungeon. Monsters illuminated by the light will be easier to hit. Water affected by the sunlight will evaporate. In particular, deep water will become shallow water, and shallow water will dry up completely, revealing the dungeon floor.
+%%%%
+Growth
+
+Use fruit to grow a ring of plants around yourself. If a complete ring cannot be formed (because you do not have enough fruit), plants will grow on squares adjacent to you that are close to monsters. The plants you create gain bonus HP proportional to your invocations skill.
+%%%%
+Rain
+
+Cause rain to fall around yourself, turning the dungeon floor into shallow water and shallow water into deep water.
+%%%%
+Reproduction
+
+Create giant spores from corpses in your line of sight. The spores will explode, causing damage to you or your enemies.
+%%%%
+Evolution
+
+Turn plants and fungi adjacent to you into stronger species. Upgrading fungi requires piety, upgrading plants requires fruit. Plants upgraded gain a bonus to attack accuracy proportional to the user's invocations skill, and oklob plants are more likely to spit acid at higher invocations.
+%%%%
+# Cheibriados
+Make Ponderous
+
+Alter a piece of body armour of your choice so it slows the wearer down. This is generally bad for hasty people, those who appreciate taking the time may benefit from Cheibriados's favour when they are not so fast.
+%%%%
+Bend Time
+
+Slow down everyone who's standing just next to you.
+%%%%
+Slouch
+
+Cause damage to everyone in sight who is moving faster than you. Those magically hasted will be hurt particularly painfully.
+%%%%
+Step From Time
+
+Remove yourself from the flow of time. Things around you will happen at their usual busy pace, monsters will wander, perishable items will decay, plants will grow. After some time has passed, you will return in the same state as the very second you departed.
+%%%%
+Renounce Religion
+
+Renounce your faith. This will make your character leave your god (and usually anger said god).
+%%%%
+# Jiyva
+Request Jelly
+
+Create a neutral jelly that will wander the floor and digest items.
+%%%%
+Slimify
+
+Coat a wielded weapon or your fists with slime, turning the next living or undead monster hit into a neutral slime.
+%%%%
+Cure Bad Mutation
+
+Remove a randomly selected bad mutation.
+%%%%
+# Ashenzari
+Scrying
+
+Gain astral sight to see through walls. This is not enough to let you target spells and abilities, even those that work through glass.
+%%%%
+Transfer Knowledge
+
+Sacrifice part of one of your skills to improve another.
+%%%%
+End Transfer Knowledge
+
+Abort an ongoing skill transfer.

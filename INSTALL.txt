@@ -1,0 +1,434 @@
+Install instructions for Dungeon Crawl Stone Soup (DCSS)
+--------------------------------------------------------
+(Last updated on 20110403 for Dungeon Crawl Stone Soup 0.8.0.)
+
+Getting DCSS to run
+-------------------
+
+This file describes how to compile a runtime executable of DCSS from the
+source code.  If you're trying to compile Crawl yourself, skip ahead to the
+next section, "Building Dungeon Crawl Stone Soup".
+
+If, however, you're having trouble getting a precompiled binary to run:
+
+1) Check whether you've downloaded and extracted the correct version.
+
+    Platform        Tiles?          Download package
+    --------        ------          ----------------
+    Windows         yes             stone_soup-VERSION-tiles-win32.zip
+    Windows         no              stone_soup-VERSION-win32.zip
+    Mac OS X        yes             stone_soup-VERSION-tiles-osx.zip
+                                    or stone_soup-VERSION-tiles-osx-app.dmg
+    Mac OS X        no              stone_soup-VERSION-osx.zip
+                                    or stone_soup-VERSION-osx-app.dmg
+    DOS             no              stone_soup-VERSION-dos.zip
+    Source code     yes             stone_soup-VERSION-src.zip
+                                    or stone_soup-VERSION-src.tar.bz2
+
+2) Try removing/renaming your saves/ directory in case older saves aren't
+   recognized anymore.
+
+
+If you still can't get Crawl to run, you can ask for further help on IRC:
+##crawl-dev on freenode, forums: https://crawl.develz.org/tavern/ or usenet:
+rec.games.roguelike.misc.  Please try to be as detailed as possible about
+any error messages you're getting.
+
+The rest of the file deals with compiling from the source.
+
+
+Building Dungeon Crawl Stone Soup
+---------------------------------
+
+Crawl Stone Soup is known to compile successfully on the following platforms
+as of version 0.8:
+
+- Any Unix with a recent gcc (and g++), GNU make and libncursesw, including
+  Linux and Mac OS X.  "Recent" is defined as gcc 4.1 or newer.
+- Microsoft Windows NT/2000/XP.
+
+The only officially supported compiler is gcc (available on almost all
+Unixes, and as djgpp for DOS, and MinGW for Windows).
+
+On other platforms, your mileage may wary, but you should be able to build
+Crawl on pretty much any operating system with a modern C++ compiler (full
+support for the standard C++ library, in particular <string>, the collection
+classes and <algorithm> is necessary) and the curses library.
+
+Windows 9X and ME are no longer supported but you may probably build for
+them with relatively minor changes.  We also used to support DOS in the past
+and the remnants of DOS code are still present, but getting them to work may
+require a substantial effort.  If you have any success, please let us know!
+
+
+Source Code Checkout
+--------------------
+
+If you don't already have the source code downloaded (in the form of a .zip
+or .tar.bz2 file), you can obtain the latest source code from Git.  MinGW
+users can obtain Git by installing msysgit (described in the MinGW section).
+Linux users can just install the 'git' or 'git-core' package with whatever
+package manager they use.  Note that there used to be another package called
+'git' (now 'gnuit') going around which stands for 'GNU interactive tools'.
+This is not what you want.
+
+Once you have Git installed, you just need to do:
+
+    git clone git@gitorious.org:crawl/crawl.git
+
+And then to get the contributing libraries, enter the newly cloned
+repository via 'cd crawl-ref' and type:
+
+    git submodule update --init
+
+This should get you all you need to build Crawl from source.
+
+
+Optional libraries
+------------------
+
+Crawl can be built with some optional features:
+
+* Sounds
+* User Lua scripts
+
+Crawl Stone Soup also uses a level compiler to compile special level
+definitions; to make changes to the level compiler, you'll need the flex and
+bison/byacc tools (Other lex/yaccs may also work).  More details are
+available below.
+
+Sounds must be enabled by editing AppHdr.h (uncomment SOUND_PLAY_COMMAND on
+Unixes or WINMM_PLAY_SOUNDS on Windows).
+
+Stone Soup 0.6 includes Lua 5.1.4 in its source tree. Crawl uses Lua for
+dungeon generation.  In addition, Crawl has a (rudimentary) Lua interface
+for users to run scripts which can do things such as conditionalise parts of
+the .crawlrc/init.txt.  Such user Lua scripts are enabled by default, but
+can be turned off by appending NO_LUA_BINDINGS=y to the make invocation.
+
+
+Building on Unix (Linux, *BSD, Solaris, etc.)
+---------------------------------------------
+
+To install or not to install:
+
+If only one user on the system (you) is going to be playing Crawl, you do
+not need to use "make install".  A simple "make" will build Crawl in the
+source directory, where you can run it as "./crawl".
+
+
+Prerequisites (Debian):
+
+On Debian-based systems (Ubuntu, Mepis, Xandros, ...), you can get all
+dependencies by typing the following as root/sudo:
+apt-get install build-essential libncursesw5-dev bison flex liblua5.1-0-dev \
+  libsqlite3-dev libz-dev pkg-config libsdl-image1.2-dev libsdl1.2-dev      \
+  libfreetype6-dev
+(the last four are needed only for tiles builds).  This is the complete set,
+with it you don't have a need for the bundled "contribs".
+
+
+Prerequisites (other systems):
+
+GNU gcc and g++, GNU make, libncursesw or libcursesw. You need the development
+headers for ncurses - they may not be installed by default on some Unixes.
+
+For tile builds, you need FreeDesktop's pkg-config and X11 headers.
+
+flex and bison are optional but highly recommended. Recent versions of byacc
+are also fine (edit your makefile appropriately).
+
+You need to link with a curses library that understands Unicode characters,
+usually named libncursesw (the development headers for libncursesw are
+usually in /usr/include/ncursesw.)
+
+
+Building:
+
+* cd to the source directory (you can safely ignore the dolinks.sh and
+  domake.sh scripts).
+
+* Most users can simply type 'make' without any extra flags, and get a
+  working build as a result.  If just typing 'make' works for you, then you
+  shouldn't need to read any further.  BSD and Solaris users may have to use
+  'gmake' instead of 'make'.
+
+* If you want a graphical (tiled) build, then you should add 'TILES=y' to
+  the 'make' command-line, like so:
+
+    make TILES=y
+
+  Note that the graphical build requires that you have development libraries
+  installed for SDL, SDL_image, libpng, zlib, and freetype.  If your system
+  doesn't have these installed, you can usually get them via your package
+  manager (apt-get, emerge, yum, etc).
+
+  If you would rather, you can go to the source/contrib directory and type
+  'make', and the required libraries should be built for you.
+
+* If you want to install Crawl system-wide rather than play from the build
+  directory, you need to specify a directory to hold the save and data files.
+  Specifying a prefix of /usr or /usr/local will default SAVEDIR to
+  "~/.crawl" and DATADIR to share/crawl (relative to the prefix).
+  SAVEDIR must be writeable and owned by the user running crawl, so except
+  for special cases it should be inside "~" (home directory).
+
+* If you're installing Crawl for multiple users, run 'make install' as root.
+  Crawl will be copied into the directory specified by 'prefix' (see above).
+  The data directory will be created if necessary, and the level layout,
+  tile and help files will be copied there.
+
+* If you do not want players to be able to script Crawl with Lua, add
+  'NO_LUA_BINDINGS=y' to the 'make' command-line.
+
+
+Building on Mac OS X
+--------------------
+
+For non-graphical builds, you can use the Unix build process described
+above, or you can use Xcode, as described below.
+
+For graphical builds, we do not support the use of the Unix build process
+for various reasons.
+
+* Crawl is officially built and tested under Xcode 3.2 on OS X 10.6.1, but
+  it's highly likely that other versions of Xcode will work fine.
+
+* Make sure Xcode is installed. Xcode should be available on the Mac OS X
+  install DVD if you haven't already installed it.  You can also download
+  Xcode from Apple's website (note that their website often has versions of
+  Xcode that are newer than the versions distributed on their Mac OS X
+  DVDs):  http://developer.apple.com/TOOLS/Xcode/
+
+* Open the Xcode project (Crawl.xcodeproj) under the "source"
+  directory.
+
+* Hit Build in Xcode. This should build all the necessary dependencies,
+  including libpng, freetype, SDL, and SDL_image, and then finally build
+  Crawl itself.  The process may take quite a while, so go grab a coke or a
+  cup of coffee.
+
+* The default build configuration, Release, will build a ppc/i386 Universal
+  binary suitable for play on all OS X 10.4 or newer systems.  The other
+  build configurations are intended for development and may not result in a
+  binary that can be distributed to others.
+
+* If you would like users to be unable to script Crawl with Lua, you can
+  specify NO_LUA_BINDINGS=y when building. See the section on Lua for more
+  information.
+
+
+Building on Windows (MinGW)
+---------------------------
+
+NOTE: You cannot build Windows binaries on Windows 9x/ME using MinGW. On
+9x/ME, you can use the Cygwin build instructions, or build a binary on a
+Windows NT/2k/XP system (the binary will run on 9x), or build a DOS binary.
+
+* To install MinGW, you have two options. You can install via the installer
+  provided by the MinGW project (http://www.mingw.org), but this is not
+  officially supported by the Crawl team.  If you have problems with it, we
+  will not help you until you get a supported version of MinGW, which can be
+  obtained from the msysgit project.  msysgit is a full MinGW setup that
+  even includes Git (which happens to be the source code management system
+  used by the Crawl team).  To get msysgit, be sure to download the
+  'netinstall' from here:
+
+    http://code.google.com/p/msysgit/downloads/list
+
+  NOTE: Do NOT get any of the versions that do not have 'netinstall' in the
+        filename. The 'netinstall' is the only one used by the Crawl team.
+
+* Start msys by running 'c:\msysgit\msys.bat'. Now you're in a MinGW build
+  environment.
+
+* cd to the the Crawl source directory. For instance, if you have the crawl
+  sources in c:\crawl\source, you would type 'cd /c/crawl/source'.
+
+* Build Crawl by running 'make'. If you want a graphical build, you will
+  need to add 'TILES=y' on the 'make' command line.
+
+* When the process finishes, you should be able to run crawl right from the
+  source directory by typing './crawl'
+
+* If you get a message about missing SDL.h even though you do have contribs
+  installed, your version of msys may suffer from a bug that has been fixed
+  since.  Please either update msys, or delete /mingw/bin/sdl-config so it
+  won't interfere with the copy shipped with Crawl.
+
+Building on Windows (cygwin)
+----------------------------
+
+* Get Cygwin from http://www.cygwin.com/. When installing, ensure that the
+  following packages are selected: gcc, g++, make, flex, bison,
+  libncurses-devel.  If you'd like to build from git, install the git-core
+  package.  You may also want to install diff, patch, and other such tools.
+
+* Once Cygwin is installed, open a Cygwin bash shell (use the Start menu or
+  desktop icon, do not double-click bash.exe in Explorer).
+
+* cd to the the Crawl source directory. For instance, if you have the crawl
+  sources in c:\crawl\source, you would type 'cd /cygdrive/c/crawl/source'.
+
+* Follow the Linux build instructions to build Crawl.
+
+
+Building for DOS (djgpp) -- unsupported!
+----------------------------------------
+
+* Install djgpp from http://www.delorie.com/djgpp/. Don't forget to include
+  C++ support when the Zip picker asks for what you want.  You may also have
+  to download GNU make as a separate package.  It's important to follow the
+  install instructions carefully, because bad installs can produce rather
+  confusing error messages.
+
+* Make sure gxx and make are in your PATH.
+
+* If you want to modify the level compiler, install the djgpp flex, bison
+  and m4 packages and set DOYACC := y in makefile.dos.
+
+* cd to the Crawl source directory.
+
+* Build Crawl by running
+        make -f makefile.dos
+
+* When the build is done, crawl.exe should be in the source directory.
+
+
+Building Tiles versions
+-----------------------
+
+* On most platforms, you can simply type:
+    make TILES=y
+
+* If you compiled the ASCII binary before, you'll need to run 'make clean'
+  before running 'make'.
+
+* All platforms require the same prerequisites listed in the other sections
+  above for building each of these platforms.
+
+* All platforms additionally require the development versions of the
+  following software packages installed.
+
+    * SDL (http://www.libsdl.org/download-1.2.php)
+    * SDL_image (http://www.libsdl.org/projects/SDL_image/)
+    * libpng (http://www.libpng.org/pub/png/libpng.html)
+    * Freetype 2 (http://www.freetype.org/download.html)
+
+  On Linux, these can be installed via a package manager (apt-get, emerge,
+  yum, etc).
+
+  On Mac OS X, these will be compiled automatically when you build the Xcode
+  project.
+
+  On Windows (MinGW or Cygwin), these will be compiled as needed when you
+  run 'make TILES=y'.
+
+* If you want both ASCII and Tiles binaries you need to compile them
+  separately, rename one of them, and copy them into the same Crawl
+  directory.
+
+
+*****************************************************************************
+Data files
+----------
+
+Crawl looks for several data files when starting up. They include:
+
+* Special level and vault layout (dat/*.des) files.
+* Core Lua code (dat/clua/*.lua).
+* Descriptions for monsters and game features (dat/descript/*.txt).
+* Definitions for monster dialogue and randart names (dat/database/*.txt).
+
+All these files are in the source tree under source/dat.
+
+Crawl will also look for documentation files when players invoke the help
+system.  These files are available under the docs directory.
+
+Your built Crawl binary must be able to find these files, or it will not
+start.
+
+If Crawl is built without an explicit DATA_DIR_PATH (this is the most common
+setup), it will search for its data files under the current directory, and
+if it can't find them there, one level above the current directory.  In
+short, it uses these search paths: ., ./dat, ./docs, .., ../dat, ../docs.
+
+
+*****************************************************************************
+
+The level compiler
+------------------
+
+Crawl uses a level compiler to read the level design (.des) files in the
+source/dat directory.
+
+If you're using one of standard makefile, the steps described in this
+section are performed automatically:
+
+The level compiler source is in the source/util directory (levcomp.lpp and
+levcomp.ypp).  The steps involved in building the level compiler are:
+
+* Run flex on levcomp.lpp to produce the levcomp.lex.cc lexer.
+* Run bison on levcomp.ypp to produce the levcomp.tab.cc parser and
+  levcomp.tab.h
+* Compile the resulting C++ source files and levcomp.cc and link the object
+  files into the Crawl executable.
+
+For convenience on systems that don't have flex/bison, pre-generated
+intermediate files are provided under source/prebuilt.  The makefiles
+provided with the Crawl source distribution will use these pre-generated
+files automatically if flex/bison is not available.
+
+
+*****************************************************************************
+Optional Libraries (Lua and PCRE)
+---------------------------------
+
+Lua
+---
+
+Security on multiuser systems (Unix):
+
+As of 0.8, setuid and setgid installs are no longer supported, thus any
+previous concerns are no longer applicable.  Lua user scripts are sandboxed
+and should be generally safe even on public servers (besides increasing the
+attack surface).
+
+As of 0.3, the Lua source is included with Crawl.  It will be used if you
+don't have Lua headers installed.  Note that we don't provide security
+support for Lua, and thus if you run a public server or a kiosk, it is
+strongly recommended to use system Lua which does receive security updates
+from whatever distribution you use.
+
+
+PCRE
+----
+As of 0.6.0, PCRE 7.9 source is included with Crawl.  It is enabled by
+default.  The sources in contrib/pcre are identical to the 7.9 distro except
+for the use of a custom-made Makefile instead of the automake system that
+was in place previously.
+
+On Unixes, you're better served by the existing POSIX regular expression
+support.  If you want PCRE, your package management system is again your
+best bet.  Remember to install development headers, not just the plain
+library.
+
+
+Unicode
+-------
+As of 0.8, Unicode support is included in all ports.  Still, you might need
+to ensure your terminal can display non-basic glyphs.
+
+On Unix, you want an UTF-8 locale.  All modern distributions install one by
+default, but you might have somehow dropped required settings.  To check
+this, run "locale charmap", which should say "UTF-8".  If it's not, please
+ensure either LANG, LC_ALL or LC_CTYPE is set.  A typical line would be
+"export LC_ALL=en_US.UTF-8".
+
+On Windows, the console behaves differently for TrueType and legacy (bitmap)
+fonts.  The latter (mostly) work only on certain language editions of
+Windows, such as English, and even there, they work adequately only for
+Crawl's default settings.  For anything more, please select one of TrueType
+fonts.  If, like one of our players, you are deeply attached to the looks of
+bitmap fonts, you can download a corrected version of the Terminal font from
+http://www.yohng.com/software/terminalvector.html

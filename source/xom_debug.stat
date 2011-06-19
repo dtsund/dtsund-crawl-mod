@@ -1,0 +1,82 @@
+---- STARTING XOM DEBUG TESTING ----
+dtsund the Magician (Deep Elf Wizard)                                                                          Turns: 2, Time: 00:00:49
+
+HP   6/6         AC  2     Str  4      Exp: 1/0 (25), need: 13
+MP   7/7         EV 12     Int 20 (22) God: Xom 0 (0)
+Gold 20          SH  0     Dex 13      Spells:  1 memorised,  7 levels left
+
+Res.Fire  : . . .   See Invis. : .    (no weapon)
+Res.Cold  : . . .   Warding    : . .  a - +0 elf robe
+Life Prot.: . . .   Conserve   : .    (no shield)
+Res.Acid. : . . .   Res.Corr.  : .    b - +0 elf wizard hat
+Res.Poison: .       Clarity    : .    (no cloak)
+Res.Elec. : .       Spirit.Shd : .    (no gloves)
+Sust.Abil.: . .     Stasis     : .    (no boots)
+Res.Mut.  : .       Ctrl.Telep.: .    (no amulet)
+Res.Rott. : .       Levitation : .    (no ring)
+Saprovore : . . .   Ctrl.Flight: .    (no ring)
+
+@: not resistant to hostile enchantments, fairly stealthy
+A: no striking features
+a: Renounce Religion
+
+        ∙≈∙
+    ∙∙ ∙∙≈∙∙▒∙
+   ≈∙∙▒ ∙≈∙∙ ∙∙
+  ∙∙≈∙∙ ∙≈∙▒∙∙≈∙
+  ∙∙∙≈∙▒∙≈∙▒∙≈∙∙∙
+ ∙  ∙∙≈∙▒∙▒∙≈∙∙▒
+ ∙∙∙ ▒(≈∙∙∙≈∙▒  ∙
+∙∙∙∙∙∙▒∙∙∙∙∙▒∙∙∙∙∙
+≈≈≈≈≈≈∙∙@<∙∙∙≈≈≈≈≈
+∙∙∙∙∙∙▒∙∙!∙∙▒)∙∙∙∙
+ ∙∙∙ ▒∙≈∙∙∙≈∙▒  ∙
+ ∙  ∙∙≈∙▒∙▒∙≈∙∙▒
+  ∙∙∙≈∙▒∙≈∙▒∙≈∙∙∙
+  ∙∙≈∙∙ ∙≈∙▒∙∙≈∙
+   ≈∙∙▒ ∙≈∙∙ ∙∙
+    ∙∙ ∙∙≈∙∙▒∙
+        ∙≈∙
+
+mapping estimate: 5%
+exploration estimate: 6%
+
+There are no monsters in sight!
+ --> Tension: 0
+Xom is BORED.
+
+Running -1 times through entire mood cycle.
+---- OUTPUT EFFECT PERCENTAGES ----
+
+Total effects (all piety ranges)
+GOOD   -nan%
+BAD    -nan%
+
+Mood: You are a very special plaything of Xom.
+GOOD   -nan%
+BAD    -nan%
+
+Mood: You are a special plaything of Xom.
+GOOD   -nan%
+BAD    -nan%
+
+Mood: You are a plaything of Xom.
+GOOD   -nan%
+BAD    -nan%
+
+Mood: You are a toy of Xom.
+GOOD   -nan%
+BAD    -nan%
+
+Mood: You are a favourite toy of Xom.
+GOOD   -nan%
+BAD    -nan%
+
+Mood: You are a beloved toy of Xom.
+GOOD   -nan%
+BAD    -nan%
+
+Mood: You are Xom's teddy bear.
+GOOD   -nan%
+BAD    -nan%
+---- FINISHED XOM DEBUG TESTING ----

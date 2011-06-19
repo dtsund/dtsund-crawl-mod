@@ -1,0 +1,199 @@
+ Dungeon Crawl Stone Soup version 0.8.0-0-g3a1e774 character file.
+
+328 dtsund the Magician (level 5, 23/23 HPs)
+             Began as a Deep Elf Wizard on June 16, 2011.
+             Quit the game on Level 4 of the Dungeon.
+             The game lasted 00:13:24 (3958 turns).
+
+dtsund the Magician (Deep Elf Wizard)                                                                       Turns: 3958, Time: 00:13:24
+
+HP  23/23        AC  4     Str  5      Exp: 5/283 (26), need: 94
+MP   9/19        EV 12     Int 28      God: 
+Gold 130         SH  0     Dex 13      Spells:  4 memorised,  8 levels left
+
+Res.Fire  : . . .   See Invis. : .    i - +3,+1 dagger (holy)
+Res.Cold  : . . .   Warding    : . .  l - +1 robe
+Life Prot.: . . .   Conserve   : .    (no shield)
+Res.Acid. : . . .   Res.Corr.  : .    r - +0 helmet
+Res.Poison: .       Clarity    : .    (no cloak)
+Res.Elec. : .       Spirit.Shd : .    (no gloves)
+Sust.Abil.: . .     Stasis     : .    (no boots)
+Res.Mut.  : .       Ctrl.Telep.: .    (no amulet)
+Res.Rott. : .       Levitation : .    (no ring)
+Saprovore : . . .   Ctrl.Flight: .    p - +5 ring of intelligence
+
+@: slightly resistant to hostile enchantments, fairly stealthy
+A: no striking features
+a: no special abilities
+
+
+You were on level 4 of the Dungeon.
+You were not hungry.
+
+You visited 1 branch of the dungeon, and saw 4 of its levels.
+
+You collected 110 gold pieces.
+
+Inventory:
+
+Hand weapons
+ f - a +0,+0 knife
+ i - a +3,+1 dagger of holy wrath (weapon)
+Armour
+ l - a +1 robe (worn)
+ r - a +0 helmet (worn)
+Comestibles
+ a - a meat ration
+ n - 2 pears
+ v - 2 chunks of worm flesh
+ B - 3 chunks of worker ant flesh
+Scrolls
+ b - a scroll of recharging {unknown}
+ d - a scroll of blinking {unknown}
+ e - a scroll of detect curse {unknown}
+ h - a scroll of curse armour {unknown}
+ k - 5 scrolls of remove curse
+ m - 2 scrolls of identify
+ s - a scroll of random uselessness {unknown}
+ u - 2 scrolls of curse jewellery {unknown}
+ A - a scroll of teleportation {unknown}
+Jewellery
+ p - a +5 ring of intelligence (left hand)
+ y - an uncursed ring of hunger
+Potions
+ g - a potion of might {unknown}
+ j - a potion of porridge {unknown}
+ o - a potion of paralysis {unknown}
+ q - 5 potions of healing {unknown}
+ t - a potion of invisibility {unknown}
+ w - a potion of agility {unknown}
+ x - 3 potions of heal wounds {unknown}
+ z - a potion of confusion {unknown}
+Books
+ c - a book of Minor Magic   
+   
+   Spells                             Type                      Level
+   *Magic Dart                        Conjuration                  1
+   *Blink                             Translocation                2
+   Call Imp                           Summoning                    2
+   Repel Missiles                     Enchantment/Air              2
+   *Slow                              Enchantment                  2
+   Conjure Flame                      Conjuration/Fire             3
+   *Mephitic Cloud                    Conjuration/Poison/Air       3
+
+
+ You had 26 experience left.
+
+   Skills:
+ + Level 2 Dodging
+ + Level 3 Stealth
+ + Level 6 Spellcasting
+ + Level 6 Conjurations
+ + Level 4 Enchantments
+ + Level 1 Summonings
+ + Level 1 Translocations
+
+
+You had 8 spell levels left.
+You knew the following spells:
+
+ Your Spells              Type           Power        Success   Level  Hunger
+a - Magic Dart            Conj           #####        100%        1    None
+b - Blink                 Tloc           N/A          93%         2    None
+c - Mephitic Cloud        Pois/Air/Conj  ####......   91%         3    None
+d - Slow                  Ench           #####....    100%        2    None
+
+
+Dungeon Overview and Level Annotations
+
+Branches:
+Dungeon (4/27)            
+Temple: D:4-7       
+
+Altars:
+Okawaru
+
+Message History
+
+Welcome back, dtsund the Deep Elf Wizard.
+Press ? for a list of commands and other information.
+Unknown command.
+Save game and exit? 
+Welcome back, dtsund the Deep Elf Wizard.
+Press ? for a list of commands and other information.
+Are you sure you want to quit? (Confirm with "yes".) 
+
+▒∙∙∙∙∙∙∙∙)∙∙∙∙∙∙∙∙∙∙∙∙∙∙
+∙∙∙∙∙∙∙▒▒▒∙▒∙▒▒▒▒▒∙▒∙∙∙∙
+∙∙∙∙∙∙∙<∙∙∙∙∙∙∙∙∙▒∙▒ ▒∙▒▒▒▒∙
+▒∙▒▒∙∙∙▒▒▒∙▒∙▒▒▒∙▒∙▒▒▒∙▒∙∙∙∙▒
+▒∙▒▒∙∙∙∙∙∙∙∙∙∙∙∙∙∙∙∙∙▒∙▒∙▒∙∙▒
+▒∙▒▒∙∙∙∙∙∙∙∙∙▒▒▒∙∙▒▒▒▒∙∙∙▒(∙▒
+▒∙▒▒∙▒▒▒▒▒∙∙∙▒∙∙∙∙∙∙∙▒∙▒∙▒∙∙▒
+∙∙∙∙∙∙   ▒∙∙∙▒∙∙∙∙∙>∙∙∙▒<▒∙∙▒
+▒▒▒▒%∙   ▒∙∙∙▒∙∙∙∙∙∙∙∙∙∙∙▒∙∙▒
+   ▒∙∙   ∙∙∙∙∙∙∙∙∙∙∙∙∙∙∙∙▒∙∙▒
+   ∙∙∙  ∙∙∙∙∙∙∙∙∙@∙∙∙∙∙∙∙∙∙∙▒
+         ∙∙∙∙∙∙∙∙∙∙∙∙∙∙∙∙∙∙∙∙∙∙▒
+          ∙∙▒▒▒∙▒▒∙∙∙▒∙▒▒▒∙▒▒▒▒▒
+             ∙∙∙∙∙∙∙∙∙∙▒  %▒
+            ▒▒▒▒▒▒∙∙∙∙∙∙∙ ∙∙
+                ∙∙∙∙∙∙∙∙∙ ∙∙∙
+                ∙∙∙∙∙∙▒▒▒▒▒▒▒▒
+                ∙∙∙∙∙∙▒
+                 ?∙∙∙∙
+
+
+There were no monsters in sight!
+
+Vanquished Creatures
+  An orc priest (D:3)
+  A worker ant (D:4)
+  An orc wizard (D:3)
+  A jelly (D:4)
+  Ijyb (D:3)
+  A snake (D:2)
+  A worm (D:3)
+  An ooze (D:1)
+  2 orcs
+  10 goblins
+  9 hobgoblins
+  3 jackals (D:1)
+  8 kobolds
+  2 quokkas (D:3)
+  3 small snakes (D:1)
+  A giant cockroach (D:2)
+  5 giant newts
+  4 megabats
+  6 rats
+  2 toadstools
+63 creatures vanquished.
+
+Vanquished Creatures (others)
+  A small snake (D:3)
+  5 toadstools (D:1)
+6 creatures vanquished.
+
+Grand Total: 69 creatures vanquished
+
+Notes
+Turn   | Place   | Note
+--------------------------------------------------------------
+     0 | D:1      | dtsund, the Deep Elf Wizard, began the quest for the Orb.
+     0 | D:1      | Reached XP level 1. HP: 6/6 MP: 7/7
+   352 | D:1      | Reached XP level 2. HP: 10/10 MP: 5/10
+   931 | D:1      | Reached XP level 3. HP: 14/14 MP: 11/13
+  1227 | D:1      | Found an iron altar of Okawaru.
+  1316 | D:2      | Learned a level 2 spell: Blink
+  1605 | D:2      | Reached skill level 5 in Spellcasting
+  1679 | D:2      | Learned a level 2 spell: Slow
+  1683 | D:2      | Learned a level 3 spell: Mephitic Cloud
+  1687 | D:2      | Reached skill level 1 in Enchantments
+  2192 | D:3      | Noticed Ijyb
+  2333 | D:3      | Reached skill level 5 in Conjurations
+  2335 | D:3      | Reached XP level 4. HP: 2/18 MP: 7/17
+  3185 | D:3      | Defeated Ijyb
+  3185 | D:3      | Reached XP level 5. HP: 21/23 MP: 2/19
+  3717 | D:3      | Reached skill level 6 in Spellcasting
+  3958 | D:4      | Quit the game
+

@@ -1,0 +1,104 @@
+ Dungeon Crawl Stone Soup version 0.8.0-0-g3a1e774 character file.
+
+50 dtsund the Sneak (level 1, 10/10 HPs)
+             Began as a Spriggan Assassin on June 16, 2011.
+             Quit the game on Level 1 of the Dungeon.
+             The game lasted 00:00:11 (0 turns).
+
+dtsund the Sneak (Spriggan Assassin)                                                                           Turns: 0, Time: 00:00:11
+
+HP  10/10        AC  3     Str  7      Exp: 1/0 (25), need: 12
+MP   1/1         EV 17     Int 12      God: 
+Gold 50          SH  0     Dex 17      Spells:  0 memorised,  0 levels left
+
+Res.Fire  : . . .   See Invis. : +    a - +2 dagger
+Res.Cold  : . . .   Warding    : . .  c - +0 robe
+Life Prot.: . . .   Conserve   : .    (shield restricted)
+Res.Acid. : . . .   Res.Corr.  : .    (helmet restricted)
+Res.Poison: .       Clarity    : .    d - +0 cloak
+Res.Elec. : .       Spirit.Shd : .    (gloves unavailable)
+Sust.Abil.: . .     Stasis     : .    (boots unavailable)
+Res.Mut.  : .       Ctrl.Telep.: .    (no amulet)
+Res.Rott. : .       Levitation : .    (no ring)
+Saprovore : . . .   Ctrl.Flight: .    (no ring)
+
+@: very quick, not resistant to hostile enchantments, quite stealthy
+A: unfitting armour, see invisible, herbivore 3, speed 3, slow metabolism 3
+a: no special abilities
+
+
+You were on level 1 of the Dungeon.
+You were not hungry.
+
+You visited 1 branch of the dungeon, and saw 1 of its levels.
+
+Inventory:
+
+Hand weapons
+ a - a +2,+2 dagger (weapon)
+ b - a +0 blowgun
+Missiles
+ e - 10 poisoned +0 needles
+ f - 3 curare-tipped +0 needles
+Armour
+ c - a +0 robe (worn)
+ d - a +0 cloak (worn)
+Potions
+ g - a potion of porridge
+
+
+ You had 25 experience left.
+
+   Skills:
+ + Level 1 Fighting
+ + Level 2 Short Blades
+ + Level 2 Throwing
+ + Level 2 Dodging
+ + Level 4 Stealth
+ + Level 3 Stabbing
+
+
+You couldn't memorise any spells.
+You didn't know any spells.
+
+Dungeon Overview and Level Annotations
+
+Branches:
+Dungeon (1/27)            
+
+Altars:
+
+
+                    Innate Abilities, Weirdness & Mutations
+
+You are tiny and cannot use many weapons and most armour.
+You have supernaturally acute eyesight.
+You are a herbivore.
+You cover ground extremely quickly.
+You need consume almost no food.
+
+
+Message History
+
+Welcome, dtsund the Spriggan Assassin.
+The destiny of this world depends on the Orb of Zot. Go down and get it!
+Press ? for a list of commands and other information.
+Are you sure you want to quit? (Confirm with "yes".) 
+
+ ▒▒▒■▒▒▒
+▒▒∙∙((∙▒▒
+▒∙@∙<∙<∙▒
+▒▒∙∙∙∙∙▒▒
+ ▒▒▒▒▒▒▒
+
+
+There were no monsters in sight!
+
+
+Notes
+Turn   | Place   | Note
+--------------------------------------------------------------
+     0 | D:1      | dtsund, the Spriggan Assassin, began the quest for the Orb.
+     0 | D:1      | Reached XP level 1. HP: 10/10 MP: 1/1
+     0 | D:1      | Quit the game
+

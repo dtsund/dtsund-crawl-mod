@@ -1,0 +1,581 @@
+Spell definitions cut from the code:
+
+{
+    SPELL_CREATE_NOISE, "Create Noise",
+     SPTYP_ENCHANTMENT,
+     SPFLAG_NONE,
+     1,
+     0,
+     LOS_RADIUS, LOS_RADIUS,
+     0,
+     NULL,
+     false,
+     true
+},
+
+{
+    SPELL_SWAP, "Swap",
+     SPTYP_TRANSLOCATION,
+     SPFLAG_NONE,
+     4,
+     0,
+     -1, -1,
+     0,
+     NULL,
+     false,
+     false
+},
+
+{
+    SPELL_TWIST, "Twist",
+     SPTYP_TRANSLOCATION,
+     SPFLAG_DIR_OR_TARGET | SPFLAG_NOT_SELF | SPFLAG_BATTLE,
+     1,
+     25,
+     LOS_RADIUS, LOS_RADIUS,
+     0,
+     NULL,
+     true,
+     false
+},
+
+{
+    SPELL_FAR_STRIKE, "Far Strike",
+     SPTYP_TRANSLOCATION,
+     SPFLAG_DIR_OR_TARGET | SPFLAG_NOT_SELF | SPFLAG_BATTLE,
+     3,
+     100,
+     LOS_RADIUS, LOS_RADIUS,
+     0,
+     NULL,
+     true,
+     false
+},
+
+{
+    SPELL_RESTORE_STRENGTH, "Restore Strength",
+     SPTYP_HOLY,
+     SPFLAG_RECOVERY | SPFLAG_HELPFUL,
+     2,
+     0,
+     -1, -1,
+     0,
+     NULL,
+     false,
+     true
+},
+
+{
+    SPELL_RESTORE_INTELLIGENCE, "Restore Intelligence",
+     SPTYP_HOLY,
+     SPFLAG_RECOVERY | SPFLAG_HELPFUL,
+     2,
+     0,
+     -1, -1,
+     0,
+     NULL,
+     false,
+     true
+},
+
+{
+    SPELL_RESTORE_DEXTERITY, "Restore Dexterity",
+     SPTYP_HOLY,
+     SPFLAG_RECOVERY | SPFLAG_HELPFUL,
+     2,
+     0,
+     -1, -1,
+     0,
+     NULL,
+     false,
+     true
+},
+
+{
+    SPELL_CURE_POISON_I, "Cure Poison",
+     SPTYP_HOLY,
+     SPFLAG_RECOVERY | SPFLAG_HELPFUL,
+     3,
+     200,
+     -1, -1,
+     0,
+     NULL,
+     false,
+     true
+},
+
+{
+    SPELL_PURIFICATION, "Purification",
+     SPTYP_HOLY,
+     SPFLAG_RECOVERY | SPFLAG_HELPFUL,
+     5,
+     0,
+     -1, -1,
+     0,
+     NULL,
+     false,
+     true
+},
+
+{
+    SPELL_REPEL_UNDEAD, "Repel Undead",
+     SPTYP_HOLY,
+     SPFLAG_AREA,
+     3,
+     0,
+     -1, -1,
+     0,
+     NULL,
+     false,
+     false
+},
+
+{
+    SPELL_HOLY_WORD, "Holy Word",
+     SPTYP_HOLY,
+     SPFLAG_AREA,
+     7,
+     0,
+     -1, -1,
+     0,
+     NULL,
+     false,
+     false
+},
+
+{
+    SPELL_HEAL_OTHER, "Heal Other",
+     SPTYP_HOLY,
+     SPFLAG_DIR_OR_TARGET | SPFLAG_HELPFUL | SPFLAG_NOT_SELF,
+     3,
+     100,
+     LOS_RADIUS, LOS_RADIUS,
+     0,
+     NULL,
+     true,
+     true
+},
+
+{
+    SPELL_BURN, "Burn", // used by wanderers
+     SPTYP_FIRE,
+     SPFLAG_DIR | SPFLAG_NOT_SELF | SPFLAG_BATTLE,
+     1,
+     25,
+     1, 1,
+     0,
+     NULL,
+     false,
+     false
+},
+
+{
+    SPELL_SUMMON_ANGEL, "Summon Angel",
+     SPTYP_HOLY,
+     SPFLAG_NONE,
+     7,
+     200,
+     -1, -1,
+     0,
+     NULL,
+     false,
+     false
+},
+
+{
+    SPELL_PESTILENCE, "Pestilence",
+     SPTYP_HOLY,
+     SPFLAG_NONE,
+     4,
+     200,
+     -1, -1,
+     0,
+     NULL,
+     false,
+     false
+},
+
+{
+    SPELL_THUNDERBOLT, "Thunderbolt",
+     SPTYP_HOLY | SPTYP_AIR,
+     SPFLAG_DIR_OR_TARGET,
+     6,         // why is this the only holy spell with a secondary? {dlb}
+     200,
+     8, 8,
+     0,
+     NULL,
+     true,
+     false
+}
+,
+
+{
+    SPELL_FLAME_OF_CLEANSING, "Flame of Cleansing",
+     SPTYP_HOLY,
+     SPFLAG_DIR_OR_TARGET,
+     8,
+     200,
+     6, 6,
+     0,
+     NULL,
+     true,
+     false
+},
+
+{
+    SPELL_SHINING_LIGHT, "Shining Light",
+     SPTYP_HOLY,
+     SPFLAG_NONE,
+     7,
+     200,
+     -1, -1,
+     0,
+     NULL,
+     false,
+     false
+},
+
+{
+    SPELL_SUMMON_DAEVA, "Summon Daeva",
+     SPTYP_HOLY,
+     SPFLAG_NONE,
+     8,
+     200,
+     -1, -1,
+     0,
+     NULL,
+     false,
+     false
+},
+
+{
+    SPELL_ABJURATION_II, "Abjuration",
+     SPTYP_HOLY,
+     SPFLAG_AREA | SPFLAG_NEUTRAL | SPFLAG_ESCAPE,
+     4,
+     200,
+     -1, -1,
+     0,
+     NULL,
+     false,
+     false
+},
+
+{
+    SPELL_CRUSH, "Crush",
+     SPTYP_EARTH,
+     SPFLAG_DIR | SPFLAG_NOT_SELF | SPFLAG_DEVEL | SPFLAG_BATTLE,
+     1,
+     25,
+     1, 1,
+     0,
+     NULL,
+     false,
+     false
+},
+
+{
+    SPELL_TOMB_OF_DOROKLOHE, "Tomb of Doroklohe",
+     SPTYP_CONJURATION | SPTYP_EARTH, // conj makes more sense than tmig -- bwr
+     SPFLAG_CARD,
+     7,
+     0,
+     -1, -1,
+     0,
+     NULL,
+     false,
+     false
+}
+,
+
+{
+    SPELL_ORB_OF_ELECTROCUTION, "Orb of Electrocution",
+     SPTYP_CONJURATION | SPTYP_AIR,
+     SPFLAG_DIR_OR_TARGET,
+     7,
+     200,
+     7, 12,
+     0,
+     NULL,
+     true,
+     false
+},
+
+{
+    SPELL_ORB_OF_FRAGMENTATION, "Orb of Fragmentation",
+     SPTYP_CONJURATION | SPTYP_EARTH,
+     SPFLAG_DIR_OR_TARGET,
+     7,
+     200,
+     5, 5,
+     0,
+     NULL,
+     true,
+     false
+},
+
+{
+    SPELL_ARC, "Arc",
+     SPTYP_AIR,
+     SPFLAG_DIR | SPFLAG_NOT_SELF | SPFLAG_BATTLE,
+     1,
+     25,
+     1, 1,
+     0,
+     NULL,
+     false,
+     false
+},
+
+{
+    SPELL_BEND, "Bend",
+     SPTYP_TRANSLOCATION,
+     SPFLAG_DIR | SPFLAG_BATTLE,
+     1,
+     100,
+     1, 1,
+     0,
+     NULL,
+     false,
+     false
+},
+
+{
+    SPELL_ERINGYAS_SURPRISING_BOUQUET, "Eringya's Surprising Bouquet",
+     SPTYP_TRANSMIGRATION | SPTYP_EARTH,
+     SPFLAG_NONE,
+     4,
+     0,
+     -1, -1,
+     0,
+     NULL,
+     false,
+     false
+},
+
+    // Removing Air Walk... it's currently broken in a number or ways:
+    // - the AC/EV bonus probably means very little to any character
+    //   capable of casting a level nine spell
+    // - the penalty of dropping inventory is a bit harsh considering
+    //   the above
+    // - the fire/ice susceptibility doesn't work... the AC/EV bonus
+    //   cancel it out (so you'd hardly be wary of them since they
+    //   can't really do any damage).
+    // - there is no need for another invulnerability spell (which is
+    //   what this spell is trying to be), one is more than enough...
+    //   let people use necromancy.
+    // - there is no need for another air spell... air spells are
+    //   already very common (i.e,. this level nine spell occurred in
+    //   two books!)
+
+{
+    SPELL_AIR_WALK, "Air Walk",
+     SPTYP_TRANSMUTATION | SPTYP_AIR,
+     SPFLAG_HELPFUL,
+     9,
+     200,
+     -1, -1,
+     0,
+     NULL,
+     false,
+     true
+},
+
+{
+    SPELL_ROTTING, "Rotting",
+     SPTYP_TRANSMUTATION | SPTYP_NECROMANCY,
+     SPFLAG_AREA,
+     5,
+     200,
+     LOS_RADIUS, LOS_RADIUS,
+     0,
+     NULL,
+     false,
+     false
+},
+
+{
+    SPELL_SEMI_CONTROLLED_BLINK, "Semi-Controlled Blink",
+     SPTYP_TRANSLOCATION,
+     SPFLAG_ESCAPE,
+     3,
+     100,
+     -1, -1,
+     0,
+     NULL,
+     false,
+     true
+},
+
+{
+    SPELL_DETECT_MAGIC, "Detect Magic",
+     SPTYP_DIVINATION,
+     SPFLAG_DEVEL,
+     1,
+     0,
+     -1, -1,
+     0,
+     NULL,
+     false,
+     true
+},
+
+{
+    SPELL_IDENTIFY, "Identify",
+     SPTYP_DIVINATION,
+     SPFLAG_NONE,
+     6,
+     0,
+     -1, -1,
+     0,
+     NULL,
+     false,
+     true
+},
+
+{
+    SPELL_REMOVE_CURSE, "Remove Curse",
+     SPTYP_ENCHANTMENT,
+     SPFLAG_NONE,
+     5,
+     0,
+     -1, -1,
+     0,
+     NULL,
+     false,
+     true
+},
+
+{
+    SPELL_DETECT_CURSE, "Detect Curse",
+     SPTYP_DIVINATION,
+     SPFLAG_NONE,
+     3,
+     0,
+     -1, -1,
+     0,
+     NULL,
+     false,
+     true
+},
+
+{
+    SPELL_MAGIC_MAPPING, "Magic Mapping",
+     SPTYP_DIVINATION | SPTYP_EARTH,
+     SPFLAG_MAPPING,
+     4,
+     45,
+     -1, -1,
+     0,
+     NULL,
+     false,
+     true
+},
+
+Spell descriptions cut from the code:
+
+[Cure Poison and Abjuration are duplicates of existing spells and are omitted.]
+
+[Summon Angel, Pestilence, Thunderbolt, Flame of Cleansing, Shining Light, Summon Daeva, Orb of Fragmentation and Semi-Controlled Blink have no descriptions and are omitted.
+
+%%%%
+Create Noise
+
+This spell causes a loud noise to be heard.
+%%%%
+Swap
+
+This spell allows the caster to swap positions with an adjacent being.
+%%%%
+Twist
+
+This spell causes a slight spatial distortion around a monster in line of sight of the caster, causing injury.
+%%%%
+Far Strike
+
+This spell allows the caster to transfer the force of a weapon strike to any target the caster can see. This spell will only deliver the impact of the blow; magical side-effects and enchantments cannot be transferred in this way. The force transferred by this spell has little to do with one's skill with weapons, and more to do with personal strength, translocation skill and magic ability.
+%%%%
+Restore Strength
+
+This spell restores the physical strength of the caster.
+%%%%
+Restore Intelligence
+
+This spell restores the intelligence of the caster.
+%%%%
+Restore Dexterity
+
+This spell restores the dexterity of the caster.
+%%%%
+Purification
+
+This spell purifies the caster's body, removing poison, disease and certain malign enchantments.
+%%%%
+Repel Undead
+
+This spell calls on a divine power to repel the unholy.
+%%%%
+Holy Word
+
+This spell involves the intonation of a word of power which repels and can destroy unholy creatures.
+%%%%
+Heal Other
+
+This spell heals another creature from a distance.
+%%%%
+Burn
+
+This spell burns a creature.
+%%%%
+Crush
+
+This spell crushes a nearby creature with waves of gravitational force.
+%%%%
+Tomb of Doroklohe
+
+This spell entombs the caster within four walls of rock. These walls will destroy most objects in their way, but their growth is obstructed by the presence of any creature. Beware - only the unwise cast this spell without reliable means of escape.
+%%%%
+Orb of Electrocution
+
+This spell hurls a crackling orb of electrical energy which explodes with immense force on impact.
+%%%%
+Arc
+
+This spell zaps at random a nearby creature with a powerful electrical current.
+%%%%
+Bend
+
+This spell applies a localized spatial distortion to the detriment of some nearby creature.
+%%%%
+Eringya's Surprising Bouquet
+
+This spell transmutes any wooden items in the caster's grasp into a bouquet of beautiful flowers.
+%%%%
+Air Walk
+
+This spell transforms the caster's body into an insubstantial cloud. The caster becomes immaterial and nearly immune to physical harm, but is vulnerable to magical fire and ice. While insubstantial the caster is, of course, unable to interact with physical objects (but may still cast spells).
+%%%%
+Rotting
+
+This spell causes the flesh of all those near the caster to rot. It will affect the living and many of the corporeal undead.
+%%%%
+Detect Magic
+
+This spell probes one or more items lying nearby for enchantment. An experienced diviner may glean additional information.
+%%%%
+Detect Curse
+
+This spell alerts the caster to the presence of curses on his or her possessions.
+%%%%
+Identify
+
+This spell allows the caster to determine the properties of an otherwise inscrutable magic item.
+%%%%
+Magic Mapping
+
+This spell reveals details about the caster's surroundings.
+%%%%
+Remove Curse
+
+This spell removes curses from any items which are being used by the caster.
+%%%%

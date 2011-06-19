@@ -1,0 +1,291 @@
+dtsund
+
+the Dwarven Hall
+(0, 0, Dwarf)
+  a -1,-1 dwarven hand axe
+  a +2 dwarven chain mail
+(2, 5, Dwarf)
+  a +1,+1 war axe
+  a +0 dwarven banded mail
+(7, 5, Dwarf)
+  a -1,-2 dwarven hand axe
+  a +0 dwarven splint mail
+(-16, 6, Dwarf)
+  a -2,-1 dwarven war axe
+  a +2 dwarven chain mail
+(-16, 7, Dwarf)
+  a +2,+4 hand axe
+  a +1 dwarven chain mail
+(-19, 8, Dwarf)
+  a +3,+4 hand axe
+  a +1 dwarven banded mail
+(-16, 8, Dwarf)
+  a +1,+4 flail
+  a +0 dwarven chain mail
+  a +4,+1 great mace
+  a +1 dwarven chain mail
+(7, 8, Dwarf)
+  a +4,+1 hand axe
+  a +1 dwarven chain mail
+  a +1,+1 halberd
+  a +0 dwarven banded mail
+(-34, 9, Dwarf)
+  a +2,+4 hand axe
+  a +3 dwarven banded mail
+(-32, 9, Dwarf)
+  a +4,+1 great mace
+  a +3 dwarven chain mail
+(-17, 9, Dwarf)
+  a -2,-2 spear
+  a +0 dwarven banded mail
+(-16, 9, Dwarf)
+  a +4,+2 hand axe
+  a +1 dwarven chain mail
+  a +2,+3 broad axe
+  a +1 dwarven splint mail
+(7, 9, Dwarf)
+  a +4,+4 spear
+  a +1 dwarven chain mail
+(-34, 10, Dwarf)
+  a +1,+1 war axe
+  a +3 dwarven plate mail
+(-33, 10, Dwarf)
+  a +0,-1 dwarven hand axe
+  a +0 dwarven plate mail
+  a +3,+4 war axe
+  a +0 dwarven chain mail
+  a +4,+4 hand axe
+  a +2 dwarven chain mail
+  a +0,-1 dwarven war axe
+  a +2 dwarven splint mail
+(-32, 10, Dwarf)
+  a +1,+1 flail
+  a +1 dwarven chain mail
+(7, 10, Dwarf)
+  a -2,-2 halberd
+  a +0 dwarven chain mail
+(4, 11, Dwarf)
+  a -2,-1 dwarven hand axe
+  a +0 robe
+(15, 16, Dwarf)
+  a +3,+3 war axe
+  a +0 dwarven chain mail
+  a +0,-2 dwarven hand axe
+  a +1 dwarven banded mail
+(21, 16, Dwarf)
+  a +0 bolt of frost
+(-23, 17, Dwarf)
+  a -2,-2 dwarven war axe
+  a +1 dwarven splint mail
+(15, 17, Dwarf)
+  a +0 dwarven banded mail
+  a +2,+3 mace
+(-9, 23, Dwarf)
+  a +0,-1 dwarven battleaxe
+  a +0 dwarven chain mail
+(21, 23, Dwarf)
+  a -1,-1 dwarven mace
+  a cursed +0 dwarven plate mail
+  a +0,-3 dwarven hand axe
+  a +0 dwarven plate mail
+(22, 23, Dwarf)
+  a +0 bolt of frost
+(-11, 24, Dwarf)
+  a -3,-2 great sword
+  a +1 dwarven plate mail
+  a +2,+4 mace
+  a +1 dwarven banded mail
+(-9, 24, Dwarf)
+  a +0,-2 dwarven great mace
+  a +0 dwarven plate mail
+(19, 24, Dwarf)
+  a +3,+1 broad axe
+  a -3,-2 dwarven hand axe
+  a +0 dwarven banded mail
+(21, 24, Dwarf)
+  a +0 dwarven chain mail (still there?)
+  a +4,+2 battleaxe (still there?)
+  a +2 dwarven chain mail (still there?)
+  a deep dwarf corpse (skeletalised by now) (still there?)
+  a +0,+0 dwarven crossbow (still there?)
+  a +2,+4 flail (still there?)
+  7 +0 bolts of frost (still there?)
+  a +1 dwarven chain mail (still there?)
+  a deep dwarf corpse (skeletalised by now) (still there?)
+(-41, 25, Dwarf)
+  a -3,-1 halberd
+  a cursed +0 dwarven plate mail
+(-11, 25, Dwarf)
+  a -3,-1 war axe
+  a +0 robe
+(-10, 25, Dwarf)
+  a +4,+4 great sword
+  a +1 dwarven chain mail
+  a +1,+3 mace
+  a +0 dwarven banded mail
+(15, 25, Dwarf)
+  a +0 dwarven banded mail
+(19, 25, Dwarf)
+  a cursed +0 dwarven chain mail
+(-41, 26, Dwarf)
+  a -3,-2 dwarven broad axe
+  a +0 robe
+(-40, 26, Dwarf)
+  a +2,+2 mace
+  a +2,+4 hand axe
+  a +1 dwarven banded mail
+  a -2,-2 dwarven war axe
+  a +0 dwarven chain mail
+  a cursed +0 dwarven chain mail
+(-41, 27, Dwarf)
+  a -3,-1 dwarven mace
+  a +0 dwarven chain mail
+(-40, 27, Dwarf)
+  a -2,-1 dwarven hand axe
+  a +1 dwarven chain mail
+(16, 28, Dwarf)
+  a +3,+3 war axe
+  a +1 dwarven banded mail
+  a deep dwarf corpse
+(-24, 29, Dwarf)
+  a +1,+4 war axe
+  a cursed +0 dwarven chain mail
+(14, 29, Dwarf)
+  a -2,-3 dwarven flail
+  a +1 dwarven chain mail
+(15, 29, Dwarf)
+  a -1,-1 dwarven hand axe
+  a cursed +1 dwarven splint mail
+(16, 29, Dwarf)
+  a +0 dwarven chain mail
+(17, 29, Dwarf)
+  a +0 robe (still there?)
+  a -2,+0 dwarven broad axe (still there?)
+  a +2 dwarven chain mail (still there?)
+(-27, 30, Dwarf)
+  a +2,+2 great sword
+  a +1 dwarven chain mail
+(-7, 30, Dwarf)
+  a -3 elven robe
+(15, 30, Dwarf)
+  a -1,-1 dwarven flail
+  a +0 dwarven chain mail
+(-28, 31, Dwarf)
+  a +0,+0 dwarven hand axe
+  a +0 dwarven plate mail
+(-26, 31, Dwarf)
+  a +1 rod of striking (9/9)
+  a cursed +0 robe
+(-25, 31, Dwarf)
+  a +1,+4 halberd
+  a +1 dwarven chain mail
+(14, 31, Dwarf)
+  a -2,-2 dwarven broad axe
+  a +0 dwarven banded mail
+  a -1,+0 dwarven flail
+  a +1 dwarven splint mail
+(15, 31, Dwarf)
+  a cursed +0 robe (still there?)
+  a -2,-1 dwarven hand axe (still there?)
+  a +3,+3 hand axe (still there?)
+(16, 31, Dwarf)
+  a +4,+2 battleaxe
+  a -1,-2 dwarven hand axe
+  a cursed +0 robe
+  a deep dwarf corpse
+(17, 31, Dwarf)
+  a +0,-1 dwarven crossbow
+  16 +0 bolts
+  a +3 dwarven chain mail
+(12, 32, Dwarf)
+  a -2,+0 dwarven broad axe
+  (unseen)
+(13, 32, Dwarf)
+  a +4,+2 flail
+  a +0 dwarven banded mail
+(2, 34, Dwarf)
+  a +0,-1 dwarven hand axe
+  a cursed +0 dwarven chain mail
+(4, 34, Dwarf)
+  a +2,+3 great mace
+  a +1 dwarven chain mail
+(12, 34, Dwarf)
+  a +4,+3 halberd
+  a cursed +1 dwarven chain mail
+(4, 35, Dwarf)
+  a +0,-2 dwarven hand axe
+  a +2 dwarven chain mail
+  a -3,-2 dwarven broad axe
+  a +0 dwarven chain mail
+  a +2,+1 great sword
+  a +0 dwarven banded mail
+(3, 36, Dwarf)
+  a -3,+0 dwarven hand axe
+  a +0 robe
+(3, 37, Dwarf)
+  a -2,-3 spear of venom
+  a +3 dwarven chain mail
+(12, 37, Dwarf)
+  a -3,-3 club
+(15, 40, Dwarf)
+  a +1,+4 hand axe
+(16, 40, Dwarf)
+  29 +0 stones
+(-39, 41, Dwarf)
+  13 +0 stones
+(16, 43, Dwarf)
+  a +3,+3 broad axe
+  a +1 dwarven chain mail
+(-18, 44, Dwarf)
+  a -3,-1 dwarven war axe
+  a +1 dwarven splint mail
+(-17, 44, Dwarf)
+  a +1,+4 great mace
+  a +3 dwarven chain mail
+  a deep dwarf corpse (skeletalised by now)
+(-14, 44, Dwarf)
+  a -1,-2 quarterstaff
+(16, 44, Dwarf)
+  a +4,+3 flail
+  a +1 dwarven chain mail
+(17, 44, Dwarf)
+  a +4,+4 war axe
+  a +0 dwarven splint mail
+(18, 44, Dwarf)
+  a +0,-2 dwarven hand axe
+  a +0 robe
+(17, 45, Dwarf)
+  a -3,-1 dwarven hand axe
+  a +0 robe
+(18, 45, Dwarf)
+  a +0,-3 dwarven war axe
+  a +0 dwarven chain mail
+(-39, 46, Dwarf)
+  26 +0 darts
+(-19, 46, Dwarf)
+  a +1,+2 spear
+  a +2 dwarven chain mail
+  a deep dwarf corpse (skeletalised by now)
+(0, 53, Dwarf)
+  21 +0 sling bullets
+(-3, 54, Dwarf)
+  a -3,-2 dwarven hand axe
+  a +0 robe
+  a deep dwarf corpse (skeletalised by now)
+(-3, 55, Dwarf)
+  a -1,-1 great sword
+  a +1 dwarven chain mail
+(-2, 55, Dwarf)
+  a +2,+3 halberd
+  a cursed +1 dwarven chain mail
+(-2, 56, Dwarf)
+  a -1 rod of striking (7/7)
+  a +0 robe
+  a deep dwarf corpse (skeletalised by now)
+(6, 57, Dwarf)
+  a +1,+4 war axe
+  (unseen)
+(14, 57, Dwarf)
+  a -1,-3 spear
+  (unseen)
+
