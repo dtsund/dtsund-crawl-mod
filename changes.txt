@@ -6,6 +6,7 @@ Probably-easy TODO list:
 		More generally, Sorcery could be a school focused on underhanded play and weaknesses
 	Rename Megabat?
 	Make Passwall Earth/Translocations, put it in the Book of Spatial Translocations (replacing Recall)
+	Xom should mess up menu text occasionally for his followers (not to an untelligible extent, though)
 
 
 Harder TODO list:
