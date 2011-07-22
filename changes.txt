@@ -22,6 +22,7 @@ Harder TODO list:
 	Nerf Mennas' defense.  Make him rely on his pets for Silence.
 	Make Shoals a portal vault
 	Skill autotraining?  Maybe just wait for the DevTeam to implement it and merge in.
+		Change manuals so that the boost a skill by a few levels and immediately disintegrate.
 	Make Invisibility more viable late-game/extended
 		Reduce some See Invisible enemies to merely Sense Invisible, or no
 		invisibility detection at all
