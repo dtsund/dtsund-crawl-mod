@@ -5,6 +5,7 @@ Probably-easy TODO list:
 	Rename Poison Magic to Sorcery, reschool some of the more Hex-like spells to it
 		More generally, Sorcery could be a school focused on underhanded play and weaknesses
 	Rename Megabat?
+	Make Passwall Earth/Translocations, put it in the Book of Spatial Translocations (replacing Recall)
 
 
 Harder TODO list:
