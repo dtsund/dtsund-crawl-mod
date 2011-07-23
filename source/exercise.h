@@ -49,4 +49,6 @@ enum exer_type
 
 void practise(exer_type ex, int param1 = 0);
 
+void autotrain();
+
 #endif

@@ -19,6 +19,7 @@
 #include "artefact.h"
 #include "cio.h"
 #include "describe.h"
+#include "exercise.h"
 #include "externs.h"
 #include "fight.h"
 #include "fontwrapper-ft.h"
@@ -371,6 +372,8 @@ COLORS SkillMenuEntry::_get_colour() const
         return DARKGREY;
     else if (is_set(SKMF_DO_RESKILL_TO) && m_sk == you.transfer_from_skill)
         return WHITE;
+    else if (you.autotrain_skill[m_sk] && you.skills[m_sk] < 27)
+        return BLUE;
     else if (you.practise_skill[m_sk] == 0 && you.skills[m_sk] < 27)
         return DARKGREY;
     else if (is_set(SKMF_DISP_RESKILL) && (m_sk == you.transfer_from_skill
@@ -403,6 +406,7 @@ std::string SkillMenuEntry::_get_prefix()
         letter = ' ';
 
     const int sign = (you.skills[m_sk] == 0 || you.skills[m_sk] == 27) ? ' '
+                                    : (you.autotrain_skill[m_sk]) ? '#'
                                     : (you.practise_skill[m_sk]) ? '+' : '-';
 #ifdef USE_TILE
     return make_stringf(" %c %c", letter, sign);
@@ -567,6 +571,7 @@ void SkillMenuEntry::_set_points()
 #define NEXT_ACTION_SIZE    16
 #define NEXT_DISPLAY_SIZE   19
 #define SHOW_ALL_SIZE       17
+#define AUTOTRAIN_SIZE      14
 SkillMenu::SkillMenu(int flags) : PrecisionMenu(), m_flags(flags),
     m_min_coord(), m_max_coord(), m_disp_queue()
 {
@@ -693,6 +698,22 @@ void SkillMenu::change_action()
     }
 }
 
+//dtsund: kludgy, may merge with change_action and just have an argument
+void SkillMenu::change_autotrain()
+{
+    const int new_action = _get_next_autotrain_action();
+    clear_flag (SKMF_ACTION_MASK);
+    set_flag(new_action);
+    _set_help(new_action);
+    _refresh_names();
+    _set_footer();
+    if (m_ff->get_active_item() != NULL
+        && !m_ff->get_active_item()->can_be_highlighted())
+    {
+        m_ff->activate_default_item();
+    }
+}
+
 void SkillMenu::change_display(bool init)
 {
     const int new_disp = _get_next_display();
@@ -719,7 +740,32 @@ void SkillMenu::change_display(bool init)
 
 void SkillMenu::toggle_practise(skill_type sk, int keyn)
 {
-    you.practise_skill[sk] = !you.practise_skill[sk];
+    //In the case where we're toggling practice, toggle between practice and disable.
+    //If the skill is being autotrained, disable autotraining and practice it.
+    if(is_set(SKMF_DO_PRACTISE))
+    {
+        if(you.autotrain_skill[sk])
+        {
+            you.num_autotrained_skills--;
+            you.autotrain_skill[sk] = false;
+            you.practise_skill[sk] = true;
+        }
+        else
+        {
+            you.practise_skill[sk] = !you.practise_skill[sk];
+        }
+    }
+    
+    //In the case where we're toggling autotrain, toggle between autotrain and practice.
+    if(is_set(SKMF_DO_AUTOTRAIN))
+    {
+        you.practise_skill[sk] = true;
+        if(you.autotrain_skill[sk])
+            you.num_autotrained_skills--;
+        else
+            you.num_autotrained_skills++;
+        you.autotrain_skill[sk] = !you.autotrain_skill[sk];
+    }
     SkillMenuEntry* skme = _find_entry(sk);
     skme->set_name(true);
     const std::vector<int> hotkeys = skme->get_name_item()->get_hotkeys();
@@ -810,12 +856,14 @@ void SkillMenu::_init_title()
     m_title->set_visible(true);
 }
 
+//CHANGE THIS
 void SkillMenu::_init_footer(coord_def coord)
 {
     m_current_action = new NoSelectTextItem();
     m_next_action = new TextItem();
     m_next_display = new TextItem();
     m_show_all = new TextItem();
+    m_autotrain = new TextItem();
 
     _add_item(m_current_action, m_ff, CURRENT_ACTION_SIZE, coord);
     m_current_action->set_fg_colour(WHITE);
@@ -843,6 +891,12 @@ void SkillMenu::_init_footer(coord_def coord)
         m_show_all->add_hotkey('*');
         m_show_all->set_id(-4);
     }
+    
+    _add_item(m_autotrain, m_ff, AUTOTRAIN_SIZE, coord);
+    m_autotrain->set_highlight_colour(RED);
+    m_autotrain->set_fg_colour(WHITE);
+    m_autotrain->add_hotkey('#');
+    m_autotrain->set_id(-5);
 }
 
 void SkillMenu::_refresh_names()
@@ -975,14 +1029,19 @@ void SkillMenu::_set_help(int flag)
         break;
     case SKMF_DO_RESKILL_FROM:
         help = "Select a skill as the source of the knowledge transfer. The "
-               "chosen skill will be reduced to the level showned in "
+               "chosen skill will be reduced to the level shown in "
                "<brown>brown</brown>.";
         break;
     case SKMF_DO_RESKILL_TO:
         help = "Select a skill as the destination of the knowledge transfer. "
-               "The chosen skill will be raised to the level showned in "
+               "The chosen skill will be raised to the level shown in "
                "<lightblue>blue</lightblue>.";
         break;
+    case SKMF_DO_AUTOTRAIN:
+    	help = "Select a skill to automatically train.  Incoming experience "
+    	       "will automatically be distributed among all skills selected "
+    	       "here.";
+    	break;
     case SKMF_DISP_NORMAL:
     case SKMF_DISP_APTITUDE:
         if (is_set(SKMF_SIMPLE))
@@ -1052,6 +1111,8 @@ void SkillMenu::_set_footer()
         text = "select source";
     else if (is_set(SKMF_DO_RESKILL_TO))
         text = "select destination";
+    else if (is_set(SKMF_DO_AUTOTRAIN))
+        text = "autotrain skill";
 
     m_current_action->set_text(make_stringf("[a-%c: %s]",
                                             SkillMenuEntry::m_letter.letter,
@@ -1071,6 +1132,17 @@ void SkillMenu::_set_footer()
     }
 
     m_next_action->set_text(make_stringf("[?: %s]", text.c_str()));
+    
+    switch (_get_next_autotrain_action())
+    {
+        case SKMF_DO_PRACTISE:
+            text = "training";
+            break;
+        case SKMF_DO_AUTOTRAIN:
+            text = "autotrain";
+    }
+    
+    m_autotrain->set_text(make_stringf("[#: %s]", text.c_str()));
 
     if (m_disp_queue.size() > 1)
     {
@@ -1160,9 +1232,13 @@ void SkillMenu::_set_links()
     }
 }
 
+//This function returns what the menu will change to when the player
+//hits the ? key.  When reskilling, it returns what the menu will do next.
 int SkillMenu::_get_next_action() const
 {
     if (is_set(SKMF_DO_PRACTISE))
+        return SKMF_DO_SHOW_DESC;
+    if (is_set(SKMF_DO_AUTOTRAIN))
         return SKMF_DO_SHOW_DESC;
     else if (is_set(SKMF_DO_SHOW_DESC) && is_set(SKMF_RESKILLING))
     {
@@ -1171,6 +1247,18 @@ int SkillMenu::_get_next_action() const
     }
     else
         return SKMF_DO_PRACTISE;
+}
+
+//This function returns what the menu will change to when the player
+//hits the # key.
+int SkillMenu::_get_next_autotrain_action() const
+{
+    if (is_set(SKMF_DO_PRACTISE))
+        return SKMF_DO_AUTOTRAIN;
+    if (is_set(SKMF_DO_SHOW_DESC))
+        return SKMF_DO_AUTOTRAIN;
+    
+    return SKMF_DO_PRACTISE;
 }
 
 int SkillMenu::_get_next_display() const
@@ -1257,11 +1345,14 @@ void skill_menu(bool reskilling)
             case -4:
                 skm.toggle_show_all();
                 break;
+            case -5:
+                skm.change_autotrain();
+                break;
             default:
                 skill_type sk = static_cast<skill_type>(sel_id);
                 ASSERT(!is_invalid_skill(sk));
 
-                if (skm.is_set(SKMF_DO_PRACTISE))
+                if (skm.is_set(SKMF_DO_PRACTISE) || skm.is_set(SKMF_DO_AUTOTRAIN))
                     skm.toggle_practise(sk, keyn);
                 else if (skm.is_set(SKMF_DO_SHOW_DESC))
                     skm.show_description(sk);
@@ -1831,6 +1922,7 @@ bool is_invalid_skill(skill_type skill)
     return (false);
 }
 
+//This'll need to be changed; the autotrain case will be different
 void dump_skills(std::string &text)
 {
     char tmp_quant[20];
@@ -1839,7 +1931,8 @@ void dump_skills(std::string &text)
         if (you.skills[i] > 0)
         {
             text += ((you.skills[i] == 27)   ? " * " :
-                     (you.practise_skill[i]) ? " + "
+                     (you.autotrain_skill[i]) ? " # " :
+                     (you.practise_skill[i]) ? " + " 
                                              : " - ");
 
             text += "Level ";

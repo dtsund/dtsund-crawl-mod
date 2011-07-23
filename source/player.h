@@ -112,6 +112,8 @@ public:
 
   FixedVector<uint8_t, NUM_SKILLS>  skills;
   FixedVector<bool, NUM_SKILLS>  practise_skill;
+  FixedVector<bool, NUM_SKILLS>  autotrain_skill;
+  int num_autotrained_skills;
   FixedVector<unsigned int, NUM_SKILLS>   skill_points;
   FixedVector<unsigned int, NUM_SKILLS>   ct_skill_points;
   FixedVector<uint8_t, NUM_SKILLS>  skill_order;

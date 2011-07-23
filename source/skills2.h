@@ -101,23 +101,24 @@ enum skill_menu_flags
     SKMF_DO_SHOW_DESC    = 0x0002,
     SKMF_DO_RESKILL_FROM = 0x0004,
     SKMF_DO_RESKILL_TO   = 0x0008,
-    SKMF_ACTION_MASK     = 0x000F,
+    SKMF_DO_AUTOTRAIN    = 0x0010,
+    SKMF_ACTION_MASK     = 0x001F,
 
 //Display
-    SKMF_DISP_NORMAL     = 0x0010,
-    SKMF_DISP_ENHANCED   = 0x0020,
-    SKMF_DISP_RESKILL    = 0x0040,
-    SKMF_DISP_NEW_LEVEL  = 0x0080,
-    SKMF_DISP_POINTS     = 0x0100,
-    SKMF_DISP_MASK       = 0x01F0,
-    SKMF_DISP_ALL        = 0x0200,
-    SKMF_DISP_APTITUDE   = 0x0400,
+    SKMF_DISP_NORMAL     = 0x0020,
+    SKMF_DISP_ENHANCED   = 0x0040,
+    SKMF_DISP_RESKILL    = 0x0080,
+    SKMF_DISP_NEW_LEVEL  = 0x0100,
+    SKMF_DISP_POINTS     = 0x0200,
+    SKMF_DISP_MASK       = 0x01E0,
+    SKMF_DISP_ALL        = 0x0400,
+    SKMF_DISP_APTITUDE   = 0x0800,
 
 //Ashenzari transfer knowledge ability set this flag.
-    SKMF_RESKILLING      = 0x0800,
+    SKMF_RESKILLING      = 0x1000,
 
-    SKMF_SKILL_ICONS     = 0x1000,
-    SKMF_SIMPLE          = 0x2000, // Simple mode for tutorial and hint mode.
+    SKMF_SKILL_ICONS     = 0x2000,
+    SKMF_SIMPLE          = 0x4000, // Simple mode for tutorial and hint mode.
 };
 
 class SkillMenu;
@@ -177,6 +178,7 @@ public:
     void clear_flag(int flag);
     void toggle_flag(int flag);
     void change_action();
+    void change_autotrain();
     void change_display(bool init = false);
     void toggle_practise(skill_type sk, int keyn);
     void show_description(skill_type sk);
@@ -205,6 +207,7 @@ private:
     TextItem*          m_next_action;
     TextItem*          m_next_display;
     TextItem*          m_show_all;
+    TextItem*          m_autotrain;
 
     std::queue<int> m_disp_queue;
 
@@ -221,6 +224,7 @@ private:
     TextItem* _find_closest_selectable(int start_ln, int col);
     void _set_links();
     int _get_next_action() const;
+    int _get_next_autotrain_action() const;
     int _get_next_display() const;
     bool _skill_enhanced() const;
 };

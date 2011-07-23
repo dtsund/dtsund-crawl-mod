@@ -76,6 +76,10 @@ extern std::map<level_pos, uint8_t> portal_vault_colours;
 extern std::map<level_id, std::string> level_annotations;
 extern std::map<level_id, std::string> level_exclusions;
 
+// defined in exercise.cc; keep track of what was the next skill
+// to be autotrained
+extern int current_autotrain_skill;
+
 // temp file pairs used for file level cleanup
 
 level_id_set Generated_Levels;
@@ -1051,10 +1055,14 @@ static void tag_construct_you(writer &th)
     {
         marshallByte(th, you.skills[j]);
         marshallByte(th, you.practise_skill[j]);
+        marshallByte(th, you.autotrain_skill[j]);
         marshallInt(th, you.skill_points[j]);
         marshallInt(th, you.ct_skill_points[j]);
         marshallByte(th, you.skill_order[j]);   // skills ordering
     }
+    
+    marshallInt(th, you.num_autotrained_skills);
+    marshallInt(th, current_autotrain_skill);
 
     marshallInt(th, you.transfer_from_skill);
     marshallInt(th, you.transfer_to_skill);
@@ -1645,10 +1653,14 @@ static void tag_read_you(reader &th)
     {
         you.skills[j]          = unmarshallByte(th);
         you.practise_skill[j]  = unmarshallByte(th);
+        you.autotrain_skill[j] = unmarshallByte(th);
         you.skill_points[j]    = unmarshallInt(th);
         you.ct_skill_points[j] = unmarshallInt(th);
         you.skill_order[j]     = unmarshallByte(th);
     }
+    
+    you.num_autotrained_skills = unmarshallInt(th);
+    current_autotrain_skill = unmarshallInt(th);
 
     you.transfer_from_skill = static_cast<skill_type>(unmarshallInt(th));
     you.transfer_to_skill = static_cast<skill_type>(unmarshallInt(th));

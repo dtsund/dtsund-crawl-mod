@@ -19,6 +19,8 @@
 #include "sprint.h"
 #include "state.h"
 
+int current_autotrain_skill = 0;
+
 static skill_type _abil_skill(ability_type abil)
 {
     switch (abil)
@@ -514,5 +516,45 @@ void practise(exer_type ex, int param1)
         break;
     default:
         break;
+    }
+}
+
+//The new autotrain function, used for, uh, autotraining.  Iterates over
+//all skills, checking to see if any need to and can be autotrained, exercising
+//them on each pass.
+//Breaks the loop when it can't or doesn't need to train anymore.
+//Preemptively returns if autotraining isn't being used.
+//Call this function after each experience gain!
+void autotrain()
+{
+    //Abort the function if we aren't autotraining anything
+    if(you.num_autotrained_skills == 0)
+        return;
+    
+    while(true)
+    {
+        //Check to see whether the skill should be autotrained.
+        if(!you.autotrain_skill[current_autotrain_skill])
+        {
+            current_autotrain_skill = (current_autotrain_skill + 1) % NUM_SKILLS;
+            continue;
+        }
+        
+        //Train the skill; if no training happened, stop training for now.
+        if(!exercise((skill_type) current_autotrain_skill,1))
+            break;
+        
+        //If this maxed out the skill, stop autotraining it.  Might need to break the loop
+        //if we weren't autotraining anything else.
+        if(you.skills[current_autotrain_skill] == 27)
+        {
+            you.num_autotrained_skills--;
+            you.autotrain_skill[current_autotrain_skill] = false;
+            if(you.num_autotrained_skills == 0)
+                break;
+        }
+        
+        //Increment before the next iteration.
+        current_autotrain_skill = (current_autotrain_skill + 1) % NUM_SKILLS;
     }
 }

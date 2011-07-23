@@ -21,6 +21,7 @@
 #include "dungeon.h"
 #include "effects.h"
 #include "env.h"
+#include "exercise.h"
 #include "files.h"
 #include "food.h"
 #include "ghost.h"
@@ -2054,6 +2055,7 @@ static void _experience_card(int power, deck_rarity_type rarity)
         exp_gain = std::min(exp_gain, power * 50);
     exp_gain -= ash_reduce_xp(exp_gain);
     you.exp_available += exp_gain;
+    autotrain();
 
     // After level 27, boosts you get don't get increased (matters for
     // charging V:8 with no rN+++ and for felids).
