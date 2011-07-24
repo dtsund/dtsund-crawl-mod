@@ -660,16 +660,13 @@ void skill_manual(int slot)
     const skill_type skill = static_cast<skill_type>(manual.plus);
 
     mprf("You read about %s.", skill_name(skill));
-
+    
+    //Note that practise, in the case of manuals, doesn't call exercise;
+    //it calls read_manual, granting a flat skill boost.
     practise(EX_READ_MANUAL, skill);
 
-    if (--manual.plus2 <= 0)
-    {
-        mpr("The manual crumbles into dust.");
-        dec_inv_item_quantity(slot, 1);
-    }
-    else
-        mpr("The manual looks somewhat more worn.");
+    mpr("The manual crumbles into dust.");
+    dec_inv_item_quantity(slot, 1);
 
     xom_is_stimulated(known ? 14 : 64);
 }

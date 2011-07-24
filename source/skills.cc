@@ -495,3 +495,21 @@ static int _exercise2(skill_type exsk)
 
     return (skill_inc);
 }
+
+//The new code handling skill increases from manuals.  Since old-style manuals
+//were made obsolete by autotraining, and manuals are rare anyway, they give a
+//flat boost (currently three levels) to the skill once and disintegrate.
+void read_manual(skill_type sk)
+{
+    if(you.skills[sk] == 27)
+    {
+        //Need to consider this case on its own; _change_skill_level fails
+        //an assert if passed 0 as an argument
+        mprf("You have already mastered %s.", skill_name(sk));
+        return;
+    }
+    else if(you.skills[sk] >= 24)
+        _change_skill_level(sk, 27 - you.skills[sk]);
+    else
+        _change_skill_level(sk, 3);
+}

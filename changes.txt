@@ -22,8 +22,6 @@ Harder TODO list:
 		get a chance at having them.
 	Nerf Mennas' defense.  Make him rely on his pets for Silence.
 	Make Shoals a portal vault
-	Skill autotraining?  Maybe just wait for the DevTeam to implement it and merge in.
-		Change manuals so that they boost a skill by a few levels and immediately disintegrate.
 	Make Invisibility more viable late-game/extended
 		Reduce some See Invisible enemies to merely Sense Invisible, or no
 		invisibility detection at all
@@ -47,3 +45,4 @@ Changes already made:
 		Also can't see ring bonii if int/str/dex without examination, but this is minor
 		(who'd spend an acquirement on one anyway?)
 	Skill can now be automatically be trained without victory dancing (interface is different from vanilla trunk)
+	Manuals now increase the associated skill by 3 levels and disintegrate immediately.

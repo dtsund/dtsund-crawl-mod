@@ -467,7 +467,8 @@ void practise(exer_type ex, int param1)
 
     case EX_READ_MANUAL:
         sk = static_cast<skill_type>(param1);
-        exercise(sk, 500);
+        //exercise(sk, 500); Manuals now give skill levels outright
+        read_manual(sk);
         break;
 
     case EX_SHIELD_BLOCK:

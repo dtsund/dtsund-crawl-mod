@@ -18,4 +18,6 @@ void change_skill_points(skill_type sk, int points, bool do_level_up);
 
 int exercise(skill_type exsk, int deg);
 
+void read_manual(skill_type sk);
+
 #endif
