@@ -139,7 +139,7 @@ While browsing, you note blood leaking from the pages. Even an illiterate will f
 %%%%
 book of distance
 
-This book contains magical spells related to the branding of weapons and launchers, as well as spells that are helpful in all forms of ranged combat.
+This book seems difficult to read unless held at arm's length.
 %%%%
 book of burglary
 
@@ -147,15 +147,15 @@ A worn-looking book, with a small key pressed between two pages.
 %%%%
 book of callings
 
-A book of magic spells.
+Every aspiring summoner keeps a copy of this book handy.
 %%%%
 book of cantrips
 
-A book of magic spells.
+A spellbook with very few words and many bright, cheery illustrations.
 %%%%
 book of changes
 
-A book of magic spells.
+The chapters of this book appear in a different order each time it is opened.
 %%%%
 book of card effects
 
@@ -171,15 +171,15 @@ A slightly seared book, with a hole burnt through the cover.
 %%%%
 book of clouds
 
-A book of magic spells.
+A thin mist continually surrounds this book.
 %%%%
 book of conjurations
 
-A book of magic spells.
+The cover of this book glows quite forcefully.
 %%%%
 book of control
 
-A book of magic spells.
+This book opens, closes, and turns pages on command.
 %%%%
 book of death
 
@@ -191,11 +191,11 @@ A translucent book; light plays strangely on its surface.
 %%%%
 book of enchantments
 
-A book of magic spells.
+A spellbindingly splendid book, almost mesmerizing in its beauty.
 %%%%
 book of envenomations
 
-A book of magic spells.
+The touch of this book's pages irritates your skin.
 %%%%
 book of fixed level
 
@@ -219,7 +219,7 @@ A book of magic spells, cold to the touch.
 %%%%
 book of geomancy
 
-A book of magic spells.
+A thick, sturdy book. The pages are so rough you could swear they're made of sandpaper.
 %%%%
 book of healing
 
@@ -227,7 +227,7 @@ A book of magic spells.
 %%%%
 book of hinderance
 
-A book of magic spells.
+A book of magic spells. Significant force is required to pry it open.
 %%%%
 book of ice
 
@@ -235,15 +235,15 @@ A book of magic spells. An icy wind chills you for a second as you open it.
 %%%%
 book of maledictions
 
-A book of magic spells.
+Pictures of broken mirrors and black cats adorn the cover of this book.
 %%%%
 book of minor magic
 
-A book of magic spells.
+Many great archwizards have begun their study of magic with a copy of this simple tome.
 %%%%
 book of morphology
 
-A book of magic spells.
+This book continually changes shape before your very eyes.
 %%%%
 book of necromancy
 
@@ -251,11 +251,11 @@ A dusty tome of forbidden magic.
 %%%%
 book of party tricks
 
-A book of magic spells.
+As you browse this book, you find yourself idly removing confetti from between the pages.
 %%%%
 book of power
 
-A book of magic spells.
+This book vibrates strangely in your hands.
 %%%%
 book of practical magic
 
@@ -263,15 +263,15 @@ A book of magic spells.
 %%%%
 book of spatial translocations
 
-A book of magic spells.
+You can never seem to remember where you leave this book. It just turns up when needed.
 %%%%
 book of stalking
 
-A book of magic spells.
+A book with a jet-black cover and black text on black pages. Reading it is rather difficult.
 %%%%
 book of summonings
 
-A book of magic spells.
+This book materializes new pages as you read it.
 %%%%
 book of the dragon
 
@@ -279,7 +279,7 @@ A book of magic spells; it is warm to the touch.
 %%%%
 book of the earth
 
-A book of magic spells.
+A heavy book with pages of thin but surprisingly strong stone.
 %%%%
 book of the sky
 
@@ -287,15 +287,15 @@ A book of magic spells. Sparks fly from the pages.
 %%%%
 book of the tempests
 
-A book of magic spells.
+This book almost seems as though it could explode at any moment.
 %%%%
 book of the warp
 
-A book of magic spells.
+A book of magic spells.  The text seems to jump around haphazardly on the page.
 %%%%
 book of transfigurations
 
-A book of magic spells.
+A book of magic spells. The cover continually changes color.
 %%%%
 book of tukima
 
@@ -307,15 +307,15 @@ A book of magic spells, filled with sigils for binding the dead.
 %%%%
 book of war chants
 
-A book of magic spells.
+As you touch this book, you find yourself longing for the thrill of battle.
 %%%%
 book of wizardry
 
-A book of magic spells.
+The air around this book glows softly with magical energy.
 %%%%
 book of zoology
 
-A book of magic spells.
+A book of magic spells. Many of the letters take the form of artfully drawn animals.
 %%%%
 bottled efreet
 
@@ -1439,5 +1439,5 @@ A conical cloth hat.
 %%%%
 young poisoner's handbook
 
-A book of magic spells.
+The pages of this book emit a foul odour.
 %%%%

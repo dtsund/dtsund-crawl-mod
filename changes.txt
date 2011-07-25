@@ -49,3 +49,4 @@ Changes already made:
 	Skill can now automatically be trained without victory dancing (interface is different from vanilla trunk).
 	Manuals now increase the associated skill by 3 levels and disintegrate immediately.
 	The Stalker background has been reworked; now emphasizes useful low level spells.
+	Every spellbook now has its own unique description.
