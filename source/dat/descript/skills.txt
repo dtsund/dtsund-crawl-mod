@@ -110,19 +110,7 @@ Enchantments
 
 Being skilled in a magical "school" makes it easier to learn and cast spells of this school. Many spells belong to a combination of several schools, in which case the average skill in these schools will decide on spellcasting success and power.
 
-Enchantments try to affect nearby beings in manifold possibilities. This includes a list of beneficial self-enchantments, like Haste.
-%%%%
-Hexes
-
-Being skilled in a magical "school" makes it easier to learn and cast spells of this school. Many spells belong to a combination of several schools, in which case the average skill in these schools will decide on spellcasting success and power.
-
-Hexes try to bestow various enchantments on nearby things. While none do direct damage, being ensorcelled can effectively take an opponent out of combat. Sadly, Hexes suffer greatly from spell resistance when cast on living beings.
-%%%%
-Charms
-
-Being skilled in a magical "school" makes it easier to learn and cast spells of this school. Many spells belong to a combination of several schools, in which case the average skill in these schools will decide on spellcasting success and power.
-
-Charms provide you with a number of self-enhancing auras.
+Enchantments grant the user access to a variety of useful effects, most of them self-beneficial.
 %%%%
 Summonings
 
@@ -172,11 +160,11 @@ Being skilled in a magical "school" makes it easier to learn and cast spells of 
 
 Being skilled in Earth Magic makes Air Magic harder to learn, and vice versa.
 %%%%
-Poison Magic
+Sorcery
 
 Being skilled in a magical "school" makes it easier to learn and cast spells of this school. Many spells belong to a combination of several schools, in which case the average skill in these schools will decide on spellcasting success and power.
 
-Poison magic is particularly useful early on, as many monsters are resistant to poison in the later game. There are poison spells of high utility throughout the game, though.
+Spells in the Sorcery school emphasize dirty tricks and the exploitation of weaknesses, with noxious poison, status ailments, and other nasty effects.
 %%%%
 Invocations
 

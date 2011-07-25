@@ -38,7 +38,7 @@ struct spell_desc
 
 {
     SPELL_CAUSE_FEAR, "Cause Fear",
-     SPTYP_ENCHANTMENT,
+     SPTYP_POISON,
      SPFLAG_AREA,
      5,
      200,
@@ -194,7 +194,7 @@ struct spell_desc
 
 {
     SPELL_POLYMORPH_OTHER, "Polymorph Other",
-     SPTYP_TRANSMUTATION | SPTYP_ENCHANTMENT,
+     SPTYP_TRANSMUTATION | SPTYP_POISON,
      SPFLAG_DIR_OR_TARGET | SPFLAG_NOT_SELF | SPFLAG_CHAOTIC,
      4,
      200,
@@ -207,7 +207,7 @@ struct spell_desc
 
 {
     SPELL_SLOW, "Slow",
-     SPTYP_ENCHANTMENT,
+     SPTYP_ENCHANTMENT | SPTYP_POISON,
      SPFLAG_DIR_OR_TARGET,
      2,
      200,
@@ -248,7 +248,7 @@ struct spell_desc
 
 {
     SPELL_CONFUSE, "Confuse",
-     SPTYP_ENCHANTMENT,
+     SPTYP_POISON,
      SPFLAG_DIR_OR_TARGET,
      3,
      200,
@@ -261,7 +261,7 @@ struct spell_desc
 
 {
     SPELL_INVISIBILITY, "Invisibility",
-     SPTYP_ENCHANTMENT,
+     SPTYP_POISON,
      SPFLAG_DIR_OR_TARGET | SPFLAG_HELPFUL,
      6,
      200,
@@ -418,7 +418,7 @@ struct spell_desc
 
 {
     SPELL_MASS_CONFUSION, "Mass Confusion",
-     SPTYP_ENCHANTMENT,
+     SPTYP_POISON,
      SPFLAG_AREA,
      6,
      200,
@@ -706,7 +706,7 @@ struct spell_desc
 
 {
     SPELL_ENSLAVEMENT, "Enslavement",
-     SPTYP_ENCHANTMENT,
+     SPTYP_POISON,
      SPFLAG_DIR_OR_TARGET | SPFLAG_NOT_SELF,
      4,
      200,
@@ -760,7 +760,7 @@ struct spell_desc
 
 {
     SPELL_CONTROL_UNDEAD, "Control Undead",
-     SPTYP_ENCHANTMENT | SPTYP_NECROMANCY,
+     SPTYP_POISON | SPTYP_NECROMANCY,
      SPFLAG_NONE,
      5,
      200,
@@ -1348,7 +1348,7 @@ struct spell_desc
 
 {
     SPELL_PROJECTED_NOISE, "Projected Noise",
-     SPTYP_ENCHANTMENT,
+     SPTYP_POISON,
      SPFLAG_NONE,
      2,
      0,
@@ -1598,7 +1598,7 @@ struct spell_desc
 
 {
     SPELL_CONFUSING_TOUCH, "Confusing Touch",
-     SPTYP_ENCHANTMENT,
+     SPTYP_POISON,
      SPFLAG_NONE,
      1,
      200,
@@ -1637,7 +1637,7 @@ struct spell_desc
 
 {
     SPELL_PASSWALL, "Passwall",
-     SPTYP_TRANSMUTATION | SPTYP_EARTH,
+     SPTYP_TRANSLOCATION | SPTYP_EARTH,
      SPFLAG_DIR | SPFLAG_ESCAPE | SPFLAG_NOT_SELF,
      3,
      200,
@@ -1702,7 +1702,7 @@ struct spell_desc
 
 {
     SPELL_HIBERNATION, "Ensorcelled Hibernation",
-     SPTYP_ENCHANTMENT | SPTYP_ICE,
+     SPTYP_POISON | SPTYP_ICE,
      SPFLAG_DIR_OR_TARGET | SPFLAG_NOT_SELF,
      2,
      56,
@@ -1715,7 +1715,7 @@ struct spell_desc
 
 {
     SPELL_ENGLACIATION, "Metabolic Englaciation",
-     SPTYP_ENCHANTMENT | SPTYP_ICE,
+     SPTYP_POISON | SPTYP_ICE,
      SPFLAG_AREA,
      7,
      200,
@@ -1793,7 +1793,7 @@ struct spell_desc
 
 {
     SPELL_SILENCE, "Silence",
-     SPTYP_ENCHANTMENT | SPTYP_AIR,
+     SPTYP_POISON | SPTYP_AIR,
      SPFLAG_AREA,
      5,
      200,
@@ -1845,7 +1845,7 @@ struct spell_desc
 
 {
     SPELL_CORONA, "Corona",
-     SPTYP_ENCHANTMENT,
+     SPTYP_POISON,
      SPFLAG_DIR_OR_TARGET | SPFLAG_NOT_SELF,
      1,
      200,
@@ -2038,8 +2038,7 @@ struct spell_desc
      false
 },
 
-// From here on, all spells are monster-only spells.
-
+// From here on, most of the spells are monster-only.
 {
     SPELL_PARALYSE, "Paralyse",
      SPTYP_ENCHANTMENT,
@@ -2889,7 +2888,7 @@ struct spell_desc
 
 {
     SPELL_LEDAS_LIQUEFACTION, "Leda's Liquefaction",
-     SPTYP_EARTH | SPTYP_TRANSMUTATION,
+     SPTYP_EARTH | SPTYP_TRANSMUTATION | SPTYP_POISON,
      SPFLAG_AREA,
      4,
      200,
@@ -2915,7 +2914,7 @@ struct spell_desc
 
 {
     SPELL_DARKNESS, "Darkness",
-     SPTYP_ENCHANTMENT,
+     SPTYP_POISON,
      SPFLAG_NONE,
      7,
      200,
