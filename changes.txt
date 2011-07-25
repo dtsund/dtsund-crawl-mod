@@ -2,11 +2,6 @@ Probably-easy TODO list:
 	Remove Felids, because boring(?)
 	Remove Labyrinths, because boring(?)
 	Rename Megabat?
-	Consequently, rework Stalker.  Book of Stalking will be like Book of Minor Magic, full of
-	low-level but useful spells, just for a stealthy battlemage.
-		New book: Corona, Fulsome Distillation, Evaporate, Blink, Ensorcelled Hibernation, Passwall?
-		Skills: 1 Fighting, 1 Short Blades, 3 Stealth, 2 Dodging, 2 Spellcasting, 1 Sorcery, 1 Tmut, 1 Tloc.  
-			Book is implemented, just need to redo the skills.
 	Xom should mess up menu text occasionally for his followers (not to an untelligible extent, though)
 
 
