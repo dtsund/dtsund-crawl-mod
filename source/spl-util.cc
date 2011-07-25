@@ -895,7 +895,7 @@ const char* spelltype_short_name(int which_spelltype)
     case SPTYP_TRANSLOCATION:
         return ("Tloc");
     case SPTYP_POISON:
-        return ("Pois");
+        return ("Sorc");
     case SPTYP_EARTH:
         return ("Erth");
     case SPTYP_AIR:
@@ -932,7 +932,7 @@ const char* spelltype_long_name(int which_spelltype)
     case SPTYP_TRANSLOCATION:
         return ("Translocation");
     case SPTYP_POISON:
-        return ("Poison");
+        return ("Sorcery");
     case SPTYP_EARTH:
         return ("Earth");
     case SPTYP_AIR:
