@@ -1,6 +1,6 @@
 Probably-easy TODO list:
 	Remove Felids, because boring(?)
-	Remove Troves and Labyrinths, because boring(?)
+	Remove Labyrinths, because boring(?)
 	Rename Megabat?
 	Consequently, rework Stalker.  Book of Stalking will be like Book of Minor Magic, full of
 	low-level but useful spells, just for a stealthy battlemage.
