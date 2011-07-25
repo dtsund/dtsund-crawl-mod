@@ -917,9 +917,11 @@ static void _give_items_skills(const newgame_def& ng)
         you.skills[SK_FIGHTING]       = 1;
         you.skills[SK_DODGING]        = 2;
         you.skills[SK_STEALTH]        = 2;
-        you.skills[SK_STABBING]       = 2;
-        you.skills[SK_SPELLCASTING]   = 1;
-        you.skills[SK_TRANSMUTATIONS] = 2;
+        //you.skills[SK_STABBING]       = 2;
+        you.skills[SK_SPELLCASTING]   = 2;
+        you.skills[SK_TRANSMUTATIONS] = 1;
+        you.skills[SK_POISON_MAGIC]   = 1;
+        you.skills[SK_TRANSLOCATIONS] = 1;
         break;
 
     case JOB_ASSASSIN:
