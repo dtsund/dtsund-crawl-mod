@@ -1,8 +1,8 @@
 Probably-easy TODO list:
 	Remove Felids, because boring(?)
 	Remove Labyrinths, because boring(?)
-	Rename Megabat?
 	Xom should mess up menu text occasionally for his followers (not to an untelligible extent, though)
+	Rename staves of poison and the like to fit the Sorcery change...
 
 
 Harder TODO list:
@@ -26,7 +26,17 @@ Harder TODO list:
 Changes already made:
 	Monsters may no longer invoke Zot traps against the player.
 	Charms, Hexes, and Poison Magic reshuffled into Enchantments and Sorcery.  Some books consequently changed.
-		May need to reconsider a species aptitude or two, but this isn't urgent.
+		Aptitude changes:
+			High Elf:
+				-2 Poison Magic to 1 Sorcery (Yes, I know this is a buff.)
+			Halfling:
+				0 Enchantments to -1; -1 Poison Magic to 0 Sorcery.
+			Centaur:
+				-2 Poison Magic to -1 Sorcery
+			Spriggan:
+				0 Poison Magic to +2 Sorcery
+			Vampire:
+				1 Enchantments to 0; -1 Poison Magic to 1 Sorcery.
 	Haste and Slow nerf reverted.
 	Crude hack in mon-place.cc to make Mennas not spawn.  Will remove when Mennas tweaked.
 	Spell success rate now shown as an actual percentage, not an adjective.  Success >= 98% rounded up to 100%.
