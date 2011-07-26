@@ -4,6 +4,7 @@ Probably-easy TODO list:
 	Xom should mess up menu text occasionally for his followers (not to an untelligible extent, though)
 	Rename staves of poison and the like to fit the Sorcery change...
 	Tweak Sorcery miscast effects (maybe have one be a magic resistance halving)
+	Replace monster HP bars with something less retarded
 
 
 Harder TODO list:
