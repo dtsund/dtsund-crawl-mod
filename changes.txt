@@ -4,7 +4,6 @@ Probably-easy TODO list:
 	Xom should mess up menu text occasionally for his followers (not to an untelligible extent, though)
 	Rename staves of poison and the like to fit the Sorcery change...
 	Tweak Sorcery miscast effects (maybe have one be a magic resistance halving)
-	Replace monster HP bars with something less retarded
 
 
 Harder TODO list:
@@ -23,6 +22,7 @@ Harder TODO list:
 	Make Invisibility more viable late-game/extended
 		Reduce some See Invisible enemies to merely Sense Invisible, or no
 		invisibility detection at all
+	Put a HP-indicator face next to the player's large HP bar, to make the new system more intuitive
 
 
 Changes already made:
@@ -57,3 +57,4 @@ Changes already made:
 	Manuals now increase the associated skill by 3 levels and disintegrate immediately.
 	The Stalker background has been reworked; now emphasizes useful low level spells.
 	Every spellbook now has its own unique description.
+	Monster HP bars have been replaced with icons that don't mislead the player.
