@@ -139,7 +139,7 @@ While browsing, you note blood leaking from the pages. Even an illiterate will f
 %%%%
 book of distance
 
-This book seems difficult to read unless held at arm's length.
+This book is difficult to read unless held at arm's length.
 %%%%
 book of burglary
 
