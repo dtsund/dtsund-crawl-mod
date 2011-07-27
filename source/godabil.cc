@@ -7,6 +7,7 @@
 
 #include <queue>
 
+#include "abyss.h"
 #include "areas.h"
 #include "artefact.h"
 #include "attitude-change.h"
@@ -29,6 +30,7 @@
 #include "invent.h"
 #include "itemprop.h"
 #include "items.h"
+#include "item_use.h"
 #include "libutil.h"
 #include "message.h"
 #include "misc.h"
@@ -51,7 +53,11 @@
 #include "shopping.h"
 #include "shout.h"
 #include "spl-book.h"
+#include "spl-cast.h"
+#include "spl-goditem.h"
 #include "spl-monench.h"
+#include "spl-other.h"
+#include "spl-selfench.h"
 #include "spl-summoning.h"
 #include "spl-transloc.h"
 #include "spl-util.h"
@@ -65,6 +71,8 @@
 #ifdef USE_TILE
 #include "tiledef-main.h"
 #endif
+
+#define random_mons(...) static_cast<monster_type>(random_choose(__VA_ARGS__))
 
 bool zin_sustenance(bool actual)
 {
@@ -1367,6 +1375,56 @@ bool zin_sanctuary()
     return (true);
 }
 
+
+//Zin's recite ability.  Code moved from abl-show.cc.
+bool zin_recite()
+{
+    recite_type prayertype;
+    if (zin_check_recite_to_monsters(&prayertype))
+        start_delay(DELAY_RECITE, 3, prayertype, you.hp);
+    else
+    {
+        mpr("That recitation seems somehow inappropriate.");
+        return (false);
+    }
+    return true;
+}
+
+//Zin's imprison ability.  Code moved from abl-show.cc.
+bool zin_imprison()
+{
+    int power;
+    bolt beam;
+    dist spd;
+    
+    beam.range = LOS_RADIUS;
+    if (!spell_direction(spd, beam))
+        return (false);
+
+    if (beam.target == you.pos())
+    {
+        mpr("You cannot imprison yourself!");
+        return (false);
+    }
+
+    monster* mons = monster_at(beam.target);
+
+    if (mons == NULL || !you.can_see(mons))
+    {
+        mpr("There is no monster there to imprison!");
+        return (false);
+    }
+
+    power = 3 + roll_dice(3, 10 * (3 + you.skill(SK_INVOCATIONS))
+                                    / (3 + mons->hit_dice)) / 3;
+
+    if (!cast_imprison(power, mons, -GOD_ZIN))
+        return (false);
+    
+    return true;
+}
+
+
 // shield bonus = attribute for duration turns, then decreasing by 1
 //                every two out of three turns
 // overall shield duration = duration + attribute
@@ -1405,6 +1463,19 @@ void tso_remove_divine_shield()
     you.duration[DUR_DIVINE_SHIELD] = 0;
     you.attribute[ATTR_DIVINE_SHIELD] = 0;
     you.redraw_armour_class = true;
+}
+
+//The Shining One's Cleansing Flame invocation.
+void tso_cleansing_flame()
+{
+    cleansing_flame(10 + (you.skill(SK_INVOCATIONS) * 7) / 6,
+                    CLEANSING_FLAME_INVOCATION, you.pos(), &you);
+}
+
+//The Shining One's angel summon invocation.
+void tso_summon_divine_warrior()
+{
+    summon_holy_warrior(you.skill(SK_INVOCATIONS) * 4, GOD_SHINING_ONE);
 }
 
 void elyvilon_purification()
@@ -1457,6 +1528,58 @@ void elyvilon_remove_divine_vigour()
     calc_hp();
     calc_mp();
 }
+
+//Elyvilon's Lifesaving invocation.
+void elyvilon_request_lifesaving()
+{
+    if (you.duration[DUR_LIFESAVING])
+        mpr("You renew your call for help.");
+    else
+    {
+        mprf("You beseech %s to protect your life.",
+             god_name(you.religion).c_str());
+    }
+    // Might be a decrease, this is intentional (like Yred).
+    you.duration[DUR_LIFESAVING] = 9 * BASELINE_DELAY
+                 + random2avg(you.piety * BASELINE_DELAY, 2) / 10;
+}
+
+//Elyvilon's Lesser Healing and Lesser Self Healing invocations.
+bool elyvilon_lesser_healing(const bool self)
+{
+    //const bool self = (abil == ABIL_ELYVILON_LESSER_HEALING_SELF);
+
+    if (cast_healing(3 + (you.skill(SK_INVOCATIONS) / 6), true,
+                     self ? you.pos() : coord_def(0, 0), !self,
+                     self ? TARG_NUM_MODES : TARG_HOSTILE) < 0)
+    {
+        return (false);
+    }
+    return true;
+}
+
+//Elyvilon's Greater Healing and Greater Self Healing invocations.
+bool elyvilon_greater_healing(const ability_type abil)
+{
+    const bool self = (abil == ABIL_ELYVILON_GREATER_HEALING_SELF);
+
+    if (cast_healing(10 + (you.skill(SK_INVOCATIONS) / 3), true,
+                     self ? you.pos() : coord_def(0, 0), !self,
+                     self ? TARG_NUM_MODES : TARG_HOSTILE) < 0)
+    {
+        return (false);
+    }
+    
+    return true;
+}
+
+//Elyvilon's Restoration invocation.
+void elyvilon_restoration()
+{
+    restore_stat(STAT_ALL, 0, false);
+    unrot_hp(100);
+}
+        
 
 bool vehumet_supports_spell(spell_type spell)
 {
@@ -1586,10 +1709,48 @@ bool trog_burn_spellbooks()
     return (true);
 }
 
+//Trog's Berserk invocation.
+void trog_berserk()
+{
+    go_berserk(true);
+}
+
+//Trog's, uh, Trog's Hand invocation.
+void trog_trogs_hand()
+{
+    cast_regen(you.piety / 2, true);
+}
+
+//Trog's Brothers In Arms invocation.
+void trog_brothers_in_arms()
+{
+    summon_berserker(you.piety +
+                     random2(you.piety/4) - random2(you.piety/4),
+                     &you);
+}
+
 bool beogh_water_walk()
 {
     return (you.religion == GOD_BEOGH && !player_under_penance()
             && you.piety >= piety_breakpoint(4));
+}
+
+//Beogh's Smiting invocation.
+bool beogh_smiting()
+{
+    if (your_spells(SPELL_SMITING, (2 + skill_bump(SK_INVOCATIONS)) * 6,
+                    false) == SPRET_ABORT)
+    {
+        return (false);
+    }
+    
+    return true;
+}
+
+//Beogh's Recall Orcish Followers invocation.
+void beogh_recall_orcish_followers()
+{
+    recall(2);
 }
 
 bool jiyva_can_paralyse_jellies()
@@ -1641,11 +1802,60 @@ bool jiyva_remove_bad_mutation()
     return (true);
 }
 
+//Jiyva's Call Jelly invocation.
+bool jiyva_call_jelly()
+{
+    mgen_data mg(MONS_JELLY, BEH_STRICT_NEUTRAL, 0, 0, 0, you.pos(),
+                 MHITNOT, 0, GOD_JIYVA);
+
+    mg.non_actor_summoner = "Jiyva";
+
+    if (create_monster(mg) == -1)
+        return (false);
+        
+    return true;
+}
+
+//Jiyva's Slimify invocation.
+void jiyva_slimify()
+{
+    const item_def* const weapon = you.weapon();
+    const std::string msg = (weapon) ? weapon->name(DESC_NOCAP_YOUR)
+                                     : ("your " + you.hand_name(true));
+    mprf(MSGCH_DURATION, "A thick mucus forms on %s.", msg.c_str());
+    you.increase_duration(DUR_SLIMIFY,
+                          you.skill(SK_INVOCATIONS) * 3 / 2 + 3,
+                          100);
+}
+
 bool yred_injury_mirror()
 {
     return (you.religion == GOD_YREDELEMNUL && !player_under_penance()
             && you.piety >= piety_breakpoint(1)
             && you.duration[DUR_MIRROR_DAMAGE]);
+}
+
+//Yredelemnul's Injury Mirror invocation.
+void yred_request_injury_mirror()
+{
+    if(you.religion == GOD_YREDELEMNUL && !player_under_penance()
+       && you.piety >= piety_breakpoint(1)
+       && you.duration[DUR_MIRROR_DAMAGE])
+    {
+        // Strictly speaking, since it is random, it is possible it
+        // actually decreases.  The player doesn't know this, and this
+        // way smart-asses won't re-roll it several times before charging.
+        mpr("Your dark aura grows in power.");
+    }
+    else
+    {
+        mprf("You %s in prayer and are bathed in unholy energy.",
+             you.species == SP_NAGA ? "coil" :
+             you.species == SP_CAT  ? "sit"
+                                    : "kneel");
+    }
+    you.duration[DUR_MIRROR_DAMAGE] = 9 * BASELINE_DELAY
+                 + random2avg(you.piety * BASELINE_DELAY, 2) / 10;
 }
 
 bool yred_can_animate_dead()
@@ -1769,6 +1979,29 @@ void yred_make_enslaved_soul(monster* mon, bool force_hostile)
 
     mprf("%s soul %s.", whose.c_str(),
          !force_hostile ? "is now yours" : "fights you");
+}
+
+void yred_recall_undead_slaves()
+{
+    recall(1);
+}
+
+bool yred_enslave_soul()
+{
+    int power;
+    bolt beam;
+    dist spd;
+
+    god_acting gdact;
+    power = you.skill(SK_INVOCATIONS) * 4;
+    beam.range = LOS_RADIUS;
+
+    if (!spell_direction(spd, beam))
+        return (false);
+
+    if (!zapping(ZAP_ENSLAVE_SOUL, power, beam))
+        return (false);
+    return true;
 }
 
 bool kiku_receive_corpses(int pow, coord_def where)
@@ -1895,6 +2128,18 @@ bool kiku_take_corpse()
     }
 
     return false;
+}
+
+bool kiku_torment()
+{
+    if (!kiku_take_corpse())
+    {
+        mpr("There are no corpses to sacrifice!");
+        return false;
+    }
+    simple_god_message(" torments the living!");
+    torment(TORMENT_KIKUBAAQUDGHA, you.pos());
+    return true;
 }
 
 bool fedhas_passthrough_class(const monster_type mc)
@@ -3078,6 +3323,22 @@ bool fedhas_evolve_flora()
     return (true);
 }
 
+//Fedhas' Spawn Spores invocation.
+bool fedhas_spawn_spores()
+{
+    const int retval = fedhas_corpse_spores();
+    if (retval <= 0)
+    {
+        if (retval == 0)
+            mprf("No corpses are in range.");
+        else
+            canned_msg(MSG_OK);
+        return (false);
+    }
+    
+    return true;
+}
+
 static int _lugonu_warp_monster(monster* mon, int pow)
 {
     if (mon == NULL)
@@ -3129,6 +3390,72 @@ void lugonu_bend_space()
 
     const int damage = roll_dice(1, 4);
     ouch(damage, NON_MONSTER, KILLED_BY_WILD_MAGIC, "a spatial distortion");
+}
+
+//Lugonu's Exit The Abyss invocation.
+void lugonu_abyss_exit()
+{
+    banished(DNGN_EXIT_ABYSS);
+}
+
+//Lugonu's Banishment invocation.
+bool lugonu_banish()
+{
+    bolt beam;
+    dist spd;
+
+    beam.range = LOS_RADIUS;
+
+    if (!spell_direction(spd, beam))
+        return (false);
+
+    if (beam.target == you.pos())
+    {
+        mpr("You cannot banish yourself!");
+        return (false);
+    }
+
+    if (!zapping(ZAP_BANISHMENT, 16 + you.skill(SK_INVOCATIONS) * 8, beam,
+                 true))
+    {
+        return (false);
+    }
+    
+    return true;
+}
+
+//Lugonu's Corrupt invocation.
+bool lugonu_corrupt()
+{
+    return lugonu_corrupt_level(300 + you.skill(SK_INVOCATIONS) * 15);
+}
+
+//Lugonu's Enter The Abyss invocation.
+void lugonu_abyss_enter()
+{
+    // Move permanent hp/mp loss from leaving to entering the Abyss. (jpeg)
+    const int maxloss = std::max(2, div_rand_round(you.hp_max, 30));
+    // Lose permanent HP
+    dec_max_hp(random_range(1, maxloss));
+
+    // Paranoia.
+    if (you.hp_max < 1)
+        you.hp_max = 1;
+
+    // Deflate HP.
+    set_hp(1 + random2(you.hp), false);
+
+    // Lose 1d2 permanent MP.
+    rot_mp(coinflip() ? 2 : 1);
+
+    // Deflate MP.
+    if (you.magic_points)
+        set_mp(random2(you.magic_points), false);
+
+    bool note_status = notes_are_active();
+    activate_notes(false);  // This banishment shouldn't be noted.
+    banished(DNGN_ENTER_ABYSS);
+    activate_notes(note_status);
 }
 
 bool is_ponderousifiable(const item_def& item)
@@ -3222,6 +3549,8 @@ static int _slouch_monsters(coord_def where, int pow, int, actor* agent)
 
 int cheibriados_slouch(int pow)
 {
+    mpr("You can feel time thicken.");
+    dprf("your speed is %d", player_movement_speed());
     return (apply_area_visible(_slouch_monsters, pow, true, &you));
 }
 
@@ -3326,15 +3655,158 @@ bool ashenzari_end_transfer(bool finished, bool force)
     return true;
 }
 
+//Ashenzari's Scrying invocation.
+void ashenzari_scrying()
+{
+    if (you.duration[DUR_SCRYING])
+        mpr("You extend your astral sight.");
+    else
+        mpr("You gain astral sight.");
+    you.duration[DUR_SCRYING] = 100 + random2avg(you.piety * 2, 2);
+    you.xray_vision = true;
+}
 
-//Newly added
+
+//Okawaru's Might invocation.
 void okawaru_might()
 {
     potion_effect(POT_MIGHT, you.skills[SK_INVOCATIONS] * 8);
 }
 
-//Newly added
+//Okawaru's Haste invocation.
 void okawaru_haste()
 {
     potion_effect(POT_SPEED, you.skills[SK_INVOCATIONS] * 8);
+}
+
+//Okawaru's Heroism invocation, currently unused.
+void okawaru_heroism()
+{
+    mprf(MSGCH_DURATION, you.duration[DUR_HEROISM]
+         ? "You feel more confident with your borrowed prowess."
+         : "You gain the combat prowess of a mighty hero.");
+
+    you.increase_duration(DUR_HEROISM,
+        35 + random2(you.skill(SK_INVOCATIONS) * 8), 80);
+    you.redraw_evasion      = true;
+    you.redraw_armour_class = true;
+}
+
+//Okawaru's Finesse invocation, currently unused.
+bool okawaru_finesse()
+{
+    if (stasis_blocks_effect(true, true, "%s emits a piercing whistle.",
+                             20, "%s makes your neck tingle."))
+    {
+        return (false);
+    }
+
+    mprf(MSGCH_DURATION, you.duration[DUR_FINESSE]
+         ? "Your hands get new energy."
+         : "You can now deal lightning-fast blows.");
+
+    you.increase_duration(DUR_FINESSE,
+        40 + random2(you.skill(SK_INVOCATIONS) * 8), 80);
+
+    //did_god_conduct(DID_HASTY, 8); // Currently irrelevant.
+    
+    return true;
+}
+
+//Sif Muna's Channel Energy invocation.
+void sif_muna_channel_energy()
+{
+    mpr("You channel some magical energy.");
+
+    inc_mp(1 + random2(you.skill(SK_INVOCATIONS) / 4 + 2), false);
+}
+
+//Sif Muna's Forget Spell invocation.
+bool sif_muna_forget_spell()
+{
+    return cast_selective_amnesia();
+}
+
+//Makhleb's Minor Destruction invocation.
+bool makhleb_minor_destruction()
+{
+    int power;
+    bolt beam;
+    dist spd;
+
+    if (!spell_direction(spd, beam))
+        return (false);
+
+    power = you.skill(SK_INVOCATIONS)
+            + random2(1 + you.skill(SK_INVOCATIONS))
+            + random2(1 + you.skill(SK_INVOCATIONS));
+
+    // Since the actual beam is random, check with BEAM_MMISSILE and the
+    // highest range possible (electricity).
+    if (!player_tracer(ZAP_DEBUGGING_RAY, power, beam, 13))
+        return (false);
+
+    switch (random2(5))
+    {
+    case 0: beam.range =  7; zapping(ZAP_FLAME, power, beam); break;
+    case 1: beam.range =  8; zapping(ZAP_PAIN,  power, beam); break;
+    case 2: beam.range =  5; zapping(ZAP_STONE_ARROW, power, beam); break;
+    case 3: beam.range = 13; zapping(ZAP_ELECTRICITY, power, beam); break;
+    case 4: beam.range =  8; zapping(ZAP_BREATHE_ACID, power/2, beam); break;
+    }
+    
+    return true;
+}
+
+//Makhleb's Lesser Servant of Makhleb invocation.
+void makhleb_lesser_servant_of_makhleb()
+{
+    summon_demon_type(random_mons(MONS_HELLWING, MONS_NEQOXEC,
+                      MONS_ORANGE_DEMON, MONS_SMOKE_DEMON, MONS_YNOXINUL, -1),
+                      20 + you.skill(SK_INVOCATIONS) * 3, GOD_MAKHLEB);
+}
+
+//Makhleb's Major Destruction invocation.
+bool makhleb_major_destruction()
+{
+    int power;
+    bolt beam;
+    dist spd;
+
+    if (!spell_direction(spd, beam))
+        return (false);
+
+    power = you.skill(SK_INVOCATIONS) * 3
+            + random2(1 + you.skill(SK_INVOCATIONS))
+            + random2(1 + you.skill(SK_INVOCATIONS));
+
+    // Since the actual beam is random, check with BEAM_MMISSILE and the
+    // highest range possible (orb of electricity).
+    if (!player_tracer(ZAP_DEBUGGING_RAY, power, beam, 20))
+        return (false);
+
+    {
+        zap_type ztype = ZAP_DEBUGGING_RAY;
+        switch (random2(7))
+        {
+        case 0: beam.range =  6; ztype = ZAP_FIRE;               break;
+        case 1: beam.range =  6; ztype = ZAP_FIREBALL;           break;
+        case 2: beam.range = 10; ztype = ZAP_LIGHTNING;          break;
+        case 3: beam.range =  5; ztype = ZAP_STICKY_FLAME;       break;
+        case 4: beam.range =  5; ztype = ZAP_IRON_SHOT;          break;
+        case 5: beam.range =  6; ztype = ZAP_NEGATIVE_ENERGY;    break;
+        case 6: beam.range = 20; ztype = ZAP_ORB_OF_ELECTRICITY; break;
+        }
+        zapping(ztype, power, beam);
+    }
+    
+    return true;
+}
+
+//Makhleb's Greater Servant of Makhleb invocation.
+void makhleb_greater_servant_of_makhleb()
+{
+    summon_demon_type(random_mons(MONS_EXECUTIONER, MONS_GREEN_DEATH,
+                      MONS_BLUE_DEATH, MONS_BALRUG, MONS_CACODEMON, -1),
+                      20 + you.skill(SK_INVOCATIONS) * 3, GOD_MAKHLEB);
 }
