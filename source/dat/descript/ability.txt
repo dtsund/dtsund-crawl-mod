@@ -207,13 +207,13 @@ Animate Remains or Dead
 If you get this description, it is a bug.
 %%%%
 # Okawaru
-Heroism
+Might
 
-Temporarily increase all of your combat skills, including the ability to sneak around or avoid traps.
+Temporarily increase your strength and damage-dealing capabilities.
 %%%%
-Finesse
+Haste
 
-Greatly increase your combat speed, with no loss of accuracy. This unnatural effect causes small amounts of magic contamination, prolonged exposure to which may be bad for your health.
+Greatly but temporarily increase your speed.
 %%%%
 # Makhleb
 Minor Destruction
