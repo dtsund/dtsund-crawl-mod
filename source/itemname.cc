@@ -1056,7 +1056,7 @@ static const char* staff_type_name(int stafftype)
     case STAFF_POWER:       return "power";
     case STAFF_FIRE:        return "fire";
     case STAFF_COLD:        return "cold";
-    case STAFF_POISON:      return "poison";
+    case STAFF_POISON:      return "sorcery";
     case STAFF_ENERGY:      return "energy";
     case STAFF_DEATH:       return "death";
     case STAFF_CONJURATION: return "conjuration";

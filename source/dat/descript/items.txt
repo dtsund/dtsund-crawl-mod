@@ -1244,9 +1244,9 @@ staff of fire
 
 This staff increases the power of fire spells cast by its wielder, and protects him or her from the effects of heat and fire. If the wielder is skilled in evocations, they can burn those struck by it, dealing even greater damage if they are also skilled in fire magic.
 %%%%
-staff of poison
+staff of sorcery
 
-This staff increases the power of poisoning spells cast by its wielder, and protects him or her from the effects of poison. If the wielder is skilled in both evocations and poison magic, they can poison those struck by it.
+This staff increases the power of sorcerous spells cast by its wielder, and protects him or her from the effects of poison. If the wielder is skilled in both evocations and sorcery, they can poison those struck by it.
 %%%%
 staff of power
 
