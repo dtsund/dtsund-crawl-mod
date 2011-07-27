@@ -1,7 +1,5 @@
 Probably-easy TODO list:
-	Remove Felids, because boring(?)
 	Remove Labyrinths, because boring(?)
-	Rename staves of poison and the like to fit the Sorcery change...
 	Tweak Sorcery miscast effects (maybe have one be a magic resistance halving)
 	Revert Okawaru nerf
 	Remove 'monstrous' demonspawn
@@ -62,3 +60,4 @@ Changes already made:
 	The Stalker background has been reworked; now emphasizes useful low level spells.
 	Every spellbook now has its own unique description.
 	Monster HP bars have been replaced with icons that don't mislead the player.
+	Felids may no longer be chosen as a player race.

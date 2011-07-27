@@ -176,6 +176,10 @@ static bool _is_species_valid_choice(species_type species)
     // Non-base draconians cannot be selected either.
     if (species >= SP_RED_DRACONIAN && species < SP_BASE_DRACONIAN)
         return (false);
+    
+    // Begone, foul cats!
+    if(species == SP_CAT)
+        return (false);
 
     return (true);
 }
@@ -1039,7 +1043,7 @@ static void _construct_backgrounds_menu(const newgame_def* ng,
              JOB_UNKNOWN, JOB_UNKNOWN}
         },
         {
-            "Warrior-mage",    // XXX: Arcane Marksmen are temporarily disabled
+            "Warrior-mage",
             coord_def(35, 0), 20,
             {JOB_CRUSADER, JOB_ENCHANTER, JOB_TRANSMUTER, JOB_STALKER,
              JOB_WARPER, JOB_ARCANE_MARKSMAN, JOB_UNKNOWN, JOB_UNKNOWN, JOB_UNKNOWN}
