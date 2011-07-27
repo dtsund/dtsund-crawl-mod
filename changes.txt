@@ -1,8 +1,9 @@
 Probably-easy TODO list:
 	Remove Labyrinths, because boring(?)
 	Tweak Sorcery miscast effects (maybe have one be a magic resistance halving)
-	Revert Okawaru nerf
 	Remove 'monstrous' demonspawn
+	Make god abilities consistently call functions in godabil.cc from _do_ability, because
+		WHAT THE HELL IS WRONG WITH YOU, PERSON WHO WROTE _do_ability?
 
 
 Harder TODO list:
@@ -61,3 +62,4 @@ Changes already made:
 	Every spellbook now has its own unique description.
 	Monster HP bars have been replaced with icons that don't mislead the player.
 	Felids may no longer be chosen as a player race.
+	Okawaru nerf reverted.

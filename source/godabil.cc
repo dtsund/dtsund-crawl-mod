@@ -43,6 +43,7 @@
 #include "notes.h"
 #include "options.h"
 #include "player-stats.h"
+#include "potion.h"
 #include "random.h"
 #include "religion.h"
 #include "skills.h"
@@ -3323,4 +3324,17 @@ bool ashenzari_end_transfer(bool finished, bool force)
     you.transfer_skill_points = 0;
     you.transfer_total_skill_points = 0;
     return true;
+}
+
+
+//Newly added
+void okawaru_might()
+{
+    potion_effect(POT_MIGHT, you.skills[SK_INVOCATIONS] * 8);
+}
+
+//Newly added
+void okawaru_haste()
+{
+    potion_effect(POT_SPEED, you.skills[SK_INVOCATIONS] * 8);
 }

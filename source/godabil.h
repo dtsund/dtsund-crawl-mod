@@ -74,4 +74,7 @@ int cheibriados_slouch(int pow);
 void cheibriados_time_step(int pow);
 bool ashenzari_transfer_knowledge();
 bool ashenzari_end_transfer(bool finished = false, bool force = false);
+
+void okawaru_might();
+void okawaru_haste();
 #endif
