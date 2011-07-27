@@ -4513,7 +4513,7 @@ tileidx_t tileidx_skill(skill_type skill, bool active)
     case SK_UNARMED_COMBAT: ch = TILEG_UNARMED_COMBAT_ON; break;
     case SK_SPELLCASTING:   ch = TILEG_SPELLCASTING_ON; break;
     case SK_CONJURATIONS:   ch = TILEG_CONJURATIONS_ON; break;
-    case SK_ENCHANTMENTS:   ch = TILEG_CHARMS_ON; break; //ENCHRESTORE.  I've got a bad feeling about this line.
+    case SK_ENCHANTMENTS:   ch = TILEG_CHARMS_ON; break;
     case SK_SUMMONINGS:     ch = TILEG_SUMMONINGS_ON; break;
     case SK_NECROMANCY:     ch = TILEG_NECROMANCY_ON; break;
     case SK_TRANSLOCATIONS: ch = TILEG_TRANSLOCATIONS_ON; break;
@@ -4522,7 +4522,7 @@ tileidx_t tileidx_skill(skill_type skill, bool active)
     case SK_ICE_MAGIC:      ch = TILEG_ICE_MAGIC_ON; break;
     case SK_AIR_MAGIC:      ch = TILEG_AIR_MAGIC_ON; break;
     case SK_EARTH_MAGIC:    ch = TILEG_EARTH_MAGIC_ON; break;
-    case SK_POISON_MAGIC:   ch = TILEG_POISON_MAGIC_ON; break;
+    case SK_POISON_MAGIC:   ch = TILEG_HEXES_ON; break;
     case SK_INVOCATIONS:    ch = TILEG_INVOCATIONS_ON; break;
     case SK_EVOCATIONS:     ch = TILEG_EVOCATIONS_ON; break;
     default:                return TILEG_TODO;
