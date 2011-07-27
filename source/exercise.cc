@@ -330,6 +330,10 @@ static void _exercise(skill_type sk, int degree, int limit)
 
 void practise(exer_type ex, int param1)
 {
+    //If autotraining, don't allow manual exercise to drain the skill pool
+    if((you.num_autotrained_skills != 0) || (ex == EX_READ_MANUAL))
+        return;
+    
     skill_type sk = SK_NONE;
     int limit = -1;
     int deg = 0;
