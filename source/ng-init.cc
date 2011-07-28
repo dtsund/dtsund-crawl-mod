@@ -68,8 +68,6 @@ void initialise_branch_depths()
             b->startdepth = random_range(b->mindepth, b->maxdepth);
     }
 
-
-/*
     // Disable one of the Swamp/Shoals/Snake Pit.
     const branch_type disabled_branch =
         static_cast<branch_type>(
@@ -77,11 +75,11 @@ void initialise_branch_depths()
 
     dprf("Disabling branch: %s", branches[disabled_branch].shortname);
     branches[disabled_branch].startdepth = -1;
-*/
 
     // dtsund: Always disable Shoals.  Not removing Shoals code because it'd
     // make a fantastic portal vault.
-    branches[BRANCH_SHOALS].startdepth = -1;
+    // Addendum: I've reverted this.  Shoals is back in, at least for now.
+    //branches[BRANCH_SHOALS].startdepth = -1;
 
     branches[BRANCH_SPIDER_NEST].startdepth = -1;
     branches[BRANCH_FOREST].startdepth = -1;
