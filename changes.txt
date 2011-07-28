@@ -4,11 +4,7 @@ Probably-easy TODO list:
 
 
 Harder TODO list:
-	Tweak silent spectre, give Mennas a few holy-flavored ones as pets
-		Specifically: Reduce spectre melee attack to negligible levels,
-		give them crazy speed, have them cast Silence rather than keep
-		a permanent aura.  Skeletal warrior packs past a certain point
-		get a chance at having them.
+	Skeletal warrior packs past a certain point get a chance at having silent spectres.
 	Nerf Mennas' defense.  Make him rely on his pets for Silence.
 	Make Invisibility more viable late-game/extended
 		Reduce some See Invisible enemies to merely Sense Invisible, or no
@@ -61,3 +57,5 @@ Changes already made:
 	Okawaru nerf reverted.
 	Misc acquirement replaced with potion acquirement.
 	Reverted the crystal ball of energy nerf.
+	Made silent spectres more interesting.
+		Still need to implement the skeletal warrior, Mennas changes

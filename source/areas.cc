@@ -466,8 +466,11 @@ int player::silence_radius2() const
 
 int monster::silence_radius2() const
 {
+    //Removing the permanent aura for now.
+    /*
     if (type == MONS_SILENT_SPECTRE)
         return 150;
+    */
 
     if (!has_ench(ENCH_SILENCE))
         return (-1);

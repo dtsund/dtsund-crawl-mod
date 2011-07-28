@@ -440,8 +440,11 @@ monster_info::monster_info(const monster* m, int milev)
     if (mons_class_flag(m->type, M_DEFLECT_MISSILES))
         mb |= ULL1 << MB_DEFLECT_MSL;
 
+    //Removed the silent spectre's permanent silence aura.
+    /*
     if (m->type == MONS_SILENT_SPECTRE)
         mb |= ULL1 << MB_SILENCING;
+    */
 
     if (you.beheld_by(m))
         mb |= ULL1 << MB_MESMERIZING;
