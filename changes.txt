@@ -1,5 +1,4 @@
 Probably-easy TODO list:
-	Remove Labyrinths, because boring(?)
 	Tweak Sorcery miscast effects (maybe have one be a magic resistance halving)
 	Remove 'monstrous' demonspawn
 
@@ -23,7 +22,7 @@ Long-term TODO list:
 	Restore square spell ranges (This actually looks really hard)
 	Reduce game length by 1/3 outside of extended endgame
 		There are subtle balance issues involved!
-	Make Shoals a portal vault
+	Make Shoals a portal vault, possibly replacing labyrinths?
 		
 
 Changes already made:
@@ -47,7 +46,6 @@ Changes already made:
 	Replaced Repel Missiles with Throw Frost in book of Minor Magic.
 	Selective Amnesia restored as a spell.  Now found in the books of Wizardry, Enchantments, and Dreams.
 	Give Assassins more needles (might revert if OP).  Now get 5 each of sleep, slow, confusion.
-	Remove Shoals from early Lair lottery (kludgy, just rigged the lottery).
 	Acquirement now shows the exact items the player is choosing from.
 		Flaw(?) with current implementation: I think unrands that get generated
 		and rejected don't get a second chance to generate.
@@ -62,3 +60,4 @@ Changes already made:
 	Felids may no longer be chosen as a player race.
 	Okawaru nerf reverted.
 	Misc acquirement replaced with potion acquirement.
+	Reverted the crystal ball of energy nerf.

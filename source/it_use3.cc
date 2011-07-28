@@ -733,8 +733,7 @@ static bool _ball_of_energy(void)
 
     if (use < 2)
     {
-        const int loss = roll_dice(1, 2 * you.max_intel() / 3);
-        lose_stat(STAT_INT, loss, false, "using a ball of energy");
+        lose_stat(STAT_INT, 1, false, "using a ball of energy");
     }
     else if (use < 4 && enough_mp(1, true))
     {
@@ -744,10 +743,6 @@ static bool _ball_of_energy(void)
     else if (use < 6)
     {
         confuse_player(10 + random2(10));
-    }
-    else if (use < 8)
-    {
-        you.paralyse(NULL, 2 + random2(2));
     }
     else
     {
