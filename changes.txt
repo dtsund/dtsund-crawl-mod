@@ -2,7 +2,6 @@ Probably-easy TODO list:
 	Remove Labyrinths, because boring(?)
 	Tweak Sorcery miscast effects (maybe have one be a magic resistance halving)
 	Remove 'monstrous' demonspawn
-	Potion acquirement
 
 
 Harder TODO list:
@@ -62,3 +61,4 @@ Changes already made:
 	Monster HP bars have been replaced with icons that don't mislead the player.
 	Felids may no longer be chosen as a player race.
 	Okawaru nerf reverted.
+	Misc acquirement replaced with potion acquirement.

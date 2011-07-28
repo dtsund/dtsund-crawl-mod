@@ -460,6 +460,150 @@ static void _acquirement_determine_food(int& type_wanted, int& quantity,
     }
 }
 
+
+
+//Determine type and quantity for potion acquirement.  Will give either a largish
+//stack of somewhat valuable potions, like heal wounds, or a small stack of highly
+//valuable potions, like cure mutation.  Currently, the acquirable types are weighted
+//equally with no regard given to currently owned potions (as, in this case, even
+//duplicates are valuable).
+static void _acquirement_determine_potion(int& type_wanted, int& quantity)
+{
+    //Players with particularly bad mutations will probably want
+    //cure mutation.  Not guaranteed, though, because having
+    //these things should still be dangerous.
+    if(player_mutation_level(MUT_BLURRY_VISION) ||
+       player_mutation_level(MUT_BERSERK) ||
+       player_mutation_level(MUT_TELEPORT) &&
+       one_chance_in(3))
+    {
+        //Average of 2.5: 1 + 1d2. 
+        type_wanted = POT_CURE_MUTATION;
+        quantity = 1 + roll_dice(1,2);
+        return;
+    }
+
+    //Potions of decay make for fantastic Evaporate fodder.
+    if(you.has_spell(SPELL_EVAPORATE) && one_chance_in(6))
+    {
+        //Average of 9: 2 + 2d6.
+        type_wanted = POT_DECAY;
+        quantity = 2 + roll_dice(2,6);
+        return;
+    }
+    
+    //Otherwise, choose the following options with equal probability:
+    //Cure Mutation (still nice to have even if the player isn't critically mutated)
+    //Experience
+    //Gain Dexterity
+    //Gain Intelligence
+    //Gain Strength
+    //Heal Wounds
+    //Invisibility
+    //Magic OR Berserk Rage (choose based on whether Fighting > Spellcasting)
+    //Speed
+    //Resistance
+    switch(roll_dice(1,10))
+    {
+    case 1:
+    {
+        //Average of 2.5: 1 + 1d2.
+        type_wanted = POT_CURE_MUTATION;
+        quantity = 1 + roll_dice(1,2);
+        return;
+    }
+    case 2:
+    {
+        //One potion of experience is quite enough.
+        type_wanted = POT_EXPERIENCE;
+        quantity = 1;
+        return;
+    }
+    case 3:
+    {
+        //Average of 2: 1d3.
+        type_wanted = POT_GAIN_DEXTERITY;
+        quantity = roll_dice(1,3);
+        return;
+    }
+    case 4:
+    {
+        //Average of 2: 1d3.
+        type_wanted = POT_GAIN_INTELLIGENCE;
+        quantity = roll_dice(1,3);
+        return;
+    }
+    case 5:
+    {
+        //Average of 2: 1d3.
+        type_wanted = POT_GAIN_STRENGTH;
+        quantity = roll_dice(1,3);
+        return;
+    }
+    case 6:
+    {
+        //Average of 10: 1 + 6d2.  Heal Wounds, while useful, is common;
+        //it should accordingly be offered in a big stack here.
+        type_wanted = POT_HEAL_WOUNDS;
+        quantity = 1 + roll_dice(6,2);
+        return;
+    }
+    case 7:
+    {
+        //Average of 6: 3 + 1d5.
+        type_wanted = POT_INVISIBILITY;
+        quantity = 3 + roll_dice(1,5);
+        return;
+    }
+    case 8:
+    {
+        //Magic is useless to pure fighters, Berserk Rage is useless to
+        //Trog followers and pure mages.  Therefore, the following scheme is used.
+        //If Trog follower: fall through to the next case (Speed).
+        //Otherwise, if Fighting > Spellcasting: offer Berserk Rage.
+        //Otherwise otherwise, offer Magic.
+        if(you.skills[SK_FIGHTING] > you.skills[SK_SPELLCASTING] &&
+           you.religion != GOD_TROG)
+        {
+            //Average of 6: 3 + 1d5.
+            type_wanted = POT_BERSERK_RAGE;
+            quantity = 3 + roll_dice(1,5);
+            return;
+        }
+        else if(you.religion != GOD_TROG)
+        {
+            //I find it highly doubtful that a Trog follower *wouldn't* have
+            //Fighting > Spellcasting, but I'll check anyway.
+            //Average of 6: 3 + 1d5.
+            type_wanted = POT_MAGIC;
+            quantity = 3 + roll_dice(1,5);
+            return;
+        }
+        
+        //Trog followers fall through here.
+    }
+    case 9:
+    {
+        //Average of 6: 3 + 1d5.
+        type_wanted = POT_SPEED;
+        quantity = 3 + roll_dice(1,5);
+        return;
+    }
+    case 10:
+    {
+        //Average of 6: 3 + 1d5.
+        type_wanted = POT_RESISTANCE;
+        quantity = 3 + roll_dice(1,5);
+        return;
+    }
+    }
+
+    //It should never get down here, but that won't stop me
+    //from adding a case just in, uh, case!
+    type_wanted = POT_WATER;
+    quantity = 1;
+}
+
 static int _acquirement_weapon_subtype(bool divine)
 {
     // Asking for a weapon is biased towards your skills.
@@ -802,6 +946,8 @@ static int _find_acquirement_subtype(object_class_type class_wanted,
             // set type_wanted and quantity
             _acquirement_determine_food(type_wanted, quantity, already_has);
             break;
+        
+        case OBJ_POTIONS: _acquirement_determine_potion(type_wanted, quantity); break;
 
         case OBJ_WEAPONS:    type_wanted = _acquirement_weapon_subtype(divine);  break;
         case OBJ_MISSILES:   type_wanted = _acquirement_missile_subtype(); break;
@@ -1815,7 +1961,7 @@ bool acquirement(object_class_type class_wanted, int agent,
                                                    stock_loc, debug, false);
             index++;
         }
-        stock[index] = acquirement_create_item_general(OBJ_MISCELLANY, agent, tempQuiet,
+        stock[index] = acquirement_create_item_general(OBJ_POTIONS, agent, tempQuiet,
                                                    stock_loc, debug, false);
         index++;
         stock[index] = acquirement_create_item_general(OBJ_FOOD, agent, tempQuiet,
