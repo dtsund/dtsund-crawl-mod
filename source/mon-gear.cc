@@ -1516,9 +1516,12 @@ void give_shield(monster* mon, int level)
 
     switch (mon->type)
     {
+    case MONS_MENNAS:
+        make_item_for_monster(mon, OBJ_ARMOUR, ARM_SHIELD,
+                              level * 2 + 1, MAKE_ITEM_NO_RACE, 1);
+        break;
     case MONS_PALADIN:
     case MONS_DAEVA:
-    case MONS_MENNAS:
         make_item_for_monster(mon, OBJ_ARMOUR, ARM_LARGE_SHIELD,
                               level * 2 + 1, MAKE_ITEM_NO_RACE, 1);
         break;

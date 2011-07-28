@@ -2262,6 +2262,7 @@ enum monster_type                      // (int) menv[].type
     MONS_SPIRIT,
     MONS_PALADIN,
     MONS_APIS,
+    MONS_SILENT_DISCIPLE, //Mennas' pets, mostly identical to spectres
 
     // Fixed uniques:
     MONS_GERYON,

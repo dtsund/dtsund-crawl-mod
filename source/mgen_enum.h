@@ -65,6 +65,7 @@ enum band_type
     BAND_DEEP_DWARF,
     BAND_SHEDU,
     BAND_TERPSICHORE,
+    BAND_MENNAS,
     NUM_BANDS                   // always last
 };
 

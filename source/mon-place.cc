@@ -1420,11 +1420,6 @@ static int _place_monster_aux(const mgen_data &mg,
         die("invalid monster to place: %s (%d)", mons_class_name(mg.cls), mg.cls);
     }
 
-    //dtsund: crude hack to make Mennas not spawn.  Remove when Mennas tweaked.
-    //Maybe give him a cadre of tweaked silent specter-type monsters?
-    if(mg.cls == MONS_MENNAS)
-        return(-1);
-
     const monsterentry *m_ent = get_monster_data(mg.cls);
 
     monster* mon = get_free_monster();
@@ -2714,6 +2709,12 @@ static band_type _choose_band(int mon_type, int power, int &band_size,
         band = BAND_PIKEL;
         band_size = 4;
         break;
+    
+    case MONS_MENNAS:
+        natural_leader = true;
+        band = BAND_MENNAS;
+        band_size = 4;
+        break;
 
     case MONS_MERFOLK_AQUAMANCER:
         band = BAND_MERFOLK_AQUAMANCER;
@@ -3024,6 +3025,8 @@ static monster_type _band_member(band_type band, int power)
         break;
     case BAND_SKELETAL_WARRIORS:
         mon_type = MONS_SKELETAL_WARRIOR;
+        if(one_chance_in(10))
+            mon_type = MONS_SILENT_SPECTRE;
         break;
     case BAND_DRACONIAN:
     {
@@ -3078,6 +3081,10 @@ static monster_type _band_member(band_type band, int power)
 
     case BAND_PIKEL:
         mon_type = MONS_SLAVE;
+        break;
+    
+    case BAND_MENNAS:
+        mon_type = MONS_SILENT_DISCIPLE;
         break;
 
     case BAND_MERFOLK_AQUAMANCER:

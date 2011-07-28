@@ -813,6 +813,7 @@ terpsichore MONS_TERPSICHORE
 insubstantial_wisp MONS_INSUBSTANTIAL_WISP
 %sdir dc-mon/holy
 spirit MONS_SPIRIT
+silent_disciple MONS_SILENT_DISCIPLE
 blessed_toe MONS_BLESSED_TOE /*'*'*/
 
 ## Dwarves ('q')
