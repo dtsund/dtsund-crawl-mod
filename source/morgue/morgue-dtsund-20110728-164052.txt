@@ -1,0 +1,167 @@
+ Dungeon Crawl Stone Soup version 0.8.0-0-g3a1e774 character file.
+
+283 dtsund the Magician (level 6, 86/86 HPs) *WIZ*
+             Began as a Deep Elf Wizard on July 28, 2011.
+             Was the Champion of Ashenzari.
+             Quit the game on Level 1 of the Dungeon.
+             The game lasted 00:03:17 (315 turns).
+
+dtsund the Magician (Deep Elf Wizard)                                                                        Turns: 315, Time: 00:03:17
+
+HP  86/86        AC  2     Str  4      Exp: 6/377 (0), need: 350
+MP   3/20        EV 12     Int 23      God: Ashenzari 198 (0)
+Gold 20          SH  0     Dex 13      Spells:  2 memorised,  8 levels left
+
+Res.Fire  : . . .   See Invis. : +    (no weapon)
+Res.Cold  : . . .   Warding    : . .  a - +0 elf robe
+Life Prot.: . . .   Conserve   : .    (no shield)
+Res.Acid. : . . .   Res.Corr.  : .    b - +0 elf wizard hat
+Res.Poison: .       Clarity    : +    (no cloak)
+Res.Elec. : .       Spirit.Shd : .    (no gloves)
+Sust.Abil.: . .     Stasis     : .    (no boots)
+Res.Mut.  : .       Ctrl.Telep.: .    (no amulet)
+Res.Rott. : .       Levitation : +    (no ring)
+Saprovore : . . .   Ctrl.Flight: .    (no ring)
+
+@: levitating (expires), slightly glowing, slightly resistant to hostile enchantments, fairly stealthy
+A: fast metabolism 1
+a: Scrying, Transfer Knowledge, Renounce Religion
+
+
+You were on level 1 of the Dungeon.
+You worshipped Ashenzari.
+Ashenzari was exalted by your worship.
+You were very full.
+
+You visited 1 branch of the dungeon, and saw 1 of its levels.
+
+Inventory:
+
+Armour
+ a - a +0 elven robe (worn)
+ b - a +0 elven wizard hat (worn)
+Magical devices
+ e - a wand of digging (23)
+Comestibles
+ d - 2 bread rations
+Books
+ c - a book of Minor Magic   
+   
+   Spells                             Type                      Level
+   *Magic Dart                        Conjuration                  1
+   Blink                              Translocation                2
+   Call Imp                           Summoning                    2
+   Throw Frost                        Conjuration/Ice              2
+   Slow                               Enchantment/Sorcery          2
+   Conjure Flame                      Conjuration/Fire             3
+   Mephitic Cloud                     Conjuration/Sorcery/Air      3
+ f - a book of Enchantments   
+   
+   Spells                             Type                      Level
+   Levitation                         Enchantment/Air              2
+   Tukima's Dance                     Enchantment                  3
+   See Invisible                      Enchantment                  4
+   Selective Amnesia                  Enchantment                  4
+   Deflect Missiles                   Enchantment/Air              6
+   *Haste                             Enchantment                  6
+
+
+ You had 0 experience left.
+
+   Skills:
+ + Level 2 Dodging
+ + Level 2 Stealth
+ + Level 5 Spellcasting
+ + Level 2 Conjurations
+ + Level 1 Summonings
+ + Level 1 Translocations
+
+
+You had 8 spell levels left.
+You knew the following spells:
+
+ Your Spells              Type           Power        Success   Level  Hunger
+a - Magic Dart            Conj           13 (25)      96%         1    None
+b - Haste                 Ench           4 (100)      0%          6    Ration
+
+
+Dungeon Overview and Level Annotations
+
+Branches:
+Dungeon (1/27)            
+
+Altars:
+Ashenzari
+
+
+                    Innate Abilities, Weirdness & Mutations
+
+You have a fast metabolism.
+
+
+Message History
+
+Confirm with . or Enter, or press ? or * to list all spells.
+Aiming: Haste
+Press: ? - help, Shift-Dir - straight line, f - you
+You miscast the spell.
+The curse is absorbed by Ashenzari.
+You sense an overwhelmingly malignant aura!
+Are you sure you want to quit? (Confirm with "yes".) 
+
+  ·· ·· · ∙∙∙∙∙∙∙∙∙∙∙∙∙∙∙∙∙∙∙∙∙∙∙∙
+  ·· ·· ·· ░   ▒∙∙∙∙∙∙∙∙▒▒▒▒▒▒▒▒∙▒
+  · ·  ·· ░░ ▒∙∙∙▒▒▒▒▒▒∙▒▒▒▒▒▒  ·░
+  ·░░░░· ░ ▒∙∙∙▒ ▒∙∙∙∙∙∙∙∙∙∙∙▒  ··
+·  ░      ░∙∙▒ ▒∙∙∙▒▒▒∙∙∙▒▒▒∙∙∙▒
+ ░ ░  ░ ░░ ∙░░· ·░░▒▒∙∙∙∙∙▒▒ ░   ░
+· ·    ·░··░░  ░░░▒▒∙∙▄<∙∙∙▒▒░ ░ ·
+ ░ ░  ░· ·       ▒▒∙∙∙∙∙∙∙∙∙▒▒  ░
+  ·   ░· ░ ··   ▒▒∙∙∙∙∙∙∙∙∙∙∙▒▒ ░░
+   ░ ░░ ░ · ░  ▒▒∙∙∙∙∙∙∙∙∙∙∙∙∙▒  ░
+·        {    ░▒∙@∙∙∙∙▒∙▒∙∙∙∙∙∙▒░
+ ░·  ░   · ░  ▒∙∙∙∙∙∙▒▒∙▒▒∙∙∙∙∙∙ ░
+·░·░ ░·  ·   ▒∙∙∙∙∙∙▒▒∙∙∙▒▒∙∙∙∙ ·░
+·  ░  · ·░░░▒∙∙∙∙∙∙▒▒∙∙∙∙∙▒▒∙∙∙··
+  ·   ··   ∙∙∙∙<∙∙▒▒∙?∙>∙[∙▒▒∙  ·
+  ·   ·░·░░▒▒∙∙∙∙∙∙▒▒∙∙∙∙∙▒▒ ····
+·░ ░ ░  · ░ ▒▒∙∙∙∙∙·▒▒∙)∙▒▒····· ░
+   ░    ░·░  ▒▒∙∙∙∙ ·▒▒$▒▒·· ·
+ ░ ░   · ·    ░░∙∙∙ · ▒▒▒· ···  ░
+·   ░ ░·  ·    ░░ ·   · ·· · ·░░
+ ·  ···  ░░       ··· ···  ··░  ░
+
+
+There were no monsters in sight!
+
+Vanquished Creatures
+  A worm (D:1)
+  A megabat (D:1)
+  A rat (D:1)
+3 creatures vanquished.
+
+Notes
+Turn   | Place   | Note
+--------------------------------------------------------------
+     0 | D:1      | dtsund, the Deep Elf Wizard, began the quest for the Orb.
+     0 | D:1      | Reached XP level 1. HP: 6/6 MP: 7/7
+     1 | D:1      | Entered wizard mode.
+     1 | D:1      | Became a worshipper of Ashenzari the Shackled
+     2 | D:1      | Acquired Ashenzari's first power
+     2 | D:1      | Acquired Ashenzari's second power
+     2 | D:1      | Acquired Ashenzari's third power
+     2 | D:1      | Acquired Ashenzari's fourth power
+    19 | D:1      | Slain by a worm (10 damage)
+             
+    25 | D:1      | Slain by a worm (7 damage)
+             
+    43 | D:1      | Reached skill level 5 in Spellcasting
+   266 | D:1      | Reached XP level 2. HP: 10/10 MP: 8/10
+   266 | D:1      | Reached XP level 3. HP: 14/14 MP: 9/13
+   266 | D:1      | Reached XP level 4. HP: 18/18 MP: 10/17
+   266 | D:1      | Reached XP level 5. HP: 23/23 MP: 11/19
+   266 | D:1      | Reached XP level 6. HP: 26/26 MP: 12/20
+   273 | D:1      | Learned a level 6 spell: Haste
+   290 | D:1      | Gained mutation: You have a fast metabolism.
+   315 | D:1      | Quit the game
+

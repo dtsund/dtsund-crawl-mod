@@ -1,0 +1,99 @@
+ Dungeon Crawl Stone Soup version 0.8.0-0-g3a1e774 character file.
+
+50 dtsund the Shooter (level 1, 11/11 HPs)
+             Began as a High Elf Arcane Marksman on July 26, 2011.
+             Quit the game on Level 1 of the Dungeon.
+             The game lasted 00:00:06 (0 turns).
+
+dtsund the Shooter (High Elf Arcane Marksman)                                                                  Turns: 0, Time: 00:00:06
+
+HP  11/11        AC  2     Str 10      Exp: 1/0 (25), need: 14
+MP   1/1         EV 12     Int 16      God: 
+Gold 50          SH  0     Dex 14      Spells:  0 memorised,  4 levels left
+
+Res.Fire  : . . .   See Invis. : .    b - +0 elf bow
+Res.Cold  : . . .   Warding    : . .  a - +0 elf robe
+Life Prot.: . . .   Conserve   : .    (no shield)
+Res.Acid. : . . .   Res.Corr.  : .    (no helmet)
+Res.Poison: .       Clarity    : .    (no cloak)
+Res.Elec. : .       Spirit.Shd : .    (no gloves)
+Sust.Abil.: . .     Stasis     : .    (no boots)
+Res.Mut.  : .       Ctrl.Telep.: .    (no amulet)
+Res.Rott. : .       Levitation : .    (no ring)
+Saprovore : . . .   Ctrl.Flight: .    (no ring)
+
+@: not resistant to hostile enchantments, unstealthy
+A: no striking features
+a: no special abilities
+
+
+You were on level 1 of the Dungeon.
+You were not hungry.
+
+You visited 1 branch of the dungeon, and saw 1 of its levels.
+
+Inventory:
+
+Hand weapons
+ b - a +0,+0 elven bow (weapon)
+Missiles
+ c - 25 +0 arrows (quivered)
+Armour
+ a - a +0 elven robe (worn)
+Comestibles
+ f - a bread ration
+Books
+ d - a book of Distance   
+   
+   Spells                             Type                      Level
+   Corona                             Sorcery                      1
+   Slow                               Enchantment/Sorcery          2
+   Poison Weapon                      Enchantment/Sorcery          3
+   Leda's Liquefaction                Sorcery/Earth                4
+   Cause Fear                         Sorcery                      5
+
+
+ You had 25 experience left.
+
+   Skills:
+ + Level 3 Bows
+ + Level 1 Dodging
+ + Level 2 Spellcasting
+ + Level 2 Sorcery
+
+
+You had 4 spell levels left.
+You didn't know any spells.
+
+Dungeon Overview and Level Annotations
+
+Branches:
+Dungeon (1/27)            
+
+Altars:
+
+Message History
+
+Welcome, dtsund the High Elf Arcane Marksman.
+Will you be the one to retrieve the fabulous Orb of Zot from the depths?
+Press ? for a list of commands and other information.
+Are you sure you want to quit? (Confirm with "yes".) 
+
+  ▒▒▒
+▒▒∙∙▒▒▒▒▒▒
+▒@∙∙∙∙∙∙∙▒
+▒<∙∙∙∙∙∙∙∙
+▒▒∙∙▒▒▒▒∙
+  ▒▒▒
+
+
+There were no monsters in sight!
+
+
+Notes
+Turn   | Place   | Note
+--------------------------------------------------------------
+     0 | D:1      | dtsund, the High Elf Arcane Marksman, began the quest for the Orb.
+     0 | D:1      | Reached XP level 1. HP: 11/11 MP: 1/1
+     0 | D:1      | Quit the game
+

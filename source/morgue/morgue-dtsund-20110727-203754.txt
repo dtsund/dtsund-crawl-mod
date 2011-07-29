@@ -1,0 +1,266 @@
+ Dungeon Crawl Stone Soup version 0.8.0-0-g3a1e774 character file.
+
+20 dtsund the Magician (level 1, 6/6 HPs) *WIZ*
+             Began as a Deep Elf Wizard on July 27, 2011.
+             Quit the game on Level 1 of the Dungeon.
+             The game lasted 00:07:05 (116 turns).
+
+dtsund the Magician (Deep Elf Wizard)                                                                        Turns: 116, Time: 00:07:05
+
+HP   6/6         AC 13     Str 19      Exp: 1/0 (24), need: 13
+MP   7/7         EV 12     Int 31      God: No God 0 (0)
+Gold 20          SH 15     Dex 18      Spells:  1 memorised,  7 levels left
+
+Res.Fire  : . . .   See Invis. : +    (no weapon)
+Res.Cold  : . . .   Warding    : . .  a - +0 elf robe
+Life Prot.: . . .   Conserve   : .    q - +2 dwarf buckler {AC+3}
+Res.Acid. : . . .   Res.Corr.  : .    n - +2 helmet {SInv}
+Res.Poison: .       Clarity    : .    p - +0 cloak {MR}
+Res.Elec. : .       Spirit.Shd : .    k - +2 pair of gauntlets {Str+3}
+Sust.Abil.: . .     Stasis     : .    f - +0 pair of boots {run}
+Res.Mut.  : .       Ctrl.Telep.: .    (no amulet)
+Res.Rott. : .       Levitation : .    (no ring)
+Saprovore : . . .   Ctrl.Flight: .    (no ring)
+
+@: quick, somewhat resistant to hostile enchantments, fairly stealthy
+A: Str +12, Int +9, Dex +5
+a: no special abilities
+
+
+You were on level 1 of the Dungeon.
+You were full.
+
+You visited 1 branch of the dungeon, and saw 1 of its levels.
+
+Inventory:
+
+Armour
+ a - a +0 elven robe (worn)
+ b - a +0 elven wizard hat
+ f - a +0 pair of boots of running (worn)
+ j - the +2 pair of Fencer's gloves {EV+3 Dex+3 Acc+5}
+   (You acquired it on level 1 of the Dungeon)   
+   
+   
+   It affects your evasion (+3).
+   It affects your dexterity (+3).
+   It affects your accuracy (+5).
+ k - a +2 pair of gauntlets of strength (worn)
+ n - a +2 helmet of see invisible (worn)
+ p - a +0 cloak of magic resistance (worn)
+ q - a +2 dwarven buckler of protection (worn)
+ t - the +3 cloak of Flash {+Lev EV+4}
+   (You acquired it on level 1 of the Dungeon)   
+   
+   
+   It affects your evasion (+4).
+   It lets you levitate.
+Magical devices
+ h - a wand of healing (6)
+Comestibles
+ d - a bread ration
+Scrolls
+ l - 2 scrolls of acquirement
+Potions
+ g - 5 potions of cure mutation
+ i - 6 potions of speed
+ m - 8 potions of resistance
+ o - 7 potions of invisibility
+Books
+ c - a book of Minor Magic   
+   
+   Spells                             Type                      Level
+   *Magic Dart                        Conjuration                  1
+   Blink                              Translocation                2
+   Call Imp                           Summoning                    2
+   Throw Frost                        Conjuration/Ice              2
+   Slow                               Enchantment/Sorcery          2
+   Conjure Flame                      Conjuration/Fire             3
+   Mephitic Cloud                     Conjuration/Sorcery/Air      3
+ e - the Handbook of Orientation
+   (You acquired it on level 1 of the Dungeon)   
+   
+   Spells                             Type                      Level
+   Apportation                        Translocation                1
+   Blink                              Translocation                2
+   Recall                             Summoning/Translocation      3
+   Teleport Other                     Translocation                3
+   Control Teleport                   Enchantment/Translocation    4
+   Phase Shift                        Translocation                5
+ r - a book of Party Tricks   
+   
+   Spells                             Type                      Level
+   Summon Butterflies                 Summoning                    1
+   Apportation                        Translocation                1
+   Projected Noise                    Sorcery                      2
+   Blink                              Translocation                2
+   Levitation                         Enchantment/Air              2
+   Alistair's Intoxication            Transmutation/Sorcery        4
+ s - the Reference Book on Attacks and Darkness
+   (You acquired it on level 1 of the Dungeon)   
+   
+   Spells                             Type                      Level
+   Shock                              Conjuration/Air              1
+   Sting                              Conjuration/Sorcery          1
+   Iskenderun's Mystic Blast          Conjuration                  4
+   Sticky Flame                       Conjuration/Fire             4
+   Twisted Resurrection               Necromancy                   5
+   Cigotuvi's Degeneration            Transmutation/Necromancy     5
+
+
+ You had 24 experience left.
+
+   Skills:
+ + Level 2 Dodging
+ + Level 2 Stealth
+ + Level 4 Spellcasting
+ + Level 1 Conjurations
+ + Level 1 Summonings
+ + Level 1 Translocations
+
+
+You had 7 spell levels left.
+You knew the following spells:
+
+ Your Spells              Type           Power        Success   Level  Hunger
+a - Magic Dart            Conj           12 (25)      94%         1    None
+
+
+Dungeon Overview and Level Annotations
+
+Branches:
+Dungeon (1/27)            
+
+Altars:
+
+
+                    Innate Abilities, Weirdness & Mutations
+
+You are agile (Dex +5).
+Your mind is acute (Int +9).
+Your muscles are strong (Str +12).
+
+
+Message History
+
+It has a very clean taste.
+You feel weaker.
+You feel clumsy.
+You feel weaker.
+Drink which item? (? for menu, Esc to quit)
+You feel stronger.
+Are you sure you want to quit? (Confirm with "yes".) 
+
+▒▒▒■▒▒▒
+▒∙∙∙∙∙▒
+▒∙∙<∙∙▒
+■∙@<∙∙■
+▒∙<∙<∙▒
+▒∙∙∙∙∙▒
+▒▒▒■▒▒▒
+
+
+There were no monsters in sight!
+
+Vanquished Creatures (others)
+  A rat (D:1)
+1 creature vanquished.
+
+Notes
+Turn   | Place   | Note
+--------------------------------------------------------------
+     0 | D:1      | dtsund, the Deep Elf Wizard, began the quest for the Orb.
+     0 | D:1      | Reached XP level 1. HP: 6/6 MP: 7/7
+     1 | D:1      | Entered wizard mode.
+     2 | D:1      | Identified the +12,+0 spiked flail of Suinikh (You acquired it on level 1 of the Dungeon)
+     2 | D:1      | Identified Thriuty's Tome of Sinister Rituals and Sorcery (You acquired it on level 1 of the Dungeon)
+     2 | D:1      | Identified 12 scrolls of acquirement
+     4 | D:1      | Gained mutation: Your muscles are strong (Str +1).
+     5 | D:1      | Gained mutation: Your muscles are strong (Str +2).
+     6 | D:1      | Gained mutation: Your muscles are strong (Str +3).
+     7 | D:1      | Gained mutation: Your muscles are strong (Str +4).
+     8 | D:1      | Identified the -1,+0 spiked flail of Pruheuss (You acquired it on level 1 of the Dungeon)
+     8 | D:1      | Identified the +2 leather armour of Breitz (You acquired it on level 1 of the Dungeon)
+     8 | D:1      | Identified the Handbook of Companions (You acquired it on level 1 of the Dungeon)
+    10 | D:1      | Gained mutation: Your mind is acute (Int +1).
+    11 | D:1      | Gained mutation: Your mind is acute (Int +2).
+    12 | D:1      | Identified the Tome of Companions (You acquired it on level 1 of the Dungeon)
+    14 | D:1      | Gained mutation: Your muscles are strong (Str +5).
+    15 | D:1      | Gained mutation: Your muscles are strong (Str +6).
+    16 | D:1      | Gained mutation: Your muscles are strong (Str +7).
+    17 | D:1      | Identified the amulet "Qefamuf" (You acquired it on level 1 of the Dungeon)
+    17 | D:1      | Identified a +0 pair of boots of running (You acquired it on level 1 of the Dungeon)
+    21 | D:1      | Identified Zoyn Che's Guide on Creative Enchantment (You acquired it on level 1 of the Dungeon)
+    23 | D:1      | Identified the -3 pair of gloves of Cacilluc (You acquired it on level 1 of the Dungeon)
+    23 | D:1      | Identified the Incunabulum of Attacks and the Arsonist (You acquired it on level 1 of the Dungeon)
+    25 | D:1      | Identified the +5,+6 demon trident of the Shoals (You acquired it on level 1 of the Dungeon)
+    25 | D:1      | Identified Lee's Disquisition on Arcane Weapons (You acquired it on level 1 of the Dungeon)
+    27 | D:1      | Identified the Volume of Twisted Flight (You acquired it on level 1 of the Dungeon)
+    29 | D:1      | Gained mutation: Your mind is acute (Int +3).
+    30 | D:1      | Gained mutation: Your mind is acute (Int +4).
+    31 | D:1      | Identified the +0 cloak of Starlight (You acquired it on level 1 of the Dungeon)
+    31 | D:1      | Identified the Volume of Calling (You acquired it on level 1 of the Dungeon)
+    32 | D:1      | Identified the +2,-2 battleaxe of Wrath (You acquired it on level 1 of the Dungeon)
+    32 | D:1      | Identified the +2 pair of Fencer's gloves (You acquired it on level 1 of the Dungeon)
+    36 | D:1      | Identified the Guide on Flamy Enchantment (You acquired it on level 1 of the Dungeon)
+    41 | D:1      | Identified the Handbook of Orientation (You acquired it on level 1 of the Dungeon)
+    46 | D:1      | Identified Frederick's Collected Works on Attacks (You acquired it on level 1 of the Dungeon)
+    48 | D:1      | Identified the +6,+10 longbow "Plipun Oqysh" (You acquired it on level 1 of the Dungeon)
+    48 | D:1      | Identified Sif Muna's Reference Book on the Quantum Glacier (You acquired it on level 1 of the Dungeon)
+    53 | D:1      | Identified the Catalogue of the Beginning (You acquired it on level 1 of the Dungeon)
+    59 | D:1      | Identified the +3,+6 ankus of Instant Death (You acquired it on level 1 of the Dungeon)
+    59 | D:1      | Identified the +1 buckler of the Guilds (You acquired it on level 1 of the Dungeon)
+    61 | D:1      | Gained mutation: Your mind is acute (Int +5).
+    62 | D:1      | Gained mutation: Your mind is acute (Int +6).
+    63 | D:1      | Gained mutation: Your mind is acute (Int +7).
+    64 | D:1      | Identified the -4,-2 crossbow "Arbiter" (You acquired it on level 1 of the Dungeon)
+    70 | D:1      | Identified the +2,+1 longbow of Defence by Offence (You acquired it on level 1 of the Dungeon)
+    70 | D:1      | Identified the +2 buckler of Zin's Anger (You acquired it on level 1 of the Dungeon)
+    70 | D:1      | Identified Sif Muna's Reference Book on Battle Magic (You acquired it on level 1 of the Dungeon)
+    72 | D:1      | Gained mutation: You are agile (Dex +1).
+    73 | D:1      | Gained mutation: You are agile (Dex +2).
+    74 | D:1      | Identified Azrael's Handbook of Attacks and Flames (You acquired it on level 1 of the Dungeon)
+    76 | D:1      | Gained mutation: You are agile (Dex +3).
+    77 | D:1      | Gained mutation: You are agile (Dex +4).
+    78 | D:1      | Identified the +6,+1 longbow of Dim Light (You acquired it on level 1 of the Dungeon)
+    78 | D:1      | Identified the ring of Guqengak (You acquired it on level 1 of the Dungeon)
+    80 | D:1      | Identified the +3 pair of gauntlets of War (You acquired it on level 1 of the Dungeon)
+    80 | D:1      | Identified the Grimoire of Heat and Sorcery (You acquired it on level 1 of the Dungeon)
+    82 | D:1      | Gained mutation: Your muscles are strong (Str +8).
+    83 | D:1      | Gained mutation: Your muscles are strong (Str +9).
+    84 | D:1      | Gained mutation: Your muscles are strong (Str +10).
+    85 | D:1      | Gained mutation: Your muscles are strong (Str +11).
+    86 | D:1      | Identified the +2 ring mail "Qeale" (You acquired it on level 1 of the Dungeon)
+    88 | D:1      | Gained mutation: Your mind is acute (Int +8).
+    89 | D:1      | Gained mutation: Your mind is acute (Int +9).
+    91 | D:1      | Identified the -2,-1 scimitar of Pnei (You acquired it on level 1 of the Dungeon)
+    91 | D:1      | Identified the +0 pair of boots of Wonder (You acquired it on level 1 of the Dungeon)
+    91 | D:1      | Identified the Reference Book on Attacks and Darkness (You acquired it on level 1 of the Dungeon)
+    93 | D:1      | Identified the +6,+7 halberd "Giplitzu" (You acquired it on level 1 of the Dungeon)
+    93 | D:1      | Identified the +3 cloak of Flash (You acquired it on level 1 of the Dungeon)
+    95 | D:1      | Identified the +3,+1 lajatang "Jiylynum" (You acquired it on level 1 of the Dungeon)
+    95 | D:1      | Identified the Collected Works on Conjuration (You acquired it on level 1 of the Dungeon)
+    96 | D:1      | Identified the ring of Khejilae (You acquired it on level 1 of the Dungeon)
+    98 | D:1      | Gained mutation: You are agile (Dex +5).
+    99 | D:1      | Gained mutation: You are agile (Dex +6).
+   100 | D:1      | Gained mutation: You are agile (Dex +7).
+   101 | D:1      | Identified the +3,+8 bardiche "Itulusae" (You acquired it on level 1 of the Dungeon)
+   101 | D:1      | Identified Sif Muna's Volume of Stolen Souls and Sorcery (You acquired it on level 1 of the Dungeon)
+   103 | D:1      | Identified dtsund's Volume of Floating Conjuration (You acquired it on level 1 of the Dungeon)
+   104 | D:1      | Identified the -3 buckler of the Ego (You acquired it on level 1 of the Dungeon)
+   106 | D:1      | Gained mutation: Your muscles are strong (Str +12).
+   107 | D:1      | Gained mutation: Your muscles are strong (Str +13).
+   108 | D:1      | Gained mutation: Your muscles are strong (Str +14).
+   109 | D:1      | Identified the +2 helmet of Jigsaw (You acquired it on level 1 of the Dungeon)
+   109 | D:1      | Identified the amulet of Xom's Full Attention (You acquired it on level 1 of the Dungeon)
+   109 | D:1      | Identified the Disquisition on Lethal Enchantment (You acquired it on level 1 of the Dungeon)
+   110 | D:1      | Identified the +4,+2 short sword of the Ring (You acquired it on level 1 of the Dungeon)
+   110 | D:1      | Identified the ring "Pethrate" (You acquired it on level 1 of the Dungeon)
+   114 | D:1      | Lost mutation: Your muscles are strong (Str +14).
+   114 | D:1      | Lost mutation: Your muscles are strong (Str +13).
+   114 | D:1      | Lost mutation: You are agile (Dex +7).
+   114 | D:1      | Lost mutation: You are agile (Dex +6).
+   114 | D:1      | Lost mutation: Your muscles are strong (Str +12).
+   115 | D:1      | Gained mutation: Your muscles are strong (Str +12).
+   116 | D:1      | Quit the game
+

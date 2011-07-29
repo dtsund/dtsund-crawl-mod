@@ -1,0 +1,160 @@
+ Dungeon Crawl Stone Soup version 0.8.0-0-g3a1e774 character file.
+
+134 dtsund the Intangible (level 4, 49/49 HPs) *WIZ*
+             Began as a Deep Elf Wizard on July 27, 2011.
+             Quit the game on Level 1 of the Dungeon.
+             The game lasted 00:00:51 (189 turns).
+
+dtsund the Intangible (Deep Elf Wizard)                                                                      Turns: 189, Time: 00:00:51
+
+HP  49/49        AC  4     Str  5      Exp: 4/164 (189), need: 31
+MP  15/27        EV 28     Int 23      God: No God 0 (0)
+Gold 20          SH  0     Dex 13      Spells:  1 memorised, 56 levels left
+
+Res.Fire  : . . .   See Invis. : .      - Unarmed
+Res.Cold  : . . .   Warding    : . .  a - +0 elf robe
+Life Prot.: . . .   Conserve   : .    (no shield)
+Res.Acid. : . . .   Res.Corr.  : .    b - +0 elf wizard hat
+Res.Poison: .       Clarity    : .    (no cloak)
+Res.Elec. : .       Spirit.Shd : .    (no gloves)
+Sust.Abil.: . .     Stasis     : .    (no boots)
+Res.Mut.  : .       Ctrl.Telep.: .    (no amulet)
+Res.Rott. : .       Levitation : .    (no ring)
+Saprovore : . . .   Ctrl.Flight: .    (no ring)
+
+@: slightly resistant to hostile enchantments, incredibly stealthy
+A: no striking features
+a: no special abilities
+
+
+You were on level 1 of the Dungeon.
+You were very full.
+
+You visited 1 branch of the dungeon, and saw 1 of its levels.
+
+Inventory:
+
+Armour
+ a - a +0 elven robe (worn)
+ b - a +0 elven wizard hat (worn)
+Comestibles
+ d - a bread ration
+Scrolls
+ e - a scroll of identify {unknown}
+ f - a scroll of amnesia {unknown}
+Books
+ c - a book of Minor Magic   
+   
+   Spells                             Type                      Level
+   *Magic Dart                        Conjuration                  1
+   Blink                              Translocation                2
+   Call Imp                           Summoning                    2
+   Throw Frost                        Conjuration/Ice              2
+   Slow                               Enchantment/Sorcery          2
+   Conjure Flame                      Conjuration/Fire             3
+   Mephitic Cloud                     Conjuration/Sorcery/Air      3
+
+
+ You had 189 experience left.
+
+   Skills:
+ * Level 27 Fighting
+ * Level 27 Short Blades
+ * Level 27 Long Blades
+ * Level 27 Axes
+ * Level 27 Maces & Flails
+ * Level 27 Polearms
+ * Level 27 Staves
+ * Level 27 Slings
+ * Level 27 Bows
+ * Level 27 Crossbows
+ * Level 27 Throwing
+ * Level 27 Armour
+ * Level 27 Dodging
+ * Level 27 Stealth
+ * Level 27 Stabbing
+ * Level 27 Shields
+ * Level 27 Traps & Doors
+ * Level 27 Unarmed Combat
+ * Level 27 Spellcasting
+ * Level 27 Conjurations
+ * Level 27 Enchantments
+ * Level 27 Summonings
+ * Level 27 Necromancy
+ * Level 27 Translocations
+ * Level 27 Transmutations
+ * Level 27 Fire Magic
+ * Level 27 Ice Magic
+ * Level 27 Air Magic
+ * Level 27 Earth Magic
+ * Level 27 Sorcery
+ * Level 27 Invocations
+ * Level 27 Evocations
+
+
+You had 56 spell levels left.
+You knew the following spells:
+
+ Your Spells              Type           Power        Success   Level  Hunger
+a - Magic Dart            Conj           25 (25)      100%        1    None
+
+
+Dungeon Overview and Level Annotations
+
+Branches:
+Dungeon (1/27)            
+
+Altars:
+
+Message History
+
+You have reached level 3!
+Your experience leads to an increase in your attributes!
+Increase (S)trength, (I)ntelligence, or (D)exterity? 
+You feel stronger.
+You have reached level 4!
+You feel clever.
+Are you sure you want to quit? (Confirm with "yes".) 
+
+                    ▒∙▒
+                    ▒∙▒
+                    ▒∙▒
+                   ▒▒∙▒▒
+                    ∙∙∙
+                    ▒∙▒
+            ▒▒▒▒▒▒▒▒▒∙▒
+           ∙∙∙^∙∙∙∙∙∙∙▒
+ ▒▒▒▒▒▒▒▒  ▒▒▒▒▒▒▒▒∙∙∙▒
+▒■∙∙∙∙∙∙▒▒▒▒∙∙∙∙∙∙'▒∙▒▒
+▒∙∙∙∙∙∙∙∙▒▒∙∙∙∙∙∙@∙▒∙▒
+▒    ▒∙∙∙▒▒∙∙∙▒▒∙∙∙▒∙▒
+▒∙   ▒▒∙∙▒▒∙∙▒ ▒▒∙∙▒∙∙
+▒∙∙  ▒▒∙∙▒▒∙∙▒▒▒▒∙∙▒∙∙
+▒∙∙∙▒▒∙∙∙▒▒∙∙∙▒▒∙∙∙▒∙∙∙
+▒∙∙∙∙∙∙∙∙∙∙∙∙∙∙∙∙∙∙▒∙▒▒
+▒▒∙∙∙∙∙∙∙∙<∙∙∙∙∙∙∙▒▒∙
+ ▒▒▒▒▒▒∙<▒▒∙∙▒▒▒▒▒▒
+ ▒▒▒▒▒▒∙%▒▒<∙▒▒▒▒
+▒▒∙∙∙∙∙∙%>∙∙∙∙∙∙∙
+▒∙∙∙∙∙∙∙∙∙∙∙∙∙∙∙∙
+
+
+There were no monsters in sight!
+
+Vanquished Creatures
+  A silent spectre (D:1)
+  A giant cockroach (D:1)
+  A small snake (D:1)
+3 creatures vanquished.
+
+Notes
+Turn   | Place   | Note
+--------------------------------------------------------------
+     0 | D:1      | dtsund, the Deep Elf Wizard, began the quest for the Orb.
+     0 | D:1      | Reached XP level 1. HP: 6/6 MP: 7/7
+     0 | D:1      | Entered wizard mode.
+   188 | D:1      | Reached XP level 2. HP: 30/30 MP: 13/19
+   188 | D:1      | Reached XP level 3. HP: 40/40 MP: 14/24
+   188 | D:1      | Reached XP level 4. HP: 49/49 MP: 15/27
+   189 | D:1      | Quit the game
+

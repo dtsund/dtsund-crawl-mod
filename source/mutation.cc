@@ -1632,12 +1632,14 @@ static std::vector<demon_mutation_info> _select_ds_mutations()
     int NUM_BODY_SLOTS = 1;
     int ct_of_tier[] = { 0, 1, 3, 1 };
     // 1 in 10 chance to create a monstrous set
+    /* Actually, let's just disable monstrous demonspawn.  Bit startscummy. -dtsund
     if (one_chance_in(10))
     {
         NUM_BODY_SLOTS = 3;
         ct_of_tier[1] = 0;
         ct_of_tier[2] = 5;
     }
+    */
 
 try_again:
     std::vector<demon_mutation_info> ret;

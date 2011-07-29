@@ -1,0 +1,141 @@
+ Dungeon Crawl Stone Soup version 0.8.0-0-g3a1e774 character file.
+
+dtsund the Acrobat (Deep Elf Wizard)                                                                         Turns: 748, Time: 00:03:39
+
+HP  10/10        AC  2     Str  4      Exp: 2/19 (5), need: 22
+MP   9/10        EV 24     Int 22      God: No God 0 (0)
+Gold 78          SH  0     Dex 13      Spells:  1 memorised,  8 levels left
+
+Res.Fire  : . . .   See Invis. : .    (no weapon)
+Res.Cold  : . . .   Warding    : . .  a - +0 elf robe
+Life Prot.: . . .   Conserve   : .    (no shield)
+Res.Acid. : . . .   Res.Corr.  : .    b - +0 elf wizard hat
+Res.Poison: .       Clarity    : .    (no cloak)
+Res.Elec. : .       Spirit.Shd : .    (no gloves)
+Sust.Abil.: . .     Stasis     : .    (no boots)
+Res.Mut.  : .       Ctrl.Telep.: .    (no amulet)
+Res.Rott. : .       Levitation : .    (no ring)
+Saprovore : . . .   Ctrl.Flight: .    (no ring)
+
+@: not resistant to hostile enchantments, fairly stealthy
+A: no striking features
+a: no special abilities
+
+
+You are on level 1 of the Dungeon.
+You are not hungry.
+
+You have visited 1 branch of the dungeon, and seen 1 of its levels.
+
+You have collected 58 gold pieces.
+
+Inventory:
+
+Armour
+ a - a +0 elven robe (worn)
+ b - a +0 elven wizard hat (worn)
+Comestibles
+ d - a bread ration
+ g - 2 meat rations
+ l - a choko
+Scrolls
+ e - a scroll labeled SKYAFU GUHE
+ f - 3 scrolls labeled KOASUSTRAORPH
+ h - a scroll labeled SMUG UVUTT
+ i - a scroll labeled YNAENWAESM
+ j - a scroll labeled KHULUH TUOXKOODGH
+ k - a scroll labeled GAS AHOLIST
+Potions
+ m - a yellow potion
+Books
+ c - a book of Minor Magic   
+   
+   Spells                             Type                      Level
+   *Magic Dart                        Conjuration                  1
+   Blink                              Translocation                2
+   Call Imp                           Summoning                    2
+   Throw Frost                        Conjuration/Ice              2
+   Slow                               Enchantment/Sorcery          2
+   Conjure Flame                      Conjuration/Fire             3
+   Mephitic Cloud                     Conjuration/Sorcery/Air      3
+
+
+ You have 5 experience left.
+
+   Skills:
+ # Level 21 Dodging
+ + Level 2 Stealth
+ + Level 4 Spellcasting
+ + Level 1 Conjurations
+ + Level 1 Summonings
+ + Level 1 Translocations
+
+
+You have 8 spell levels left.
+You know the following spells:
+
+ Your Spells              Type           Power        Success   Level  Hunger
+a - Magic Dart            Conj           8 (25)       91%         1    None
+
+
+Dungeon Overview and Level Annotations
+
+Branches:
+Dungeon (1/27)            
+
+Altars:
+
+Message History
+
+Casting: Magic Dart
+Confirm with . or Enter, or press ? or * to list all spells.
+Aiming: Magic Dart
+Press: ? - help, Shift-Dir - straight line, f - rat
+Aim: A rat (hasn't noticed you)
+The magic dart hits the rat.
+You kill the rat!
+
+              ▒∙∙∙∙∙▒           ▒∙
+              ▒∙∙∙∙∙▒           ▒∙
+              ▒∙∙∙∙∙▒       ▒∙▒ ▒∙
+▒▒▒▒▒▒  ∙     ▒∙)∙∙%▒       ▒∙▒∙▒∙
+∙∙∙∙∙∙∙∙∙     ▒∙(∙∙∙▒       ▒∙▒∙▒∙
+▒▒▒▒▒▒ ▒∙▒▒▒▒▒▒∙∙∙∙∙▒       ▒∙▒∙▒∙
+       ▒∙▒∙∙∙∙∙∙∙∙∙∙▒       ▒∙▒∙▒∙
+       ▒∙▒(▒▒▒▒▒▒∙▒▒▒       ▒∙▒∙▒∙
+       ▒∙▒∙▒    ▒∙▒         ▒∙▒∙▒∙
+       ▒∙▒∙▒    ▒∙▒         ▒∙▒∙▒∙
+▒▒▒▒▒▒▒▒∙▒∙▒▒▒▒▒▒@▒▒▒▒▒▒    ▒∙∙∙∙∙
+∙∙∙∙∙∙∙∙∙∙∙)∙∙∙∙∙∙∙∙∙∙∙▒    ▒∙∙∙∙∙
+▒▒▒▒▒▒▒▒∙▒∙▒▒▒▒▒▒∙▒▒▒▒∙▒    ▒∙∙∙∙∙
+       ▒∙▒∙▒    ▒∙▒  ▒∙▒    ▒∙∙∙∙∙
+       ▒∙▒∙▒    ▒∙▒  ▒∙▒    ▒∙▒∙▒▒
+       ▒∙▒(▒    ▒∙▒  ▒∙▒    ▒∙▒∙▒
+ ▒▒▒▒▒▒▒∙▒∙▒    ▒∙▒  ▒∙▒▒▒▒▒▒∙▒∙▒▒
+ ▒∙∙∙∙∙∙∙∙∙▒    ▒∙▒  ▒∙∙∙∙∙∙∙∙∙∙∙∙
+▒▒∙∙∙∙∙∙∙∙∙▒    ▒∙▒  ▒∙∙∙▒▒▒▒∙▒∙▒▒
+∙∙∙∙∙∙∙∙∙∙∙▒    ▒∙▒  ▒∙∙∙▒  ▒∙▒∙▒
+▒▒▒▒▒▒▒▒∙▒▒▒    ▒∙▒  ▒∙∙∙▒  ▒∙▒∙▒
+
+
+There are no monsters in sight!
+
+Vanquished Creatures
+  A hobgoblin (D:1)
+  4 megabats (D:1)
+  A giant cockroach (D:1)
+  A giant newt (D:1)
+  2 goblins (D:1)
+  A kobold (D:1)
+  4 rats (D:1)
+14 creatures vanquished.
+
+Notes
+Turn   | Place   | Note
+--------------------------------------------------------------
+     0 | D:1      | dtsund, the Deep Elf Wizard, began the quest for the Orb.
+     0 | D:1      | Reached XP level 1. HP: 6/6 MP: 7/7
+     1 | D:1      | Entered wizard mode.
+     1 | D:1      | Reached skill level 21 in Dodging
+   480 | D:1      | Reached XP level 2. HP: 10/10 MP: 5/10
+

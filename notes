@@ -1,0 +1,266 @@
+CONJURATION
+	Magic Dart
+	Iskenderun's Mystic Blast
+	Orb of Destruction
+	Sting (Sorcery)
+	Venom Bolt (Sorcery)
+	Poison Arrow (Sorcery)
+	Bolt of Draining (Necromancy)
+	Flame Tongue (Fire)
+	Throw Flame (Fire)
+	Sticky Flame (Fire)
+	Fireball (Fire)
+	Delayed Fireball (Fire)
+	Conjure Flame (Fire)
+	Bolt of Fire (Fire)
+	Bolt of Magma (Fire/Earth)
+	Fire Storm (Fire)
+	Throw Frost (Ice)
+	Throw Icicle (Ice)
+	Bolt of Cold (Ice)
+	Ice Storm (Ice)
+	Freezing Cloud (Ice/Air)
+	Stone Arrow (Earth)
+	Iron Shot (Earth)
+	Lehudib's Crystal Spear (Earth)
+	Mephitic Cloud (Air/Sorcery)
+	Poisonous Cloud (Air/Sorcery)
+	Shock (Air)
+	Static Discharge (Air)
+	Lightning Bolt (Air)
+	Conjure Ball Lightning (Air)
+	Chain Lightning (Air)
+
+ENCHANTMENT
+	Slow (Sorcery)
+	Haste
+	Selective Amnesia
+	Cause Fear
+	Levitation
+	Berserker Rage
+	Tukima's Dance
+	Tukima's Ball
+	Sure Blade
+	See Invisible
+	Control Teleport (Translocation)
+	Warp Weapon (Translocation)
+	Lethal Infusion (Necromancy)
+	Regeneration (Necromancy)
+	Excruciating Wounds (Necromancy)
+	Death's Door (Necromancy)
+	Poison Weapon (Sorcery)
+	Resist Poison (Sorcery)
+	Fire Brand (Fire)
+	Ring of Flames (Fire)
+	Freezing Aura (Ice) 
+	Ozocubu's Armour (Ice)
+	Maxwell's Silver Hammer (Earth)
+	Swiftness (Air)
+	Repel Missiles (Air)
+	Flight (Air)
+	Insulation (Air)
+	Deflect Missiles (Air)
+	
+SUMMONING
+	Summon Butterflies
+	Summon Small Mammals
+	Abjuration
+	Summon Elemental
+	Summon Horrible Things
+	Call Imp
+	Summon Demon
+	Demonic Horde
+	Summon Greater Demon
+	Shadow Creatures
+	Call Canine Familiar
+	Summon Dragon
+	Summon Ugly Thing
+	Summon Hydra
+	Recall (Translocation)
+	Malign Gateway (Translocation)
+	Haunt (Necromancy)
+	Summon Scorpions (Sorcery)
+	Summon Ice Beast (Ice)
+
+TRANSLOCATION
+	Portal Projectile
+	Apportation
+	Blink
+	Teleport Self
+	Controlled Blink
+	Teleport Other
+	Phase Shift 
+	Dispersal 
+	Passage of Golubria 
+	Control Teleport (Enchantment) 
+	Warp Weapon (Enchantment) 
+	Recall (Summoning) 
+	Malign Gateway (Summoning) 
+	Passwall (Earth)
+	
+TRANSMUTATION
+	Sticks to Snakes 
+	Blade Hands 
+	Dig (Earth) 
+	Petrify (Earth) 
+	Stoneskin (Earth) 
+	Statue Form (Earth) 
+	Cigotuvi's Degeneration (Necromancy) 
+	Fulsome Distillation (Necromancy) 
+	Necromutation (Necromancy) 
+	Polymorph Other (Enchantment) 
+	Spider Form (Sorcery) 
+	Alistair's Intoxication (Sorcery) 
+	Condensation Shield (Ice) 
+	Ice Form (Ice) 
+	Evaporate (Fire) 
+	Dragon Form (Fire) 
+	Ignite Poison (Fire) 
+
+NECROMANCY
+	Pain 
+	Agony 
+	Animate Skeleton 
+	Vampiric Draining 
+	Sublimation of Blood 
+	Corpse Rot 
+	Animate Dead 
+	Borgnjor's Revivification , maybe lower the level to 6
+	Dispel Undead 
+	Twisted Resurrection 
+	Death Channel 
+	Bolt of Draining (Conjuration) 
+	Lethal Infusion (Enchantment) 
+	Regeneration (Enchantment) 
+	Excruciating Wounds (Enchantment) 
+	Control Undead (Enchantment) 
+	Death's Door (Enchantment) 
+	Cigotuvi's Degeneration (Transmutation) 
+	Fulsome Distillation (Transmutation) 
+	Necromutation (Transmutation) 
+	Haunt (Summoning) 
+	Simulacrum (Ice) 
+
+SORCERY
+	Darkness
+	Projected Noise
+	Confusing Touch
+	Enslavement
+	Mass Confusion
+	Corona
+	Cause Fear
+	Polymorph Other (Transmutation)
+	Slow (Enchantment)
+	Invisibility
+	Confuse
+	Cure Poison 
+	Olgreb's Toxic Radiance 
+	Sting (Conjuration) 
+	Mephitic Cloud (Conjuration/Air) 
+	Poisonous Cloud (Conjuration/Air) 
+	Poison Arrow (Conjuration) 
+	Venom Bolt (Conjuration) 
+	Poison Weapon (Enchantment) 
+	Resist Poison (Enchantment) 
+	Summon Scorpions (Summoning)
+	Leda's Liquefaction (Transmutation/Earth)
+	Spider Form (Transmutation)
+	Alistair's Intoxication (Transmutation) 
+	Control Undead (Necromancy)
+	Ensorcelled Hibernation (Ice)
+	Metabolic Englaciation (Ice)
+	Silence (Air)
+
+FIRE MAGIC
+	Flame Tongue (Conjuration) 
+	Throw Flame (Conjuration) 
+	Sticky Flame (Conjuration) 
+	Fireball (Conjuration) 
+	Delayed Fireball (Conjuration) 
+	Conjure Flame (Conjuration) 
+	Bolt of Fire (Conjuration) 
+	Bolt of Magma (Conjuration/Earth) 
+	Fire Storm (Conjuration) 
+	Fire Brand (Enchantment) 
+	Ring of Flames (Enchantment) 
+	Evaporate (Transmutation) 
+	Dragon Form (Transmutation) 
+	Ignite Poison (Transmutation) 
+
+ICE MAGIC
+	Freeze 
+	Ozocubu's Refrigeration 
+	Throw Frost (Conjuration) 
+	Throw Icicle (Conjuration) 
+	Bolt of Cold (Conjuration) 
+	Ice Storm (Conjuration) 
+	Freezing Cloud (Conjuration/Air) 
+	Ensorcelled Hibernation (Enchantment) 
+	Freezing Aura (Enchantment) 
+	Ozocubu's Armour (Enchantment) 
+	Metabolic Englaciation (Enchantment) 
+	Summon Ice Beast (Summoning) 
+	Condensation Shield (Transmutation) 
+	Ice Form (Transmutation) 
+	Simulacrum (Necromancy) 
+
+EARTH MAGIC
+	Sandblast 
+	Lee's Rapid Deconstruction 
+	Shatter 
+	Passwall (Transmutation) 
+	Dig (Transmutation) 
+	Petrify (Transmutation) 
+	Stoneskin (Transmutation) 
+	Statue Form (Transmutation) 
+	Leda's Liquefaction (Transmutation/Sorcery)
+	Stone Arrow (Conjuration) 
+	Iron Shot (Conjuration) 
+	Lehudib's Crystal Spear (Conjuration) 
+	Bolt of Magma (Conjuration/Fire) 
+	Maxwell's Silver Hammer (Enchantment) 
+
+AIR MAGIC
+	Airstrike 
+	Tornado 
+	Mephitic Cloud (Conjuration/Sorcery) 
+	Poisonous Cloud (Conjuration/Sorcery) 
+	Shock (Conjuration) 
+	Static Discharge(Conjuration) 
+	Lightning Bolt (Conjuration) 
+	Freezing Cloud (Conjuration/Ice) 
+	Conjure Ball Lightning (Conjuration) 
+	Chain Lightning (Conjuration) 
+	Swiftness (Enchantment) 
+	Repel Missiles (Enchantment) 
+	Flight (Enchantment) 
+	Insulation (Enchantment) 
+	Silence (Enchantment) 
+	Deflect Missiles (Enchantment) 
+	
+	
+
+
+Screw it, Sorcery can stay named POISON internally.
+
+
+
+
+
+Specific book notes:
+	Cause Fear needs to be removed from Enchantments (it can afford the loss) DONE
+		Other spellbooks with Cause Fear in it: Book of Brands, Book of the Dragon.  Need to put it in something else.
+			Maybe make a new relatively high level Sorcery book?
+	
+	Put Passwall in Spatial Translocations DONE
+	
+	Overhaul Stalking DONE
+	
+	Sure Blade doesn't fit in the Book of Maledictions; replace with Confusing Touch DONE
+	
+	Need to overhaul Book of Brands DONE
+		Corona, Poison Weapon, Slow, Leda's Liquefaction, Cause Fear
+
+
+
+

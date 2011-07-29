@@ -1,0 +1,184 @@
+ Dungeon Crawl Stone Soup version 0.8.0-0-g3a1e774 character file.
+
+513961 dtsund the Intangible (level 27, 60/248 HPs) *WIZ*
+             Began as a Deep Elf Wizard on July 28, 2011.
+             Quit the game on Level 1 of the Dungeon.
+             The game lasted 00:04:23 (405 turns).
+
+dtsund the Intangible (Deep Elf Wizard)                                                                      Turns: 405, Time: 00:04:23
+
+HP  60/248       AC  4     Str  4      Exp: 27/1194708 (7535)
+MP  50/50        EV 28     Int 28      God: No God 0 (0)
+Gold 20          SH  0     Dex 13      Spells:  1 memorised, 79 levels left
+
+Res.Fire  : . . .   See Invis. : .      - Unarmed
+Res.Cold  : . . .   Warding    : . .  a - +0 elf robe
+Life Prot.: . . .   Conserve   : .    (no shield)
+Res.Acid. : . . .   Res.Corr.  : .    b - +0 elf wizard hat
+Res.Poison: .       Clarity    : .    (no cloak)
+Res.Elec. : .       Spirit.Shd : .    (no gloves)
+Sust.Abil.: . .     Stasis     : .    (no boots)
+Res.Mut.  : .       Ctrl.Telep.: .    (no amulet)
+Res.Rott. : .       Levitation : .    (no ring)
+Saprovore : . . .   Ctrl.Flight: .    (no ring)
+
+@: very resistant to hostile enchantments, incredibly stealthy
+A: no striking features
+a: no special abilities
+
+
+You were on level 1 of the Dungeon.
+You were very full.
+
+You visited 1 branch of the dungeon, and saw 2 of its levels.
+
+Inventory:
+
+Hand weapons
+ e - a +0,+1 orcish dagger (quivered)
+Armour
+ a - a +0 elven robe (worn)
+ b - a +0 elven wizard hat (worn)
+Comestibles
+ d - a bread ration
+Books
+ c - a book of Minor Magic   
+   
+   Spells                             Type                      Level
+   *Magic Dart                        Conjuration                  1
+   Blink                              Translocation                2
+   Call Imp                           Summoning                    2
+   Throw Frost                        Conjuration/Ice              2
+   Slow                               Enchantment/Sorcery          2
+   Conjure Flame                      Conjuration/Fire             3
+   Mephitic Cloud                     Conjuration/Sorcery/Air      3
+
+
+ You had 7535 experience left.
+
+   Skills:
+ * Level 27 Fighting
+ * Level 27 Short Blades
+ * Level 27 Long Blades
+ * Level 27 Axes
+ * Level 27 Maces & Flails
+ * Level 27 Polearms
+ * Level 27 Staves
+ * Level 27 Slings
+ * Level 27 Bows
+ * Level 27 Crossbows
+ * Level 27 Throwing
+ * Level 27 Armour
+ * Level 27 Dodging
+ * Level 27 Stealth
+ * Level 27 Stabbing
+ * Level 27 Shields
+ * Level 27 Traps & Doors
+ * Level 27 Unarmed Combat
+ * Level 27 Spellcasting
+ * Level 27 Conjurations
+ * Level 27 Enchantments
+ * Level 27 Summonings
+ * Level 27 Necromancy
+ * Level 27 Translocations
+ * Level 27 Transmutations
+ * Level 27 Fire Magic
+ * Level 27 Ice Magic
+ * Level 27 Air Magic
+ * Level 27 Earth Magic
+ * Level 27 Sorcery
+ * Level 27 Invocations
+ * Level 27 Evocations
+
+
+You had 79 spell levels left.
+You knew the following spells:
+
+ Your Spells              Type           Power        Success   Level  Hunger
+a - Magic Dart            Conj           25 (25)      100%        1    None
+
+
+Dungeon Overview and Level Annotations
+
+Branches:
+Dungeon (2/27)            
+
+Altars:
+
+Message History
+
+You pummel the goblin!!!
+You kill the goblin!
+Things that are here:
+a club; a goblin corpse
+Found 7 poisoned needles and a scroll labeled CHAHI ROUDAA.
+Found 11 gold pieces.
+Are you sure you want to quit? (Confirm with "yes".) 
+
+                      ▒∙∙
+                      ▒∙∙
+                 ▒▒▒▒▒▒∙∙
+                 ▒∙∙∙▒▒∙∙
+                 ▒∙∙∙▒▒∙∙
+                 ▒∙∙∙▒▒∙∙
+ ▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒∙∙∙▒▒∙∙
+∙∙∙∙∙∙∙∙∙∙∙∙∙∙∙∙∙∙∙∙∙∙∙∙∙
+       ▒@∙∙∙∙∙∙∙∙∙∙∙∙∙∙∙∙
+       ▒∙▒▒▒▒▒▒▒▒▒∙∙∙∙∙∙∙
+      ∙(∙∙    ∙∙∙∙∙∙)∙∙∙∙
+    ∙?∙∙∙∙∙  ∙∙∙∙∙∙∙∙∙∙∙∙
+  $∙∙∙▒▒∙∙∙∙ ▒▒▒▒▒▒▒▒∙∙∙∙
+   ∙∙∙ ∙∙∙∙∙∙      ∙∙∙∙∙∙
+   ∙∙  ∙∙∙∙∙∙▒     ▒∙∙∙∙∙
+       ∙∙∙∙∙∙      ▒∙∙∙∙▒
+       ∙∙∙          ∙∙∙∙∙
+          ∙∙∙∙∙∙∙∙∙▒∙∙∙
+       ∙∙∙∙∙?∙∙∙∙∙∙▒∙∙∙∙▒
+
+
+There were no monsters in sight!
+
+Vanquished Creatures
+  Mennas (D:1)
+  3 silent disciples (D:1)
+  2 goblins
+  A hobgoblin (D:2)
+  A rat (D:2)
+8 creatures vanquished.
+
+Notes
+Turn   | Place   | Note
+--------------------------------------------------------------
+     0 | D:1      | dtsund, the Deep Elf Wizard, began the quest for the Orb.
+     0 | D:1      | Reached XP level 1. HP: 6/6 MP: 7/7
+     0 | D:1      | Entered wizard mode.
+     0 | D:1      | Noticed Mennas
+     2 | D:1      | Reached XP level 2. HP: 30/30 MP: 13/19
+     2 | D:1      | Reached XP level 3. HP: 40/40 MP: 14/24
+     2 | D:1      | Reached XP level 4. HP: 49/49 MP: 15/27
+     2 | D:1      | Reached XP level 5. HP: 60/60 MP: 16/29
+     2 | D:1      | Reached XP level 6. HP: 68/68 MP: 17/32
+     2 | D:1      | Reached XP level 7. HP: 78/78 MP: 18/34
+     2 | D:1      | Reached XP level 8. HP: 88/88 MP: 19/36
+     2 | D:1      | Reached XP level 9. HP: 97/97 MP: 20/37
+     2 | D:1      | Reached XP level 10. HP: 107/107 MP: 21/38
+     2 | D:1      | Reached XP level 11. HP: 117/117 MP: 22/39
+     2 | D:1      | Reached XP level 12. HP: 125/125 MP: 23/40
+     2 | D:1      | Reached XP level 13. HP: 134/134 MP: 24/41
+     2 | D:1      | Reached XP level 14. HP: 142/142 MP: 25/42
+     2 | D:1      | Reached XP level 15. HP: 150/150 MP: 26/43
+     2 | D:1      | Reached XP level 16. HP: 158/158 MP: 27/45
+     2 | D:1      | Reached XP level 17. HP: 167/167 MP: 28/45
+     2 | D:1      | Reached XP level 18. HP: 176/176 MP: 29/46
+     2 | D:1      | Reached XP level 19. HP: 185/185 MP: 30/46
+     2 | D:1      | Reached XP level 20. HP: 195/195 MP: 31/47
+     2 | D:1      | Reached XP level 21. HP: 203/203 MP: 32/47
+     2 | D:1      | Reached XP level 22. HP: 210/210 MP: 33/48
+     2 | D:1      | Reached XP level 23. HP: 219/219 MP: 34/48
+     2 | D:1      | Reached XP level 24. HP: 225/225 MP: 35/49
+     2 | D:1      | Reached XP level 25. HP: 234/234 MP: 36/49
+     2 | D:1      | Reached XP level 26. HP: 241/241 MP: 37/50
+     2 | D:1      | Reached XP level 27. HP: 248/248 MP: 38/50
+   384 | D:1      | Defeated Mennas
+   405 | D:1      | Quit the game
+
