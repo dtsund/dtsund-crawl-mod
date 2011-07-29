@@ -1,5 +1,5 @@
 Probably-easy TODO list:
-	Autoexplore and autotravel shouldn't work if a stat is 0.
+	Nothing at the moment!
 
 
 Harder TODO list:
@@ -59,4 +59,5 @@ Changes already made:
 	Skeletal warrior packs have a decent chance of having a silent spectre, very small chance of more than one.
 	Mennas has four holy-flavored silent spectres in his group, but can no longer cast Silence himself.
 		Also lowered his evasion from 28 to 20, replaced his large shield with a medium shield.
-	"Monstrous" demonspawn disabled.
+	"Monstrous" demonspawn disabled for now.
+	Autoexplore now fails if Str, Dex, or Int is at fatally low levels.
