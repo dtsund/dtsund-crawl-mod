@@ -1,5 +1,6 @@
 Probably-easy TODO list:
-	Nothing at the moment!
+	Fix the 'radiating silence' bug.
+	Update the documentation, removing Stone Soup specific stuff.
 
 
 Harder TODO list:
