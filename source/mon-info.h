@@ -38,6 +38,8 @@ enum monster_info_flags
     MB_ENSLAVED,
     MB_SWIFT,
     MB_INSANE,
+    MB_DUMMY, //I think win32 builds from MinGW have an issue
+              //with whatever's in the 32nd slot here.
     MB_SILENCING,
     MB_MESMERIZING,
     MB_EVIL_ATTACK,
@@ -69,7 +71,9 @@ enum monster_info_flags
     MB_MUTE,
     MB_BLIND,
     MB_DUMB,
-    MB_MAD,
+    //MB_MAD,
+    //Having this enum be too big is Bad News, and this one doesn't
+    //currently accomplish anything useful.  Making room for MB_DUMMY...
     MB_CLINGING,
     MB_NAME_ZOMBIE,
     MB_PERM_SUMMON,

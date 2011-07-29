@@ -1,5 +1,4 @@
 Probably-easy TODO list:
-	Fix the 'radiating silence' bug.
 	Update the documentation, removing Stone Soup specific stuff.
 
 
@@ -34,7 +33,6 @@ Changes already made:
 			Vampire:
 				1 Enchantments to 0; -1 Poison Magic to 1 Sorcery.
 	Haste and Slow nerf reverted.
-	Crude hack in mon-place.cc to make Mennas not spawn.  Will remove when Mennas tweaked.
 	Spell success rate now shown as an actual percentage, not an adjective.  Success >= 98% rounded up to 100%.
 	Replaced Silence with Haste in the book of War Chants.
 	Replaced Repel Missiles with Throw Frost in book of Minor Magic.

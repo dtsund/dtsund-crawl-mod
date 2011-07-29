@@ -130,8 +130,8 @@ static uint64_t ench_to_mb(const monster& mons, enchant_type ench)
         return ULL1 << MB_BLIND;
     case ENCH_DUMB:
         return ULL1 << MB_DUMB;
-    case ENCH_MAD:
-        return ULL1 << MB_MAD;
+    //case ENCH_MAD:
+    //    return ULL1 << MB_MAD;
     default:
         return 0;
     }
@@ -891,8 +891,8 @@ static std::string _verbose_info0(const monster_info& mi)
         return ("paralysed");
     if (mi.is(MB_PETRIFYING))
         return ("petrifying");
-    if (mi.is(MB_MAD))
-        return ("mad");
+    //if (mi.is(MB_MAD))
+    //    return ("mad");
     if (mi.is(MB_CONFUSED))
         return ("confused");
     if (mi.is(MB_FLEEING))
@@ -1101,8 +1101,8 @@ std::vector<std::string> monster_info::attributes() const
         v.push_back("permanently blind");
     if (is(MB_DUMB))
         v.push_back("stupefied");
-    if (is(MB_MAD))
-        v.push_back("lost in madness");
+    //if (is(MB_MAD))
+    //    v.push_back("lost in madness");
     return v;
 }
 
