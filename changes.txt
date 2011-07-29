@@ -1,12 +1,8 @@
 Probably-easy TODO list:
-	Tweak Sorcery miscast effects (maybe have one be a magic resistance halving)
-	Remove 'monstrous' demonspawn
+	Autoexplore and autotravel shouldn't work if a stat is 0.
 
 
 Harder TODO list:
-	Make Invisibility more viable late-game/extended
-		Reduce some See Invisible enemies to merely Sense Invisible, or no
-		invisibility detection at all
 	Put a HP-indicator face next to the player's large HP bar, to make the new system more intuitive
 
 
@@ -17,11 +13,14 @@ Long-term TODO list:
 	Reduce game length by 1/3 outside of extended endgame
 		There are subtle balance issues involved!
 	Make Shoals a portal vault, possibly replacing labyrinths?
+	Make Invisibility more viable late-game/extended
+		Reduce some See Invisible enemies to merely Sense Invisible, or no
+		invisibility detection at all
 		
 
 Changes already made:
 	Monsters may no longer invoke Zot traps against the player.
-	Charms, Hexes, and Poison Magic reshuffled into Enchantments and Sorcery.  Some books consequently changed.
+	Charms, Hexes, and Poison Magic reshuffled into Enchantments and Sorcery.  Some books consequently changed; miscast effects tweaked.
 		Aptitude changes:
 			High Elf:
 				-2 Poison Magic to 1 Sorcery (Yes, I know this is a buff.)
@@ -60,3 +59,4 @@ Changes already made:
 	Skeletal warrior packs have a decent chance of having a silent spectre, very small chance of more than one.
 	Mennas has four holy-flavored silent spectres in his group, but can no longer cast Silence himself.
 		Also lowered his evasion from 28 to 20, replaced his large shield with a medium shield.
+	"Monstrous" demonspawn disabled.

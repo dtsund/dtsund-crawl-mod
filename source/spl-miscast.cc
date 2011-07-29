@@ -29,6 +29,7 @@
 #include "potion.h"
 #include "religion.h"
 #include "spl-clouds.h"
+#include "spl-goditem.h"
 #include "spl-summoning.h"
 #include "state.h"
 #include "stuff.h"
@@ -1022,8 +1023,8 @@ void MiscastEffect::_enchantment(int severity)
         case 2:
             if (target->atype() == ACT_PLAYER)
             {
-                mpr("You sense a malignant aura.");
-                curse_an_item(false);
+                you.set_duration(DUR_LOWERED_MR, 40, 0,
+                                 "You feel extremely vulnerable!");
                 break;
             }
             // Intentional fall-through for monsters.
@@ -1040,7 +1041,7 @@ void MiscastEffect::_enchantment(int severity)
 
     case 3:         // potentially lethal
         // Only use first two cases for monsters.
-        switch (random2(target->atype() == ACT_PLAYER ? 4 : 2))
+        switch (random2(target->atype() == ACT_PLAYER ? 3 : 2))
         {
         case 0:
             _potion_effect(POT_PARALYSIS, 10);
@@ -1050,12 +1051,6 @@ void MiscastEffect::_enchantment(int severity)
             break;
         case 2:
             contaminate_player(random2avg(19, 3), spell != SPELL_NO_SPELL);
-            break;
-        case 3:
-            do
-                curse_an_item(false);
-            while (!one_chance_in(3));
-            mpr("You sense an overwhelmingly malignant aura!");
             break;
         }
         break;
@@ -2776,8 +2771,8 @@ void MiscastEffect::_poison(int severity)
         break;
 
     case 2:         // rather less harmless stuff
-        // Don't use last case for monsters.
-        switch (random2(target->atype() == ACT_PLAYER ? 3 : 2))
+        // Don't use last two cases for monsters.
+        switch (random2(target->atype() == ACT_PLAYER ? 4 : 2))
         {
         case 0:
             if (target->res_poison() <= 0)
@@ -2799,17 +2794,23 @@ void MiscastEffect::_poison(int severity)
             break;
 
         case 2:
+            /* Now that this is caused by Sorcery, don't let rPois block this.
             if (player_res_poison())
                 canned_msg(MSG_NOTHING_HAPPENS);
             else
-                _lose_stat(STAT_RANDOM, 1);
+            */
+            _lose_stat(STAT_RANDOM, 1);
+            break;
+        case 3:
+            mpr("You sense a malignant aura.");
+            curse_an_item(false);
             break;
         }
         break;
 
     case 3:         // less harmless stuff
-        // Don't use last case for monsters.
-        switch (random2(target->atype() == ACT_PLAYER ? 3 : 2))
+        // Don't use last two cases for monsters.
+        switch (random2(target->atype() == ACT_PLAYER ? 4 : 2))
         {
         case 0:
             if (target->res_poison() <= 0)
@@ -2829,10 +2830,18 @@ void MiscastEffect::_poison(int severity)
             _big_cloud(CLOUD_POISON, 20, 7 + random2(7));
             break;
         case 2:
+            /* Now that this is caused by Sorcery, don't let rPois block this.
             if (player_res_poison())
                 canned_msg(MSG_NOTHING_HAPPENS);
             else
-                _lose_stat(STAT_RANDOM, 1 + random2avg(5, 2));
+            */
+            _lose_stat(STAT_RANDOM, 1 + random2avg(5, 2));
+            break;
+        case 3:
+            do
+                curse_an_item(false);
+            while (!one_chance_in(3));
+            mpr("You sense an overwhelmingly malignant aura!");
             break;
         }
         break;
