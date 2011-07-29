@@ -288,7 +288,10 @@ monster_info::monster_info(const monster* m, int milev)
             mb |= ULL1 << MB_SUMMONED;
 
         if (testbits(m->flags, MF_HARD_RESET) && testbits(m->flags, MF_NO_REWARD))
-            mb |= ULL1 << MB_PERM_SUMMON;
+            //mb |= ULL1 << MB_PERM_SUMMON;
+            //Needed to comment out that line; as far as I can tell, it currently
+            //accomplishes nothing useful, but shifts by 64 bits with the addition
+            //of MB_DUMMY for MinGW compilation.
 
         if (mons_is_known_mimic(m) && mons_genus(type) == MONS_DOOR_MIMIC)
             mimic_feature = get_mimic_feat(m);
