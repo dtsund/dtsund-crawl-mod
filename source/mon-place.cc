@@ -1560,6 +1560,9 @@ static int _place_monster_aux(const mgen_data &mg,
     // Mennas belongs to Zin.
     else if (mg.cls == MONS_MENNAS)
         mon->god = GOD_ZIN;
+    // Silent disciples belong to Zin.
+    else if (mg.cls == MONS_SILENT_DISCIPLE)
+        mon->god = GOD_ZIN;
     // Ignacio belongs to Makhleb.
     else if (mg.cls == MONS_IGNACIO)
         mon->god = GOD_MAKHLEB;
