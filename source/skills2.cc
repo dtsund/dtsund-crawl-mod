@@ -874,6 +874,9 @@ void SkillMenu::_init_footer(coord_def coord)
     m_next_action->add_hotkey('?');
     m_next_action->set_id(-2);
 
+//Don't want to delete this, because it might be useful in debugging,
+//but the player really doesn't need this.
+/*
     if (m_disp_queue.size() > 1)
     {
         _add_item(m_next_display, m_ff, NEXT_DISPLAY_SIZE, coord);
@@ -882,6 +885,7 @@ void SkillMenu::_init_footer(coord_def coord)
         m_next_display->add_hotkey('!');
         m_next_display->set_id(-3);
     }
+*/
 
     if (!is_set(SKMF_SIMPLE))
     {
