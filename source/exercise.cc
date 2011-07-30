@@ -541,6 +541,7 @@ void autotrain()
         //Check to see whether the skill should be autotrained.
         if(!you.autotrain_skill[current_autotrain_skill])
         {
+            //We aren't autotraining this skill, so move on to the next one.
             current_autotrain_skill = (current_autotrain_skill + 1) % NUM_SKILLS;
             continue;
         }
@@ -548,6 +549,11 @@ void autotrain()
         //Train the skill; if no training happened, stop training for now.
         if(!exercise((skill_type) current_autotrain_skill,1))
             break;
+            
+        //Having trained the skill, check whether it was a magical skill;
+        //if so, award piety to Sif Muna followers.
+        if( (current_autotrain_skill >= SK_SPELLCASTING) && (current_autotrain_skill <= SK_POISON_MAGIC) )
+            did_god_conduct(DID_SPELL_PRACTISE, 1);
         
         //If this maxed out the skill, stop autotraining it.  Might need to break the loop
         //if we weren't autotraining anything else.
@@ -559,7 +565,7 @@ void autotrain()
                 break;
         }
         
-        //Increment before the next iteration.
+        //Move on to the next skill before the next iteration.
         current_autotrain_skill = (current_autotrain_skill + 1) % NUM_SKILLS;
     }
 }
