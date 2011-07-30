@@ -17,6 +17,7 @@ Long-term TODO list:
 	Make Invisibility more viable late-game/extended
 		Reduce some See Invisible enemies to merely Sense Invisible, or no
 		invisibility detection at all
+	Overhaul some gods.
 		
 
 Changes already made:
