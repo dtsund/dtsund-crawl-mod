@@ -1,5 +1,6 @@
 Probably-easy TODO list:
 	Update the documentation, removing Stone Soup specific stuff.
+	Add [a]bilities and success rates to the morgue file.
 
 
 Harder TODO list:
