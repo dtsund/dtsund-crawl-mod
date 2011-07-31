@@ -96,7 +96,7 @@ CFOPTIMIZE := -O2
 
 endif # USE_ICC
 
-CFOTHERS := -pipe $(EXTERNAL_FLAGS)
+CFOTHERS := -pipe $(EXTERNAL_FLAGS) -fPIC
 CFOTHERS_L := -fsigned-char
 CFWARN := -Wall
 CFWARN_L := -Wundef
