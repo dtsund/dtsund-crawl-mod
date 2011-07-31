@@ -884,7 +884,7 @@ void cscroll(int n, GotoRegion region)
 
 mouse_mode mouse_control::ms_current_mode = MOUSE_MODE_NORMAL;
 
-#ifndef __USE_BSD
+#ifndef __UCLIBC__
 size_t strlcpy(char *dst, const char *src, size_t n)
 {
     if (!n)
