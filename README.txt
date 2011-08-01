@@ -81,7 +81,7 @@ This is a descendant of Linley's Dungeon Crawl. Development of the main branch
 stalled at version 4.0.0b26, with a final alpha of 4.1 being released by Brent
 Ross in 2005. Since 2006, the Dungeon Crawl Stone Soup team has been continuing
 the development, with the Crawl Light fork originating in 2011. See the CREDITS
-in the main folder for a myriad of contributors, past and present; license.txt
+in the main folder for a list of contributors, past and present; license.txt
 contains the legal blurb.
 
 Crawl Light is an open source, freeware roguelike. It is supported
