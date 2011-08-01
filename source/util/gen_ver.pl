@@ -29,6 +29,10 @@ my $stable = defined($pretyp) ? "false" : "true";
 
 my $prefix = "CRAWL";
 
+#Remove any terminating newline from $_;
+#had problems with MinGW otherwise.
+chomp($_);
+
 open OUT, ">", "$outfile" or die $!;
 print OUT <<__eof__;
 #define ${prefix}_VERSION_FINAL $stable
