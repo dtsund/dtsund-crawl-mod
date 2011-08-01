@@ -1,6 +1,8 @@
 Probably-easy TODO list:
 	Update the documentation, removing Stone Soup specific stuff.
 	Add [a]bilities and success rates to the morgue file.
+	Merge Traps & Doors with Stealth, making Thievery
+	New splash screen logo needed!
 
 
 Harder TODO list:
