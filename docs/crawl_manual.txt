@@ -1,5 +1,5 @@
-                       DUNGEON CRAWL Stone Soup
-                            - the manual -
+                             Crawl Light
+                      - Help and Instructions -
 
 Contents
 --------
@@ -50,34 +50,7 @@ You can also read these documents while playing Crawl by hitting '?' at the
 help menu. There is also a list of frequently asked questions about gameplay and
 design, best accessed by pressing '?Q' in the game.
 
-While Dungeon Crawl is strictly a single player game, you can play on a server
-together with many others. These are the relevant webpage and telnet and ssh
-addresses (akrasiac.org is situated in North America, while develz.org is
-located in Europe):
-
-
-akrasiac.org
-  http://crawl.akrasiac.org
-  telnet://crawl.develz.org
-  ssh://joshua@crawl.akrasiac.org (password joshua)
-
-develz.org
-  http://crawl.develz.org
-  telnet://crawl.develz.org:345
-
-Connecting to these servers opens up several interesting options. You can:
-  * watch other players, and even communicate with them
-  * view your past games or those of others
-  * meet ghosts of other players
-  * compete using a common score list
-  * take part in an annual tournament
-  * play the most recent development version on crawl.develz.org
-
-The servers carry no guarantees, though they are pretty much always running and
-no one has lost their save file yet. :) More information is available at the
-URLs above.
-
-There is also a lively IRC channel dedicated to Crawl at ##crawl on freenode.
+There is also an IRC channel dedicated to Crawl Light at #CrawlLight on freenode.
 You can ask for help and there will always be someone to supervise your game and
 give hints if you happen to play on a server.
 
@@ -181,7 +154,7 @@ Health
   currently has 8. Usually, you regain hit points slowly over time. Pressing '5'
   or Shift-Num-5 lets you wait for a longer period. Some very battle-fixated
   characters may end up with more than 250 hit points, yet some spellcasters are
-  known to have finished the game victorious with less than 100.
+  known to have finished the game victorious with fewer than 100.
 
 Magic
   A measure of magic or other intrinsic power. This is used primarily for
@@ -226,7 +199,8 @@ temporarily from mutations or using appropriate artefacts or abilities.
 
 If any one of these drops to zero for some reason, you will not die immediately.
 But you will experience very unpleasant effects: running around with no strength
-or intelligence is going to cause you problems before long.
+or intelligence is going to cause you problems before long, and having an
+attribute reduced to such critically low levels is eventually fatal.
 
 Upon gaining levels 3, 6, 9, etc., you may choose an attribute to raise. Most
 species gain additional attributes at some levels, with the frequency and the
@@ -1221,9 +1195,9 @@ flag queries with -crawl- as other games are also discussed there.
 Some players, especially those on crawl.akrasiac.org and crawl.develz.org, also
 frequent ##crawl on IRC's freenode network.
 
-Stone Soup's homepage is at::
+Crawl Light's homepage is at:
 
-  http://crawl.develz.org
+  COMING SOON
 
 Use this page for direct links to downloads of the most recent version. You can
 also submit bug reports and feature requests there. Be sure to make sure that
@@ -1242,9 +1216,10 @@ of good ideas, but was nearly unplayable due to balance issues. In the meantime,
 several patchers appeared, improving Crawl's interface tremendously. Several of
 them formed a new devteam; reasoning that rebalancing 4.1.2 was a very difficult
 task, they decided to fork Crawl 4.0 beta 26 and selectively include good ideas
-from 4.1.2 and other sources. This fork is Stone Soup, and is the game this
-manual describes. Stone Soup's release versions were restarted at 0.1 to avoid
-confusion with the existing plethora of Crawl versions.
+from 4.1.2 and other sources, resulting in the Stone Soup fork. Stone Soup's 
+release versions were restarted at 0.1 to avoid confusion with the existing 
+plethora of Crawl versions. The game you are playing now, Crawl Light, is
+a fork of the eighth major version of Stone Soup, version 0.8.
 
 It should be mentioned that there have been other Crawl variants over the years,
 among them Ax-Crawl, Tile Crawl, Dungeon Crawl Alternative.
@@ -1290,185 +1265,118 @@ measures which may improve the situation:
 N.                         PHILOSOPHY (PAS DE FAQ)
 ------------------------------------------------------------------------
 
-In a nutshell: This game aims to be a tactical fantasy-themed dungeon crawl. We
-strive for strategy being a concern, too, and for exquisite gameplay and
-interface. However, don't expect plots or quests.
+As this fork was created largely to address problems inherent not only in the
+content of Stone Soup but in the very development philosophy leading to said
+content, it will perhaps be most useful to address the ways in which this game
+is meant to differ from Stone Soup. The philosophy of the Stone Soup DevTeam can
+be found in the Stone Soup manual; it is not repeated in full here.
 
-You may ponder about the wisdom of certain design decisions of Crawl. This
-section tries to explain some of them. It could also be of interest if you are
-used to other roguelikes and want a bit of background on the differences. Prime
-mainstays of Crawl development are the following, most of which are explained in
-more detail below. Note that many of these date back to Linley's first versions.
-
-Major design goals
-  * challenging and random gameplay, with skill making a real difference
-  * meaningful decisions (no no-brainers)
-  * avoidance of grinding (no scumming)
-  * gameplay supporting painless interface and newbie support
-
-Minor design goals
-  * clarity (playability without need for spoilers)
-  * internal consistency
-  * replayability (using branches, species, playing styles and gods)
-  * proper use of out of depth monsters
+While many of the aims of the Stone Soup team, such as the avoidance of grinding
+and the desire for a painless interface, are not only admirable but have been 
+executed well, many of their other aims have done and continue to do serious 
+harm to the enjoyability of the game. Some of them are addressed below.
 
 Balance
 ========================================
 
-The notions of balance, or being imbalanced, are extremely vague. Here is our
-definition: Crawl is designed to be a challenging game, and is also renowned for
-its randomness. However, this does not mean that wins are an arbitrary matter of
-luck: the skill of players will have the largest impact. So, yes, there may be
-situations where you are doomed - no action could have saved your life. But
-then, from the midgame on, most deaths are not of this type: By this stage,
-almost all casualties can be traced back to actual mistakes; if not tactical
-ones, then of a strategical type, like wrong skilling (too broad or too narrow),
-unwise use of resources (too conservative or too liberal), or wrong decisions
-about branch/god/gear.
+What it means for a game to be balanced is, as noted by the Stone Soup team,
+nebulous at best. Unfortunately, the concept of balance as presented in the
+Stone Soup manual, that skill should be the primary factor in success, only
+nominally helps, since this definition seems to be frequently ignored. That the
+definition itself does not work well with the current design of Stone Soup only
+compounds matters.
 
-The possibility of unavoidable deaths is a larger topic in computer games:
-Ideally, a game like this would be really challenging and have both random
-layout and random course of action; yet still be winnable with perfect play.
-This goal seems out of reach. Thus, computer games can be soft in the sense that
-optimal play ensures a win. Apart from puzzles, though, this means that the game
-is solved from the outset; this is where the lack of a human game-master is
-obvious. Alternatively, they can be hard in the sense that unavoidable deaths
-can occur. We feel that the latter choice provides much more fun in
-the long run.
+For the purposes of this discussion, it will be useful to consider two different
+types of difficulty that games can impose upon its players: they will be
+referred to here as "enforced difficulty" and "permitted difficulty". Enforced
+difficulty arises when a game presents a barrier that every player will need to
+overcome in order to attain victory; unique monsters are an example of this, as
+they are usually challenging foes who must invariably be vanquished or avoided
+in order to win. When a game recognises the achievements of a skilled player who
+goes out of his or her way to do something that is particularly difficult but
+strictly optional, this is permitted difficulty. In NetHack, for example,
+permitted difficulty comes from the tracking of player conducts.
 
-Crawl has a huge number of handmade vaults/maps to tweak the randomness. While
-the placement, and often parts of the contents, of such vaults are random as
-well, they provide several advantages: vaults offer challenges that are very
-hard to get via just random monster and layout generation; they may centre on
-some theme, providing additional immersion; finally, they will often contain
-some loot, forcing players to decide between safety and greed.
+Currently, what permitted difficulty Stone Soup has is concentrated in one
+place: the so-called extended endgame, a series of optional dungeon branches
+meant to allow expert players to use their skills for particularly impressive
+wins. The current design of the dungeon and of the game does not allow for much
+permitted difficulty prior to this; as a result, designing the game to be
+enjoyable by its most experienced players, allowing their skill at the game to
+matter, requires steadily increasing the game's enforced difficulty. The DevTeam
+has shown little reluctance to do this, to the detriment of accessibility to
+newcomers.
 
-(The next topic can also be filed under balance; see Replayability for what
-balance does not mean to us.)
+The nominal definition of balance, as seen in the Stone Soup manual's Philosophy
+section, conspicuously makes no argument toward the necessity of each race or
+each background being equally easy to play, and indeed, members of the Stone
+Soup DevTeam have said as much. They certainly have not acted as though this is
+the case, however; as just one of many counterexamples, the principal motivation
+for the Berserker nerf in the forthcoming 0.9 version of Stone Soup is that the
+background was seen as particularly easy to win in Stone Soup 0.8.
 
-Crusade against no-brainers
+Therefore, the Stone Soup notion of balance is fractured and broken, and so
+Crawl Light discards it in favor of a new one: the game will be adequately
+balanced when both beginners and experts can play the same game and have a good
+deal of fun doing so. Beginners should, particularly early on, need to contend
+with less enforced difficulty than is currently present in Stone Soup (which
+is not to say that it shouldn't exist; a game lacking in difficulty is itself no
+fun!), while experts should be able to seek permitted difficulty much sooner
+than they currently can. Guiding the development of this first version of Crawl
+Light is the notion that the former problem is somewhat more pressing; the
+latter will be seriously addressed in a later version.
+
+Stone Soup and "no-brainers"
 ========================================
 
-A very important point in Crawl is steering away from no-brainers. Speaking
-about games in general, wherever there's a no-brainer, that means the
-development team put a lot of effort into providing a "choice" that's really not
-an interesting choice at all. And that's a horrible lost opportunity for fun.
-Examples for this are the resistances: there are very few permanent sources,
-most involve a choice (like rings or specific armour) or are only semi-permanent
-(like mutations). Another example is the absence of clear-cut best items, which
-comes from the fact that most artefacts are randomly generated. Furthermore,
-even non-random artefacts cannot be wished for, as scrolls of acquirement
-produce random items in general. Likewise, there are no sure-fire means of life
-saving (the closest equivalents are controlled blinks, and good religious
-standings for some deities).
+To borrow a quote from the Stone Soup manual's Philosophy section: "Speaking
+about games in general, whenever there's a no-brainer, that means the
+development team put a lot of effort into providing a 'choice' that's really
+not an interesting choice at all." This is proof that even highly attractive
+statements can be deeply wrong.
 
-Anti-grinding
+If an ability available to the player is so weak that it's a "no-brainer" to
+never use it, this is indeed a problem; the appropriate action would be to
+either improve the ability to make it usably good or to remove it outright.
+However, the same does not necessarily hold true for abilities that are so
+powerful as to be desired by most or even all players. In any system with a rich
+variety of skills, some are simply going to be valuable in a wider array of
+circumstances than others. This is not, in itself, a problem, even if an ability
+is good enough to be useful to all players; this just makes it a staple skill. 
+A good example of this is Haste: in a game as hard as Crawl, an ability that
+gives the player more turns than they would otherwise get will always be useful,
+but the game is not weaker for its presence.
+
+When these "no-brainer" abilities become a problem is when it becomes rare to
+use anything else. Here, the problem is not necessarily of inherent
+overpoweredness but of mutual exclusion. If two skills are competing for a
+resource, whether it be MP, piety, experience investment, or simply turns, and
+one skill always or almost always loses, there is a problem. It might be that
+one of the skills is overpowered; there again, the other one might be
+underpowered.
+
+That the Crawl DevTeam persists in believing in this "no-brainer" philosophy and
+acting on it is itself bad enough, but the way in which they have done so ranges
+from comedic to downright depressing. Whenever something the player can do is
+perceived as such a "no-brainer", its alternatives, whatever they are, are never
+buffed to match; the ability itself has always been nerfed. As a result, a
+game with a level of enforced difficulty that is already too high will simply
+get harder as time goes by. Therefore, Crawl Light rejects this aspect of the
+Stone Soup development philosophy too.
+
+Options
 ========================================
 
-Another basic design principle is avoidance of grinding (also known as
-scumming). These are activities that have low risk, take a lot of time, and
-bring some reward. This is bad for a game's design because it encourages players
-to bore themselves. Even worse, it may be optimal to do so. We try to avoid
-this!
-
-This explains why shops don't buy: otherwise players would hoover the dungeon
-for items to sell. Another instance: there's no infinite commodity available:
-food, monster and item generation is generally not enough to support infinite
-play. Not messing with lighting also falls into this category: there might be a
-benefit to mood when players have to carry candles/torches, but we don't see any
-gameplay benefit as yet. The deep tactical gameplay Crawl aims for necessitates
-permanent dungeon levels. Many a time characters have to choose between
-descending or battling. While caution is a virtue in Crawl, as it is in many
-other roguelikes, there are strong forces driving characters deeper.
-
-Interface
-========================================
-
-The interface is radically designed to make gameplay easy - this sounds trivial,
-but we mean it. All tedious, but necessary, chores should be automated. Examples
-are long-distance travel, exploration and taking notes. Also, we try to cater
-for different preferences: both ASCII and tiles are supported; as are vi-keys
-and numpad. Documentation is plenty, context-specific and always available
-in-game. Finally, we ease getting started via tutorials.
-
-Clarity
-========================================
-
-Things ought to work in an intuitive way. Crawl definitely is winnable without
-spoiler access. Concerning important but hidden details (i.e. facts subject to
-spoilers) our policy is this: the joy of discovering something spoily is nice,
-once. (And disappears before it can start if you feel you need to read spoilers
-- a legitimate feeling.) The joy of dealing with ever-changing, unexpected and
-challenging strategic and tactical situations that arise out of transparent
-rules, on the other hand, is nice again and again. That said, we believe that
-qualitative feedback is often better than precise numbers.
-
-In concrete terms, we either spell out a gameplay mechanic explicitly (either in
-the manual, or by in-game feedback) or leave it to min-maxers if we feel that
-the naive approach is good enough.
-
-Consistency
-========================================
-
-While there is no plot to speak of, the game should still be set in a consistent
-Crawl universe. For example, names of artefacts should fit the mood, vaults
-should be sensibly placed and monsters should somehow fit as well. Essentially,
-this is about player immersion. As such, it's good to have in mind, but
-consistency is always secondary to gameplay. A typical example is player vs.
-monster behaviour: while we try to make these identical (or similar), there are
-good reasons for keeping them distinct in certain cases.
-
-Replayability
-========================================
-
-This is actually quite important, but in some sense just a corollary to the
-major design goals. Besides these, there are several other points helping to
-make playing Crawl fun over and over again:
-
-Diversity
-  whenever there are choices to the player, be that choice of species, god,
-  weapon or spell, the various options should be genuinely different. It is
-  no good to provide dozens of weapons with different names (and perhaps even
-  numbers) if, in the end, they all play the same.
-
-Many different species
-  This is partly due to the skills and aptitude system. Similarly important
-  are the built-in starting bonuses/handicaps of species; these often have great
-  impact on play. To us, balance does not mean that all combinations of
-  background and species play equally well! Some are much more challenging than
-  others, and this is fine with us. Each species has at least some backgrounds
-  playing rather well, though.
-
-Dungeon layout
-  Even veteran players will find the Tomb or the Hells exciting (which are
-  construed such that life endangering situations can always pop up).
-  These and other branches may or may not fit a given character's buildup. By
-  the way, we strongly believe that games are pointless if you can reach the
-  invincible state.
-
-Religion
-  This addresses new players, as getting to the Temple and choosing a god
-  becomes the first major task of most games. But religion is also a point in
-  favour of replayability for experienced players, since the choice of god can
-  matter as much as species does.
-
-Playing styles
-  Related to, but encompassing, species, background, god are fundamentally
-  different playing styles like melee oriented fighter, stabber, etc. Deciding
-  on whether (and when!) to make a transition of style can make or break games.
-
-Out of the depths
-========================================
-
-From time to time a discussion about Crawl's unfair OOD (out of depth) monsters
-turns up, like a dragon on the second dungeon level. These are not bugs!
-Actually, they are part of the randomness design goal. In this case, they also
-serve as additional motivation: in many situations, the OOD monster can be
-survived somehow, and the mental bond with the character will then surely grow.
-OOD monsters also help to keep players on their toes by making shallow, or
-cleared, levels still not trivial. In a similar vein, early trips to the Abyss
-are not deficits: there's more than one way out, and successfully escaping is
-exciting for anyone.
+Much of the enjoyment to be found in playing a game like Crawl comes from
+creative application of the available options to vanquish monsters and escape
+nasty situations. Player setups designed explicitly to remove such tactical
+richness from the player's grasp in return for straightforward power, therefore,
+represent bad design and should be avoided. Demigods in Stone Soup (but removed
+from Crawl Light) are a prime example of this, sacrificing the interesting
+abilities afforded by god worship in return for, simply, higher attributes.
+Having bad choices of race and class like this, moreover, are worse than simply
+removing them outright; such unnecessary options in the player creation menu
+are downright paralysing to newcomers.
 
 ########################################
 Appendices

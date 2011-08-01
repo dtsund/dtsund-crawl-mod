@@ -1,65 +1,20 @@
-﻿The Dungeon Crawl Stone Soup team (Peter Berger, Adam Borowski,
-Jude Brown, Robert Burnham, Chris Campbell, Matthew Cline, Paul Du Bois,
-Eino Keskitalo, Vsevolod Kozlov, Janne Lahdenperä, Raphaël Langella, Nat Lanza,
-Jesse Luehrs, Neil Middleton, Steven Noonan, Haran Pilpel, David Ploog,
-Johanna Ploog, Stefan O'Rear, Charles Otto, David Lawrence Ramsey,
-Robert Vollmert, Enne Walker) would like to thank:
+I, Derrick 'dtsund' Sund, am indebted to the following people in the making
+of this fork.
 
 * Linley Henzell, the author of Dungeon Crawl, for writing this great game.
 
-* Brent Ross, Dungeon Crawl 4.0/4.1 maintainer. Stone Soup owes a lot to his
-  ideas and code in Crawl 4.1.
+* Brent Ross, Dungeon Crawl 4.0/4.1 maintainer. Stone Soup, and by extension
+  Crawl Light, owes a lot to his ideas and code in Crawl 4.1.
 
-* Other members of the 4.0 Crawl development team: Michal Valvoda, Guus Sliepen,
-  Brian Robinson, Mark Mackey, Gordon Lipford, Daniel Ligon, Jesse Jones, Josh
-  Fishman, Don Brodale.
+* The Dungeon Crawl Stone Soup team, for keeping Dungeon Crawl alive, for
+  making some truly impressive interface improvements to the game, and for
+  what good ideas and code cleanup they've incorporated into the game.
 
-* Darshan Shaligram and Erik Piper, for starting the Stone Soup project, and
-  rekindling interest in Crawl development.
+* Kiyoshi "Aerdan" Aman, for hosting http://crawl.aerdan.org.
 
-* Marc H. Thoben, for setting up and maintaining our current Mantis tracker,
-  Wiki, development blog and Windows trunk builds, as well as providing public
-  telnet access to development builds, all on crawl.develz.org.
+* The people of #TalkingTime, ##arena, and everyone else who has played this
+  fork and contributed feedback and/or given me ideas.  Particular thanks to
+  Kalir, Cait, krelbel, and Alex "ais523" Smith.
 
-* Rachel Elizabeth Dillon, for all the work done in running the public telnet
-  server crawl.akrasiac.org, its associated August tourney, and other great
-  contributions.
-
-We'd also like to thank members of the Dungeon Crawl community who have
-contributed to Dungeon Crawl Stone Soup:
-
-Mike Adams                   Sophie Hamilton              Malwyn P
-Warwick Allison              Chris Hamons                 William Parker
-Juha Arpiainen               R. Dan Henry                 Pedro
-Arxale                       Brendan Hickey               Arlen Phillips
-John 'Poor Yurik' Attea      Sylvia 'Onia' Hörnke         Lemuel Pitkin
-Roy Axenov                   Benoit Hudson                Derek Ray
-Max Bane                     Iainuki                      Terence Reeves
-Bill Beher                   Ilyak                        Remsleep
-Alexander Beisig             Matthew Ince                 RjY
-Stu Black                    Mitsuhiro Itakura            Will Rogers
-Terje Bø                     Mikko Juola                  David Rose
-Erik Inge Bolsø              Jarmo Kielosto               Risto Saarelma
-Peter Borgmann               Kornel Kisielewicz           Sebastian Salman
-Daniel Mark Brownrigg        Daniel Klein                 Brett Scarborough
-Trent W. Buck                Ilkka Koskela                Roman Sêk
-Joe Buzzelli                 Vambola Kotkas               Robert Shimmin
-Henry Cipolla                Ryan Kusnery                 Sigurd
-Aaron Curtis                 Jukka Kuusisto               Edgar Simo
-Denzi                        Maciej Lapinski              Alex Smith
-Mike Drinen                  Jordan Lewis                 Solf
-Kieron Dunbar                Icy Lich                     Michael Spang
-elliptic                     Markus Maier                 Johan Strandell
-Micha Elsner                 Arien Malec                  Pavel 'Curio' Svinarchuk
-Carl-Oscar Erneholm          Paul Maloney                 Matthew Tadd
-Christopher Evenstar         Wille Mäntylä                William Tanksley, Jr.
-Brett Foster                 James 'Eronarn' Meickle      Jared 'Twinge' Tinney
-Chris Galardi                Andrew Minton                Matt Titus
-Ben Goetter                  Shawn M Moore                Steven Wheeler
-Rob Grant                    Eva Myers                    Thomas Willem
-John Greenberg               Erkki Nurmi                  Evan Williams
-GreyKnight                   Mattias Nyberg               Jeremey Wilson
-Joshua Gross                 nyra                         Yelve Yakut
-Brian Haase                  Dylan O'Donnell              Zooko
-Shayne Halvorson             Yuuma Oohara
-
+It is my sincere hope to be able to expand the first sentence of this document 
+in the future!

@@ -1,7 +1,7 @@
-Dungeon Crawl Stone Soup
+Crawl Light
 ========================
 
-Dungeon Crawl Stone Soup is a game of dungeon exploration, combat and magic,
+Crawl Light is a game of dungeon exploration, combat and magic,
 involving characters of diverse skills, worshipping deities of great power and
 caprice. To win, you'll need to be a master of tactics and strategy, and
 prevail against overwhelming odds.
@@ -22,13 +22,6 @@ If you'd like to dive in immediately, your best bets are to
 * start a game and pick a tutorial (select tutorial in the game menu), or
 * read quickstart.txt (in the docs/ directory), or
 * for studious readers, browse the manual (see below for all doc files).
-
-Internet play:
-You can play Crawl online, both competing with other players and watching
-them. Check the homepage at http://crawl.akrasiac.org/ for details, including
-information about additional servers. You just need a ssh or telnet console;
-on Windows, the PuTTY program works very well. Read docs/ssh_guide.txt
-for a step by step guide on how to set this up.
 
 Tiles:
 Crawl features an alternative to the classical ASCII display; Tile-based
@@ -66,11 +59,14 @@ The settings/ folder contains, among others, the following files:
 
 3. Contact and reporting bugs
 -----------------------------
-The official webpage is at
-      http://crawl.develz.org/
-and there you can find both trackers to add bug reports, feature requests, or
-upload patches, as well as sources and binaries. This is the best way to report
-bugs or mention new ideas.
+The official webpage can be found at:
+      http://crawl.aerdan.org/
+
+And the official development site is located at:
+      https://github.com/dtsund/dtsund-crawl-mod
+
+At the latter, you may submit issues pertaining to bugs or what you feel to be
+badly-designed elements of the game. 
 
 There is a Usenet newsgroup dealing with roguelikes, including Crawl:
       rec.games.roguelike.misc
@@ -78,23 +74,20 @@ It is polite to flag your post with -crawl- as other games are discussed over
 there as well. This is a good place to ask general questions, both from new
 players as well as for spoilers, or to announce spectacular wins.
 
-If you want to chime in with development, you can read the mailing list
-      crawl-ref-discuss@lists.sourceforge.net
-which can get pretty busy on the occasion.
-
 
 4. License and history information
 ----------------------------------
 This is a descendant of Linley's Dungeon Crawl. Development of the main branch
 stalled at version 4.0.0b26, with a final alpha of 4.1 being released by Brent
 Ross in 2005. Since 2006, the Dungeon Crawl Stone Soup team has been continuing
-the development. See the CREDITS in the main folder for a myriad of
-contributors, past and present; license.txt contains the legal blurb.
+the development, with the Crawl Light fork originating in 2011. See the CREDITS
+in the main folder for a myriad of contributors, past and present; license.txt
+contains the legal blurb.
 
-Dungeon Crawl Stone Soup is an open source, freeware roguelike. It is supported
+Crawl Light is an open source, freeware roguelike. It is supported
 on Linux, Windows, OS X, and, to a lesser extent, on DOS. The source should
 compile and run on any reasonably modern Unix.
-Stone Soup features both ASCII and graphical (Tiles) display.
+Crawl Light features both ASCII and graphical (Tiles) display.
 
 Crawl gladly and gratuitously uses the following open source packages; the
 text files mentioned can be found in the docs/license/ folder:
@@ -143,7 +136,7 @@ If you like, you can similarly modify the descriptions for features, items or
 branches.
 
 * Tiles.
-Since version 0.4, tiles are integrated within Crawl. Having variants of
+Since DCSS 0.4, tiles are integrated within Crawl. Having variants of
 often-used glyphs is always good. If you want to give this a shot, please
 contact us via the mailing list. In case you drew some tiles of your own,
 tell us via the list.
@@ -152,7 +145,7 @@ tell us via the list.
 If you like to, you can download the source code and apply patches. Both
 patches for bug fixes as well as implementation of new features are very much
 welcome. If you want to code a cool feature that is likely to be accepted but
-unlikely to be coded by the devteam, please ask on the IRC channel ##crawl-dev.
+unlikely to be coded by the devteam, please ask on the IRC channel #CrawlLight.
 Please be sure to read docs/develop/coding_conventions.txt first.
 
 Thank you, and have fun crawling!

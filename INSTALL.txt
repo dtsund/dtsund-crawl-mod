@@ -1,13 +1,13 @@
-Install instructions for Dungeon Crawl Stone Soup (DCSS)
---------------------------------------------------------
-(Last updated on 20110403 for Dungeon Crawl Stone Soup 0.8.0.)
+Install instructions for Crawl Light (CL)
+-----------------------------------------
+(Last updated on 7/30/2011 for Crawl Light 0.1.0.)
 
-Getting DCSS to run
+Getting CL to run
 -------------------
 
-This file describes how to compile a runtime executable of DCSS from the
+This file describes how to compile a runtime executable of CL from the
 source code.  If you're trying to compile Crawl yourself, skip ahead to the
-next section, "Building Dungeon Crawl Stone Soup".
+next section, "Building Crawl Light".
 
 If, however, you're having trouble getting a precompiled binary to run:
 
@@ -15,13 +15,11 @@ If, however, you're having trouble getting a precompiled binary to run:
 
     Platform        Tiles?          Download package
     --------        ------          ----------------
-    Windows         yes             stone_soup-VERSION-tiles-win32.zip
-    Windows         no              stone_soup-VERSION-win32.zip
-    Mac OS X        yes             stone_soup-VERSION-tiles-osx.zip
-                                    or stone_soup-VERSION-tiles-osx-app.dmg
-    Mac OS X        no              stone_soup-VERSION-osx.zip
-                                    or stone_soup-VERSION-osx-app.dmg
-    DOS             no              stone_soup-VERSION-dos.zip
+    Windows         yes             CrawlMod_win_binary.zip
+    Windows         no              Coming soon!
+    Mac OS X        yes             Coming soon, hopefully!
+    Mac OS X        no              Coming soon, hopefully!
+    DOS             no              Coming soon... maybe.
     Source code     yes             stone_soup-VERSION-src.zip
                                     or stone_soup-VERSION-src.tar.bz2
 
@@ -30,25 +28,29 @@ If, however, you're having trouble getting a precompiled binary to run:
 
 
 If you still can't get Crawl to run, you can ask for further help on IRC:
-##crawl-dev on freenode, forums: https://crawl.develz.org/tavern/ or usenet:
-rec.games.roguelike.misc.  Please try to be as detailed as possible about
-any error messages you're getting.
+##crawl-dev on freenode or usenet: rec.games.roguelike.misc.  Please try
+to be as detailed as possible about any error messages you're getting.
 
 The rest of the file deals with compiling from the source.
 
 
-Building Dungeon Crawl Stone Soup
----------------------------------
+Building Crawl Light
+--------------------
 
-Crawl Stone Soup is known to compile successfully on the following platforms
-as of version 0.8:
+Crawl Light is known to compile successfully on the following platforms
+as of version 0.1.0:
 
-- Any Unix with a recent gcc (and g++), GNU make and libncursesw, including
-  Linux and Mac OS X.  "Recent" is defined as gcc 4.1 or newer.
-- Microsoft Windows NT/2000/XP.
+- Linux with a recent gcc (and g++), GNU make and libncursesw.  "Recent" is 
+  defined as gcc 4.1 or newer.
+- Microsoft Windows NT/2000/XP/Vista.
 
-The only officially supported compiler is gcc (available on almost all
-Unixes, and as djgpp for DOS, and MinGW for Windows).
+In all likelihood, Crawl Light can be compiled on any other platform for
+which Crawl Stone Soup can be compiled, including any Unix with a recent
+gcc.  Unfortunately, the Xcode project seems to be rather out of date, and
+a legacy version of Xcode may be needed to compile adequately on Mac OS X.
+If you think you might want to bring the Xcode work up to date, please let
+us know!  The only officially supported compiler is gcc (available on almost 
+all Unixes, and as djgpp for DOS, and MinGW for Windows).
 
 On other platforms, your mileage may wary, but you should be able to build
 Crawl on pretty much any operating system with a modern C++ compiler (full
@@ -56,9 +58,10 @@ support for the standard C++ library, in particular <string>, the collection
 classes and <algorithm> is necessary) and the curses library.
 
 Windows 9X and ME are no longer supported but you may probably build for
-them with relatively minor changes.  We also used to support DOS in the past
-and the remnants of DOS code are still present, but getting them to work may
-require a substantial effort.  If you have any success, please let us know!
+them with relatively minor changes.  Stone Soup also used to support DOS in 
+the past and the remnants of DOS code are still present, but getting them to 
+work mayrequire a substantial effort.  If you have any success, please let
+both us and the Stone Soup team know!
 
 
 Source Code Checkout
@@ -74,14 +77,11 @@ This is not what you want.
 
 Once you have Git installed, you just need to do:
 
-    git clone git@gitorious.org:crawl/crawl.git
+    git clone git@github.com:dtsund/dtsund-crawl-mod.git
 
-And then to get the contributing libraries, enter the newly cloned
-repository via 'cd crawl-ref' and type:
-
-    git submodule update --init
-
-This should get you all you need to build Crawl from source.
+This should get you all you need to build the first version of Crawl Light 
+from source.   Support for compiling legacy versions simply will come when 
+new versions are released.
 
 
 Optional libraries
@@ -92,19 +92,20 @@ Crawl can be built with some optional features:
 * Sounds
 * User Lua scripts
 
-Crawl Stone Soup also uses a level compiler to compile special level
-definitions; to make changes to the level compiler, you'll need the flex and
-bison/byacc tools (Other lex/yaccs may also work).  More details are
+Crawl Light, like Stone Soup, also uses a level compiler to compile special
+level definitions; to make changes to the level compiler, you'll need the 
+flex and bison/byacc tools (Other lex/yaccs may also work).  More details are
 available below.
 
 Sounds must be enabled by editing AppHdr.h (uncomment SOUND_PLAY_COMMAND on
 Unixes or WINMM_PLAY_SOUNDS on Windows).
 
-Stone Soup 0.6 includes Lua 5.1.4 in its source tree. Crawl uses Lua for
-dungeon generation.  In addition, Crawl has a (rudimentary) Lua interface
-for users to run scripts which can do things such as conditionalise parts of
-the .crawlrc/init.txt.  Such user Lua scripts are enabled by default, but
-can be turned off by appending NO_LUA_BINDINGS=y to the make invocation.
+Stone Soup 0.6, and by extension Crawl Light, includes Lua 5.1.4 in its 
+source tree. Crawl uses Lua for dungeon generation.  In addition, Crawl has
+a (rudimentary) Lua interface for users to run scripts which can do things
+such as conditionalise parts of the .crawlrc/init.txt.  Such user Lua scripts
+are enabled by default, but can be turned off by appending NO_LUA_BINDINGS=y
+to the make invocation.
 
 
 Building on Unix (Linux, *BSD, Solaris, etc.)
@@ -191,8 +192,8 @@ above, or you can use Xcode, as described below.
 For graphical builds, we do not support the use of the Unix build process
 for various reasons.
 
-* Crawl is officially built and tested under Xcode 3.2 on OS X 10.6.1, but
-  it's highly likely that other versions of Xcode will work fine.
+* Crawl has been officially built and tested under Xcode 3.2 on OS X 10.6.1;
+  it has been verified to NOT work out of the box with Xcode 4.
 
 * Make sure Xcode is installed. Xcode should be available on the Mac OS X
   install DVD if you haven't already installed it.  You can also download
@@ -389,24 +390,24 @@ Lua
 
 Security on multiuser systems (Unix):
 
-As of 0.8, setuid and setgid installs are no longer supported, thus any
-previous concerns are no longer applicable.  Lua user scripts are sandboxed
-and should be generally safe even on public servers (besides increasing the
-attack surface).
+As of Stone Soup 0.8, setuid and setgid installs are no longer supported, 
+thus any previous concerns are no longer applicable.  Lua user scripts are
+sandboxed and should be generally safe even on public servers (besides 
+increasing the attack surface).
 
-As of 0.3, the Lua source is included with Crawl.  It will be used if you
-don't have Lua headers installed.  Note that we don't provide security
-support for Lua, and thus if you run a public server or a kiosk, it is
-strongly recommended to use system Lua which does receive security updates
+As of Stone Soup 0.3, the Lua source is included with Crawl.  It will be 
+used if you don't have Lua headers installed.  Note that we don't provide
+security support for Lua, and thus if you run a public server or a kiosk, it
+is strongly recommended to use system Lua which does receive security updates
 from whatever distribution you use.
 
 
 PCRE
 ----
-As of 0.6.0, PCRE 7.9 source is included with Crawl.  It is enabled by
-default.  The sources in contrib/pcre are identical to the 7.9 distro except
-for the use of a custom-made Makefile instead of the automake system that
-was in place previously.
+As of Stone Sop 0.6.0, PCRE 7.9 source is included with Crawl.  It is enabled
+by default.  The sources in contrib/pcre are identical to the 7.9 distro 
+except for the use of a custom-made Makefile instead of the automake system 
+that was in place previously.
 
 On Unixes, you're better served by the existing POSIX regular expression
 support.  If you want PCRE, your package management system is again your
@@ -416,8 +417,8 @@ library.
 
 Unicode
 -------
-As of 0.8, Unicode support is included in all ports.  Still, you might need
-to ensure your terminal can display non-basic glyphs.
+As of Stone Soup 0.8, Unicode support is included in all ports.  Still, you
+might need to ensure your terminal can display non-basic glyphs.
 
 On Unix, you want an UTF-8 locale.  All modern distributions install one by
 default, but you might have somehow dropped required settings.  To check
@@ -429,6 +430,6 @@ On Windows, the console behaves differently for TrueType and legacy (bitmap)
 fonts.  The latter (mostly) work only on certain language editions of
 Windows, such as English, and even there, they work adequately only for
 Crawl's default settings.  For anything more, please select one of TrueType
-fonts.  If, like one of our players, you are deeply attached to the looks of
-bitmap fonts, you can download a corrected version of the Terminal font from
+fonts.  If you are deeply attached to the looks of bitmap fonts, you can 
+download a corrected version of the Terminal font from
 http://www.yohng.com/software/terminalvector.html
