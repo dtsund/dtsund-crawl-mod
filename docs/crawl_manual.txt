@@ -1373,10 +1373,42 @@ nasty situations. Player setups designed explicitly to remove such tactical
 richness from the player's grasp in return for straightforward power, therefore,
 represent bad design and should be avoided. Demigods in Stone Soup (but removed
 from Crawl Light) are a prime example of this, sacrificing the interesting
-abilities afforded by god worship in return for, simply, higher attributes.
-Having bad choices of race and class like this, moreover, are worse than simply
-removing them outright; such unnecessary options in the player creation menu
-are downright paralysing to newcomers.
+abilities afforded by god worship in return for, simply, higher attributes. It
+doesn't matter whether this makes the race easier or harder to win than average;
+the important thing is that this makes the race more boring. Note that spriggans
+aren't an example of a bad selection; while they lose some capabilities had by
+other races, who can wear more armor and have fewer food worries, they make up
+for it by having their own unique, interesting tactical capabilities. Having bad
+choices of race and class available is worse than simply removing them outright;
+such unnecessary options in the player creation menu can be downright paralysing
+to newcomers.
+
+Death out of nowhere
+========================================
+
+As Dwarf Fortress is quick to remind us, losing can be fun. But the
+circumstances surrounding a loss play an important role in whether it actually
+is.
+
+In the original Rogue, the game was quite often simply unwinnable. The dungeon
+might not generate enough food for you to survive, or you might need to get past
+a particularly vicious monster without having the resources to survive the
+encounter. When you lost, and you could expect to lose often, you'd only have
+invested an hour or so into your character. Some more recent roguelikes are like
+this too: losing in DoomRL or Shiren the Wanderer doesn't sting as much as it
+might, because the games are quite short.
+
+Crawl is not a short game. While it isn't as long as Angband by a long shot, it
+is still long enough for losing to be a heavy blow. And when a game as long as
+this is lost suddenly and without warning, it can leave the player feeling
+cheated, as anyone who's ever been sacrificed on an altar in ADOM can probably
+attest. While Stone Soup has few instadeaths in the strictest sense of the word,
+it does have a number of foes capable of dealing so much damage that an
+unsuspecting player may find himself dead without a chance to react. Experienced
+or spoiled players will know to react appropriately to them on sight, but the
+only way to learn these foes naturally is often to be killed by them. While the
+first verison of Crawl Light does not solve this problem, it is, at least,
+recognised as one.
 
 ########################################
 Appendices
