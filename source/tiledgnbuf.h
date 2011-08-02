@@ -19,6 +19,7 @@ struct packed_cell
     bool is_bloody;
     bool is_silenced;
     bool is_haloed;
+    bool in_halo_range;
     bool is_moldy;
     bool glowing_mold;
     bool is_sanctuary;

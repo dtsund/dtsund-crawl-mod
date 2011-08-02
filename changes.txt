@@ -1,6 +1,4 @@
 Probably-easy TODO list:
-	Add [a]bilities and success rates to the morgue file.
-	Merge Traps & Doors with Stealth, making Thievery
 	New splash screen logo needed!
 
 
@@ -9,6 +7,8 @@ Harder TODO list:
 
 
 Long-term TODO list:
+	Add [a]bilities and success rates to the morgue file.
+	Merge Traps & Doors with Stealth, making Thievery
 	Redo scoring system to induce experts to play hyperagressively
 	Phase out paralysis in favor of a suite of new status effects
 	Restore square spell ranges (This actually looks really hard)
@@ -63,3 +63,4 @@ Changes already made:
 		Also lowered his evasion from 28 to 20, replaced his large shield with a medium shield.
 	"Monstrous" demonspawn disabled for now.
 	Autoexplore now fails if Str, Dex, or Int is at fatally low levels.
+	The halo surrounding TSO followers and divine beings is now visible when using tiles.

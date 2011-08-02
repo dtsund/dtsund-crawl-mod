@@ -1023,6 +1023,7 @@ void tile_apply_properties(const coord_def &gc, packed_cell &cell)
     bool print_blood = true;
     if (haloed(gc))
     {
+        cell.in_halo_range = true;
         monster* mon = monster_at(gc);
         if (you.see_cell(gc) && mon)
         {
@@ -1036,7 +1037,10 @@ void tile_apply_properties(const coord_def &gc, packed_cell &cell)
         }
     }
     else
+    {
         cell.is_haloed = false;
+        cell.in_halo_range = false;
+    }
 
     if (liquefied(gc, true))
         cell.is_liquefied = true;

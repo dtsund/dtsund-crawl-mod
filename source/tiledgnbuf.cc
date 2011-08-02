@@ -28,6 +28,7 @@ void packed_cell::clear()
     is_bloody        = false;
     is_silenced      = false;
     is_haloed        = false;
+    in_halo_range    = false;
     is_moldy         = false;
     glowing_mold     = false;
     is_sanctuary     = false;
@@ -585,6 +586,9 @@ void DungeonCellBuffer::pack_background(int x, int y, const packed_cell &cell)
             else if (bg & TILE_FLAG_ELDRITCH_SW)
                 m_buf_feat.add(TILE_ELDRITCH_OVERLAY_SW, x, y);
         }
+        
+        if (cell.in_halo_range)
+            m_buf_feat.add(TILE_HALO_RANGE, x, y);
 
         if (cell.is_haloed)
             m_buf_feat.add(TILE_HALO, x, y);
