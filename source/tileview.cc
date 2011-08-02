@@ -1023,7 +1023,9 @@ void tile_apply_properties(const coord_def &gc, packed_cell &cell)
     bool print_blood = true;
     if (haloed(gc))
     {
-        cell.in_halo_range = true;
+        if (you.see_cell(gc))
+            cell.in_halo_range = true;
+        
         monster* mon = monster_at(gc);
         if (you.see_cell(gc) && mon)
         {
