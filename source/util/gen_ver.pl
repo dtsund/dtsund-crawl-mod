@@ -18,7 +18,10 @@ $_ = `git describe --tags --long $mergebase 2> /dev/null || git describe --tags 
         : die "No Git, and $scriptpath/release_ver doesn't exist.\n")
     or die "couldn't get the version information\n";
 
-chomp;
+#Remove the terminating newline; can't just use chomp!
+#Chomp fails when using mingw on Windows.
+$_ =~ s/\f//;
+$_ =~ s/\r//;
 
 /v?([0-9]+\.[0-9]+(?:\.[0-9]+)?(?:-([a-zA-Z]+[0-9]+))?)(?:-[0-9]+-g[a-fA-F0-9]+)?/
     or die "Version string '$_' is malformed.\n";
@@ -28,10 +31,6 @@ my ($tag, $pretyp) = ($1, $2);
 my $stable = defined($pretyp) ? "false" : "true";
 
 my $prefix = "CRAWL";
-
-#Remove any terminating newline from $_;
-#had problems with MinGW otherwise.
-chomp($_);
 
 open OUT, ">", "$outfile" or die $!;
 print OUT <<__eof__;
