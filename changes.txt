@@ -1,5 +1,4 @@
 Probably-easy TODO list:
-	New splash screen logo needed!
 
 
 Harder TODO list:
