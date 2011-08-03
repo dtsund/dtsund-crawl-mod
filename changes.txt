@@ -4,6 +4,7 @@ Probably-easy TODO list:
 
 Harder TODO list:
 	Put a HP-indicator face next to the player's large HP bar, to make the new system more intuitive
+	Need better intro images!
 
 
 Long-term TODO list:
