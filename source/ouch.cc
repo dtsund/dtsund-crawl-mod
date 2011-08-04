@@ -70,6 +70,7 @@
 #include "state.h"
 #include "stuff.h"
 #include "transform.h"
+#include "travel.h"
 #include "tutorial.h"
 #include "view.h"
 #include "shout.h"
@@ -79,6 +80,11 @@
 
 static void _end_game(scorefile_entry &se);
 static void _item_corrode(int slot);
+
+//This is defined in travel.cc; it clears the default
+//autotravel target.  We call it once here, when the player
+//ends the game.
+extern void reset_level_target();
 
 static void _maybe_melt_player_enchantments(beam_type flavour)
 {
@@ -1377,6 +1383,9 @@ void screen_end_game(std::string text)
 
 void _end_game(scorefile_entry &se)
 {
+    //Make sure the game doesn't crash on future plays!
+    reset_level_target();
+    
     for (int i = 0; i < ENDOFPACK; i++)
         if (item_type_unknown(you.inv[i]))
             add_inscription(you.inv[i], "unknown");
