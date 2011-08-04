@@ -527,8 +527,8 @@ int calc_spell_power(spell_type spell, bool apply_intel, bool fail_rate_check,
 
         // When checking failure rates, wizardry is handled after the various
         // stepping calulations.
-        power = (you.skill(SK_SPELLCASTING) / 2)
-                     + (fail_rate_check? 0 : player_mag_abil(false));
+        power += (you.skill(SK_SPELLCASTING) / 2)
+                  + (fail_rate_check? 0 : player_mag_abil(false));
 
         if (apply_intel)
             power = (power * you.intel()) / 10;

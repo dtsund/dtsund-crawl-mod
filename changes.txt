@@ -1,6 +1,4 @@
 Probably-easy TODO list:
-	Fix the Windows tile bug
-	Fix the spell success bug
 
 
 Harder TODO list:
