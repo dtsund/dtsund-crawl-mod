@@ -58,7 +58,6 @@ changes to the template in docs/template/apt-tmpl.txt.
                  Arm Ddg Sth Stb Shd T&D   Inv Evo                 Exp
 ----------------------------------------------------------------------
 Human              0   0   0   0   0   0     0   0                 100
-Felid              0  +2  +2  +3   0  +2    -1  -2                 160
 Centaur           -3  -3  -4  -3  -3  -2     0  -1                 140
 Demigod           -1  -1  -1  -1  -1  -1     0  -1                 160
 Demonspawn        -1  -1  -1  -1  -1  -1    +2   0                 150
@@ -97,7 +96,6 @@ Vampire           -2  +1  +4  +1  -1   0    -2  -1                 150
                  Fgt SBl LBl M&F Axs Pla Stv UC    Thr Slg Bws Crb
 ----------------------------------------------------------------------
 Human              0   0   0   0   0   0   0   0     0   0   0   0
-Felid             -2   0   0   0   0   0   0  -2     0   0   0   0
 Centaur            0  -1  -1  -1  -1  -1  -1   0    +3  +1  +3  +1
 Demigod           -1  -1  -1  -1  -1  -1  -1  -1    -1  -1  -1  -1
 Demonspawn         0  -1  -1  -1  -1  -1  -1  -1    -1  -1  -1  -1
@@ -136,7 +134,6 @@ Vampire           -1  +1   0  -2  -1  -1  -2  +1    -2  -2  -2  -2
                  Spc Coj Enc Sum Nec Trl Trm       Fir Ice Air Ear Poi
 ----------------------------------------------------------------------
 Human              0   0   0   0   0   0   0         0   0   0   0   0
-Felid              0  -1  +3  +1   0  +2  +1        -1  -2  -1  -2  -1
 Centaur           -2  -1  -1  -1  -1  -1  -1        -1  -1  -1  -1  -1
 Demigod           -1  -1  -1  -1  -1  -1  -1        -1  -1  -1  -1  -1
 Demonspawn         0   0  -1   0  +1  -1  -1        -1  -1  -1  -1   0

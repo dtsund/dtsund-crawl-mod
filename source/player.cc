@@ -245,16 +245,16 @@ static bool _check_moveto_trap(const coord_def& p, const std::string &move_verb)
     return (true);
 }
 
-static bool _check_moveto_dangerous(const coord_def& p,
-                                    const std::string move_verb)
+static bool _check_moveto_dangerous(const coord_def& p)
 {
     if (you.can_swim() && feat_is_water(env.grid(p))
-        || you.can_cling_to(p)
+        || you.airborne() || you.can_cling_to(p)
         || !is_feat_dangerous(env.grid(p)))
     {
         return (true);
     }
-    else if (you.species == SP_MERFOLK && feat_is_water(env.grid(p)))
+    
+    if (you.species == SP_MERFOLK && feat_is_water(env.grid(p)))
         mpr("You cannot swim in your current form.");
     else
         canned_msg(MSG_UNTHINKING_ACT);
@@ -265,10 +265,13 @@ static bool _check_moveto_terrain(const coord_def& p,
                                   const std::string &move_verb)
 {
     if (you.is_wall_clinging() && move_verb == "blink")
-        return (_check_moveto_dangerous(p, move_verb));
+        return (_check_moveto_dangerous(p));
 
     if (!need_expiration_warning() && need_expiration_warning(p))
     {
+        if (!_check_moveto_dangerous(p))
+            return false;
+
         std::string prompt = "Are you sure you want to " + move_verb;
 
         if (you.ground_level())
@@ -289,11 +292,7 @@ static bool _check_moveto_terrain(const coord_def& p,
         }
     }
 
-    // Only consider terrain if player is not levitating.
-    if (you.airborne() || you.can_cling_to(p))
-        return (true);
-
-    return (_check_moveto_dangerous(p, move_verb));
+    return _check_moveto_dangerous(p);
 }
 
 bool check_moveto(const coord_def& p, const std::string &move_verb)
@@ -1960,6 +1959,7 @@ int player_prot_life(bool calc_unid, bool temp, bool items)
 
         // pearl dragon counts
         pl += player_equip(EQ_BODY_ARMOUR, ARM_PEARL_DRAGON_ARMOUR);
+        pl += player_equip(EQ_BODY_ARMOUR, ARM_PEARL_DRAGON_HIDE);
 
         // randart wpns
         pl += scan_artefacts(ARTP_NEGATIVE_ENERGY, calc_unid);

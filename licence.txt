@@ -1,4 +1,4 @@
-Dungeon Crawl Stone Soup
+Crawl Light
 Copyright 1997-2011 Linley Henzell, the dev team, and the contributors
 (please refer to CREDITS.txt for details).
 
