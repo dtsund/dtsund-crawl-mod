@@ -766,6 +766,8 @@ void SkillMenu::toggle_practise(skill_type sk, int keyn)
             you.num_autotrained_skills++;
         you.autotrain_skill[sk] = !you.autotrain_skill[sk];
     }
+    //Need to update the title now; the number of autotrained skills may have changed.
+    _set_title();
     SkillMenuEntry* skme = _find_entry(sk);
     skme->set_name(true);
     const std::vector<int> hotkeys = skme->get_name_item()->get_hotkeys();
@@ -936,6 +938,16 @@ void SkillMenu::_set_title()
         t = make_stringf(format, "source");
     else if (is_set(SKMF_DO_RESKILL_TO))
         t = make_stringf(format, "destination");
+    else if(you.num_autotrained_skills)
+    {
+        if(you.num_autotrained_skills == 1)
+            t = make_stringf("You are automatically training one skill.\n\n");
+        else
+        {
+            t = make_stringf("You are automatically training %d skills.\n\n",
+                             you.num_autotrained_skills);
+        }
+    }
     else
     {
 #ifdef DEBUG
