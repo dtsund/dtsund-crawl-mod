@@ -501,7 +501,15 @@ increase that skill when you practise it (and will also not spend as many
 experience points on it). The main use of turning off skills is to spend more
 points on other skills: You will not lose any experience by deselecting
 skills: you will rather spend it elsewhere. It can happen that the pool grows
-rather large in this way; the maximum is 20000 experience points.
+rather large in this way; there is no effective maximum.
+
+Additionally, pressing # in the skill menu will allow you to toggle automatic
+training of skills you already have. If you are automatically training skills,
+incoming experience is automatically used to practise these skills in roughly
+equal amounts; any experience already in the skill pool when automatic training
+is enabled will also be consumed. Since this precludes using experience to train
+new skills, of course, you'll want to disable automatic training if you intend
+to gain a new skill.
 
 Occasionally you may find a manual of a skill which allows to make quick
 progress in this area. Whenever you read it, all your free experience is
@@ -1583,19 +1591,6 @@ Kenku
   Kenku do not appreciate any form of servitude, and so are poor at using
   invocations. Their light avian bodies cannot sustain a great deal of injury.
 
-Demigods
-  Demigods are mortals (Humans, Orcs or Elves, for example) with some divine or
-  angelic ancestry, however distant; they can be created by a number of
-  processes, including magical experiments and the time-honoured practice of
-  interplanar miscegenation.
-
-  Demigods look more or less like members of their mortal part's species, but
-  have excellent attributes (Str, Int, Dex) and are extremely robust; they can
-  also draw on great supplies of magical energy. On the downside, they advance
-  very slowly in experience, gain skills slightly less quickly than Humans and,
-  due to their status, cannot worship the various gods and powers available to
-  other classes of being.
-
 Demonspawn
   Demonspawn are horrible half-mortal, half-infernal creatures - the flip side
   of the Demigods. Demonspawn can be created in any number of ways: magical
@@ -1815,21 +1810,22 @@ there you can shape them as you will. Note that due to peculiarities of size or
 body shape, some characters start with a different inventory.
 
 Fighters
-  Fighters usually start with a decent weapon, a suit of heavy armour and a
+  Fighters usually start with great weaponry, a suit of heavy armour and a
   shield. They have a good general grounding in the arts of fighting.
 
 Gladiators
   The Gladiator has been trained to fight in the ring, and so is versed in the
   art of fighting, but is not so good at anything else. In fact, Gladiators have
   never learned anything except bashing monsters with heavy things. They start
-  with a nasty weapon, a small shield, light armour, a helmet (if they can wear
-  one) and some nets or darts.
+  with a nasty weapon, light armour, a helmet (if they can wear one) and either
+  some nets and javelins or darts.
 
 Monks
   The Monk is a member of an ascetic order dedicated to the perfection of one's
   body and soul through the discipline of the martial arts. Monks start with
-  very little equipment, but can survive without the weighty weapons and
-  spellbooks needed by characters of other backgrounds.
+  very little equipment, save a ring increasing their melee accuracy, but can
+  survive without the weighty weapons and spellbooks needed by characters of
+  other backgrounds.
 
 Berserkers
   Berserkers are hardy warriors who worship Trog the Wrathful, from whom they
@@ -1849,18 +1845,18 @@ Healers
   that way.
 
 Chaos Knights
-  The Chaos Knight is a plaything of Xom. Xom is a very unpredictable (and possibly
-  psychotic) entity who rewards or punishes according to whim.
+  The Chaos Knight is a plaything of Xom. Xom is a very unpredictable (and
+  possibly psychotic) entity who rewards or punishes according to whim.
 
 Death Knights
-  The Death Knight is a fighter who aligns him or herself with the powers of death
-  and worships Yredelemnul the Dark, who will soon grant the ability to re-animate
-  the dead.
+  The Death Knight is a fighter who aligns him or herself with the powers of
+  death and worships Yredelemnul the Dark, who will soon grant the ability to
+  re-animate the dead.
 
 Abyssal Knights
-  The Abyssal Knight is a fighter serving Lugonu the Unformed, ruler of the Abyss.
-  They are granted some power over the Abyss, and must spread death and disorder
-  in return.
+  The Abyssal Knight is a fighter serving Lugonu the Unformed, ruler of the
+  Abyss. They are granted some power over the Abyss, and must spread death and
+  disorder in return.
 
 Crusaders
   The Crusader is a decent fighter who can use the magical arts of enchantment
@@ -1874,9 +1870,8 @@ Warpers
 
 Arcane Marksmen
   Arcane Marksmen specialise in dealing ranged damage via enchanted weapons.
-  Initially, they may choose either elemental damage types or translocation
-  effects. Additionally, they have spells which will aid in staying at a
-  distance and defend against other ranged weapon users.
+  They enter the dungeon armed with spells to ensure their foes have difficulty
+  approaching them.
 
 Assassins
   An Assassin is a stealthy character who is especially good at killing,
@@ -1889,7 +1884,7 @@ Stalkers
 
 Hunters
   The Hunter is a type of fighter who specialises in missile weapons. A Hunter
-  starts with either some throwing weapons or a ranged weapon and some
+  starts with either some throwing weapons or a ranged weapon and a good deal of
   ammunition, as well as an edged weapon and a set of leathers.
 
 Artificers
