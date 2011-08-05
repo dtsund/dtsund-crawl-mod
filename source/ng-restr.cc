@@ -42,7 +42,6 @@ char_choice_restriction job_allowed(species_type speci, job_type job)
             case SP_CAT:
                 return (CC_BANNED);
             case SP_DEEP_ELF:
-            case SP_SLUDGE_ELF:
             case SP_HALFLING:
             case SP_KOBOLD:
             case SP_SPRIGGAN:
@@ -524,6 +523,7 @@ char_choice_restriction job_allowed(species_type speci, job_type job)
             case SP_CAT:
                 return (CC_BANNED);
             case SP_DEEP_ELF:
+            case SP_SLUDGE_ELF:
             case SP_HILL_ORC:
             case SP_MERFOLK:
             case SP_SPRIGGAN:
@@ -562,7 +562,6 @@ char_choice_restriction job_allowed(species_type speci, job_type job)
                 return (CC_UNRESTRICTED);
         }
 
-// XXX: Arcane Marksmen are temporarily disabled
         case JOB_ARCANE_MARKSMAN:
             switch (speci)
         {

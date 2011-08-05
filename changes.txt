@@ -41,6 +41,11 @@ Changes already made:
 	Replaced Repel Missiles with Throw Frost in book of Minor Magic.
 	Selective Amnesia restored as a spell.  Now found in the books of Wizardry, Enchantments, and Dreams.
 	Give Assassins more needles (might revert if OP).  Now get 5 each of sleep, slow, confusion.
+	Fighters now start with better weapons, to make them a more desirable choice.
+	Monks now have a +3,+0 ring of slaying, so players have a reason to not just choose Transmuter instead
+		Analyze to-hit mechanics, come up with better enchantment
+	Gladiators have had their buckler removed in favor or stronger ranged capabilities
+	Bow, crossbow, and sling Hunters get more ammo, so there is a reason to choose them over Arcane Marksman
 	Acquirement now shows the exact items the player is choosing from.
 		Flaw(?) with current implementation: I think unrands that get generated
 		and rejected don't get a second chance to generate.

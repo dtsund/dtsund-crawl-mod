@@ -445,6 +445,12 @@ static void _update_weapon(const newgame_def& ng)
         you.inv[0].sub_type = ng.weapon;
 }
 
+static void _enchant_weapon(int slot, int plus, int plus2)
+{
+    you.inv[slot].plus = plus;
+    you.inv[slot].plus2 = plus2;
+}
+
 static void _give_items_skills(const newgame_def& ng)
 {
     int weap_skill = 0;
@@ -460,6 +466,37 @@ static void _give_items_skills(const newgame_def& ng)
         newgame_make_item(1, EQ_BODY_ARMOUR, OBJ_ARMOUR, ARM_SCALE_MAIL,
                           ARM_ROBE);
         newgame_make_item(2, EQ_SHIELD, OBJ_ARMOUR, ARM_SHIELD, ARM_BUCKLER);
+
+        //Give Fighters the next weapon up in whatever type they chose,
+        //to give the class a draw compared to, say, Berserkers.
+        switch(ng.weapon)
+        {
+        case WPN_SHORT_SWORD:
+            //Yes, this isn't a huge upgrade.
+            //No, you may not start with a quick blade.
+            newgame_make_item(3, EQ_NONE, OBJ_WEAPONS, WPN_SABRE);
+            break;
+        case WPN_HAND_AXE:
+            newgame_make_item(3, EQ_NONE, OBJ_WEAPONS, WPN_WAR_AXE);
+            break;
+        case WPN_MACE:
+            //Flails aren't a big enough upgrade from maces to make this
+            //interesting, so jump to morningstars.
+            newgame_make_item(3, EQ_NONE, OBJ_WEAPONS, WPN_MORNINGSTAR);
+            break;
+        case WPN_TRIDENT:
+            //Halberds can't be used with shields, which would kind of make
+            //the class a bit schizophrenic.  Demon tridents are out of
+            //the question.  Therefore, just enchant the starting weapon
+            //a bit instead.
+            _enchant_weapon(0, 2, 2);
+            break;
+        case WPN_FALCHION:
+            newgame_make_item(3, EQ_NONE, OBJ_WEAPONS, WPN_LONG_SWORD);
+            break;
+        default:
+            break;
+        }
 
         // Skills.
         you.skills[SK_FIGHTING] = 3;
@@ -480,8 +517,8 @@ static void _give_items_skills(const newgame_def& ng)
 
         newgame_make_item(1, EQ_BODY_ARMOUR, OBJ_ARMOUR, ARM_LEATHER_ARMOUR,
                            ARM_ANIMAL_SKIN);
-
-        newgame_make_item(2, EQ_SHIELD, OBJ_ARMOUR, ARM_BUCKLER, ARM_SHIELD);
+        
+        //No buckler anymore.  Instead, gladiators get stronger ranged options.
 
         curr = 3;
         if (you_can_wear(EQ_HELMET))
@@ -490,20 +527,28 @@ static void _give_items_skills(const newgame_def& ng)
             curr++;
         }
 
-        // Small species get darts, the others nets.
+        // Small species get darts (some exploding), the others nets and javelins.
         if (you.body_size(PSIZE_BODY) < SIZE_MEDIUM)
-            newgame_make_item(curr, EQ_NONE, OBJ_MISSILES, MI_DART, -1, 20);
+        {
+            newgame_make_item(curr++, EQ_NONE, OBJ_MISSILES, MI_DART, -1, 20, 1);
+            //Make some exploding darts.  They won't last long, but will be
+            //fun and useful while they're there.
+            newgame_make_item(curr, EQ_NONE, OBJ_MISSILES, MI_DART, -1, 15, 1);
+            set_item_ego_type(you.inv[curr++], OBJ_MISSILES, SPMSL_EXPLODING);
+        }
         else
         {
-            newgame_make_item(curr, EQ_NONE, OBJ_MISSILES, MI_THROWING_NET, -1,
+            //Four throwing nets and six +1 javelins.
+            newgame_make_item(curr++, EQ_NONE, OBJ_MISSILES, MI_THROWING_NET, -1,
                                4);
+            newgame_make_item(curr, EQ_NONE, OBJ_MISSILES, MI_JAVELIN, -1, 6, 1);
+            
         }
 
         // Skills.
         you.skills[SK_FIGHTING] = 2;
-        you.skills[SK_THROWING] = 2;
-        you.skills[SK_DODGING]  = 2;
-        you.skills[SK_SHIELDS]  = 2;
+        you.skills[SK_THROWING] = 3;
+        you.skills[SK_DODGING]  = 3;
         you.skills[SK_UNARMED_COMBAT] = 2;
         weap_skill = 3;
         break;
@@ -520,7 +565,11 @@ static void _give_items_skills(const newgame_def& ng)
         else
             you.equip[EQ_WEAPON] = -1;
 
-        newgame_make_item(curr, EQ_BODY_ARMOUR, OBJ_ARMOUR, ARM_ROBE);
+        newgame_make_item(curr++, EQ_BODY_ARMOUR, OBJ_ARMOUR, ARM_ROBE);
+        
+        //Monks get a +3,+0 ring of slaying for more accurate attacks.  Gives
+        //the player a reason to choose Monk over Transmuter.
+        newgame_make_item(curr++, EQ_NONE, OBJ_JEWELLERY, RING_SLAYING, -1, 1, 3, 0);
 
         you.skills[SK_FIGHTING]       = 3;
 
@@ -917,7 +966,6 @@ static void _give_items_skills(const newgame_def& ng)
         you.skills[SK_FIGHTING]       = 1;
         you.skills[SK_DODGING]        = 2;
         you.skills[SK_STEALTH]        = 2;
-        //you.skills[SK_STABBING]       = 2;
         you.skills[SK_SPELLCASTING]   = 2;
         you.skills[SK_TRANSMUTATIONS] = 1;
         you.skills[SK_POISON_MAGIC]   = 1;
@@ -976,8 +1024,14 @@ static void _give_items_skills(const newgame_def& ng)
             break;
         }
 
+        //A butchering implement and enchanted ammo doesn't exactly compensate
+        //for the absence of the book of Distance.  Therefore, Hunters also start
+        //with more ammo, in the applicable cases.
         switch (you.species)
         {
+        //Sludge elves, hill orcs, and merfolk who want nets and javelins can
+        //just play Gladiator.
+        /*
         case SP_SLUDGE_ELF:
         case SP_HILL_ORC:
         case SP_MERFOLK:
@@ -985,6 +1039,7 @@ static void _give_items_skills(const newgame_def& ng)
             newgame_make_item(2, EQ_NONE, OBJ_MISSILES, MI_THROWING_NET, -1,
                                2);
             break;
+        */
 
         case SP_OGRE:
             // Give ogres a knife for butchering, as they now start with
@@ -1000,7 +1055,7 @@ static void _give_items_skills(const newgame_def& ng)
         case SP_HALFLING:
             newgame_make_item(1, EQ_NONE, OBJ_WEAPONS, WPN_SLING);
             newgame_make_item(2, EQ_NONE, OBJ_MISSILES, MI_SLING_BULLET, -1,
-                               30, 1);
+                               50, 1);
 
             // Wield the sling instead.
             you.equip[EQ_WEAPON] = 1;
@@ -1010,7 +1065,7 @@ static void _give_items_skills(const newgame_def& ng)
         case SP_DEEP_DWARF:
         case SP_KOBOLD:
             newgame_make_item(1, EQ_NONE, OBJ_WEAPONS, WPN_CROSSBOW);
-            newgame_make_item(2, EQ_NONE, OBJ_MISSILES, MI_BOLT, -1, 25, 1);
+            newgame_make_item(2, EQ_NONE, OBJ_MISSILES, MI_BOLT, -1, 40, 1);
 
             // Wield the crossbow instead.
             you.equip[EQ_WEAPON] = 1;
@@ -1018,7 +1073,7 @@ static void _give_items_skills(const newgame_def& ng)
 
         default:
             newgame_make_item(1, EQ_NONE, OBJ_WEAPONS, WPN_BOW);
-            newgame_make_item(2, EQ_NONE, OBJ_MISSILES, MI_ARROW, -1, 25, 1);
+            newgame_make_item(2, EQ_NONE, OBJ_MISSILES, MI_ARROW, -1, 40, 1);
 
             // Wield the bow instead.
             you.equip[EQ_WEAPON] = 1;
