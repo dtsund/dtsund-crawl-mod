@@ -1,4 +1,7 @@
 Probably-easy TODO list:
+	Update the manual.
+	Locate the section of code sending a background color control sequence, make it optional.
+		This because Gnome terminal is a dumb.
 
 
 Harder TODO list:
