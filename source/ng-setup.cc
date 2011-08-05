@@ -530,7 +530,7 @@ static void _give_items_skills(const newgame_def& ng)
         // Small species get darts (some exploding), the others nets and javelins.
         if (you.body_size(PSIZE_BODY) < SIZE_MEDIUM)
         {
-            newgame_make_item(curr++, EQ_NONE, OBJ_MISSILES, MI_DART, -1, 20, 1);
+            newgame_make_item(curr++, EQ_NONE, OBJ_MISSILES, MI_DART, -1, 15, 1);
             //Make some exploding darts.  They won't last long, but will be
             //fun and useful while they're there.
             newgame_make_item(curr, EQ_NONE, OBJ_MISSILES, MI_DART, -1, 15, 1);
