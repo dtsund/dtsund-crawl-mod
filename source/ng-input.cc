@@ -16,8 +16,8 @@ void opening_screen(void)
 {
     std::string msg =
     "<yellow>Hello, welcome to " CRAWL " " + Version::Long() + "!</yellow>\n"
-    "<brown>(c) Copyright 1997-2002 Linley Henzell, "
-    "2002-2010 Crawl DevTeam\n"
+    "<brown>(c) Copyright 1997-2002 L. Henzell, "
+    "2002-2011 DCSS DevTeam, 2011-2011 CL team.\n"
     "Read the instructions for legal details."
     "</brown> " ;
 
