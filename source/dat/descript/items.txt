@@ -295,7 +295,7 @@ A book of magic spells.  The text seems to jump around haphazardly on the page.
 %%%%
 book of transfigurations
 
-A book of magic spells. The cover continually changes color.
+A book of magic spells. The cover continually changes colour.
 %%%%
 book of tukima
 
