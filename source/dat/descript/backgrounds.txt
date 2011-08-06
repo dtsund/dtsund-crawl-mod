@@ -9,7 +9,7 @@ Air Elementalists have learned the Shock spell. Later on, their book of Air prov
 %%%%
 Arcane Marksman
 
-Arcane Marksmen carry some missiles as well as a book from which they will learn spells to brand those missiles later on.
+Arcane Marksmen carry some missiles as well as a book from which they will learn spells to use them more effectively.
 %%%%
 Artificer
 
@@ -17,7 +17,7 @@ Artificers start with two magical devices and are competent at using such tools.
 %%%%
 Assassin
 
-Assassins are all about stealth, ready to stab unaware opponents. Not just dagger and cloak, they carry nasty curare needles for their blowgun.
+Assassins are all about stealth, ready to stab unaware opponents. Not just dagger and cloak; they carry many nasty needles for their blowgun.
 %%%%
 Berserker
 
@@ -57,7 +57,7 @@ Fire Elementalists start with the book of Flames and know the Flame Tongue spell
 %%%%
 Gladiator
 
-Gladiators are ready for the arena with light armour, shield, nets and a weapon of their choice.
+Gladiators are ready for the arena with light armour, javelins, nets and a weapon of their choice.
 %%%%
 Healer
 
@@ -73,7 +73,7 @@ Ice Elementalists start with the book of Frost and the Freeze spell. The book's 
 %%%%
 Monk
 
-Monks are ready to take on everything in the dungeon wearing just a robe and using their body, optionally wielding a staff.
+Monks are ready to take on everything in the dungeon wearing just a robe and using their body with deadly accuracy, optionally wielding a staff.
 %%%%
 Necromancer
 
@@ -85,11 +85,11 @@ Priests are followers of Zin, spreading the god's word to the Dungeon's inhabita
 %%%%
 Stalker
 
-Stalkers use stealth and transformative magic to approach and subdue their victims.
+Stalkers use stealth and various forms of magic to approach and subdue their victims.
 %%%%
 Summoner
 
-Summoners start with the book of Callings and are able to Summon Small Mammals from the start.
+Summoners start with the book of Callings and are able to cast Summon Small Mammals from the start.
 %%%%
 Transmuter
 
