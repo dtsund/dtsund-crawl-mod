@@ -180,6 +180,10 @@ static bool _is_species_valid_choice(species_type species)
     // Begone, foul cats!
     if(species == SP_CAT)
         return (false);
+    
+    // And you too, demigods!
+    if(species == SP_DEMIGOD)
+        return (false);
 
     return (true);
 }
@@ -601,6 +605,12 @@ static void _construct_species_menu(const newgame_def* ng,
     coord_def min_coord(0,0);
     coord_def max_coord(0,0);
 
+    //Some species may be disabled using _is_species_valid_choice
+    //instead of being removed outright from the code, so they
+    //can be re-added easily.  Since the current loop iteration
+    //was used for things like assigning letters and determining menu
+    //position, we'll want to track how many have actually been used.
+    int cur = 0;
     for (int i = 0; i < ng_num_species(); ++i)
     {
         const species_type species = get_species(i);
@@ -632,20 +642,20 @@ static void _construct_species_menu(const newgame_def* ng,
         }
         else
         {
-            text = index_to_letter(i);
+            text = index_to_letter(cur);
             text += " - ";
             text += species_name(species);
         }
         // Fill to column width - 1
         text.append(COLUMN_WIDTH - text.size() - 1 , ' ');
         tmp->set_text(text);
-        min_coord.x = X_MARGIN + (i / ITEMS_IN_COLUMN) * COLUMN_WIDTH;
-        min_coord.y = 3 + i % ITEMS_IN_COLUMN;
+        min_coord.x = X_MARGIN + (cur / ITEMS_IN_COLUMN) * COLUMN_WIDTH;
+        min_coord.y = 3 + cur % ITEMS_IN_COLUMN;
         max_coord.x = min_coord.x + text.size();
         max_coord.y = min_coord.y + 1;
         tmp->set_bounds(min_coord, max_coord);
 
-        tmp->add_hotkey(index_to_letter(i));
+        tmp->add_hotkey(index_to_letter(cur));
         tmp->set_id(species);
         tmp->set_description_text(getGameStartDescription(species_name(species)));
         menu->attach_item(tmp);
@@ -654,6 +664,7 @@ static void _construct_species_menu(const newgame_def* ng,
         {
             menu->set_active_item(tmp);
         }
+        cur++;
     }
 
     // Add all the special button entries
