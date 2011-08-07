@@ -5,7 +5,6 @@ Probably-easy TODO list:
 	Make the heavily wounded icon a lighter shade of orange.
 	Revert Sticky Flame nerf
 	Fix the Lair/Swamp mosquito vault
-	Remove Shoals once more.  Too buggy.
 	Make Sorcery appear above the elemental schools in skills menu, maybe next to Enchantments.
 
 
@@ -80,3 +79,4 @@ Changes already made:
 	Autoexplore now fails if Str, Dex, or Int is at fatally low levels.
 	The halo surrounding TSO followers and divine beings is now visible when using tiles.
 	Megabat description updated.
+	Shoals removed, pending fixing of tiles version, gameplay tweaking.
