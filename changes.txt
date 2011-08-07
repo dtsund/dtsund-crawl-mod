@@ -2,6 +2,11 @@ Probably-easy TODO list:
 	Update the manual.
 	Locate the section of code sending a background color control sequence, make it optional.
 		This because Gnome terminal is a dumb.
+	Make the heavily wounded icon a lighter shade of orange.
+	Revert Sticky Flame nerf
+	Fix the Lair/Swamp mosquito vault
+	Remove Shoals once more.  Too buggy.
+	Make Sorcery appear above the elemental schools in skills menu, maybe next to Enchantments.
 
 
 Harder TODO list:
@@ -22,7 +27,9 @@ Long-term TODO list:
 		Reduce some See Invisible enemies to merely Sense Invisible, or no
 		invisibility detection at all
 	Overhaul some gods.
-		
+	Switch to an automatic build system, like autotools, cmake, something like that.
+		Hopefully, this will resolve OS X compatibility.
+
 
 Changes already made:
 	Monsters may no longer invoke Zot traps against the player.
@@ -72,3 +79,4 @@ Changes already made:
 	"Monstrous" demonspawn disabled for now.
 	Autoexplore now fails if Str, Dex, or Int is at fatally low levels.
 	The halo surrounding TSO followers and divine beings is now visible when using tiles.
+	Megabat description updated.

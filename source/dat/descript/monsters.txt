@@ -844,7 +844,7 @@ A black ant with poisonous pincers, about the size of a large dog.
 %%%%
 megabat
 
-A huge black bat.
+A huge black bat. This species, while native to dungeons, can sometimes be seen hanging from the roofs of bikesheds.
 %%%%
 goliath beetle
 
