@@ -2052,7 +2052,9 @@ static spret_type _do_cast(spell_type spell, int powc,
 
 
 
-
+//Converts the to-beat fail number into an intuitive string
+//representing the success rate. Used to use adjectives, now
+//uses actual percentage numbers!
 char* failure_rate_to_string(int fail)
 {
     //Because of multiple die shenanigans, need to convert
@@ -2065,16 +2067,13 @@ char* failure_rate_to_string(int fail)
         sprintf(buffer, "%d%%", 100);
         return buffer;
     }
-    //dtsund: Holy crap I hate C++ already.
-    //This could be a memory leak, but I don't know how the
-    //original code worked without heap allocation.
+
     int success = 100 - failPercent;
     sprintf(buffer, "%d%%", success);
     return buffer;
 
 /*
-    //Old failure string code below.  I'd rather use the more
-    //informative actual percentage values.
+    //Here are the old adjectives for posterity.
     return (fail == 100) ? "Useless"   : // 0% success chance
            (fail > 77)   ? "Terrible"  : // 0-5%
            (fail > 59)   ? "Very Poor" : // 5-30%
