@@ -331,7 +331,7 @@ static void _exercise(skill_type sk, int degree, int limit)
 void practise(exer_type ex, int param1)
 {
     //If autotraining, don't allow manual exercise to drain the skill pool
-    if((you.num_autotrained_skills != 0) || (ex == EX_READ_MANUAL))
+    if((you.num_autotrained_skills != 0) && (ex != EX_READ_MANUAL))
         return;
     
     skill_type sk = SK_NONE;
@@ -471,7 +471,7 @@ void practise(exer_type ex, int param1)
 
     case EX_READ_MANUAL:
         sk = static_cast<skill_type>(param1);
-        //exercise(sk, 500); Manuals now give skill levels outright
+        //Manuals now give skill levels outright
         read_manual(sk);
         break;
 
