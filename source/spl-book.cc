@@ -286,6 +286,7 @@ int book_rarity(uint8_t which_book)
     case BOOK_UNLIFE:
     case BOOK_CONTROL:
     case BOOK_SPATIAL_TRANSLOCATIONS:
+    case BOOK_BRANDS:
         return 10;
 
     case BOOK_TEMPESTS:
@@ -315,7 +316,6 @@ int book_rarity(uint8_t which_book)
     case BOOK_DESTRUCTION:
         return 30;
 
-    case BOOK_BRANDS:        // XXX: Temporarily disabled along with AM
 #if TAG_MAJOR_VERSION == 32
     case BOOK_MINOR_MAGIC_II:
     case BOOK_MINOR_MAGIC_III:
