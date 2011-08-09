@@ -1923,6 +1923,11 @@ int melee_attack::player_weapon_type_modify(int damage)
             attack_verb = "dice";
             verb_degree = " like an onion";
         }
+        else if (mons_genus(defender->as_monster()->type) == MONS_DOOR_MIMIC)
+        {
+            attack_verb = "open";
+            verb_degree = " like a door";
+        }        
         else
         {
             attack_verb = "open";
