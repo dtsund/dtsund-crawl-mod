@@ -2,7 +2,6 @@ Probably-easy TODO list:
 	Update the manual.
 	Revert Sticky Flame nerf
 	Make Sorcery appear above the elemental schools in skills menu, maybe next to Enchantments.
-	Update the randart spellbook name generator.
 	"That beam is likely to hit you" for Fire Storm and Ice Storm, LRD, Major Destruction
 	Casting LRD at a pandemonium vault wall resulted in 
 		"[string "global_prelude"]:64: attempt to index local 'vault' (a nil value)"

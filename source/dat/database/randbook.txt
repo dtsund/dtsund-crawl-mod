@@ -234,7 +234,7 @@ Spellcasting
 
 Wizardry
 
-Sorcery
+Thaumaturgy
 
 Witchcraft
 
@@ -421,7 +421,9 @@ Blows and Bruises
 w:1
 Damage Dealing
 %%%%
-Charms
+Enchantment
+
+Enchantment
 
 Enhancements
 
@@ -473,8 +475,6 @@ Malediction
 the Oath
 
 Execration
-
-Enchantment
 
 Bewitchment
 
@@ -589,21 +589,29 @@ the Compass
 
 the Voyage
 %%%%
-Poison
+Sorcery
 
-Poison
+Sorcery
 
 Venom
 
 Toxins
 
-Poisoning
-
 Intoxication
 
-Envenoming
-
 Contamination
+
+Hexes
+
+Curses
+
+Malediction
+
+the Oath
+
+Execration
+
+Bewitchment
 %%%%
 Earth
 
