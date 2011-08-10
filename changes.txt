@@ -1,9 +1,6 @@
 Probably-easy TODO list:
 	Update the manual.
-	Locate the section of code sending a background color control sequence, make it optional.
-		This because Gnome terminal is a dumb.
 	Revert Sticky Flame nerf
-	Fix the Lair/Swamp mosquito vault
 	Make Sorcery appear above the elemental schools in skills menu, maybe next to Enchantments.
 	Update the randart spellbook name generator.
 	"That beam is likely to hit you" for Fire Storm and Ice Storm, LRD, Major Destruction
@@ -14,6 +11,8 @@ Probably-easy TODO list:
 Harder TODO list:
 	Put a HP-indicator face next to the player's large HP bar, to make the new system more intuitive
 	Need better intro images!
+	Locate the section of code sending a background color control sequence, make it optional.
+		This because Gnome terminal is a dumb.
 
 
 Long-term TODO list:
@@ -84,3 +83,4 @@ Changes already made:
 	Megabat description updated.
 	Shoals removed, pending fixing of tiles version, gameplay tweaking.
 	Special-case message for slicing door mimics
+	Toned down the vampire mosquito Swamp entrance vault
