@@ -1,5 +1,5 @@
-I, Derrick 'dtsund' Sund, am indebted to the following people in the making
-of this fork.
+Derrick 'dtsund' Sund and Ben 'krelbel' Morris are indebted to the following
+people in the making of this fork.
 
 * Linley Henzell, the author of Dungeon Crawl, for writing this great game.
 
@@ -14,7 +14,7 @@ of this fork.
 
 * The people of #TalkingTime, ##arena, and everyone else who has played this
   fork and contributed feedback and/or given me ideas.  Particular thanks to
-  Kalir, Cait, krelbel, and Alex "ais523" Smith.
+  Kalir, Cait, and Alex "ais523" Smith.
 
 It is my sincere hope to be able to expand the first sentence of this document 
 in the future!
