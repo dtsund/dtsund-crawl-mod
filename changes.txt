@@ -2,7 +2,6 @@ Probably-easy TODO list:
 	Update the manual.
 	Locate the section of code sending a background color control sequence, make it optional.
 		This because Gnome terminal is a dumb.
-	Make the heavily wounded icon a lighter shade of orange.
 	Revert Sticky Flame nerf
 	Fix the Lair/Swamp mosquito vault
 	Make Sorcery appear above the elemental schools in skills menu, maybe next to Enchantments.
