@@ -433,6 +433,7 @@ Good Luck
 
 Protection
 
+Charms
 w:3
 Self-Knowledge
 
@@ -655,7 +656,7 @@ Excruciating
 w:5
 Lethal
 %%%%
-Charms adj
+Enchantment adj
 
 Helpful
 
@@ -665,21 +666,21 @@ Assistive
 
 Boosting
 %%%%
-Hexes adj
+Sorcery adj
 
-Enchanting
+Fell
 
 Bewitching
 
-Captivating
+Debilitating
 
 Fetching
 
-Enthralling
+Noxious
 
 Ensnaring
 
-Entrancing
+Enfeebling
 %%%%
 Fire adj
 
@@ -857,7 +858,7 @@ Nergalle
 
 __NONE
 %%%%
-Conjuration Poison owner
+Conjuration Sorcery owner
 
 w:5
 Aizul
@@ -904,7 +905,7 @@ Asmodeus
 
 __NONE
 %%%%
-highlevel Necromancy Poison owner
+highlevel Necromancy Sorcery owner
 
 Gloorx Vloq
 
@@ -1048,13 +1049,13 @@ Menkaure
 
 Khufu
 %%%%
-highlevel Poison owner
+highlevel Sorcery owner
 
 Gloorx Vloq
 
-@Poison owner@
+@Sorcery owner@
 %%%%
-Poison owner
+Sorcery owner
 
 Olgreb
 
