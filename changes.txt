@@ -6,6 +6,10 @@ Probably-easy TODO list:
 	Revert Sticky Flame nerf
 	Fix the Lair/Swamp mosquito vault
 	Make Sorcery appear above the elemental schools in skills menu, maybe next to Enchantments.
+	Update the randart spellbook name generator.
+	"That beam is likely to hit you" for Fire Storm and Ice Storm, LRD, Major Destruction
+	Casting LRD at a pandemonium vault wall resulted in 
+		"[string "global_prelude"]:64: attempt to index local 'vault' (a nil value)"
 
 
 Harder TODO list:
@@ -80,3 +84,4 @@ Changes already made:
 	The halo surrounding TSO followers and divine beings is now visible when using tiles.
 	Megabat description updated.
 	Shoals removed, pending fixing of tiles version, gameplay tweaking.
+	Special-case message for slicing door mimics

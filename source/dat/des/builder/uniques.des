@@ -325,7 +325,7 @@ DEPTH:  20-27, !Lair, !Slime
 NAME:   uniq_mennas
 # would be cool to get him wandering around Pan too
 DEPTH:  20-27, !Lair, !Slime
-: place_unique(_G, "Mennas")
+: place_unique(_G, "Mennas band")
 
 
 ################################################################################
