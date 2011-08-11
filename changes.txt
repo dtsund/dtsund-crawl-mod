@@ -2,7 +2,6 @@ Probably-easy TODO list:
 	Update the manual.
 	Revert Sticky Flame nerf
 	Make Sorcery appear above the elemental schools in skills menu, maybe next to Enchantments.
-	Prevent player from making shaft traps.
 
 
 Harder TODO list:
@@ -85,3 +84,4 @@ Changes already made:
 	"That beam is likely to hit you" implemented for Fire Storm, Ice Storm, Major Destruction
 	Removed the Disco Hall vault; sadly, it is rather buggy in tiles.
 	Summon Butterflies restored to the book of Cantrips.
+	Player can no longer make shaft traps with cards; Minefield no longer makes teleportation traps either.

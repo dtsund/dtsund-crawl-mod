@@ -1607,7 +1607,7 @@ static void _minefield_card(int power, deck_rarity_type rarity)
             if (you.level_type == LEVEL_ABYSS)
                 grd(*ri) = coinflip() ? DNGN_DEEP_WATER : DNGN_LAVA;
             else
-                place_specific_trap(*ri, TRAP_RANDOM);
+                place_specific_trap(*ri, TRAP_NONTELEPORT);
         }
     }
 }
