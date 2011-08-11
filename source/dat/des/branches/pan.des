@@ -936,50 +936,52 @@ ENDMAP
 # Sadly, this vault works well only in text. If we could get changing tiles,
 # it would be great, but for now, these are static.
 #
-NAME:   pan_disco_hall
-TAGS:   pan no_rotate
-ORIENT: float
-SUBST:  - = 0:1 / .:10
-COLOUR: D = random
-COLOUR: .x = disco
-COLOUR: 0123456789 = disco
-KFEAT:  D = granite_statue
-MARKER: D = lua:portal_desc { desc="weirdly glowing ball", \
-            desc_long=("This floating ball radiates with shimmering light.") }
-MARKER: D = lua:props_marker { veto_fragmentation="veto", \
-                               veto_disintegrate="veto", \
-                               veto_shatter="veto" }
-MONS:   col:random name:demonic name_adjective plant
-MONS:   red devil ; demon trident good_item ego:distortion
-MONS:   red devil ; lajatang good_item ego:distortion
-MONS:   red devil ; katana good_item ego:distortion
-RTILE:  x = wall_zot_blue / wall_zot_green / wall_zot_cyan / wall_zot_red /\
-            wall_zot_magenta / wall_zot_yellow
+# dtsund - It's not just static in Tiles, it's horribly buggy.  Commenting out.
+
+#NAME:   pan_disco_hall
+#TAGS:   pan no_rotate
+#ORIENT: float
+#SUBST:  - = 0:1 / .:10
+#COLOUR: D = random
+#COLOUR: .x = disco
+#COLOUR: 0123456789 = disco
+#KFEAT:  D = granite_statue
+#MARKER: D = lua:portal_desc { desc="weirdly glowing ball", \
+#            desc_long=("This floating ball radiates with shimmering light.") }
+#MARKER: D = lua:props_marker { veto_fragmentation="veto", \
+#                               veto_disintegrate="veto", \
+#                               veto_shatter="veto" }
+#MONS:   col:random name:demonic name_adjective plant
+#MONS:   red devil ; demon trident good_item ego:distortion
+#MONS:   red devil ; lajatang good_item ego:distortion
+#MONS:   red devil ; katana good_item ego:distortion
+#RTILE:  x = wall_zot_blue / wall_zot_green / wall_zot_cyan / wall_zot_red /\
+#            wall_zot_magenta / wall_zot_yellow
 # alas, floor tiles are not distinguished from walls enough, commenting out:
 # FTILE: . = floor_moss / floor_dirt / floor_hive / floor_rough_red /\
 #            floor_snake / floor_swamp
-KFEAT:  _ = floor
-FTILE:  _ = floor_hall
-MAP
-                   xx@xx
-                   x1.1x
-                   x...x
-   xxxxxxxxxxxxxxxxxx.xxxxxxxxxxxxxxxxxxxxxxx
-   x........................x---------------x
-   x.x.x.x.x.x.x.x.x.x.x.x..x---------------x
-   x........................x---------------xxxxxx
-   x.x.x.x.x.x.x.x.x.x.x.x..x---------------_....x
-xxxx.........................---------------_..2.x
-x1.x.........................---------------_....x
-@...........................D---------------_..3.x
-x1.x.........................---------------_....x
-xxxx.........................---------------_..4.x
-   x.xxxxxxxxxxxxxxxxxxxxx..x---------------_....x
-   x.x0.0x..0x0.0x0.0x..0x..x---------------xxxxxx
-   x.x0..x0..x...x0..x...x..x---------------x
-   x........................x---------------x
-   xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
-ENDMAP
+#KFEAT:  _ = floor
+#FTILE:  _ = floor_hall
+#MAP
+#                   xx@xx
+#                   x1.1x
+#                   x...x
+#   xxxxxxxxxxxxxxxxxx.xxxxxxxxxxxxxxxxxxxxxxx
+#   x........................x---------------x
+#   x.x.x.x.x.x.x.x.x.x.x.x..x---------------x
+#   x........................x---------------xxxxxx
+#   x.x.x.x.x.x.x.x.x.x.x.x..x---------------_....x
+#xxxx.........................---------------_..2.x
+#x1.x.........................---------------_....x
+#@...........................D---------------_..3.x
+#x1.x.........................---------------_....x
+#xxxx.........................---------------_..4.x
+#   x.xxxxxxxxxxxxxxxxxxxxx..x---------------_....x
+#   x.x0.0x..0x0.0x0.0x..0x..x---------------xxxxxx
+#   x.x0..x0..x...x0..x...x..x---------------x
+#   x........................x---------------x
+#   xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+#ENDMAP
 
 
 ##############################################################################
