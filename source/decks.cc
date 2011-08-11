@@ -1582,18 +1582,13 @@ static void _flight_card(int power, deck_rarity_type rarity)
 
     if (power_level == 2) // Stacks with the above.
     {
-        if (is_valid_shaft_level() && grd(you.pos()) == DNGN_FLOOR)
-        {
-            if (place_specific_trap(you.pos(), TRAP_SHAFT))
-            {
-                find_trap(you.pos())->reveal();
-                mpr("A shaft materialises beneath you!");
-            }
-        }
-    }
-    if (one_chance_in(4 - power_level))
+        //Removed the shaft trap because it was exploitable; dropping
+        //onto the Orb of Zot, anyone?  Invisibility is now guaranteed
+        //for power_level 2, but will never happen otherwise.
         potion_effect(POT_INVISIBILITY, random2(power)/4);
-    else if (!success)
+    }
+
+    if (!success)
         canned_msg(MSG_NOTHING_HAPPENS);
 }
 
