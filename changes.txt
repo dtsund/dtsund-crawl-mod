@@ -2,8 +2,6 @@ Probably-easy TODO list:
 	Update the manual.
 	Revert Sticky Flame nerf
 	Make Sorcery appear above the elemental schools in skills menu, maybe next to Enchantments.
-	Casting LRD at a pandemonium vault wall resulted in 
-		"[string "global_prelude"]:64: attempt to index local 'vault' (a nil value)"
 
 
 Harder TODO list:
@@ -83,3 +81,4 @@ Changes already made:
 	Special-case message for slicing door mimics
 	Toned down the vampire mosquito Swamp entrance vault
 	"That beam is likely to hit you" implemented for Fire Storm, Ice Storm, Major Destruction
+	Removed the Disco Hall vault; sadly, it is rather buggy in tiles.
