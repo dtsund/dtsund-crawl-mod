@@ -3784,6 +3784,10 @@ bool makhleb_major_destruction()
     // highest range possible (orb of electricity).
     if (!player_tracer(ZAP_DEBUGGING_RAY, power, beam, 20))
         return (false);
+    //Inform the player if the chosen target might be unwise, in the
+    //Orb of Electrocution case
+    if (!player_tracer(ZAP_ORB_OF_ELECTRICITY, power, beam, 20))
+        return false;
 
     {
         zap_type ztype = ZAP_DEBUGGING_RAY;
