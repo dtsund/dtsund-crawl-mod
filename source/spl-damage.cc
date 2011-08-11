@@ -44,10 +44,18 @@ bool fireball(int pow, bolt &beam)
     return (zapping(ZAP_FIREBALL, pow, beam, true));
 }
 
+//Set up the parameters for the Fire Storm explosion.  The beam
+//will be fired first as a tracer, to ensure that the player doesn't
+//accidentally blast himself with it, then as an actual spell;
+//these parameters are for the tracer.
+//The parameters needed to be reset for the actual casting of the
+//spell (beam.ex_size, beam.is_tracer, and beam.in_explosion_phase)
+//are reset after the tracer is fired in cast_fire_storm.
 void setup_fire_storm(const actor *source, int pow, bolt &beam)
 {
     beam.name         = "great blast of fire";
-    beam.ex_size      = 2 + (random2(pow) > 75);
+    //The explosion size can be 2 or 3, but use 3 for the tracer.
+    beam.ex_size      = 3;
     beam.flavour      = BEAM_LAVA;
     beam.real_flavour = beam.flavour;
     beam.glyph        = dchar_glyph(DCHAR_FIRED_ZAP);
@@ -59,7 +67,7 @@ void setup_fire_storm(const actor *source, int pow, bolt &beam)
     beam.aux_source.clear();
     beam.obvious_effect = false;
     beam.is_beam      = false;
-    beam.is_tracer    = false;
+    beam.is_tracer    = true;
     beam.is_explosion = true;
     beam.ench_power   = pow;      // used for radius
     beam.hit          = 20 + pow / 10;
@@ -71,7 +79,25 @@ bool cast_fire_storm(int pow, bolt &beam)
     if (distance(beam.target, beam.source) > dist_range(beam.range))
         return (false);
 
+
     setup_fire_storm(&you, pow, beam);
+    
+    beam.explode(false);
+
+    if (beam.beam_cancelled)
+    {
+        //Player aborted the casting.
+        canned_msg(MSG_OK);
+        return (false);
+    }
+    
+    //Reset the parameters.  beam.ex_size was 3 before to make
+    //*absolutely* sure the player doesn't hit him/herself;
+    //Fire Storm *hurts*.
+    beam.ex_size            = 2 + (random2(pow) > 75);
+    beam.is_tracer          = false;
+    //Failure to reset in_explosion_phase means failing an assert.
+    beam.in_explosion_phase = false;
 
     mpr("A raging storm of fire appears!");
 
