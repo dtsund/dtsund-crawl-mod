@@ -2,13 +2,10 @@ Probably-easy TODO list:
 	Update the manual.
 	Revert Sticky Flame nerf
 	Make Sorcery appear above the elemental schools in skills menu, maybe next to Enchantments.
+	Prevent player from making shaft traps.
 
 
 Harder TODO list:
-	Put a HP-indicator face next to the player's large HP bar, to make the new system more intuitive
-	Need better intro images!
-	Locate the section of code sending a background color control sequence, make it optional.
-		This because Gnome terminal is a dumb.
 
 
 Long-term TODO list:
@@ -26,6 +23,11 @@ Long-term TODO list:
 	Overhaul some gods.
 	Switch to an automatic build system, like autotools, cmake, something like that.
 		Hopefully, this will resolve OS X compatibility.
+	Put a HP-indicator face next to the player's large HP bar, to make the new system more intuitive
+	Need better intro images!
+	Locate the section of code sending a background color control sequence, make it optional.
+		This because Gnome terminal is a dumb.
+	Break enum.h into smaller enum files, so changing one little thing about the enums doesn't force total recompilation.
 
 
 Changes already made:
@@ -82,3 +84,4 @@ Changes already made:
 	Toned down the vampire mosquito Swamp entrance vault
 	"That beam is likely to hit you" implemented for Fire Storm, Ice Storm, Major Destruction
 	Removed the Disco Hall vault; sadly, it is rather buggy in tiles.
+	Summon Butterflies restored to the book of Cantrips.
