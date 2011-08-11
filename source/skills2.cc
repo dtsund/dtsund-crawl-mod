@@ -1938,7 +1938,6 @@ bool is_invalid_skill(skill_type skill)
     return (false);
 }
 
-//This'll need to be changed; the autotrain case will be different
 void dump_skills(std::string &text)
 {
     char tmp_quant[20];
