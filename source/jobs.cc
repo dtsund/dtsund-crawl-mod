@@ -26,7 +26,7 @@ static const char * Job_Name_List[ NUM_JOBS ] =
 #if TAG_MAJOR_VERSION == 32
       "Paladin",
 #endif
-      "Assassin", "Berserker", "Hunter", "Conjurer", "Enchanter",
+      "Assassin", "Berserker", "Hunter", "Conjurer", "Sorcerer",
       "Fire Elementalist", "Ice Elementalist", "Summoner", "Air Elementalist",
       "Earth Elementalist", "Crusader",
       "Venom Mage",
