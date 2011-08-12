@@ -1,6 +1,5 @@
 Probably-easy TODO list:
 	Update the manual.
-	Make Sorcery appear above the elemental schools in skills menu, maybe next to Enchantments.
 
 
 Harder TODO list:
