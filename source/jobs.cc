@@ -11,7 +11,7 @@ static const char * Job_Abbrev_List[ NUM_JOBS ] =
       "Pa",
 #endif
       "As", "Be", "Hu",
-      "Cj", "En", "FE", "IE", "Su", "AE", "EE", "Cr",
+      "Cj", "So", "FE", "IE", "Su", "AE", "EE", "Cr",
       "VM",
       "CK", "Tm", "He",
 #if TAG_MAJOR_VERSION == 32
