@@ -9,7 +9,7 @@ accepted - that depends entirely on content.
 Required tools
 --------------
 
-The Stone Soup project uses git for version control. It is preferred, although
+The Crawl Light project uses git for version control. It is preferred, although
 not mandatory, for the contributors to get acquinted with the git workflow and
 submit their patches in the git format. For Windows, msysgit is a good,
 self-contained package of all the required tools for Windows.
@@ -26,7 +26,7 @@ Main steps
     text files.
 
 1.) Make a local clone of the source code:
-    git clone git@gitorious.org:crawl/crawl.git
+    git clone git@github.com:dtsund/dtsund-crawl-mod.git
 
 2.) Compile the code. To do this you might have to install a compiler and/or
     additional libraries. See INSTALL.txt for details. If you have any
@@ -53,8 +53,8 @@ Main steps
     Where n is the number of commits you made. Each is made into a separate
     patch file.
 
-6.) Upload the patch file(s) on Mantis at
-    http://crawl.develz.org/mantis/main_page.php
+6.) Upload the patch file(s) on the wiki at
+    https://github.com/dtsund/dtsund-crawl-mod/wiki
 
     Here it is immensely helpful if you give a summary of what the patch is
     about. If you created it in response to a bug report or an "Implementable",

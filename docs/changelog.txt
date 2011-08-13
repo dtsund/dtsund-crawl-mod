@@ -87,6 +87,11 @@ Items
 * Every non-randart spellbook now has a unique description.
 * Crystal ball of energy nerf reverted.
 
+Technical
+---------
+* All god invocation code is now in god-abil.cc
+* mkrelease.sh script is now responsible for making build.h and tarballs
+
 
 Stone Soup 0.8 (20110426)
 -------------------------

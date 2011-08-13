@@ -1,5 +1,5 @@
 #
-# Dungeon Crawl Stone Soup
+# Crawl Light
 # GNU Makefile
 #
 # largely written by Steven Noonan <steven@uplinklabs.net>
@@ -871,7 +871,7 @@ GENERATED_HEADERS := art-enum.h #the rest are private
 GENERATED_FILES := $(GENERATED_HEADERS) art-data.h mon-mst.h $(RLTILES)/dc-unrand.txt compflag.h
 
 GAME_DEPENDS  := $(DESTTILEFILES) $(OBJECTS) $(EXTRA_OBJECTS) $(CONTRIB_LIBS)
-SRC_PKG_BASE  := stone_soup
+SRC_PKG_BASE  := crawl_light
 SRC_VERSION   := $(shell git describe --tags --long $(MERGE_BASE) 2>/dev/null || cat util/release_ver)
 
 # when making release builds, use just the bare tag
@@ -941,6 +941,8 @@ depend: $(OBJECTS:.o=.d) $(YACC_OBJECTS:.o=.d)
 # "crawl -version"
 compflag.h: $(OBJECTS:.o=.cc) util/gen-cflg.pl
 	$(QUIET_GEN)util/gen-cflg.pl compflag.h "$(ALL_CFLAGS)" "$(LDFLAGS)" "$(HOST)" "$(ARCH)"
+
+# build.h is now produced using the mkrelease.sh script.  Run that manually.
 
 version.o: build.h compflag.h
 
@@ -1188,48 +1190,6 @@ endif
 clean-rltiles:
 	$(RM) $(DESTTILEFILES)
 	+$(MAKE) -C $(RLTILES) distclean
-
-#############################################################################
-# Packaging a source tarball for release
-#
-
-# To package, you *must* have lex and yacc to generate the intermediates.
-BSRC = build/crawl-ref/source/
-package-source: prebuildyacc
-	+@$(MAKE) source
-
-source: removeold
-	@git branch >/dev/null 2>/dev/null || (echo You can package source only from git. && false)
-	rm -rf build
-	mkdir build
-	(cd ../..;git ls-files| \
-		grep -v -f crawl-ref/source/misc/src-pkg-excludes.lst| \
-		tar cf - -T -)|tar xf - -C build
-	for x in lua pcre sqlite libpng freetype sdl sdl-image zlib; \
-	  do \
-	   mkdir -p $(BSRC)contrib/$$x; \
-	   (cd contrib/$$x;git ls-files|tar cf - -T -)| \
-		tar xf - -C $(BSRC)contrib/$$x; \
-	  done
-	find build -name .gitignore -execdir rm -f '{}' +
-	(git describe --tags --long $(MERGE_BASE) 2> /dev/null || \
-	  git describe --tags $(MERGE_BASE) 2> /dev/null) \
-	  > $(BSRC)util/release_ver
-	cd build && mv crawl-ref $(PKG_SRC_DIR)
-	cd build && tar cfj ../../../$(SRC_PKG_TAR) $(PKG_SRC_DIR)
-	@if which zip >/dev/null; then \
-	  echo "cd build && zip -rq ../../../$(SRC_PKG_ZIP) $(PKG_SRC_DIR)"; \
-	  cd build && zip -rq ../../../$(SRC_PKG_ZIP) $(PKG_SRC_DIR); \
-	else \
-	  echo "**** No ZIP installed -- not creating the zipball."; \
-	fi
-	cd build && rm -rf $(PKG_SRC_DIR)/source/contrib \
-		 && tar cjf ../../../$(SRC_PKG_TAR_NODEPS) $(PKG_SRC_DIR)
-	rm -rf build
-
-removeold:
-	if [ -f ../../$(SRC_PKG_TAR) ]; then $(RM) ../../$(SRC_PKG_TAR); fi
-	if [ -f ../../$(SRC_PKG_ZIP) ]; then $(RM) ../../$(SRC_PKG_ZIP); fi
 
 #############################################################################
 # Building the unified Windows package.
