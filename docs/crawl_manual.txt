@@ -1200,17 +1200,18 @@ characters (being 'YAAD' or 'YASD', i.e. 'Yet Another Annoying/Stupid Death').
 The Usenet newsgroup rec.games.roguelike.misc, in operation for decades, still
 exists but traffic has trickled down. If you want to post on the newsgroup,
 flag queries with -crawl- as other games are also discussed there.
-Some players, especially those on crawl.akrasiac.org and crawl.develz.org, also
-frequent ##crawl on IRC's freenode network.
+There is also a Crawl Light channel on the FreeNode IRC network, #crawllight.
 
 Crawl Light's homepage is at:
 
-  COMING SOON
+  http://crawl.aerdan.org
 
-Use this page for direct links to downloads of the most recent version. You can
-also submit bug reports and feature requests there. Be sure to make sure that
-your bug/feature isn't already in the list. For more complicated requests, it
-might be a good idea to discuss them in the newsgroup first.
+Use this page for direct links to downloads of the most recent version, as well
+as to the github page where the project is hosted. You can submit bug reports
+and feature requests on the github page wiki. Be sure to make sure that your 
+bug/feature isn't already in the list. For more complicated requests, it might
+be a good idea to bring them up in the brainstorming page first before posting
+to the suggestions page.
 
 The history of Crawl is somewhat convoluted: Crawl was created in 1995 by Linley
 Henzell. Linley based Crawl loosely on Angband and NetHack, but avoided several

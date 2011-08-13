@@ -1,3 +1,93 @@
+Crawl Light 0.1 (20110812)
+--------------------------
+
+Disclaimer: These are merely the highlights, not an exhaustive list of changes.
+Breaks save compatibility with the Stone Soup 0.7 release.
+
+Crawl Light 0.1 Highlights
+--------------------------
+* Charms, Hexes, and Poison Magic reshuffled to make the new Enchantments and Sorcery schools.
+* Restored spell: Selective Amnesia.
+* Restored background: Arcane Marksman.  Now uses a different list of spells.
+* Removed species: Felids and Demigods.
+* Acquirement now lets players choose between specific items rather than classes of items.
+* Haste and Slow nerf reverted.
+* Tweaked backgrounds: Fighter, Gladiator, Monk, Assassin, Hunter, Stalker, Wizard, Crusader.
+* Automatic training of skills is now possible.
+
+Character
+---------
+* Removed the Felid and Demigod races.
+* Restored the Arcane Marksman background.  Now uses the new book of Distance, detailed below.
+* High Elves' -2 Poison Magic aptitude improved to +1 Sorcery.
+* Halflings' 0 Charms aptitude lowered to -1 Enchantments, -1 Poison Magic improved to 0 Sorcery.
+* Centaurs' -2 Poison Magic aptitude improved to -1 Sorcery.
+* Spriggans' 0 Poison Magic aptitude improved to +2 Sorcery.
+* Vampires' +1 Enchantments aptitude lowered to 0 Charms, -1 Poison Magic improved to +1 Sorcery.
+* Assassins now get a wider variety of needles to use.
+* Fighters now get better weaponry.
+* Hunters may no longer start with nets and javelins.
+* Gladiators now get javelins instead of a buckler, or exploding darts for small races.
+* Monks now begin the game with a +3,+0 ring of slaying.
+* Hunters now begin the game with more ammunition.
+* Okawaru followers now gain access to Might and Haste, rather than Heroism and Finesse.
+* Removed "monstrous" Demonspawn.
+
+Interface
+---------
+* Ability success rates are now displayed as percentages, rather than adjectives.
+* Automatic training is now available in the skills menu.
+* Monster HP indicator tiles have been replaced with less misleading icons.
+* Autoexplore now fails if Str, Int, or Dex is at lethally low levels.
+* The halo surrounding holy beings and TSO followers is now visible in the tiles version.
+* Fire Storm, Ice Storm, and Major Destruction now warn players if they're likely to catch themselves in an explosion.
+
+Spells
+------
+* The Charms, Hexes, and Poison Magic schools have been replaced with Enchantments and Sorcery.
+* Except where otherwise noted, new Sorcery aptitudes are equal to old Poison Magic aptitudes.
+* Except where otherwise noted, new Enchantments aptitudes are equal to old Charms aptitudes.
+* Slow is now level 2 Ench/Sorc (was level 2 Hex).
+* Leda's Liquefaction is now level 5 Sorc/Earth (was level 5 Tmut/Earth).
+* Passwall is now level 3 Tloc/Earth (was level 3 Tmut/Earth).
+* Replaced Recall with Passwall in the book of Spatial Translocations.
+* Replaced Repel Missiles with Throw Frost in the book of Minor Magic.
+* Replaced Silence with Haste in the book of War Chants.
+* Restored Summon Butterflies to the book of Cantrips.
+* New book of Stalking: Corona, Fulsome Distillation, Evaporate, Blink, Ensorcelled Hibernation, Passwall.
+* Added book of Distance for Arcane Marksmen: Corona, Slow, Poison Weapon, Leda's Liquefaction, Cause Fear.
+* The Stone Soup 0.8 nerf of the Haste and Slow effects has been reverted.
+* Skills sufficient to grant 98% success or greater now confer 100% success for spellcasting.
+* Restored the Selective Amnesia spell.  Now found in the books of Wizardry, Enchantments, and Dreams.
+* Sticky Flame nerf reverted.
+
+Monsters
+--------
+* Monsters may no longer invoke Zot traps against the player.
+* Silent spectres have been completely overhauled to be fast but weak Silence-casters.
+* Skeletal warrior packs now have a chance of containing one, or rarely more, silent spectres.
+* Mennas' evasion lowered from 28 to 20, large shield reduced to medium shield.
+* Removed Silence from Mennas' spell list; instead, he has a band of holy-flavoured silent spectres.
+* Updated the megabat description.
+* Added a special case message when attacking door mimics.
+
+Levels
+------
+* Shoals has been temporarily disabled, pending an overhaul.
+* Toned down the deadliness of a Swamp entrance vault with vampire mosquitos.
+* Removed the disco hall Pandemonium vault; it is extremely buggy in the tiles version.
+* Removed the ability for players to place shaft traps using Flight and Minefield cards.
+* Ghost moths removed from possible Spider's Nests.
+
+Items
+-----
+* Scrolls of acquirement now let the player choose between specific items rather than broad classes of item.
+* Misc. acquirement replaced with potion acquirement.
+* Manuals now increase the appropriate skill by 3 levels when read, disintegrate immediately.
+* Every non-randart spellbook now has a unique description.
+* Crystal ball of energy nerf reverted.
+
+
 Stone Soup 0.8 (20110426)
 -------------------------
 
