@@ -1,3 +1,0 @@
-#define CRAWL_VERSION_FINAL true
-#define CRAWL_VERSION_SHORT "0.1"
-#define CRAWL_VERSION_LONG "0.1 Beta"
