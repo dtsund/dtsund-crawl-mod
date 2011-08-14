@@ -1,5 +1,5 @@
-Derrick 'dtsund' Sund and Ben 'krelbel' Morris are indebted to the following
-people in the making of this fork.
+Derrick 'dtsund' Sund, Ben 'krelbel' Morris, and Kiyoshi 'Aerdan' Aman are
+indebted to the following people in the making of this fork.
 
 * Linley Henzell, the author of Dungeon Crawl, for writing this great game.
 

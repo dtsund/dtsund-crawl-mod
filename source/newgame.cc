@@ -251,6 +251,10 @@ static void _resolve_species(newgame_def* ng, const newgame_def* ng_choice)
         {
             // any species will do
             ng->species = get_species(random2(ng_num_species()));
+            
+            //Felids and demigods are disabled; make them humans
+            if(ng->species == SP_CAT || ng->species == SP_DEMIGOD)
+                ng->species = SP_HUMAN;
         }
         else
         {
