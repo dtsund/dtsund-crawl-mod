@@ -4,7 +4,7 @@
 	<key>CFBundleDevelopmentRegion</key>
 	<string>English</string>
 	<key>CFBundleDisplayName</key>
-	<string>%NAME%</string>
+	<string>Dungeon Crawl Stone Soup</string>
 	<key>CFBundleIdentifier</key>
 	<string>net.sourceforge.crawl-ref</string>
 	<key>CFBundleInfoDictionaryVersion</key>

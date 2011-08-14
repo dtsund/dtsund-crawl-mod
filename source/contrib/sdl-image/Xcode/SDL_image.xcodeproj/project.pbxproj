@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 42;
+	objectVersion = 46;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -324,9 +324,16 @@
 /* Begin PBXProject section */
 		0867D690FE84028FC02AAC07 /* Project object */ = {
 			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0410;
+			};
 			buildConfigurationList = 00B7E3B6097EB73D00826121 /* Build configuration list for PBXProject "SDL_image" */;
-			compatibilityVersion = "Xcode 2.4";
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
 			hasScannedForEncodings = 1;
+			knownRegions = (
+				en,
+			);
 			mainGroup = 0867D691FE84028FC02AAC07 /* SDL_imageFramework */;
 			productRefGroup = 034768DDFF38A45A11DB9C8B /* Products */;
 			projectDirPath = "";
@@ -474,24 +481,15 @@
 		007288110F0DA5BA00C302A9 /* Development_ImageIO */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ARCHS = "$(ARCHS_STANDARD_32_64_BIT_PRE_XCODE_3_1)";
-				ARCHS_STANDARD_32_64_BIT_PRE_XCODE_3_1 = "x86_64 i386 ppc";
+				ARCHS = "$(ARCHS_STANDARD_32_64_BIT)";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(PROJECT_DIR)/../../Frameworks/Default",
 					"$(PROJECT_DIR)/../../Frameworks/Release",
 					"$(HOME)/Library/Frameworks",
 					/Library/Frameworks,
 				);
-				GCC_VERSION_i386 = 4.0;
-				GCC_VERSION_ppc = 4.0;
-				GCC_VERSION_x86_64 = 4.2;
-				MACOSX_DEPLOYMENT_TARGET_i386 = 10.4;
-				MACOSX_DEPLOYMENT_TARGET_ppc = 10.4;
-				MACOSX_DEPLOYMENT_TARGET_x86_64 = 10.6;
-				SDKROOT = /Developer/SDKs/MacOSX10.4u.sdk;
-				SDKROOT_i386 = /Developer/SDKs/MacOSX10.4u.sdk;
-				SDKROOT_ppc = /Developer/SDKs/MacOSX10.4u.sdk;
-				SDKROOT_x86_64 = /Developer/SDKs/MacOSX10.6.sdk;
+				MACOSX_DEPLOYMENT_TARGET = 10.5;
+				SDKROOT = "";
 				SYMROOT = "$(PROJECT_DIR)/../../Frameworks";
 			};
 			name = Development_ImageIO;
@@ -499,11 +497,11 @@
 		007288120F0DA5BA00C302A9 /* Development_ImageIO */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_32_64_BIT)";
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				FRAMEWORK_VERSION = A;
 				GCC_DYNAMIC_NO_PIC = NO;
-				GCC_ENABLE_FIX_AND_CONTINUE = YES;
 				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
 				GCC_OPTIMIZATION_LEVEL = 0;
 				GCC_PREPROCESSOR_DEFINITIONS = (
@@ -524,6 +522,7 @@
 				INSTALL_PATH = "@executable_path/../Frameworks";
 				OTHER_CFLAGS = "";
 				PRODUCT_NAME = SDL_image;
+				SDKROOT = "";
 				SECTORDER_FLAGS = "";
 				WARNING_CFLAGS = (
 					"-Wall",
@@ -540,7 +539,6 @@
 				DYLIB_CURRENT_VERSION = 1;
 				FRAMEWORK_SEARCH_PATHS = "";
 				GCC_DYNAMIC_NO_PIC = NO;
-				GCC_ENABLE_FIX_AND_CONTINUE = YES;
 				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
 				GCC_OPTIMIZATION_LEVEL = 0;
 				GCC_PREPROCESSOR_DEFINITIONS = (
@@ -574,7 +572,6 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				GCC_DYNAMIC_NO_PIC = NO;
-				GCC_ENABLE_FIX_AND_CONTINUE = YES;
 				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
 				GCC_OPTIMIZATION_LEVEL = 0;
 				OTHER_CFLAGS = "";
@@ -595,24 +592,15 @@
 		007288150F0DA5C400C302A9 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ARCHS = "$(ARCHS_STANDARD_32_64_BIT_PRE_XCODE_3_1)";
-				ARCHS_STANDARD_32_64_BIT_PRE_XCODE_3_1 = "x86_64 i386 ppc";
+				ARCHS = "$(ARCHS_STANDARD_32_64_BIT)";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(PROJECT_DIR)/../../Frameworks/Default",
 					"$(PROJECT_DIR)/../../Frameworks/Release",
 					"$(HOME)/Library/Frameworks",
 					/Library/Frameworks,
 				);
-				GCC_VERSION_i386 = 4.0;
-				GCC_VERSION_ppc = 4.0;
-				GCC_VERSION_x86_64 = 4.2;
-				MACOSX_DEPLOYMENT_TARGET_i386 = 10.4;
-				MACOSX_DEPLOYMENT_TARGET_ppc = 10.4;
-				MACOSX_DEPLOYMENT_TARGET_x86_64 = 10.6;
-				SDKROOT = /Developer/SDKs/MacOSX10.4u.sdk;
-				SDKROOT_i386 = /Developer/SDKs/MacOSX10.4u.sdk;
-				SDKROOT_ppc = /Developer/SDKs/MacOSX10.4u.sdk;
-				SDKROOT_x86_64 = /Developer/SDKs/MacOSX10.6.sdk;
+				MACOSX_DEPLOYMENT_TARGET = 10.5;
+				SDKROOT = "";
 				SYMROOT = "$(PROJECT_DIR)/../../Frameworks";
 			};
 			name = Release;
@@ -620,10 +608,10 @@
 		007288160F0DA5C400C302A9 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_32_64_BIT)";
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				FRAMEWORK_VERSION = A;
-				GCC_ENABLE_FIX_AND_CONTINUE = NO;
 				GCC_GENERATE_DEBUGGING_SYMBOLS = NO;
 				GCC_PREPROCESSOR_DEFINITIONS = (
 					LOAD_LBM,
@@ -643,6 +631,7 @@
 				INSTALL_PATH = "@executable_path/../Frameworks";
 				OTHER_CFLAGS = "";
 				PRODUCT_NAME = SDL_image;
+				SDKROOT = "";
 				SECTORDER_FLAGS = "";
 				WARNING_CFLAGS = (
 					"-Wall",
@@ -658,7 +647,6 @@
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				FRAMEWORK_SEARCH_PATHS = "";
-				GCC_ENABLE_FIX_AND_CONTINUE = NO;
 				GCC_GENERATE_DEBUGGING_SYMBOLS = NO;
 				GCC_PREPROCESSOR_DEFINITIONS = (
 					LOAD_LBM,
@@ -690,7 +678,6 @@
 		007288180F0DA5C400C302A9 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				GCC_ENABLE_FIX_AND_CONTINUE = NO;
 				OTHER_CFLAGS = "";
 				OTHER_LDFLAGS = "";
 				OTHER_REZFLAGS = "";
@@ -709,11 +696,11 @@
 		00B7E3AB097EB73D00826121 /* Development_legacy */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_32_64_BIT)";
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				FRAMEWORK_VERSION = A;
 				GCC_DYNAMIC_NO_PIC = NO;
-				GCC_ENABLE_FIX_AND_CONTINUE = YES;
 				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
 				GCC_OPTIMIZATION_LEVEL = 0;
 				GCC_PREPROCESSOR_DEFINITIONS = (
@@ -746,6 +733,7 @@
 					"-lz",
 				);
 				PRODUCT_NAME = SDL_image;
+				SDKROOT = "";
 				SECTORDER_FLAGS = "";
 				WARNING_CFLAGS = (
 					"-Wall",
@@ -758,10 +746,10 @@
 		00B7E3AC097EB73D00826121 /* Deployment_legacy */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_32_64_BIT)";
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				FRAMEWORK_VERSION = A;
-				GCC_ENABLE_FIX_AND_CONTINUE = NO;
 				GCC_GENERATE_DEBUGGING_SYMBOLS = NO;
 				GCC_PREPROCESSOR_DEFINITIONS = (
 					LOAD_BMP,
@@ -792,6 +780,7 @@
 					"-lz",
 				);
 				PRODUCT_NAME = SDL_image;
+				SDKROOT = "";
 				SECTORDER_FLAGS = "";
 				WARNING_CFLAGS = (
 					"-Wall",
@@ -804,6 +793,7 @@
 		00B7E3AD097EB73D00826121 /* Default */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_32_64_BIT)";
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				FRAMEWORK_VERSION = A;
@@ -831,6 +821,7 @@
 					"-lz",
 				);
 				PRODUCT_NAME = SDL_image;
+				SDKROOT = "";
 				SECTORDER_FLAGS = "";
 				WARNING_CFLAGS = (
 					"-Wall",
@@ -847,7 +838,6 @@
 				DYLIB_CURRENT_VERSION = 1;
 				FRAMEWORK_SEARCH_PATHS = "";
 				GCC_DYNAMIC_NO_PIC = NO;
-				GCC_ENABLE_FIX_AND_CONTINUE = YES;
 				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
 				GCC_OPTIMIZATION_LEVEL = 0;
 				GCC_PREPROCESSOR_DEFINITIONS = (
@@ -895,7 +885,6 @@
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				FRAMEWORK_SEARCH_PATHS = "";
-				GCC_ENABLE_FIX_AND_CONTINUE = NO;
 				GCC_GENERATE_DEBUGGING_SYMBOLS = NO;
 				GCC_PREPROCESSOR_DEFINITIONS = (
 					LOAD_BMP,
@@ -976,7 +965,6 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				GCC_DYNAMIC_NO_PIC = NO;
-				GCC_ENABLE_FIX_AND_CONTINUE = YES;
 				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
 				GCC_OPTIMIZATION_LEVEL = 0;
 				OTHER_CFLAGS = "";
@@ -997,7 +985,6 @@
 		00B7E3B4097EB73D00826121 /* Deployment_legacy */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				GCC_ENABLE_FIX_AND_CONTINUE = NO;
 				OTHER_CFLAGS = "";
 				OTHER_LDFLAGS = "";
 				OTHER_REZFLAGS = "";
@@ -1033,24 +1020,15 @@
 		00B7E3B7097EB73D00826121 /* Development_legacy */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ARCHS = "$(ARCHS_STANDARD_32_64_BIT_PRE_XCODE_3_1)";
-				ARCHS_STANDARD_32_64_BIT_PRE_XCODE_3_1 = "x86_64 i386 ppc";
+				ARCHS = "$(ARCHS_STANDARD_32_64_BIT)";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(PROJECT_DIR)/../../Frameworks/Default",
 					"$(PROJECT_DIR)/../../Frameworks/Release",
 					"$(HOME)/Library/Frameworks",
 					/Library/Frameworks,
 				);
-				GCC_VERSION_i386 = 4.0;
-				GCC_VERSION_ppc = 4.0;
-				GCC_VERSION_x86_64 = 4.2;
-				MACOSX_DEPLOYMENT_TARGET_i386 = 10.4;
-				MACOSX_DEPLOYMENT_TARGET_ppc = 10.4;
-				MACOSX_DEPLOYMENT_TARGET_x86_64 = 10.6;
-				SDKROOT = /Developer/SDKs/MacOSX10.4u.sdk;
-				SDKROOT_i386 = /Developer/SDKs/MacOSX10.4u.sdk;
-				SDKROOT_ppc = /Developer/SDKs/MacOSX10.4u.sdk;
-				SDKROOT_x86_64 = /Developer/SDKs/MacOSX10.6.sdk;
+				MACOSX_DEPLOYMENT_TARGET = 10.5;
+				SDKROOT = "";
 				SYMROOT = "$(PROJECT_DIR)/../../Frameworks";
 			};
 			name = Development_legacy;
@@ -1058,24 +1036,15 @@
 		00B7E3B8097EB73D00826121 /* Deployment_legacy */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ARCHS = "$(ARCHS_STANDARD_32_64_BIT_PRE_XCODE_3_1)";
-				ARCHS_STANDARD_32_64_BIT_PRE_XCODE_3_1 = "x86_64 i386 ppc";
+				ARCHS = "$(ARCHS_STANDARD_32_64_BIT)";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(PROJECT_DIR)/../../Frameworks/Default",
 					"$(PROJECT_DIR)/../../Frameworks/Release",
 					"$(HOME)/Library/Frameworks",
 					/Library/Frameworks,
 				);
-				GCC_VERSION_i386 = 4.0;
-				GCC_VERSION_ppc = 4.0;
-				GCC_VERSION_x86_64 = 4.2;
-				MACOSX_DEPLOYMENT_TARGET_i386 = 10.4;
-				MACOSX_DEPLOYMENT_TARGET_ppc = 10.4;
-				MACOSX_DEPLOYMENT_TARGET_x86_64 = 10.6;
-				SDKROOT = /Developer/SDKs/MacOSX10.4u.sdk;
-				SDKROOT_i386 = /Developer/SDKs/MacOSX10.4u.sdk;
-				SDKROOT_ppc = /Developer/SDKs/MacOSX10.4u.sdk;
-				SDKROOT_x86_64 = /Developer/SDKs/MacOSX10.6.sdk;
+				MACOSX_DEPLOYMENT_TARGET = 10.5;
+				SDKROOT = "";
 				SYMROOT = "$(PROJECT_DIR)/../../Frameworks";
 			};
 			name = Deployment_legacy;
@@ -1083,24 +1052,15 @@
 		00B7E3B9097EB73D00826121 /* Default */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ARCHS = "$(ARCHS_STANDARD_32_64_BIT_PRE_XCODE_3_1)";
-				ARCHS_STANDARD_32_64_BIT_PRE_XCODE_3_1 = "x86_64 i386 ppc";
+				ARCHS = "$(ARCHS_STANDARD_32_64_BIT)";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(PROJECT_DIR)/../../Frameworks/Default",
 					"$(PROJECT_DIR)/../../Frameworks/Release",
 					"$(HOME)/Library/Frameworks",
 					/Library/Frameworks,
 				);
-				GCC_VERSION_i386 = 4.0;
-				GCC_VERSION_ppc = 4.0;
-				GCC_VERSION_x86_64 = 4.2;
-				MACOSX_DEPLOYMENT_TARGET_i386 = 10.4;
-				MACOSX_DEPLOYMENT_TARGET_ppc = 10.4;
-				MACOSX_DEPLOYMENT_TARGET_x86_64 = 10.6;
-				SDKROOT = /Developer/SDKs/MacOSX10.4u.sdk;
-				SDKROOT_i386 = /Developer/SDKs/MacOSX10.4u.sdk;
-				SDKROOT_ppc = /Developer/SDKs/MacOSX10.4u.sdk;
-				SDKROOT_x86_64 = /Developer/SDKs/MacOSX10.6.sdk;
+				MACOSX_DEPLOYMENT_TARGET = 10.5;
+				SDKROOT = "";
 				SYMROOT = "$(PROJECT_DIR)/../../Frameworks";
 			};
 			name = Default;

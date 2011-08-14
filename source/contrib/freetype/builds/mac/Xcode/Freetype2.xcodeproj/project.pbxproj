@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 44;
+	objectVersion = 46;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -1157,9 +1157,16 @@
 /* Begin PBXProject section */
 		08FB7793FE84155DC02AAC07 /* Project object */ = {
 			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0410;
+			};
 			buildConfigurationList = 1DEB91EF08733DB70010E9CD /* Build configuration list for PBXProject "Freetype2" */;
-			compatibilityVersion = "Xcode 3.0";
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
 			hasScannedForEncodings = 1;
+			knownRegions = (
+				en,
+			);
 			mainGroup = 08FB7794FE84155DC02AAC07 /* Freetype2 */;
 			projectDirPath = "";
 			projectRoot = ../../..;
@@ -1306,7 +1313,6 @@
 			buildSettings = {
 				COPY_PHASE_STRIP = NO;
 				GCC_DYNAMIC_NO_PIC = NO;
-				GCC_ENABLE_FIX_AND_CONTINUE = YES;
 				GCC_MODEL_TUNING = G5;
 				GCC_OPTIMIZATION_LEVEL = 0;
 				INSTALL_PATH = /usr/local/lib;
@@ -1328,6 +1334,7 @@
 		1DEB91F008733DB70010E9CD /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_32_64_BIT)";
 				GCC_PREPROCESSOR_DEFINITIONS = (
 					"$(GCC_PREPROCESSOR_DEFINITIONS_QUOTED_1)",
 					FT2_BUILD_LIBRARY,
@@ -1335,10 +1342,7 @@
 				);
 				GCC_PREPROCESSOR_DEFINITIONS_QUOTED_1 = "FT_CONFIG_CONFIG_H=\"<ftconfig.h>\"";
 				GCC_PREPROCESSOR_DEFINITIONS_QUOTED_2 = "FT_CONFIG_MODULES_H=\"<ftmodule.h>\"";
-				GCC_VERSION = 4.0;
-				GCC_VERSION_i386 = 4.0;
-				GCC_VERSION_ppc = 4.0;
-				GCC_VERSION_x86_64 = 4.2;
+				GCC_VERSION = "";
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				HEADER_SEARCH_PATHS = (
@@ -1347,14 +1351,8 @@
 					"$(PROJECT_DIR)/../../../devel",
 					"$(PROJECT_DIR)/../../../include/freetype/config",
 				);
-				MACOSX_DEPLOYMENT_TARGET_i386 = 10.4;
-				MACOSX_DEPLOYMENT_TARGET_ppc = 10.4;
-				MACOSX_DEPLOYMENT_TARGET_x86_64 = 10.6;
-				PREBINDING = NO;
-				SDKROOT = "$(DEVELOPER_SDK_DIR)/MacOSX10.4u.sdk";
-				SDKROOT_i386 = /Developer/SDKs/MacOSX10.4u.sdk;
-				SDKROOT_ppc = /Developer/SDKs/MacOSX10.4u.sdk;
-				SDKROOT_x86_64 = /Developer/SDKs/MacOSX10.6.sdk;
+				MACOSX_DEPLOYMENT_TARGET = 10.5;
+				SDKROOT = "";
 				SYMROOT = "$(PROJECT_DIR)/../../../../Frameworks";
 			};
 			name = Debug;
@@ -1362,8 +1360,7 @@
 		1DEB91F108733DB70010E9CD /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ARCHS = "$(ARCHS_STANDARD_32_64_BIT_PRE_XCODE_3_1)";
-				ARCHS_STANDARD_32_64_BIT_PRE_XCODE_3_1 = "x86_64 i386 ppc";
+				ARCHS = "$(ARCHS_STANDARD_32_64_BIT)";
 				GCC_PREPROCESSOR_DEFINITIONS = (
 					"$(GCC_PREPROCESSOR_DEFINITIONS_QUOTED_1)",
 					FT2_BUILD_LIBRARY,
@@ -1371,10 +1368,7 @@
 				);
 				GCC_PREPROCESSOR_DEFINITIONS_QUOTED_1 = "FT_CONFIG_CONFIG_H=\"<ftconfig.h>\"";
 				GCC_PREPROCESSOR_DEFINITIONS_QUOTED_2 = "FT_CONFIG_MODULES_H=\"<ftmodule.h>\"";
-				GCC_VERSION = 4.0;
-				GCC_VERSION_i386 = 4.0;
-				GCC_VERSION_ppc = 4.0;
-				GCC_VERSION_x86_64 = 4.2;
+				GCC_VERSION = "";
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				HEADER_SEARCH_PATHS = (
@@ -1383,14 +1377,8 @@
 					"$(PROJECT_DIR)/../../../devel",
 					"$(PROJECT_DIR)/../../../include/freetype/config",
 				);
-				MACOSX_DEPLOYMENT_TARGET_i386 = 10.4;
-				MACOSX_DEPLOYMENT_TARGET_ppc = 10.4;
-				MACOSX_DEPLOYMENT_TARGET_x86_64 = 10.6;
-				PREBINDING = NO;
-				SDKROOT = "$(DEVELOPER_SDK_DIR)/MacOSX10.4u.sdk";
-				SDKROOT_i386 = /Developer/SDKs/MacOSX10.4u.sdk;
-				SDKROOT_ppc = /Developer/SDKs/MacOSX10.4u.sdk;
-				SDKROOT_x86_64 = /Developer/SDKs/MacOSX10.6.sdk;
+				MACOSX_DEPLOYMENT_TARGET = 10.5;
+				SDKROOT = "";
 				SYMROOT = "$(PROJECT_DIR)/../../../../Frameworks";
 			};
 			name = Release;
@@ -1404,7 +1392,6 @@
 				DYLIB_CURRENT_VERSION = 1;
 				FRAMEWORK_VERSION = A;
 				GCC_DYNAMIC_NO_PIC = NO;
-				GCC_ENABLE_FIX_AND_CONTINUE = YES;
 				GCC_MODEL_TUNING = G5;
 				GCC_OPTIMIZATION_LEVEL = 0;
 				INFOPLIST_FILE = "Freetype2-Info.plist";
@@ -1415,7 +1402,6 @@
 					"-framework",
 					AppKit,
 				);
-				PREBINDING = NO;
 				PRODUCT_NAME = Freetype2;
 			};
 			name = Debug;
@@ -1429,7 +1415,6 @@
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				FRAMEWORK_VERSION = A;
-				GCC_ENABLE_FIX_AND_CONTINUE = NO;
 				GCC_MODEL_TUNING = G5;
 				INFOPLIST_FILE = "Freetype2-Info.plist";
 				LD_DYLIB_INSTALL_NAME = "@executable_path/../Frameworks/$(PRODUCT_NAME).framework/$(PRODUCT_NAME)";

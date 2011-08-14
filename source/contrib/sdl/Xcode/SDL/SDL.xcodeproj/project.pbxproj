@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 42;
+	objectVersion = 46;
 	objects = {
 
 /* Begin PBXAggregateTarget section */
@@ -1198,9 +1198,16 @@
 /* Begin PBXProject section */
 		0867D690FE84028FC02AAC07 /* Project object */ = {
 			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0410;
+			};
 			buildConfigurationList = 0073178E0858DB0500B2BC32 /* Build configuration list for PBXProject "SDL" */;
-			compatibilityVersion = "Xcode 2.4";
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
 			hasScannedForEncodings = 1;
+			knownRegions = (
+				en,
+			);
 			mainGroup = 0867D691FE84028FC02AAC07 /* SDLFramework */;
 			productRefGroup = 034768DDFF38A45A11DB9C8B /* Products */;
 			projectDirPath = "";
@@ -1534,10 +1541,12 @@
 		0073177B0858DB0500B2BC32 /* Development_using_10.4SDK_and_10.6SDK */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_32_64_BIT)";
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				FRAMEWORK_VERSION = A;
 				GCC_SYMBOLS_PRIVATE_EXTERN = YES;
+				GCC_VERSION = 4.2;
 				INFOPLIST_FILE = "Info-Framework.plist";
 				INSTALL_PATH = "@executable_path/../Frameworks";
 				OTHER_CFLAGS = "$(OTHER_CFLAGS_$(CURRENT_ARCH))";
@@ -1551,10 +1560,12 @@
 		0073177C0858DB0500B2BC32 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_32_64_BIT)";
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				FRAMEWORK_VERSION = A;
 				GCC_SYMBOLS_PRIVATE_EXTERN = YES;
+				GCC_VERSION = 4.2;
 				INFOPLIST_FILE = "Info-Framework.plist";
 				INSTALL_PATH = "@executable_path/../Frameworks";
 				OTHER_CFLAGS = "$(OTHER_CFLAGS_$(CURRENT_ARCH))";
@@ -1569,10 +1580,12 @@
 		0073177D0858DB0500B2BC32 /* Default */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_32_64_BIT)";
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				FRAMEWORK_VERSION = A;
 				GCC_SYMBOLS_PRIVATE_EXTERN = YES;
+				GCC_VERSION = 4.2;
 				INFOPLIST_FILE = "Info-Framework.plist";
 				INSTALL_PATH = "@executable_path/../Frameworks";
 				OTHER_CFLAGS = "$(OTHER_CFLAGS_$(CURRENT_ARCH))";
@@ -1739,26 +1752,15 @@
 		0073178F0858DB0500B2BC32 /* Development_using_10.4SDK_and_10.6SDK */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ARCHS = "$(ARCHS_STANDARD_32_64_BIT_PRE_XCODE_3_1)";
-				ARCHS_STANDARD_32_64_BIT_PRE_XCODE_3_1 = "x86_64 i386 ppc";
+				ARCHS = "$(ARCHS_STANDARD_32_64_BIT)";
 				GCC_ALTIVEC_EXTENSIONS = YES;
 				GCC_AUTO_VECTORIZATION = YES;
 				GCC_ENABLE_CPP_EXCEPTIONS = NO;
 				GCC_ENABLE_CPP_RTTI = NO;
 				GCC_ENABLE_SSE3_EXTENSIONS = YES;
 				GCC_OPTIMIZATION_LEVEL = 0;
-				GCC_VERSION = 4.0;
-				GCC_VERSION_i386 = 4.0;
-				GCC_VERSION_ppc = 4.0;
-				GCC_VERSION_x86_64 = 4.2;
-				MACOSX_DEPLOYMENT_TARGET = "";
-				MACOSX_DEPLOYMENT_TARGET_i386 = 10.4;
-				MACOSX_DEPLOYMENT_TARGET_ppc = 10.4;
-				MACOSX_DEPLOYMENT_TARGET_x86_64 = 10.6;
-				PREBINDING = NO;
-				SDKROOT_i386 = /Developer/SDKs/MacOSX10.4u.sdk;
-				SDKROOT_ppc = /Developer/SDKs/MacOSX10.4u.sdk;
-				SDKROOT_x86_64 = /Developer/SDKs/MacOSX10.6.sdk;
+				GCC_VERSION = 4.2;
+				MACOSX_DEPLOYMENT_TARGET = 10.5;
 				SYMROOT = "$(PROJECT_DIR)/../../../Frameworks";
 				WARNING_CFLAGS = "";
 			};
@@ -1767,8 +1769,7 @@
 		007317900858DB0500B2BC32 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ARCHS = "$(ARCHS_STANDARD_32_64_BIT_PRE_XCODE_3_1)";
-				ARCHS_STANDARD_32_64_BIT_PRE_XCODE_3_1 = "x86_64 i386 ppc";
+				ARCHS = "$(ARCHS_STANDARD_32_64_BIT)";
 				DEPLOYMENT_POSTPROCESSING = YES;
 				GCC_ALTIVEC_EXTENSIONS = YES;
 				GCC_AUTO_VECTORIZATION = YES;
@@ -1776,18 +1777,8 @@
 				GCC_ENABLE_CPP_RTTI = NO;
 				GCC_ENABLE_SSE3_EXTENSIONS = YES;
 				GCC_OPTIMIZATION_LEVEL = 3;
-				GCC_VERSION = 4.0;
-				GCC_VERSION_i386 = 4.0;
-				GCC_VERSION_ppc = 4.0;
-				GCC_VERSION_x86_64 = 4.2;
-				MACOSX_DEPLOYMENT_TARGET = "";
-				MACOSX_DEPLOYMENT_TARGET_i386 = 10.4;
-				MACOSX_DEPLOYMENT_TARGET_ppc = 10.4;
-				MACOSX_DEPLOYMENT_TARGET_x86_64 = 10.6;
-				PREBINDING = NO;
-				SDKROOT_i386 = /Developer/SDKs/MacOSX10.4u.sdk;
-				SDKROOT_ppc = /Developer/SDKs/MacOSX10.4u.sdk;
-				SDKROOT_x86_64 = /Developer/SDKs/MacOSX10.6.sdk;
+				GCC_VERSION = 4.2;
+				MACOSX_DEPLOYMENT_TARGET = 10.5;
 				SEPARATE_STRIP = YES;
 				STRIP_STYLE = "non-global";
 				SYMROOT = "$(PROJECT_DIR)/../../../Frameworks";
@@ -1798,26 +1789,15 @@
 		007317910858DB0500B2BC32 /* Default */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ARCHS = "$(ARCHS_STANDARD_32_64_BIT_PRE_XCODE_3_1)";
-				ARCHS_STANDARD_32_64_BIT_PRE_XCODE_3_1 = "x86_64 i386 ppc";
+				ARCHS = "$(ARCHS_STANDARD_32_64_BIT)";
 				GCC_ALTIVEC_EXTENSIONS = YES;
 				GCC_AUTO_VECTORIZATION = YES;
 				GCC_ENABLE_CPP_EXCEPTIONS = NO;
 				GCC_ENABLE_CPP_RTTI = NO;
 				GCC_ENABLE_SSE3_EXTENSIONS = YES;
 				GCC_OPTIMIZATION_LEVEL = 3;
-				GCC_VERSION = 4.0;
-				GCC_VERSION_i386 = 4.0;
-				GCC_VERSION_ppc = 4.0;
-				GCC_VERSION_x86_64 = 4.2;
-				MACOSX_DEPLOYMENT_TARGET = "";
-				MACOSX_DEPLOYMENT_TARGET_i386 = 10.4;
-				MACOSX_DEPLOYMENT_TARGET_ppc = 10.4;
-				MACOSX_DEPLOYMENT_TARGET_x86_64 = 10.6;
-				PREBINDING = NO;
-				SDKROOT_i386 = /Developer/SDKs/MacOSX10.4u.sdk;
-				SDKROOT_ppc = /Developer/SDKs/MacOSX10.4u.sdk;
-				SDKROOT_x86_64 = /Developer/SDKs/MacOSX10.6.sdk;
+				GCC_VERSION = 4.2;
+				MACOSX_DEPLOYMENT_TARGET = 10.5;
 				SYMROOT = "$(PROJECT_DIR)/../../../Frameworks";
 				WARNING_CFLAGS = "";
 			};
@@ -1826,10 +1806,12 @@
 		00B04D1C0CC7F3B100A95728 /* Deployment_legacy */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_32_64_BIT)";
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				FRAMEWORK_VERSION = A;
 				GCC_SYMBOLS_PRIVATE_EXTERN = YES;
+				GCC_VERSION = 4.2;
 				INFOPLIST_FILE = "Info-Framework.plist";
 				INSTALL_PATH = "@executable_path/../Frameworks";
 				OTHER_CFLAGS = "$(OTHER_CFLAGS_$(CURRENT_ARCH))";
@@ -1895,8 +1877,7 @@
 		00B04D230CC7F3B100A95728 /* Deployment_legacy */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ARCHS = "$(ARCHS_STANDARD_32_64_BIT_PRE_XCODE_3_1)";
-				ARCHS_STANDARD_32_64_BIT_PRE_XCODE_3_1 = "x86_64 i386 ppc";
+				ARCHS = "$(ARCHS_STANDARD_32_64_BIT)";
 				DEPLOYMENT_POSTPROCESSING = YES;
 				GCC_ALTIVEC_EXTENSIONS = YES;
 				GCC_AUTO_VECTORIZATION = YES;
@@ -1904,18 +1885,8 @@
 				GCC_ENABLE_CPP_RTTI = NO;
 				GCC_ENABLE_SSE3_EXTENSIONS = YES;
 				GCC_OPTIMIZATION_LEVEL = 3;
-				GCC_VERSION = 4.0;
-				GCC_VERSION_i386 = 4.0;
-				GCC_VERSION_ppc = 4.0;
-				GCC_VERSION_x86_64 = 4.2;
-				MACOSX_DEPLOYMENT_TARGET = "";
-				MACOSX_DEPLOYMENT_TARGET_i386 = 10.4;
-				MACOSX_DEPLOYMENT_TARGET_ppc = 10.4;
-				MACOSX_DEPLOYMENT_TARGET_x86_64 = 10.6;
-				PREBINDING = NO;
-				SDKROOT_i386 = /Developer/SDKs/MacOSX10.4u.sdk;
-				SDKROOT_ppc = /Developer/SDKs/MacOSX10.4u.sdk;
-				SDKROOT_x86_64 = /Developer/SDKs/MacOSX10.6.sdk;
+				GCC_VERSION = 4.2;
+				MACOSX_DEPLOYMENT_TARGET = 10.5;
 				SEPARATE_STRIP = YES;
 				STRIP_STYLE = "non-global";
 				SYMROOT = "$(PROJECT_DIR)/../../../Frameworks";
@@ -1926,10 +1897,12 @@
 		00B04D240CC7F43D00A95728 /* Development_legacy */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_32_64_BIT)";
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				FRAMEWORK_VERSION = A;
 				GCC_SYMBOLS_PRIVATE_EXTERN = YES;
+				GCC_VERSION = 4.2;
 				INFOPLIST_FILE = "Info-Framework.plist";
 				INSTALL_PATH = "@executable_path/../Frameworks";
 				OTHER_CFLAGS = "$(OTHER_CFLAGS_$(CURRENT_ARCH))";
@@ -1994,26 +1967,15 @@
 		00B04D2B0CC7F43D00A95728 /* Development_legacy */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ARCHS = "$(ARCHS_STANDARD_32_64_BIT_PRE_XCODE_3_1)";
-				ARCHS_STANDARD_32_64_BIT_PRE_XCODE_3_1 = "x86_64 i386 ppc";
+				ARCHS = "$(ARCHS_STANDARD_32_64_BIT)";
 				GCC_ALTIVEC_EXTENSIONS = YES;
 				GCC_AUTO_VECTORIZATION = YES;
 				GCC_ENABLE_CPP_EXCEPTIONS = NO;
 				GCC_ENABLE_CPP_RTTI = NO;
 				GCC_ENABLE_SSE3_EXTENSIONS = YES;
 				GCC_OPTIMIZATION_LEVEL = 0;
-				GCC_VERSION = 4.0;
-				GCC_VERSION_i386 = 4.0;
-				GCC_VERSION_ppc = 4.0;
-				GCC_VERSION_x86_64 = 4.2;
-				MACOSX_DEPLOYMENT_TARGET = "";
-				MACOSX_DEPLOYMENT_TARGET_i386 = 10.4;
-				MACOSX_DEPLOYMENT_TARGET_ppc = 10.4;
-				MACOSX_DEPLOYMENT_TARGET_x86_64 = 10.6;
-				PREBINDING = NO;
-				SDKROOT_i386 = /Developer/SDKs/MacOSX10.4u.sdk;
-				SDKROOT_ppc = /Developer/SDKs/MacOSX10.4u.sdk;
-				SDKROOT_x86_64 = /Developer/SDKs/MacOSX10.6.sdk;
+				GCC_VERSION = 4.2;
+				MACOSX_DEPLOYMENT_TARGET = 10.5;
 				SYMROOT = "$(PROJECT_DIR)/../../../Frameworks";
 				WARNING_CFLAGS = "";
 			};
@@ -2022,6 +1984,7 @@
 		00CFA621106A567900758660 /* Deployment_native_only */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_32_64_BIT)";
 				DEPLOYMENT_POSTPROCESSING = YES;
 				GCC_ALTIVEC_EXTENSIONS = YES;
 				GCC_AUTO_VECTORIZATION = YES;
@@ -2029,8 +1992,8 @@
 				GCC_ENABLE_CPP_RTTI = NO;
 				GCC_ENABLE_SSE3_EXTENSIONS = YES;
 				GCC_OPTIMIZATION_LEVEL = 3;
-				MACOSX_DEPLOYMENT_TARGET = "";
-				PREBINDING = NO;
+				GCC_VERSION = 4.2;
+				MACOSX_DEPLOYMENT_TARGET = 10.5;
 				SEPARATE_STRIP = YES;
 				STRIP_STYLE = "non-global";
 				SYMROOT = "$(PROJECT_DIR)/../../../Frameworks";
@@ -2041,10 +2004,12 @@
 		00CFA622106A567900758660 /* Deployment_native_only */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_32_64_BIT)";
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				FRAMEWORK_VERSION = A;
 				GCC_SYMBOLS_PRIVATE_EXTERN = YES;
+				GCC_VERSION = 4.2;
 				INFOPLIST_FILE = "Info-Framework.plist";
 				INSTALL_PATH = "@executable_path/../Frameworks";
 				OTHER_CFLAGS = "$(OTHER_CFLAGS_$(CURRENT_ARCH))";
@@ -2110,14 +2075,15 @@
 		00CFA627106A568900758660 /* Development_native_only */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_32_64_BIT)";
 				GCC_ALTIVEC_EXTENSIONS = YES;
 				GCC_AUTO_VECTORIZATION = YES;
 				GCC_ENABLE_CPP_EXCEPTIONS = NO;
 				GCC_ENABLE_CPP_RTTI = NO;
 				GCC_ENABLE_SSE3_EXTENSIONS = YES;
 				GCC_OPTIMIZATION_LEVEL = 0;
-				MACOSX_DEPLOYMENT_TARGET = "";
-				PREBINDING = NO;
+				GCC_VERSION = 4.2;
+				MACOSX_DEPLOYMENT_TARGET = 10.5;
 				SYMROOT = "$(PROJECT_DIR)/../../../Frameworks";
 				WARNING_CFLAGS = "";
 			};
@@ -2126,10 +2092,12 @@
 		00CFA628106A568900758660 /* Development_native_only */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_32_64_BIT)";
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				FRAMEWORK_VERSION = A;
 				GCC_SYMBOLS_PRIVATE_EXTERN = YES;
+				GCC_VERSION = 4.2;
 				INFOPLIST_FILE = "Info-Framework.plist";
 				INSTALL_PATH = "@executable_path/../Frameworks";
 				OTHER_CFLAGS = "$(OTHER_CFLAGS_$(CURRENT_ARCH))";

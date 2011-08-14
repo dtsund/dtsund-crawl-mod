@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 44;
+	objectVersion = 46;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -162,9 +162,16 @@
 /* Begin PBXProject section */
 		0867D690FE84028FC02AAC07 /* Project object */ = {
 			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0410;
+			};
 			buildConfigurationList = 4FADC24608B4156D00ABE55E /* Build configuration list for PBXProject "libpng" */;
-			compatibilityVersion = "Xcode 3.0";
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
 			hasScannedForEncodings = 1;
+			knownRegions = (
+				en,
+			);
 			mainGroup = 0867D691FE84028FC02AAC07 /* libpng */;
 			productRefGroup = 034768DDFF38A45A11DB9C8B /* Products */;
 			projectDirPath = "";
@@ -238,6 +245,7 @@
 		4FADC24308B4156D00ABE55E /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_32_64_BIT)";
 				COPY_PHASE_STRIP = NO;
 				DYLIB_COMPATIBILITY_VERSION = 14;
 				DYLIB_CURRENT_VERSION = 14;
@@ -251,6 +259,7 @@
 				MACH_O_TYPE = mh_dylib;
 				OTHER_LDFLAGS = "-lz";
 				PRODUCT_NAME = libpng;
+				SDKROOT = "";
 				WRAPPER_EXTENSION = framework;
 			};
 			name = Debug;
@@ -258,6 +267,7 @@
 		4FADC24408B4156D00ABE55E /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_32_64_BIT)";
 				DYLIB_COMPATIBILITY_VERSION = 14;
 				DYLIB_CURRENT_VERSION = 14;
 				FRAMEWORK_VERSION = 1.4.0;
@@ -270,6 +280,7 @@
 				MACH_O_TYPE = mh_dylib;
 				OTHER_LDFLAGS = "-lz";
 				PRODUCT_NAME = libpng;
+				SDKROOT = "";
 				WRAPPER_EXTENSION = framework;
 			};
 			name = Release;
@@ -277,19 +288,11 @@
 		4FADC24708B4156D00ABE55E /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				GCC_VERSION_i386 = 4.0;
-				GCC_VERSION_ppc = 4.0;
-				GCC_VERSION_x86_64 = 4.2;
+				ARCHS = "$(ARCHS_STANDARD_32_64_BIT)";
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				MACOSX_DEPLOYMENT_TARGET_i386 = 10.4;
-				MACOSX_DEPLOYMENT_TARGET_ppc = 10.4;
-				MACOSX_DEPLOYMENT_TARGET_x86_64 = 10.6;
-				PREBINDING = NO;
-				SDKROOT = "$(DEVELOPER_SDK_DIR)/MacOSX10.4u.sdk";
-				SDKROOT_i386 = /Developer/SDKs/MacOSX10.4u.sdk;
-				SDKROOT_ppc = /Developer/SDKs/MacOSX10.4u.sdk;
-				SDKROOT_x86_64 = /Developer/SDKs/MacOSX10.6.sdk;
+				MACOSX_DEPLOYMENT_TARGET = 10.5;
+				SDKROOT = "";
 				SYMROOT = "$(PROJECT_DIR)/../../../Frameworks";
 			};
 			name = Debug;
@@ -297,21 +300,11 @@
 		4FADC24808B4156D00ABE55E /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ARCHS = "$(ARCHS_STANDARD_32_64_BIT_PRE_XCODE_3_1)";
-				ARCHS_STANDARD_32_64_BIT_PRE_XCODE_3_1 = "x86_64 i386 ppc";
-				GCC_VERSION_i386 = 4.0;
-				GCC_VERSION_ppc = 4.0;
-				GCC_VERSION_x86_64 = 4.2;
+				ARCHS = "$(ARCHS_STANDARD_32_64_BIT)";
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				MACOSX_DEPLOYMENT_TARGET_i386 = 10.4;
-				MACOSX_DEPLOYMENT_TARGET_ppc = 10.4;
-				MACOSX_DEPLOYMENT_TARGET_x86_64 = 10.6;
-				PREBINDING = NO;
-				SDKROOT = "$(DEVELOPER_SDK_DIR)/MacOSX10.4u.sdk";
-				SDKROOT_i386 = /Developer/SDKs/MacOSX10.4u.sdk;
-				SDKROOT_ppc = /Developer/SDKs/MacOSX10.4u.sdk;
-				SDKROOT_x86_64 = /Developer/SDKs/MacOSX10.6.sdk;
+				MACOSX_DEPLOYMENT_TARGET = 10.5;
+				SDKROOT = "";
 				SYMROOT = "$(PROJECT_DIR)/../../../Frameworks";
 			};
 			name = Release;
