@@ -3766,7 +3766,7 @@
 				);
 				INFOPLIST_FILE = "mac/Crawl-Info.plist";
 				INSTALL_PATH = "$(HOME)/Applications";
-				PRODUCT_NAME = "Dungeon Crawl Stone Soup";
+				PRODUCT_NAME = "Crawl Light";
 				YACC_GENERATED_FILE_STEM = InputFileStem;
 			};
 			name = Profile;
@@ -3806,7 +3806,7 @@
 				);
 				INFOPLIST_FILE = "mac/Crawl-Info.plist";
 				INSTALL_PATH = "$(HOME)/Applications";
-				PRODUCT_NAME = "Dungeon Crawl Stone Soup";
+				PRODUCT_NAME = "Crawl Light";
 				YACC_GENERATED_FILE_STEM = InputFileStem;
 			};
 			name = Release;
@@ -3842,7 +3842,7 @@
 				);
 				INFOPLIST_FILE = "mac/Crawl-Info.plist";
 				INSTALL_PATH = "$(HOME)/Applications";
-				PRODUCT_NAME = "Dungeon Crawl Stone Soup";
+				PRODUCT_NAME = "Crawl Light";
 				YACC_GENERATED_FILE_STEM = InputFileStem;
 			};
 			name = Debug;
@@ -3876,7 +3876,7 @@
 				);
 				INFOPLIST_FILE = "mac/Crawl-Info.plist";
 				INSTALL_PATH = "$(HOME)/Applications";
-				PRODUCT_NAME = "Dungeon Crawl Stone Soup";
+				PRODUCT_NAME = "Crawl Light";
 				YACC_GENERATED_FILE_STEM = InputFileStem;
 			};
 			name = Wizard;
